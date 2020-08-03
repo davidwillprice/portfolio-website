@@ -37,6 +37,10 @@
 }
 .image {
 	width: 100%;
+	/*mask-image: url("../svg/brush-bg-1.svg");*/
+	mask-size: 100%;
+	mask-repeat: no-repeat;
+	transition: opacity 200ms;
 }
 .image,
 .brushBg {
@@ -53,8 +57,8 @@
 	width: 100%;
 	transition: fill 200ms;
 }
-.workExampleLink:hover .brushBg {
-	fill: #f05d5e;
+.workExampleLink:hover img {
+	opacity: 0.5;
 }
 
 @media (max-width: 1000px) {

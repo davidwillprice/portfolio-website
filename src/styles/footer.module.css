@@ -37,7 +37,7 @@
 .footerSmallPrint p,
 .privPolLink {
 	color: #333333;
-	font-size: 16px;
+	font-size: 1em;
 }
 .privPolLink:hover {
 	opacity: 0.5;

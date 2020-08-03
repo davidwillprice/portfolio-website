@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import titleBannerStyles from '../styles/title-banner.module.css';
+import titleBannerStyles from '../styles/titlebanner.module.css';
 
 class TitleBanner extends Component {
 	render() {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import headerStyles from '../styles/header.module.css';
-import Logo from '../svg/personal-logo.svg';
+import Logo from '../svgs/personal-logo.svg';
 
 class Header extends Component {
 	state = {
@@ -31,7 +31,7 @@ class Header extends Component {
 					</button>
 					<div className={headerStyles.headerNav}>
 						{/*<div className={classnames(headerStyles.headerNav, headerStyles.expandedHeaderNav)}>*/}
-						<Link className={headerStyles.headerMenuItem} to={`/web-development/`}>
+						<Link className={headerStyles.headerMenuItem} to={`/web/`}>
 							Web development
 						</Link>
 						<Link className={headerStyles.headerMenuItem} to={`/graphic-design/`}>
