@@ -31,6 +31,15 @@ module.exports = {
 		},
 		`gatsby-plugin-offline`,
 		{
+			resolve: 'gatsby-plugin-web-font-loader',
+			options: {
+				custom: {
+					families: [ 'Reey' ],
+					urls: [ '/fonts/fonts.css' ]
+				}
+			}
+		},
+		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `src`,
