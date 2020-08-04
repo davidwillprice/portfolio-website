@@ -10,21 +10,15 @@ class Footer extends Component {
 		return (
 			<div className={footerStyles.footerCon}>
 				<div className={footerStyles.footerLinks}>
-					<Link
-						aria-label="Email button"
-						className={footerStyles.footerLinkItem}
-						to={`mailto: davidwillprice@gmail.com`}
-					/>
-					<Link
-						aria-label="LinkedIn button"
-						className={footerStyles.footerLinkItem}
-						to={`https://www.linkedin.com/in/davidwillprice/`}
-					/>
-					<Link
-						aria-label="GitHub button"
-						className={footerStyles.footerLinkItem}
-						to={`https://github.com/davidwillprice/`}
-					/>
+					<a aria-label="Email button" href="mailto: davidwillprice@gmail.com">
+						<div className={footerStyles.footerLinkItem} />
+					</a>
+					<a aria-label="LinkedIn button" href="https://www.linkedin.com/in/davidwillprice/">
+						<div className={footerStyles.footerLinkItem} />
+					</a>
+					<a aria-label="GitHub button" href="https://github.com/davidwillprice/">
+						<div className={footerStyles.footerLinkItem} />
+					</a>
 				</div>
 				<div className={footerStyles.footerSmallPrint}>
 					<p>
