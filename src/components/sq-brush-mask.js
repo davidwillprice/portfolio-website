@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
-import sqBrushMaskStyles from '../styles/sqbrushmask.module.css';
+import sqBrushStyles from '../styles/sqbrush.module.css';
 
 import { Link } from 'gatsby';
 
 class SqBrushMask extends Component {
 	render() {
 		const workExampleClasses = this.props.dirTxtRight
-			? sqBrushMaskStyles.workExampleCon + ' ' + sqBrushMaskStyles.workExampleConR
-			: sqBrushMaskStyles.workExampleCon;
+			? sqBrushStyles.workExampleCon + ' ' + sqBrushStyles.brushMaskCon + ' ' + sqBrushStyles.workExampleConR
+			: sqBrushStyles.workExampleCon + ' ' + sqBrushStyles.brushMaskCon;
 		return (
 			<div className={workExampleClasses}>
-				<div className={sqBrushMaskStyles.workExampleText}>{this.props.children}</div>
-				<Link className={sqBrushMaskStyles.workExampleLink} aria-label={this.props.linkDesc} to={`/`}>
-					<div className={sqBrushMaskStyles.brushPreviewCon}>
-						<div className={sqBrushMaskStyles.brushPreview}>
+				<div className={sqBrushStyles.workExampleText}>{this.props.children}</div>
+				<Link className={sqBrushStyles.workExampleLink} aria-label={this.props.linkDesc} to={`/`}>
+					<div className={sqBrushStyles.brushPreviewCon}>
+						<div className={sqBrushStyles.brushPreview}>
 							<img
 								alt={this.props.imgAlt}
 								src={this.props.img}
-								className={sqBrushMaskStyles.image}
+								className={sqBrushStyles.image}
 								style={{ maskImage: 'url(' + this.props.brush + ')', maskSize: '100%' }}
 							/>
 						</div>

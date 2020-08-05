@@ -4,7 +4,6 @@
 	font-style: normal;
 	src: url("../fonts/ReeyRegular.ttf") format("ttf"), url("../fonts/ReeyRegular.woff2") format("woff2"),
 		url("../fonts/ReeyRegular.woff") format("woff");
-	font-display: swap;
 }
 
 * {

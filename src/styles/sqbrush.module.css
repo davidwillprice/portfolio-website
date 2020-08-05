@@ -1,0 +1,101 @@
+.workExampleCon {
+	width: 100%;
+	display: flex;
+}
+.workExampleCon:nth-child(n + 3) {
+	margin-top: -75px;
+}
+.workExampleConR .workExampleText {
+	order: 1;
+	text-align: right;
+	margin: 0 0 30px 20px;
+}
+.workExampleText h3 {
+	font-size: 2em;
+	font-weight: 900;
+}
+.workExampleText {
+	display: flex;
+	align-self: center;
+	align-content: center;
+	flex-direction: column;
+	width: 100%;
+	margin: 0 20px 30px 0;
+}
+.workExampleLink {
+	width: 100%;
+}
+.brushPreviewCon {
+	max-width: 600px;
+	width: 100%;
+}
+.brushPreview {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-top: 100%;
+}
+.brushBg {
+	fill: #007a90;
+	z-index: -1;
+	width: 100%;
+	transition: fill 200ms;
+}
+
+.image {
+	width: 100%;
+	transition: opacity 200ms;
+}
+.brushMaskCon img {
+	border-radius: 5%;
+	-webkit-mask-size: 100%;
+	mask-size: 100%;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+.image,
+.brushBg {
+	top: 50%;
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	height: auto;
+}
+.brushMaskCon :hover img {
+	opacity: 0.5;
+}
+.brushSplashCon .workExampleLink:hover .brushBg {
+	fill: #f05d5e;
+}
+
+@media (max-width: 1000px) {
+	.workExampleCon:nth-child(n + 3) {
+		margin-top: -25px;
+	}
+}
+
+@media (max-width: 800px) {
+	.workExampleText h3 {
+		font-size: 1.3em;
+	}
+	.workExampleCon:nth-child(n + 3) {
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.workExampleCon {
+		flex-direction: column;
+	}
+	.workExampleConR .workExampleText {
+		text-align: left;
+		margin: 0 0 20px;
+	}
+	.workExampleText {
+		margin: 0 0 20px;
+	}
+	.workExampleText {
+		order: 1;
+	}
+}
