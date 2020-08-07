@@ -7,6 +7,7 @@ import SqBrushMask from '../components/sq-brush-mask';
 import LypLeaflet from '../images/lyp/lyp-leaflet-mock-up.jpg';
 import TeslaNowIcon from '../images/teslanow-icon.jpg';
 import AberLogo from '../images/aber-inspired-logo-thumbnail.jpg';
+import SpringholmLogo from '../images/freelance-logos/springholm-wells-farm-logo-thumbnail.jpg';
 
 export default function GraphicDesign() {
 	return (
@@ -43,10 +44,18 @@ export default function GraphicDesign() {
 			>
 				<h3>Aberystwyth Univeristy</h3>
 				<p>Jan 2015 - Feb 2015</p>
-				<p>
-					Logos, posters and a mural that I designed while working as an Exhibition Co-ordinator at
-					Aberystwyth University as part of the 'AberForward' post-graduate scheme.
-				</p>
+				<p>Logos, posters and a mural that I designed while working at Aberystwyth University.</p>
+			</SqBrushMask>
+			<SqBrushMask
+				brush={'/svgs/brush-bg-4.svg'}
+				img={SpringholmLogo}
+				imgAlt="Logo for an Australian summer retreat camp"
+				linkDesc="Freelance logos"
+				dirTxtRight={true}
+			>
+				<h3>Freelance logos</h3>
+				<p>Feb 2015 - Aug 2015</p>
+				<p>Commissioned and practice logos created before I got my first full-time job in the industry.</p>
 			</SqBrushMask>
 		</Layout>
 	);
