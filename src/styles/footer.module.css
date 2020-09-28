@@ -26,6 +26,7 @@
 	text-align: center;
 	background-color: #ecf8f2;
 	color: #333333;
+	height:40px;
 }
 .footerSmallPrint p {
 	margin: 0;
@@ -37,6 +38,9 @@
 .footerSmallPrint p,
 .privPolLink {
 	color: #333333;
+	font-size: .8em;
+}
+.privPolLink {
 	font-size: 1em;
 }
 .privPolLink:hover {
