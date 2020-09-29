@@ -37,9 +37,9 @@ class Header extends Component {
 						<Link className={headerStyles.headerMenuItem} to={`/graphic-design/`}>
 							Graphic design
 						</Link>
-						<Link className={headerStyles.headerMenuItem} to={`/art/`}>
+						{/*<Link className={headerStyles.headerMenuItem} to={`/art/`}>
 							Art
-						</Link>
+							</Link>*/}
 						<Link className={headerStyles.headerMenuItem} to={`/`}>
 							Contact
 						</Link>

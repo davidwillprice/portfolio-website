@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import footerStyles from '../styles/footer.module.css';
 
+import EmailIcon from '../svgs/email-icon.svg';
+import LinkedInIcon from '../svgs/linkedin-icon.svg';
+import GitHubIcon from '../svgs/github-icon.svg';
+
 class Footer extends Component {
 	render() {
 		const currentDate = new Date();
@@ -11,13 +15,13 @@ class Footer extends Component {
 			<div className={footerStyles.footerCon}>
 				<div className={footerStyles.footerLinks}>
 					<a aria-label="Email button" href="mailto: davidwillprice@gmail.com">
-						<div className={footerStyles.footerLinkItem} />
+						<EmailIcon className={footerStyles.footerLinkItem} />
 					</a>
 					<a aria-label="LinkedIn button" href="https://www.linkedin.com/in/davidwillprice/">
-						<div className={footerStyles.footerLinkItem} />
+						<LinkedInIcon className={footerStyles.footerLinkItem} />
 					</a>
 					<a aria-label="GitHub button" href="https://github.com/davidwillprice/">
-						<div className={footerStyles.footerLinkItem} />
+						<GitHubIcon className={footerStyles.footerLinkItem} />
 					</a>
 				</div>
 				<div className={footerStyles.footerSmallPrint}>
