@@ -1,5 +1,5 @@
 .homeTitleBanCon {
-	min-height: calc(100vh - 170px);
+	min-height: calc(100vh - 155px);
 	display:flex;
 	align-items: center;
 }
@@ -52,7 +52,7 @@ margin-top:20px;
 
 @media only screen and (max-width: 600px) {
 	.homeTitleBanCon {
-		min-height: calc(100vh - 200px);
+		min-height: calc(100vh - 185px);
 	}
 	.homeTitle {
 		font-size:3em;
