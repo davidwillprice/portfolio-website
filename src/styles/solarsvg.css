@@ -2,23 +2,38 @@
 	opacity:0;
 }
 #sun-lines path {
-    animation: fadein forwards linear 1s;
-    -webkit-animation: fadein forwards linear 1s;
+    animation: fadein forwards ease-in-out 2s;
+    -webkit-animation: fadein forwards ease-in-out 2s;
+    -moz-animation: fadein forwards ease-in-out 2s;
 }
 
 #bg-light g {
-    animation: fadein forwards linear 1s;
-    -webkit-animation: fadein forwards linear 1s;
+    animation: fadein forwards ease-in-out 1s;
+    /*expand forwards linear 2s infinite*/
+    -webkit-animation: fadein forwards ease-in-out 1s;
+}
+#bg-light g path {
+    transform-origin: bottom center;
+}
+
+#bg-light g:nth-child(1) path {
+    animation: expand forwards ease-in-out 10s infinite;
+}
+#bg-light g:nth-child(2) path {
+    animation: expand forwards ease-in-out 7s infinite;
+}
+#bg-light g:nth-child(3) path {
+    animation: expand forwards ease-in-out 3s infinite;
 }
 
     @-webkit-keyframes expand {
         0% { transform: scale(1, 1); }
-        50% { transform: scale(1.1, 1.1); }
+        50% { transform: scale(1.05, 1.05); }
         100% { transform: scale(1, 1); }
     }
     @keyframes expand {
         0% { transform: scale(1, 1); }
-        50% { transform: scale(1.1, 1.1); }
+        50% { transform: scale(1.05, 1.05); }
         100% { transform: scale(1, 1); }
     }
 
@@ -27,6 +42,10 @@
         to { opacity: 1; }
     }
     @keyframes fadein {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @-moz-keyframes fadein {
         from { opacity: 0; }
         to { opacity: 1; }
     }
