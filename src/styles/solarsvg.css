@@ -1,0 +1,98 @@
+#bg-light g, #sun-lines path {
+	opacity:0;
+}
+#sun-lines path {
+    animation: fadein forwards linear 1s;
+    -webkit-animation: fadein forwards linear 1s;
+}
+
+#bg-light g {
+    animation: fadein forwards linear 1s;
+    -webkit-animation: fadein forwards linear 1s;
+}
+
+    @-webkit-keyframes expand {
+        0% { transform: scale(1, 1); }
+        50% { transform: scale(1.1, 1.1); }
+        100% { transform: scale(1, 1); }
+    }
+    @keyframes expand {
+        0% { transform: scale(1, 1); }
+        50% { transform: scale(1.1, 1.1); }
+        100% { transform: scale(1, 1); }
+    }
+
+    @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes fadein {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+
+#bg-light g:nth-child(1) {
+    animation-delay: .5s;
+}
+#bg-light g:nth-child(2) {
+    animation-delay: 1s;
+}
+#bg-light g:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+#sun-lines path:nth-child(18) {
+    animation-delay: 1.75s;
+}
+#sun-lines path:nth-child(17) {
+    animation-delay: 2s;
+}
+#sun-lines path:nth-child(16) {
+    animation-delay: 2.25s;
+}
+#sun-lines path:nth-child(15) {
+    animation-delay: 2.5s;
+}
+#sun-lines path:nth-child(14) {
+    animation-delay:2.75s;
+}
+#sun-lines path:nth-child(13) {
+    animation-delay:3s;
+}
+#sun-lines path:nth-child(12) {
+    animation-delay:3.25s;
+}
+#sun-lines path:nth-child(11) {
+    animation-delay:3.5s;
+}
+#sun-lines path:nth-child(10) {
+    animation-delay:3.75s;
+}
+#sun-lines path:nth-child(9) {
+    animation-delay:4s;
+}
+#sun-lines path:nth-child(8) {
+    animation-delay:4.25s;
+}
+#sun-lines path:nth-child(7) {
+    animation-delay:4.5s;
+}
+#sun-lines path:nth-child(6) {
+    animation-delay:4.75s;
+}
+#sun-lines path:nth-child(5) {
+    animation-delay:5s;
+}
+#sun-lines path:nth-child(4) {
+    animation-delay:5.25s;
+}
+#sun-lines path:nth-child(3) {
+    animation-delay:5.5s;
+}
+#sun-lines path:nth-child(2) {
+    animation-delay:5.75s;
+}
+#sun-lines path:nth-child(1) {
+    animation-delay:6s;
+}

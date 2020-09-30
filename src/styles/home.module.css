@@ -19,7 +19,7 @@
 	margin:auto;
 	height:50%;
 }
-.homeTitleBan img {
+.solarSVG {
 	width:70%;
 }
 .homeTitle {
@@ -35,15 +35,15 @@
 		display:flex;
 		flex-direction:column;
 	}
-	.homeTitleBan img {
+	.solarSVG {
 		width:100%;
 		margin:0 auto;
 	}
 	.homeTitleBanText {
-position:relative;
-height: auto; 
-text-align:center;
-margin-top:20px;
+		position:relative;
+		height: auto; 
+		text-align:center;
+		margin-top:20px;
 	}
 	.homeTitle {
 		font-size:4em;
