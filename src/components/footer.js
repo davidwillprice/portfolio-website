@@ -13,7 +13,7 @@ class Footer extends Component {
 
 		return (
 			<div className={footerStyles.footerCon}>
-				<div className={footerStyles.footerLinks}>
+				<div className={footerStyles.footerLinks} id="contact">
 					<a aria-label="Email button" href="mailto: davidwillprice@gmail.com">
 						<EmailIcon className={footerStyles.footerLinkItem} />
 					</a>

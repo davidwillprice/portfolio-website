@@ -40,9 +40,9 @@ class Header extends Component {
 						{/*<Link className={headerStyles.headerMenuItem} to={`/art/`}>
 							Art
 							</Link>*/}
-						<Link className={headerStyles.headerMenuItem} to={`/`}>
+						<a className={headerStyles.headerMenuItem} href="#contact" onClick={this.toggleMobMenu}>
 							Contact
-						</Link>
+						</a>
 					</div>
 				</div>
 			</div>

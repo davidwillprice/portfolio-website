@@ -20,6 +20,7 @@ html {
 	/*background-image: linear-gradient(to left, #007a90, #004061); */
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	scroll-behavior: smooth;
 }
 html,
 body {
