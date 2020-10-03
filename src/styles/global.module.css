@@ -12,7 +12,6 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	color: white;
-	outline: none;
 }
 html {
 	font-size: 20px;
@@ -69,6 +68,17 @@ h2,
 p {
 	color: #00c8b4;
 }
+
+/*Accessibility*/
+/*The default outline styling, for greatest accessibility */
+.usingKeys *:focus {
+    outline: 3px solid #F05D5E;   
+}
+  /* When mouse is detected, ALL focused elements have outline removed */
+.usingMouse *:focus {
+	outline: none;
+}
+/*End of Accessibility*/
 
 @media only screen and (max-width: 1200px) {
 	html {

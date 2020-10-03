@@ -1,16 +1,16 @@
-.homeTitleBanCon {
+.indexTitleBanCon {
 	min-height: calc(100vh - 155px);
 	display:flex;
 	align-items: center;
 }
 
-.homeTitleBan {
+.indexTitleBan {
 	width: 100%;
 	position: relative;
 	
 }
 
-.homeTitleBanText {
+.indexTitleBanText {
 	position:absolute;
 	top:0;
 	right:0;
@@ -22,16 +22,16 @@
 .solarSVG {
 	width:70%;
 }
-.homeTitle {
+.indexTitle {
 	font-size:3em;
 	padding-left:25px;
 }
-.homeSubtitle {
+.indexSubtitle {
 	font-size:1.5em;
 }
 
 @media only screen and (max-width: 900px) {
-	.homeTitleBan {
+	.indexTitleBan {
 		display:flex;
 		flex-direction:column;
 	}
@@ -39,28 +39,28 @@
 		width:100%;
 		margin:0 auto;
 	}
-	.homeTitleBanText {
+	.indexTitleBanText {
 		position:relative;
 		height: auto; 
 		text-align:center;
 		margin-top:20px;
 	}
-	.homeTitle {
+	.indexTitle {
 		font-size:4em;
 	}
 }
 
 @media only screen and (max-width: 600px) {
-	.homeTitleBanCon {
+	.indexTitleBanCon {
 		min-height: calc(100vh - 185px);
 	}
-	.homeTitle {
+	.indexTitle {
 		font-size:3em;
 	}
 }
 
 @media only screen and (max-width: 500px) {
-	.homeTitle {
+	.indexTitle {
 		font-size:2em;
 	}
 }
