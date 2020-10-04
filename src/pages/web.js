@@ -8,9 +8,11 @@ import brushConStyles from '../styles/brushcon.module.css';
 
 import BrushOne from '../svgs/brush-bg-1.svg';
 import BrushTwo from '../svgs/brush-bg-2.svg';
+import BrushThree from '../svgs/brush-bg-3.svg';
 
 import LypPropSearchDesktopImg from '../images/lyp/lyp-property-search-desktop.png';
 import BmaHpMobImg from '../images/bma/bma-hp-mob.png';
+import SwiisWhyFosterTabImg from '../images/swiis/swiis-fc-why-foster-tablet.png';
 
 export default function WebDev() {
 	return (
@@ -20,11 +22,22 @@ export default function WebDev() {
 			</TitleBanner>
 			<div className={brushConStyles.workBrushCon}>
 				<SqBrushSplash
+					brush={<BrushThree />}
+					img={SwiisWhyFosterTabImg}
+					imgAlt="Swiis Foster Care Why Foster on tablet"
+					linkDesc="Swiis international web development page"
+					linkUrl="/web/swiis/"
+				>
+					<h3>Swiis International Ltd</h3>
+					<p>Feb 2019 - Current</p>
+					<p>Full time position at parent company of Swiis Foster Care, Swiis Foster Care Scotland and Swiis Healthcare.</p>
+				</SqBrushSplash>
+				<SqBrushSplash
 					brush={<BrushOne />}
 					dirTxtRight={true}
 					img={LypPropSearchDesktopImg}
 					imgAlt="Love Your Postcode property search page on desktop"
-					linkDesc="Love Your Postcode web development"
+					linkDesc="Love Your Postcode web development page"
 					linkUrl="/web/loveyourpostcode/"
 				>
 					<h3>Love Your Postcode</h3>
@@ -35,7 +48,7 @@ export default function WebDev() {
 					brush={<BrushTwo />}
 					img={BmaHpMobImg}
 					imgAlt="Bristol Marketing Agency homepage on mobile"
-					linkDesc="Bristol Marketing Agency web design"
+					linkDesc="Bristol Marketing Agency web design page"
 					linkUrl="/web/bristol-marketing-agency/"
 				>
 					<h3>Bristol Marketing Agency</h3>

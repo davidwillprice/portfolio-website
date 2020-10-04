@@ -8,7 +8,7 @@ import brushConStyles from '../styles/brushcon.module.css';
 
 import LypLeaflet from '../images/lyp/lyp-leaflet-mock-up.jpg';
 import TeslaNowIcon from '../images/teslanow/teslanow-icon.jpg';
-import AberLogo from '../images/aber-designs/aber-inspired-logo-thumbnail.jpg';
+import AberLogo from '../images/aber-design/aber-inspired-logo-thumbnail.jpg';
 import SpringholmLogo from '../images/freelance-logos/springholm-wells-farm-logo-thumbnail.jpg';
 
 export default function GraphicDesign() {
