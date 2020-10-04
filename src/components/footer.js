@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import footerStyles from '../styles/footer.module.css';
 
-import EmailIcon from '../svgs/email-icon.svg';
-import LinkedInIcon from '../svgs/linkedin-icon.svg';
-import GitHubIcon from '../svgs/github-icon.svg';
+import EmailIcon from '../svgs/footer/email-icon.svg';
+import LinkedInIcon from '../svgs/footer/linkedin-icon.svg';
+import GitHubIcon from '../svgs/footer/github-icon.svg';
 
 class Footer extends Component {
 	render() {

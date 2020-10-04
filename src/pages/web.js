@@ -10,7 +10,7 @@ import BrushOne from '../svgs/brush-bg-1.svg';
 import BrushTwo from '../svgs/brush-bg-2.svg';
 
 import LypPropSearchDesktopImg from '../images/lyp/lyp-property-search-desktop.png';
-import BmaHpMobImg from '../images/bma-hp-mob.png';
+import BmaHpMobImg from '../images/bma/bma-hp-mob.png';
 
 export default function WebDev() {
 	return (
@@ -25,6 +25,7 @@ export default function WebDev() {
 					img={LypPropSearchDesktopImg}
 					imgAlt="Love Your Postcode property search page on desktop"
 					linkDesc="Love Your Postcode web development"
+					linkUrl="/web/loveyourpostcode/"
 				>
 					<h3>Love Your Postcode</h3>
 					<p>Aug 2015 - Feb 2019</p>
@@ -35,6 +36,7 @@ export default function WebDev() {
 					img={BmaHpMobImg}
 					imgAlt="Bristol Marketing Agency homepage on mobile"
 					linkDesc="Bristol Marketing Agency web design"
+					linkUrl="/web/bristol-marketing-agency/"
 				>
 					<h3>Bristol Marketing Agency</h3>
 					<p>Feb 2018</p>

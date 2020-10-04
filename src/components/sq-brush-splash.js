@@ -11,7 +11,7 @@ class SqBrushSplash extends Component {
 		return (
 			<div className={workExampleClasses}>
 				<div className={sqBrushStyles.workExampleText}>{this.props.children}</div>
-				<Link className={sqBrushStyles.workExampleLink} aria-label={this.props.linkDesc} to={`/`}>
+				<Link className={sqBrushStyles.workExampleLink} aria-label={this.props.linkDesc} to={this.props.linkUrl}>
 					<div className={sqBrushStyles.brushPreviewCon}>
 						<div className={sqBrushStyles.brushPreview}>
 							<img alt={this.props.imgAlt} src={this.props.img} className={sqBrushStyles.image} />
