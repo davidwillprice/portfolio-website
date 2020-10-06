@@ -52,7 +52,6 @@ export default function LypDigital() {
                 <p>This stamp duty tax calculator was my first feature created from scratch, converting the mathematic formula I had previously written out into fully functional JavaScript.</p>
             </StandardCentralText>
             */}
-
-</Layout>
+        </Layout>
     );
 }
