@@ -70,6 +70,9 @@ p,
 li {
 	color: #00c8b4;
 }
+h3 {
+	font-size:2em;
+}
 
 /*Accessibility*/
 /*The default outline styling, for greatest accessibility */
