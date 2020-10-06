@@ -1,0 +1,65 @@
+@font-face {
+	font-family: "Piccadilly";
+	src: url("../fonts/picadilly-regular.woff2") format("woff2"),
+		url("../fonts/picadilly-regular.woff") format("woff");
+}
+
+.logoCon {
+    width:49%;
+    background: linear-gradient(to bottom,rgba(29,133,155,.95) 0%,rgba(24,83,99,.9) 100%);
+    border-radius:5px;
+    display:flex;
+    flex-direction:column;
+    align-content: center;
+    justify-content: center;
+    text-align:center;
+    align-content: center;
+    padding:40px;
+    margin-bottom:20px;
+}
+.logoCon h3 {
+    color:white;
+    margin:0;
+    font-family:Piccadilly;
+    font-size: 2em;
+}
+.logo {
+    width:80%;
+    height:auto;
+    margin:0 auto 20px;
+    transform: translate(3%, 0);
+}
+
+.introCon {
+    display:flex;
+    justify-content: space-between;
+}
+.introCon ul {
+margin-bottom:0;
+}
+.introTextContin {
+    margin-top:0;
+}
+.introCon .introText {
+    width:49%;
+}
+
+@media only screen and (max-width: 800px) {
+    .logoCon h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .logoCon {
+        width:100%;
+        padding:20px;
+    }
+    .introCon {
+flex-direction:column;
+    }
+    .introCon .introText {
+width:100%;
+    }
+
+}
