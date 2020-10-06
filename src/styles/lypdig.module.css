@@ -43,6 +43,39 @@ margin-bottom:0;
 .introCon .introText {
     width:49%;
 }
+.desktopScreenshotsCon {
+    position:relative;
+}
+.desktopScreenshots {
+    padding-top:5%;
+    display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.desktopBg {
+    position: absolute;
+    left: 0;
+    width:100%;
+    z-index:-1;
+}
+.desktopScreenshot {
+    background-image:url("../images/lyp/lyp-desktop-images.jpg");
+    width: 45%;
+padding-top: 24%;
+background-size: 200%;
+box-sizing: border-box;
+display: inline-block;
+margin: 20px 2%;
+}
+.desktopScreenshot:nth-child(2) {
+    background-position: 100% 0%;
+}
+.desktopScreenshot:nth-child(3) {
+    background-position: 0% 100%;
+}
+.desktopScreenshot:nth-child(4) {
+    background-position: 100% 100%;
+}
 
 @media only screen and (max-width: 800px) {
     .logoCon h3 {
@@ -60,6 +93,18 @@ flex-direction:column;
     }
     .introCon .introText {
 width:100%;
+    }
+    .desktopBg {
+        display:none;
+    }
+    .desktopScreenshots {
+flex-direction: column;
+padding:0;
+    }
+    .desktopScreenshot {
+width:100%;
+margin:0 auto 20px;
+padding-top: 53.6%;
     }
 
 }
