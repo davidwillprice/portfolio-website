@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import globalStyles from '../styles/global.module.css';
-import Header from './header.js';
-import Footer from './footer.js';
+import globalStyles from '../../styles/global.module.css';
+import Header from './header';
+import Footer from './footer';
 
 class Layout extends Component {
 	state = {

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Layout from '../components/layout';
-import TitleBanner from '../components/title-banner';
+import Layout from '../components/layout/layout';
+import TitleBanner from '../components/layout/title-banner';
 import SqBrushSplash from '../components/sq-brush-splash';
 
-import brushConStyles from '../styles/brushcon.module.css';
+import brushConStyles from '../styles/component/brushcon.module.css';
 
 import BrushOne from '../svgs/brush-bg-1.svg';
 import BrushTwo from '../svgs/brush-bg-2.svg';

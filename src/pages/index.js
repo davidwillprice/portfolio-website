@@ -1,8 +1,8 @@
 import React from 'react';
-import Layout from '../components/layout';
+import Layout from '../components/layout/layout';
 
 import IndexStyles from '../styles/page/index.module.css';
-import SolarSVGStyles from '../styles/solarsvg.css';
+import SolarSVGStyles from '../styles/component/svg/solarsvg.css';
 
 import SolarSVG from '../svgs/solar.svg';
 

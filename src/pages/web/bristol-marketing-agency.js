@@ -1,7 +1,7 @@
 import React from 'react';
 /*import { Link } from 'gatsby';*/
-import Layout from '../../components/layout';
-import TitleBanner from '../../components/title-banner';
+import Layout from '../../components/layout/layout';
+import TitleBanner from '../../components/layout/title-banner';
 
 export default function LypDigital() {
     return (

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StandCenTexStyles from '../styles/stand-cent-tex.module.css';
+import StandCenTexStyles from '../styles/component/stand-cent-tex.module.css';
 
 class StandardCentralText extends Component {
     render() {

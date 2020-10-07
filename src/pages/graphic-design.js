@@ -1,10 +1,10 @@
 import React from 'react';
 /*import { Link } from 'gatsby';*/
-import Layout from '../components/layout';
-import TitleBanner from '../components/title-banner';
+import Layout from '../components/layout/layout';
+import TitleBanner from '../components/layout/title-banner';
 import SqBrushMask from '../components/sq-brush-mask';
 
-import brushConStyles from '../styles/brushcon.module.css';
+import brushConStyles from '../styles/component/brushcon.module.css';
 
 import LypLeaflet from '../images/lyp/lyp-leaflet-mock-up.jpg';
 import TeslaNowIcon from '../images/teslanow/teslanow-icon.jpg';
