@@ -26,7 +26,7 @@ class Footer extends Component {
 				</div>
 				<div className={footerStyles.footerSmallPrint}>
 					<p>
-						David Price © {currentYear} -{' '}
+						{/*David Price © {currentYear} -{' '}*/}
 						<Link className={footerStyles.privPolLink} to={`/privacy-policy/`} aria-label="Privacy Policy">
 							Privacy policy
 						</Link>
