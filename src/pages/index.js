@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 
-import IndexStyles from '../styles/index.module.css';
+import IndexStyles from '../styles/page/index.module.css';
 import SolarSVGStyles from '../styles/solarsvg.css';
 
 import SolarSVG from '../svgs/solar.svg';

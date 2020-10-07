@@ -1,0 +1,15 @@
+@font-face {
+	font-family: "Piccadilly";
+	src: url("../../fonts/picadilly-regular.woff2") format("woff2"),
+		url("../../fonts/picadilly-regular.woff") format("woff");
+}
+
+.logoCon {
+	background: linear-gradient(to bottom,rgba(29,133,155,.95) 0%,rgba(24,83,99,.9) 100%);
+}
+.logoSubheading { 
+	font-family:Piccadilly;
+}
+.desktopScreenshot { 
+    background-image:url("../../images/lyp/lyp-desktop-images.jpg");
+}

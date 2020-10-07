@@ -3,8 +3,8 @@ import Layout from '../../components/layout';
 import StandardCentralText from '../../components/standard-central-text'
 
 
-import LypDigStyles from '../../styles/lypdig.module.css';
-import ShowcaseStyles from '../../styles/showcasepage.module.css';
+import LypDigStyles from '../../styles/page/lypdig.module.css';
+import ShowcaseStyles from '../../styles/page/showcasepage.module.css';
 
 import LypLogo from '../../svgs/lyp-logo.svg';
 
@@ -13,12 +13,12 @@ import LypBirm from '../../images/lyp/lyp-birmingham-banner.jpg';
 export default function LypDigital() {
     return (
         <Layout>
-            <div className={LypDigStyles.introCon}>
-                <div className={LypDigStyles.logoCon}>
-                    <LypLogo className={LypDigStyles.logo} />
-                    <h3>Digital Design</h3>
+            <div className={ShowcaseStyles.introCon}>
+                <div className={ShowcaseStyles.logoCon + ' ' + LypDigStyles.logoCon}>
+                    <LypLogo className={ShowcaseStyles.logo} />
+                    <h3 className={LypDigStyles.logoSubheading}>Digital Design</h3>
                 </div>
-                <div className={LypDigStyles.introText}>
+                <div className={ShowcaseStyles.introText}>
                     <p>I worked for West Midlands based 'Love Your Postcode Estate Agents' full-time as a Web / Graphic Designer between August 2015 and February 2019.</p>
                     <p>Duties included:</p>
                     <ul>
@@ -29,7 +29,7 @@ export default function LypDigital() {
                     </ul>
                 </div>
             </div>
-            <ul className={LypDigStyles.introTextContin}>
+            <ul className={ShowcaseStyles.introTextContin}>
                 <li>
                     Working as part of a team to improve website <span className="ShowcaseStyles.highlight">SEO</span>: Building backlinks, managing Google Search Console, keyword analysis, meta titles/descriptions, header structure and other on-page optimisation;
             </li>
@@ -37,13 +37,13 @@ export default function LypDigital() {
                     <span className="ShowcaseStyles.highlight">Copywriting</span> website pages and blog content.
                 </li>
             </ul>
-            <div className={LypDigStyles.desktopScreenshotsCon} >
-                <img className={LypDigStyles.desktopBg} src={LypBirm} alt="Birmingham landscape" />
-                <div className={LypDigStyles.desktopScreenshots}>
-                    <div className={LypDigStyles.desktopScreenshot}></div>
-                    <div className={LypDigStyles.desktopScreenshot}></div>
-                    <div className={LypDigStyles.desktopScreenshot}></div>
-                    <div className={LypDigStyles.desktopScreenshot}></div>
+            <div className={ShowcaseStyles.desktopScreenshotsCon} >
+                <img className={ShowcaseStyles.desktopBg} src={LypBirm} alt="Birmingham landscape" />
+                <div className={ShowcaseStyles.desktopScreenshots}>
+                    <div className={ShowcaseStyles.desktopScreenshot + ' ' + LypDigStyles.desktopScreenshot}></div>
+                    <div className={ShowcaseStyles.desktopScreenshot + ' ' + LypDigStyles.desktopScreenshot}></div>
+                    <div className={ShowcaseStyles.desktopScreenshot + ' ' + LypDigStyles.desktopScreenshot}></div>
+                    <div className={ShowcaseStyles.desktopScreenshot + ' ' + LypDigStyles.desktopScreenshot}></div>
                 </div>
             </div>
             {/*
