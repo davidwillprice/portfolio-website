@@ -41,6 +41,12 @@ export default function SwiisDigital() {
                     </ul>
                 </li>
             </ul>
+
+            <StandardCentralText headerText="Automating training feedback">
+                <p>Foster carers regularly receive training to ensure they are best equipped for the challenges they may face.</p>
+                <p>Previously, collecting feedback for these sessions would involve handing out sheets for carers to fillout, collecting them back, then sending them to the training team who would then manually input the results into an Excel spreadsheet.</p>
+                <p>To streamline this, I recreated the forms on our website using the plugin <span className="ShowcaseStyles.highlight">Contact Form 7</span>. When users submit these forms, they are emailed to Zapier where I set up parsing of the information, allowing Zapier to input the feedback directly into Google Sheets within seconds of the form being sent.</p>
+            </StandardCentralText>
         </Layout>
     );
 }
