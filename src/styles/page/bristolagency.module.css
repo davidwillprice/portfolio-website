@@ -1,0 +1,20 @@
+.logoCon {
+    background-color: white;
+    position:relative;
+    width:100%;
+    max-width:1000px;
+    height:500px;
+    overflow:hidden;
+    display:block;
+}
+
+.logoCon svg {
+    margin:0 auto;
+    position: absolute;
+    width:100%;
+    height:auto;
+    bottom:0;
+    right:0;
+    left:0;
+    display: block
+}

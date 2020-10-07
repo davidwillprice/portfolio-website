@@ -3,12 +3,16 @@ import React from 'react';
 import Layout from '../../components/layout/layout';
 import TitleBanner from '../../components/layout/title-banner';
 
-export default function LypDigital() {
+import BrisAgencyStyles from '../../styles/page/bristolagency.module.css';
+
+import BristolLandscapeSVG from '../../svgs/bristol-landscape.svg'
+
+export default function bristolAgency() {
     return (
         <Layout>
-            <TitleBanner>
-                <h1>Graphic design</h1>
-            </TitleBanner>
+            <div className={BrisAgencyStyles.logoCon}>
+                <BristolLandscapeSVG />
+            </div>
         </Layout>
     );
 }
