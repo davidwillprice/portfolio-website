@@ -2,13 +2,22 @@
     background-color: white;
     position:relative;
     width:100%;
-    max-width:1000px;
     height:500px;
     overflow:hidden;
-    display:block;
+    display:flex;
+    border-radius: 5px;
+    align-items: flex-start;
+    text-align:center;
+    justify-content: center;
+}
+.bristolAgencyLogo {
+    width:75%;
+    max-width:500px;
+    height:auto;
+    margin-top:7%
 }
 
-.logoCon svg {
+.bristolLandscape {
     margin:0 auto;
     position: absolute;
     width:100%;
@@ -16,5 +25,27 @@
     bottom:0;
     right:0;
     left:0;
-    display: block
+    display: block;
+    transform: scale(1.01);
+}
+
+@media only screen and (max-width: 700px) {
+    .bristolAgencyLogo {
+        padding-top:30px;
+        height:auto;
+        width:90%;
+        margin-top:0;
+    }
+    .logoCon{
+        height:300px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .bristolAgencyLogo {
+        width:90%;
+    }
+    .logoCon{
+        height:220px;
+    }
 }
