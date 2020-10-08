@@ -1,0 +1,45 @@
+.bmaIcons {
+    width:100%;
+    border-radius: 5px;
+    padding:20px;
+    margin-bottom:20px;
+    background-color: white; 
+    animation-name: rotateIconsBg;
+    animation-duration: 9s;
+    animation-delay: 6s;
+    animation-iteration-count:infinite;
+}
+#icons-group1 > g {
+    opacity:0;
+    animation-name: rotateIcons;
+    animation-duration: 9s;
+    animation-iteration-count:infinite;
+}
+
+#dark-fill {
+
+}
+
+#dark-stroke {
+    animation-delay: 3s;
+}
+
+#light-stroke {
+    animation-delay: 6s;
+}
+
+@keyframes rotateIcons {
+    0% {opacity:0}
+    5% {opacity:1}
+    33% {opacity:1}
+    38% {opacity:0}
+    100% {opacity:0}
+}
+
+@keyframes rotateIconsBg {
+    0% {background-color: white}
+    5% {background-color: #48616e}
+    33% {background-color: #48616e}
+    38% {background-color: white}
+    100% {background-color: white}
+}

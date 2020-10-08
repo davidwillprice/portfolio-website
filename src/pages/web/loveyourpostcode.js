@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/layout/layout';
-import StandardCentralText from '../../components/standard-central-text'
+import StandardCentralText from '../../components/standard-central-text';
 
 
 import LypDigStyles from '../../styles/page/lypdig.module.css';
