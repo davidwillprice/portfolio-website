@@ -13,3 +13,7 @@
 .desktopScreenshot { 
     background-image:url("../../images/lyp/lyp-desktop-images.jpg");
 }
+.logo {
+	transform: translate(3%, 0);
+    margin:0 auto 20px;
+}

@@ -6,14 +6,14 @@ import StandardCentralText from '../../components/standard-central-text';
 
 import ShowcaseStyles from '../../styles/page/showcasepage.module.css';
 
-import LypLogo from '../../svgs/lyp-logo.svg';
+import SwiisLogos from '../../svgs/swiis-logos.svg'
 
 export default function SwiisDigital() {
     return (
         <Layout>
             <div className={ShowcaseStyles.introCon}>
                 <div className={ShowcaseStyles.logoCon}>
-                    <LypLogo className={ShowcaseStyles.logo} />
+                    <SwiisLogos className={ShowcaseStyles.logo} />
                 </div>
                 <div className={ShowcaseStyles.introText}>
                     <p>I am currently in a full-time position as a Web Developer & Designer at Swiis International, the parent company of Swiis Foster Care, Swiis Foster Care Scotland and Swiis Healthcare.</p>

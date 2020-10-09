@@ -18,7 +18,7 @@ export default function LypDigital() {
         <Layout>
             <div className={ShowcaseStyles.introCon}>
                 <div className={ShowcaseStyles.logoCon + ' ' + LypDigStyles.logoCon}>
-                    <LypLogo className={ShowcaseStyles.logo} />
+                    <LypLogo className={ShowcaseStyles.logo + ' ' + LypDigStyles.logo} />
                     <h3 className={LypDigStyles.logoSubheading}>Digital Design</h3>
                 </div>
                 <div className={ShowcaseStyles.introText}>
