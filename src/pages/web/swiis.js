@@ -2,9 +2,8 @@ import React from 'react';
 import Layout from '../../components/layout/layout';
 import StandardCentralText from '../../components/standard-central-text';
 
-
-
 import ShowcaseStyles from '../../styles/page/showcasepage.module.css';
+import SwiisLogosCSS from '../../styles/component/svg/swiis-logos.css';
 
 import SwiisLogos from '../../svgs/swiis-logos.svg'
 
@@ -12,7 +11,7 @@ export default function SwiisDigital() {
     return (
         <Layout>
             <div className={ShowcaseStyles.introCon}>
-                <div className={ShowcaseStyles.logoCon}>
+                <div className={ShowcaseStyles.logoCon + " SwiisLogos"}>
                     <SwiisLogos className={ShowcaseStyles.logo} />
                 </div>
                 <div className={ShowcaseStyles.introText}>
