@@ -1,12 +1,26 @@
 .titleBannerCon {
-	padding: 100px 0 0;
+	padding: 125px 0 0;
 }
 .titleBannerCon h1 {
 	text-align: center;
 }
-
+@media only screen and (max-width: 1000px) {
+	.titleBannerCon {
+		padding: 85px 0 0;
+	}
+}
 @media only screen and (max-width: 600px) {
 	.titleBannerCon {
-		padding: 70px 0 0;
+		padding: 50px 0 0;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.titleBannerCon {
+		padding: 50px 0 0;
+	}
+}
+@media only screen and (max-width: 340px) {
+	.titleBannerCon {
+		padding: 40px 0 0;
 	}
 }

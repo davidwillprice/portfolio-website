@@ -53,7 +53,6 @@ h1 {
 	font-family: 'reey', Arial;
 	font-weight: 800;
 	font-size: 5em;
-	padding-left: 10px;
 }
 h2 {
 	font-size: 2em;
@@ -104,12 +103,12 @@ h3 {
 	html {
 		font-size: 17px;
 	}
-	.contentCon {
-		padding: 80px 15px 0;
-	}
 }
 
 @media only screen and (max-width: 600px) {
+	.contentCon {
+		padding: 80px 15px 0;
+	}
 	h1 {
 		font-size: 2.4em;
 	}
@@ -125,6 +124,12 @@ h3 {
 }
 
 @media only screen and (max-width: 400px) {
+	h1 {
+		font-size: 2.2em;
+	}
+}
+
+@media only screen and (max-width: 340px) {
 	h1 {
 		font-size: 1.8em;
 	}
