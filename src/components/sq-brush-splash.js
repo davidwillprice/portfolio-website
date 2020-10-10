@@ -4,15 +4,29 @@ import sqBrushStyles from '../styles/component/sqbrush.module.css';
 import { Link } from 'gatsby';
 
 class SqBrushSplash extends Component {
+	CalcModCon = () => {
+		let classes = sqBrushStyles.workExampleCon + ' ' + sqBrushStyles.brushSplashCon;
+		if (this.props.dirTxtRight) {
+			classes += ' ' + sqBrushStyles.workExampleConR
+		}
+		return classes;
+	}
+	CalcBrushCon = () => {
+		let classes = sqBrushStyles.brushPreviewCon;
+		if (this.props.nonDesktop) {
+			classes += ' ' + sqBrushStyles.nonDesktop
+		}
+		return classes;
+	}
+
 	render() {
-		const workExampleClasses = this.props.dirTxtRight
-			? sqBrushStyles.workExampleCon + ' ' + sqBrushStyles.brushSplashCon + ' ' + sqBrushStyles.workExampleConR
-			: sqBrushStyles.workExampleCon + ' ' + sqBrushStyles.brushSplashCon;
+		let ModConClasses = this.CalcModCon();
+		let brushConClasses = this.CalcBrushCon();
 		return (
-			<div className={workExampleClasses}>
+			<div className={ModConClasses}>
 				<div className={sqBrushStyles.workExampleText}>{this.props.children}</div>
 				<Link className={sqBrushStyles.workExampleLink} aria-label={this.props.linkDesc} to={this.props.linkUrl}>
-					<div className={sqBrushStyles.brushPreviewCon}>
+					<div className={brushConClasses}>
 						<div className={sqBrushStyles.brushPreview}>
 							<img alt={this.props.imgAlt} src={this.props.img} className={sqBrushStyles.image} />
 							{React.cloneElement(this.props.brush, { className: sqBrushStyles.brushBg })}

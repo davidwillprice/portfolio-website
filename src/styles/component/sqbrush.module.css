@@ -92,6 +92,9 @@
 		text-align: left;
 		margin: 0 0 20px;
 	}
+	.nonDesktop {
+		margin-bottom:10px;
+	}
 	.workExampleText {
 		margin: 0 0 20px;
 	}

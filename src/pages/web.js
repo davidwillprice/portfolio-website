@@ -27,6 +27,7 @@ export default function WebDev() {
 					imgAlt="Swiis Foster Care Why Foster on tablet"
 					linkDesc="Swiis international web development page"
 					linkUrl="/web/swiis/"
+					nonDesktop={true}
 				>
 					<h3>Swiis International Ltd</h3>
 					<p>Feb 2019 - Current</p>
@@ -50,6 +51,7 @@ export default function WebDev() {
 					imgAlt="Bristol Marketing Agency homepage on mobile"
 					linkDesc="Bristol Marketing Agency web design page"
 					linkUrl="/web/bristol-marketing-agency/"
+					nonDesktop={true}
 				>
 					<h3>Bristol Marketing Agency</h3>
 					<p>Feb 2018</p>
