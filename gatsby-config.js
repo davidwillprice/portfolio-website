@@ -5,7 +5,7 @@ module.exports = {
 		author: `David Price`
 	},
 	plugins: [
-		{
+		/*{
 			resolve: `gatsby-plugin-google-analytics`,
 			options: {
 				// The property ID; the tracking code won't be generated without it
@@ -27,7 +27,7 @@ module.exports = {
 				siteSpeedSampleRate: 10,
 				cookieDomain: "davidwillprice.com",
 			}
-		},
+		},*/
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
