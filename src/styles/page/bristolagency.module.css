@@ -40,6 +40,69 @@
     width:49%;
 }
 
+.egServicesBg{
+    background-color:#e2dedf; 
+    width:100%;
+    border-radius: 5px;
+}
+
+.egServicesCon {
+    margin-left:45%;
+    /* transform-origin:90% 0; */
+    width:70%;
+    transform: rotate(45deg);
+    overflow:hidden;
+    transform-origin: 25% 0;
+}
+
+.egServicesCon > div {
+    background-color:white; 
+    width:19%;
+    padding-bottom:19%;
+    float:left;
+    margin:1%;
+    background-image: url('../../images/bma/services-sprites.jpg');
+    background-size:400% auto;
+    transition: opacity 0.3s;
+}
+
+.egServicesCon:hover > div:hover {
+    opacity:1;
+}
+.egServicesCon:hover > div {
+    opacity:0.5;
+}
+
+.egServicesCon > div:nth-child(1){
+    margin-left:43%;
+    clear:both;
+}
+.egServicesCon > div:nth-child(2){
+    margin-left:22%;
+    background-position:33.33% 0%;
+}
+.egServicesCon > div:nth-child(3){
+    background-position:66.66% 0%;
+}
+.egServicesCon > div:nth-child(4){
+    background-position:100% 0%;
+}
+.egServicesCon > div:nth-child(5){
+    background-position:0% 100%;
+}
+.egServicesCon > div:nth-child(6){
+    background-position:33.33% 100%;
+}
+.egServicesCon > div:nth-child(7){
+    background-position:66.66% 100%;
+}
+
+.egServicesCon > div:nth-child(8){
+    margin-left:22%;
+    background-position:100% 100%;
+}
+/* EG services CSS end */
+
 @media only screen and (max-width: 800px) {
     .iconsCon {
         flex-direction: column;
@@ -60,6 +123,16 @@
         height:300px;
     }
 }
+@media only screen and (max-width: 600px) {
+
+
+.egServicesCon {
+    margin-left:43%;
+    /* transform-origin:90% 0; */
+    width:100%;
+}
+}
+
 
 @media only screen and (max-width: 450px) {
     .bristolAgencyLogo {

@@ -59,6 +59,18 @@ export default function bristolAgency() {
                     <p>Finally, the dark stroke icons were for use on dark backgrounds.</p>
                 </div>
             </div>
+            <div class={BrisAgencyStyles.egServicesBg}>
+                <div class={BrisAgencyStyles.egServicesCon}>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
         </Layout>
     );
 }
