@@ -12,9 +12,13 @@ import IconsSVGStyles from '../../styles/component/svg/bma-icons.css';
 import BristolLandscapeSVG from '../../svgs/bristol-landscape.svg';
 import BristolAgencyLogoSVG from '../../svgs/bristol-marketing-agency-logo.svg';
 import IconsSVG from '../../svgs/bma-icons.svg';
+import BlankMobile from '../../svgs/blank-mobile.svg'
 
 import ConceptBoard from '../../images/bma/concept-board.jpg';
 import ThreeDeviceHp from '../../images/bma/homepage-multiple-devices.jpg';
+import MobileMenu from '../../images/bma/bma-mobile-menu-full.png'
+
+import mobileMenuGif from '../../images/bma/bma-mob-menu.gif'
 
 export default function bristolAgency() {
     return (
@@ -71,6 +75,22 @@ export default function bristolAgency() {
                     <div></div>
                 </div>
             </div>
-        </Layout>
+            <StandardCentralText headerText="Portfolio showcase">
+                <p>As requested in the brief, I wanted to make sure the website's portfolio showcase was particularly striking.</p>
+                <p>The diamond shape of the images are consistent with the shape of the icons.</p>
+            </StandardCentralText>
+            <div class={BrisAgencyStyles.mobMenuCon}>
+                <img src={MobileMenu} alt="Mobile menu design" />
+                <div class={BrisAgencyStyles.mobMenuGifCon}>
+                    <BlankMobile />
+                    <img src={mobileMenuGif} className={BrisAgencyStyles.mobMenuVideo} alt="GIF of the mobile menu in action" />
+                </div>
+                <div>
+                    <h3 className={BrisAgencyStyles.heading}>Seemless mobile menu</h3>
+                    <p>I created a mock up GIF showcasing tapping the mobile menu button.</p>
+                    <p>A couple of call-to-action buttons at the bottom of the mobile menu make contacting the agency simple.</p>
+                </div>
+            </div >
+        </Layout >
     );
 }

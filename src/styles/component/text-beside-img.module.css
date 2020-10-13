@@ -9,7 +9,7 @@
     width:49%;
 }
 
-img {
+.container img {
     width:49%;
     border-radius: 5px;
     margin-bottom:20px;
@@ -23,7 +23,7 @@ flex-direction:column;
         width:100%;
     }
     
-    img {
+    .container img {
         width:100%;
     }
 }
