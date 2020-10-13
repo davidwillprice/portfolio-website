@@ -80,12 +80,14 @@ export default function bristolAgency() {
                 <p>The diamond shape of the images are consistent with the shape of the icons.</p>
             </StandardCentralText>
             <div class={BrisAgencyStyles.mobMenuCon}>
-                <img src={MobileMenu} alt="Mobile menu design" />
-                <div class={BrisAgencyStyles.mobMenuGifCon}>
-                    <BlankMobile />
-                    <img src={mobileMenuGif} className={BrisAgencyStyles.mobMenuVideo} alt="GIF of the mobile menu in action" />
+                <div class={BrisAgencyStyles.mobMenuDesigns}>
+                    <img src={MobileMenu} alt="Mobile menu design" />
+                    <div class={BrisAgencyStyles.mobMenuGifCon}>
+                        <BlankMobile />
+                        <img src={mobileMenuGif} className={BrisAgencyStyles.mobMenuVideo} alt="GIF of the mobile menu in action" />
+                    </div>
                 </div>
-                <div>
+                <div class={BrisAgencyStyles.mobMenuText}>
                     <h3 className={BrisAgencyStyles.heading}>Seemless mobile menu</h3>
                     <p>I created a mock up GIF showcasing tapping the mobile menu button.</p>
                     <p>A couple of call-to-action buttons at the bottom of the mobile menu make contacting the agency simple.</p>

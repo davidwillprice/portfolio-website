@@ -45,14 +45,20 @@
     align-items: center;
     margin-bottom:30px;
 }
-.mobMenuCon > img {
-width:100%;
+.mobMenuDesigns {
+    display:flex;
+    justify-content: space-between;
+    margin-right:2%;
+    width:50%;
+}
+
+.mobMenuDesigns > img {
+width:49%;
 max-width:250px;
 }
 
 .mobMenuGifCon {
-    margin:0% 2%;
-    width:100%;
+    width:49%;
     position: relative;
     max-width:250px;
     display: flex;
@@ -60,14 +66,16 @@ max-width:250px;
 }
 .mobMenuVideo {
     width:100%;
-    margin:12% 2% 15%;
-    background-color: white;
+    padding:12% 2% 15%;
 }
 .mobMenuGifCon svg {
     right: 0;
     left: 0;
     height: 100%;
     position: absolute;
+}
+.mobMenuText {
+    width:50%;
 }
 
 .egServicesBg {
@@ -153,18 +161,27 @@ max-width:250px;
         height:300px;
     }
 }
+@media only screen and (max-width: 650px) {
+    .egServicesCon {
+        margin-left:43%;
+        /* transform-origin:90% 0; */
+        width:100%;
+    }
+    .mobMenuGifCon {
+        margin-left: 0%;
+        width:100%;
+    }
+    .mobMenuDesigns > img {
+        display:none;
+        }
+    }
+
 @media only screen and (max-width: 600px) {
 .egServicesCon {
     margin-left:43%;
     /* transform-origin:90% 0; */
     width:100%;
 }
-.mobMenuGifCon {
-    margin-left: 0%;
-}
-.mobMenuCon > img {
-    display:none;
-    }
 }
 
 
@@ -178,11 +195,14 @@ max-width:250px;
     .mobMenuGifCon {
         margin-right:0;
         max-width:200px;
-        margin-bottom:30px;
+        margin-bottom:20px;
     }
     .mobMenuCon {
         flex-direction: column;
         margin-bottom:0px;
+    }
+    .mobMenuText {
+        width:100%;
     }
     
 }
