@@ -5,6 +5,7 @@ import StandardCentralText from '../../components/standard-central-text';
 import TextBesideImg from '../../components/text-beside-img';
 import ColourPreview from '../../components/colour-preview';
 import FullWidthImage from '../../components/full-width-img';
+import FontShowcase from '../../components/font-showcase.js'
 
 import BrisAgencyStyles from '../../styles/page/bristolagency.module.css';
 import IconsSVGStyles from '../../styles/component/svg/bma-icons.css';
@@ -93,6 +94,32 @@ export default function bristolAgency() {
                     <p>A couple of call-to-action buttons at the bottom of the mobile menu make contacting the agency simple.</p>
                 </div>
             </div >
+            <FontShowcase bgColor="white" color="#48616e" fontName="Adamina Regular" fontFamily="Adamina">
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
+                </style>
+            </FontShowcase>
+            <StandardCentralText>
+                <p>For the primary font, I chose Adamina Regular as I think it best reflected the elegence, mood and feel of the images provided in the concept board.</p>
+                <p>I felt it was also important to me to pick a font that could be easily implemented through Google Fonts.</p>
+            </StandardCentralText>
+            <FontShowcase bgColor="white" color="#48616e" fontName="Source Sans Pro&nbsp;Light" fontFamily="Source Sans Pro" fontWeight="300">
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap');
+                </style>
+            </FontShowcase>
+            <StandardCentralText>
+                <p>I felt Source Pro Light would be a strong choice as a font for all UI aspects and some headers.</p>
+                <p>While being clearly readable, its light weight helps it avoid clashing with the serif font Adamina.</p>
+            </StandardCentralText>
+            <FontShowcase bgColor="white" color="#48616e" fontName="Source Sans Pro Semibold" fontFamily="Source Sans Pro" fontWeight="600">
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap');
+                </style>
+            </FontShowcase>
+            <StandardCentralText>
+                <p>Source Sans Pro Semibold was the typeface I was least sure about being the right fit for the project, but I envisioned it being used sparingly and only on Call to action buttons.</p>
+            </StandardCentralText>
         </Layout >
     );
 }

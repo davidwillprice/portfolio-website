@@ -1,0 +1,42 @@
+.container {
+    text-align:center;
+    border-radius: 5px;
+    padding:20px 20px 25px;
+    margin-bottom:20px;
+    max-width:650px;
+    margin:0 auto;
+}
+.container h4{
+    font-size: 2rem;
+    color:inherit;
+    margin:0 auto 10px;
+    font-weight:inherit;
+}
+.container hr {
+    color:inherit;
+    width:50%;
+    max-width:400px;
+    opacity:0.5;
+}
+.container p, .container span { 
+    font-family:inherit;
+    color:inherit;
+    font-size:1.5rem;
+    margin-bottom:0;
+    font-weight:inherit;
+}
+.container span {
+    display:block;
+}
+
+@media only screen and (max-width: 600px) {
+    .container h4{
+        font-size: 1.5rem;
+    }
+    .container p, .container span { 
+        font-size: 1.1rem;
+    }
+    .container span {
+        display:inline;
+    }
+}
