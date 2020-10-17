@@ -105,19 +105,13 @@ export default function bristolAgency() {
                 <p>For the primary font, I chose Adamina Regular as I think it best reflected the elegence, mood and feel of the images provided in the concept board.</p>
                 <p>I felt it was also important to me to pick a font that could be easily implemented through Google Fonts.</p>
             </StandardCentralText>
-            <FontShowcase bgColor="white" color="#48616e" fontName="Source Sans Pro&nbsp;Light" fontFamily="Source Sans Pro" fontWeight="300">
-                <style>
-                    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap');
-                </style>
+            <FontShowcase bgColor="white" color="#48616e" fontName="Source Sans Pro&nbsp;Light" fontFamily="Source Sans Pro Light">
             </FontShowcase>
             <StandardCentralText>
                 <p>I felt Source Pro Light would be a strong choice as a font for all UI aspects and some headers.</p>
                 <p>While being clearly readable, its light weight helps it avoid clashing with the serif font Adamina.</p>
             </StandardCentralText>
-            <FontShowcase bgColor="white" color="#48616e" fontName="Source Sans Pro Semibold" fontFamily="Source Sans Pro" fontWeight="600">
-                <style>
-                    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap');
-                </style>
+            <FontShowcase className={BrisAgencyStyles.test} bgColor="white" color="#48616e" fontName="Source Sans Pro Semibold" fontFamily="Source Sans Pro Semibold" >
             </FontShowcase>
             <StandardCentralText>
                 <p>Source Sans Pro Semibold was the typeface I was least sure about being the right fit for the project, but I envisioned it being used sparingly and only on Call to action buttons.</p>

@@ -1,3 +1,21 @@
+@font-face {
+	font-family: "Adamina";
+	src: url("../../fonts/picadilly-regular.woff2") format("woff2"),
+		url("../../fonts/picadilly-regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Source Sans Pro Light";
+	src: url("../../fonts/SourceSansPro-Light.woff2") format("woff2"),
+		url("../../fonts/SourceSansPro-Light.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Source Sans Pro Semibold";
+	src: url("../../fonts/SourceSansPro-SemiBold.woff2") format("woff2"),
+		url("../../fonts/SourceSansPro-SemiBold.woff") format("woff");
+}
+
 .container {
     text-align:center;
     border-radius: 5px;
