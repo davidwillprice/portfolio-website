@@ -97,9 +97,6 @@ export default function bristolAgency() {
                 </div>
             </div >
             <FontShowcase bgColor="white" color="#48616e" fontName="Adamina Regular" fontFamily="Adamina">
-                <style>
-                    @import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
-                </style>
             </FontShowcase>
             <StandardCentralText>
                 <p>For the primary font, I chose Adamina Regular as I think it best reflected the elegence, mood and feel of the images provided in the concept board.</p>
