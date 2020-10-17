@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/layout/layout';
+import SEO from '../../components/head/seo.js';
 import ColourPreview from '../../components/colour-preview';
 import FullWidthImage from '../../components/full-width-img';
 import StandardCentralText from '../../components/standard-central-text';
@@ -16,6 +17,7 @@ import FactsTab from '../../images/lyp/lyp-facts-tablet.jpg';
 export default function LypDigital() {
     return (
         <Layout>
+            <SEO title="Love Your Postcode" description="I worked for 'Love Your Postcode Estate Agents' full-time as a Web / Graphic Designer for three and a half years" />
             <div className={ShowcaseStyles.introCon}>
                 <div className={ShowcaseStyles.logoCon + ' ' + LypDigStyles.logoCon}>
                     <LypLogo className={ShowcaseStyles.logo + ' ' + LypDigStyles.logo} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../components/layout/layout';
 import StandardCentralText from '../../components/standard-central-text';
+import SEO from '../../components/head/seo.js';
 
 import ShowcaseStyles from '../../styles/page/showcasepage.module.css';
 import SwiisLogosCSS from '../../styles/component/svg/swiis-logos.css';
@@ -10,6 +11,7 @@ import SwiisLogos from '../../svgs/swiis-logos.svg'
 export default function SwiisDigital() {
     return (
         <Layout>
+            <SEO title="Swiis International" description="I am currently in a full-time position as a Web Developer & Designer at Swiis International" />
             <div className={ShowcaseStyles.introCon}>
                 <div className={ShowcaseStyles.logoCon + " SwiisLogos"}>
                     <SwiisLogos className={ShowcaseStyles.logo} />

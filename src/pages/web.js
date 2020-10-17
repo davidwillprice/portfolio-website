@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Layout from '../components/layout/layout';
+import SEO from '../components/head/seo.js';
 import TitleBanner from '../components/layout/title-banner';
 import SqBrushSplash from '../components/sq-brush-splash';
 
@@ -17,6 +18,7 @@ import SwiisWhyFosterTabImg from '../images/swiis/swiis-fc-why-foster-tablet.png
 export default function WebDev() {
 	return (
 		<Layout>
+			<SEO title="Web development" description="The different web development projects and positions I have worked in" />
 			<TitleBanner>
 				<h1>Web development</h1>
 			</TitleBanner>
