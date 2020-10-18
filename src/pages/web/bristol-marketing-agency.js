@@ -7,6 +7,7 @@ import TextBesideImg from '../../components/text-beside-img';
 import ColourPreview from '../../components/colour-preview';
 import FullWidthImage from '../../components/full-width-img';
 import FontShowcase from '../../components/font-showcase.js'
+import ColourPreviewCon from '../../components/colour-preview-con';
 
 import BrisAgencyStyles from '../../styles/page/bristolagency.module.css';
 import IconsSVGStyles from '../../styles/component/svg/bma-icons.css';
@@ -39,11 +40,12 @@ export default function bristolAgency() {
                 <p>I decided my first step should be to choose a colour scheme and using the concept board as a guide, I settled on the below four colours in addition to a heavy use of white.</p>
                 <p>I chose colours which I felt matched well with the company brand values included in the brief: Authentic - Engaged - Accountable.</p>
             </TextBesideImg>
-            <ColourPreview hexColour="#48616e" rgbColour="72, 97, 110" textColour="white" />
-            <ColourPreview hexColour="#949887" rgbColour="148, 152, 135" textColour="white" />
-            <ColourPreview hexColour="#dfe0d2" rgbColour="223, 224, 210" textColour="#48616e" />
-            <ColourPreview hexColour="#e2dedf" rgbColour="226, 222, 223" textColour="#48616e" />
-            <br></br>
+            <ColourPreviewCon>
+                <ColourPreview hexColour="#48616e" rgbColour="72, 97, 110" textColour="white" />
+                <ColourPreview hexColour="#949887" rgbColour="148, 152, 135" textColour="white" />
+                <ColourPreview hexColour="#dfe0d2" rgbColour="223, 224, 210" textColour="#48616e" />
+                <ColourPreview hexColour="#e2dedf" rgbColour="226, 222, 223" textColour="#48616e" />
+            </ColourPreviewCon>
             <FullWidthImage img={ThreeDeviceHp} imgAlt="Homepage design previews on desktop, tablet and mobile" />
 
             <StandardCentralText headerText="A simple but striking homepage">

@@ -4,7 +4,7 @@ import SEO from '../../components/head/seo.js';
 import ColourPreview from '../../components/colour-preview';
 import FullWidthImage from '../../components/full-width-img';
 import StandardCentralText from '../../components/standard-central-text';
-
+import ColourPreviewCon from '../../components/colour-preview-con'
 
 import LypDigStyles from '../../styles/page/lypdig.module.css';
 import ShowcaseStyles from '../../styles/page/showcasepage.module.css';
@@ -66,10 +66,12 @@ export default function LypDigital() {
                 <p>This stamp duty tax calculator was my first feature created from scratch, converting the mathematic formula I had previously written out into fully functional JavaScript.</p>
             </StandardCentralText>
             */}
-            <ColourPreview hexColour="#1D859B" rgbColour="29, 133, 155" textColour="white" />
-            <ColourPreview hexColour="#185363" rgbColour="24, 83, 99" textColour="white" />
-            <ColourPreview hexColour="#EC1868" rgbColour="236, 24, 104" textColour="white" />
-            <ColourPreview hexColour="#505050" rgbColour="80, 80, 80" textColour="white" />
+            <ColourPreviewCon>
+                <ColourPreview hexColour="#1D859B" rgbColour="29, 133, 155" textColour="white" />
+                <ColourPreview hexColour="#185363" rgbColour="24, 83, 99" textColour="white" />
+                <ColourPreview hexColour="#EC1868" rgbColour="236, 24, 104" textColour="white" />
+                <ColourPreview hexColour="#505050" rgbColour="80, 80, 80" textColour="white" />
+            </ColourPreviewCon>
         </Layout>
     );
 }
