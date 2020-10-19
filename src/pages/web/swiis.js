@@ -4,7 +4,7 @@ import StandardCentralText from '../../components/standard-central-text';
 import SEO from '../../components/head/seo.js';
 
 import ShowcaseStyles from '../../styles/page/showcasepage.module.css';
-import SwiisLogosCSS from '../../styles/component/svg/swiis-logos.css';
+/* eslint-disable */import SwiisLogosCSS from '../../styles/component/svg/swiis-logos.css';/* eslint-enable */
 
 import SwiisLogos from '../../svgs/swiis-logos.svg'
 

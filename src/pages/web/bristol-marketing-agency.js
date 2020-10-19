@@ -10,7 +10,7 @@ import FontShowcase from '../../components/font-showcase.js'
 import ColourPreviewCon from '../../components/colour-preview-con';
 
 import BrisAgencyStyles from '../../styles/page/bristolagency.module.css';
-import IconsSVGStyles from '../../styles/component/svg/bma-icons.css';
+/* eslint-disable */import IconsSVGStyles from '../../styles/component/svg/bma-icons.css';/* eslint-enable */
 
 import BristolLandscapeSVG from '../../svgs/bristol-landscape.svg';
 import BristolAgencyLogoSVG from '../../svgs/bristol-marketing-agency-logo.svg';

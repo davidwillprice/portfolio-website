@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout/layout';
 
 import IndexStyles from '../styles/page/index.module.css';
-import SolarSVGStyles from '../styles/component/svg/solarsvg.css';
+/* eslint-disable */import SolarSVGStyles from '../styles/component/svg/solarsvg.css';/* eslint-enable */
 import SEO from '../components/head/seo.js';
 
 import SolarSVG from '../svgs/solar.svg';
