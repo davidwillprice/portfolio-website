@@ -11,9 +11,11 @@ class Layout extends Component {
 	usingMouseFn = () => {
 		this.setState({ usingMouse: true });
 	}
-	//Using keyboard, updating state
-	usingKeysFn = () => {
-		this.setState({ usingMouse: false });
+	//If tab has been pressed, update state
+	usingKeysFn = (e) => {
+		if (e.key === "Tab") {
+			this.setState({ usingMouse: false });
+		}
 	}
 
 	componentDidMount() {
