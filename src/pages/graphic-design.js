@@ -5,10 +5,10 @@ import TitleBanner from '../components/layout/title-banner';
 import SqBrushMask from '../components/sq-brush-mask';
 
 import brushConStyles from '../styles/component/brushcon.module.css';
-
+/*
 import LypLeaflet from '../images/lyp/lyp-leaflet-mock-up.jpg';
 import TeslaNowIcon from '../images/teslanow/teslanow-icon.jpg';
-import AberLogo from '../images/aber-design/aber-inspired-logo-thumbnail.jpg';
+import AberLogo from '../images/aber-design/aber-inspired-logo-thumbnail.jpg'; */
 import SpringholmLogo from '../images/freelance-logos/springholm-wells-farm-logo-thumbnail.jpg';
 
 export default function GraphicDesign() {
@@ -18,6 +18,7 @@ export default function GraphicDesign() {
 				<h1>Graphic design</h1>
 			</TitleBanner>
 			<div className={brushConStyles.workBrushCon}>
+				{/*
 				<SqBrushMask
 					brush={'/svgs/brush-bg-2.svg'}
 					img={LypLeaflet}
