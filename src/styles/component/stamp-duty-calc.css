@@ -149,7 +149,7 @@ user-select: none;
     display: block;
 }
 .stamp_buyer_type .checkmark:after {
-    left: 9px;
+    left: 8px;
     top: 3px;
     width: 5px;
     height: 10px;
