@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
+//import { Link } from 'gatsby';
 import footerStyles from '../../styles/component/layout/footer.module.css';
 
 import EmailIcon from '../../svgs/footer/email-icon.svg';
@@ -8,8 +8,8 @@ import GitHubIcon from '../../svgs/footer/github-icon.svg';
 
 class Footer extends Component {
 	render() {
-		const currentDate = new Date();
-		const currentYear = currentDate.getFullYear();
+		//const currentDate = new Date();
+		//const currentYear = currentDate.getFullYear();
 
 		return (
 			<div className={footerStyles.footerCon}>
