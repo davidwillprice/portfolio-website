@@ -146,7 +146,7 @@ class StampDutyCalc extends Component {
                         <div class="input-container">
                             <div class="cost-container">
                                 <div class="pound_box border-box">£</div>
-                                <input type="text" inputmode="numeric" pattern="[0-9]*" defaultValue="200000" name="costofhouse" id="costofhouse" placeholder="Cost of house" onChange={calcInit} />
+                                <input type="text" inputMode="numeric" pattern="[0-9]*" defaultValue="200000" name="costofhouse" id="costofhouse" placeholder="Cost of house" onChange={calcInit} />
                             </div>
                             <div class="error-message-con hide" id="error-message-con">
                                 <div class="error-message" id="error-message">
