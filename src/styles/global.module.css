@@ -76,7 +76,7 @@ h3 {
 
 /*Accessibility*/
 /*The default outline styling, for greatest accessibility */
-.usingKeys *:focus {
+.usingKeys *:focus, .usingKeys *:focus ~ span {
     outline: 3px solid #F05D5E;   
 }
   /* When mouse is detected, ALL focused elements have outline removed */

@@ -127,9 +127,6 @@ user-select: none;
 }
 .stamp_checkbox input:checked ~ .checkmark {
     background-color: #59585a;
-  }
-.stamp_checkbox input:focus ~ .checkmark {
-    outline: 3px solid #F05D5E;
 }
 .stamp_buyer_type .checkmark {
     position: absolute;
