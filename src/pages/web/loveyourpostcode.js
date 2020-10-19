@@ -4,7 +4,8 @@ import SEO from '../../components/head/seo.js';
 import ColourPreview from '../../components/colour-preview';
 import FullWidthImage from '../../components/full-width-img';
 import StandardCentralText from '../../components/standard-central-text';
-import ColourPreviewCon from '../../components/colour-preview-con'
+import ColourPreviewCon from '../../components/colour-preview-con';
+import StampDutyCalc from '../../components/stamp-duty-calc.js'
 
 import LypDigStyles from '../../styles/page/lypdig.module.css';
 import ShowcaseStyles from '../../styles/page/showcasepage.module.css';
@@ -72,6 +73,7 @@ export default function LypDigital() {
                 <ColourPreview hexColour="#EC1868" rgbColour="236, 24, 104" textColour="white" />
                 <ColourPreview hexColour="#505050" rgbColour="80, 80, 80" textColour="white" />
             </ColourPreviewCon>
+            <StampDutyCalc></StampDutyCalc>
         </Layout>
     );
 }
