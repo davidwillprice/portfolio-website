@@ -50,11 +50,13 @@ export default function GraphicDesign() {
 					<p>Jan 2015 - Feb 2015</p>
 					<p>Logos, posters and a mural that I designed while working at Aberystwyth University.</p>
 				</SqBrushMask>
+				*/}
 				<SqBrushMask
 					brush={'/svgs/brush-bg-4.svg'}
 					img={SpringholmLogo}
 					imgAlt="Logo for an Australian summer retreat camp"
 					linkDesc="Freelance logos"
+					linkUrl="/graphic-design/freelance-logos/"
 					dirTxtRight={true}
 				>
 					<h3>Freelance logos</h3>
