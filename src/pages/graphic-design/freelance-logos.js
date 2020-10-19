@@ -12,7 +12,7 @@ import Springholm from '../../images/freelance-logos/springholm-wells-farm.jpg';
 import TheComInsu from '../../images/freelance-logos/the-commercial-insurance-broker.png';
 import Waga from '../../images/freelance-logos/wagamama-logo.jpg';
 
-export default function bristolAgency() {
+export default function FreelanceLogo() {
     return (
         <Layout>
             <SEO title="Freelance logos" description="Commissioned and practice logos created before I got my first full-time job in the industry." />
