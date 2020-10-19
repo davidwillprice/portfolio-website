@@ -7,8 +7,8 @@ import SqBrushMask from '../components/sq-brush-mask';
 import brushConStyles from '../styles/component/brushcon.module.css';
 /*
 import LypLeaflet from '../images/lyp/lyp-leaflet-mock-up.jpg';
-import TeslaNowIcon from '../images/teslanow/teslanow-icon.jpg';
-import AberLogo from '../images/aber-design/aber-inspired-logo-thumbnail.jpg'; */
+import TeslaNowIcon from '../images/teslanow/teslanow-icon.jpg';*/
+import AberLogo from '../images/aber-design/aber-inspired-logo-thumbnail.jpg';
 import SpringholmLogo from '../images/freelance-logos/springholm-wells-farm-logo-thumbnail.jpg';
 
 export default function GraphicDesign() {
@@ -39,18 +39,19 @@ export default function GraphicDesign() {
 					<h3>TESLANOW</h3>
 					<p>Jun 2015</p>
 					<p>Icon, app and website design for a company through freelancer.com.</p>
-				</SqBrushMask>
+				</SqBrushMask>*/}
 				<SqBrushMask
 					brush={'/svgs/brush-bg-3.svg'}
 					img={AberLogo}
 					imgAlt="Aberystwyth Inspired logo"
 					linkDesc="Aberystwyth university graphic design"
+					linkUrl="/graphic-design/aberystwyth-university/"
 				>
 					<h3>Aberystwyth Univeristy</h3>
 					<p>Jan 2015 - Feb 2015</p>
 					<p>Logos, posters and a mural that I designed while working at Aberystwyth University.</p>
 				</SqBrushMask>
-				*/}
+
 				<SqBrushMask
 					brush={'/svgs/brush-bg-4.svg'}
 					img={SpringholmLogo}
