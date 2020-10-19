@@ -74,6 +74,11 @@ export default function LypDigital() {
                 <ColourPreview hexColour="#505050" rgbColour="80, 80, 80" textColour="white" />
             </ColourPreviewCon>
             <StampDutyCalc></StampDutyCalc>
+            <StandardCentralText headerText="My first JavaScript project">
+                <p>In 2016, I was asked to create a calculator for the website that would allow users to input the cost of a property and return the amount of Stamp Duty Tax it would require to buy. This could change depending on if the user was a first-time buyer, buying a second property or neither.</p>
+                <p>As I didn't know JavaScript at the time, I worked out the values for each taxband cell using mathematic formula and then my JavaScript/PHP developer colleague translated those workings into a finished calculator.</p>
+                <p>As I started to learn JavaScript in October 2018, I challenged myself to re-code the calculator myself, using only my own formula.</p>
+            </StandardCentralText>
         </Layout>
     );
 }
