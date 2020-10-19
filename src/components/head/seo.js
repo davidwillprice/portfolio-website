@@ -24,7 +24,7 @@ const SEO = ({ title, description, image, article }) => {
 	}
 
 	return (
-		<Helmet title={seo.title} titleTemplate={seo.title == "David Price Web Design" ? "" : titleTemplate}>
+		<Helmet title={seo.title} titleTemplate={seo.title === "David Price Web Design" ? "" : titleTemplate}>
 			<meta name="description" content={seo.description} />
 			<meta name="image" content={seo.image} />
 

@@ -12,14 +12,14 @@ class StampDutyCalc extends Component {
 
         function firstTimeBuyer() {
             //First time buyer is clicked - If ticking, untick second property box - Run calc either way
-            if (document.getElementById("firstTime").checked == true) {
+            if (document.getElementById("firstTime").checked === true) {
                 document.getElementById("secondProp").checked = false;
             }
             calcInit();
         }
         function secondPropBuyer() {
             //Second Property is clicked - If ticking, untick first property box - Run calc either way 
-            if (document.getElementById("secondProp").checked == true) {
+            if (document.getElementById("secondProp").checked === true) {
                 document.getElementById("firstTime").checked = false;
             }
             calcInit();
@@ -42,9 +42,9 @@ class StampDutyCalc extends Component {
 
         function getBuyerType() {
             //Calculate button is clicked. Run calcutions depending on buyer type
-            if (document.getElementById("firstTime").checked == true) {
+            if (document.getElementById("firstTime").checked === true) {
                 return firstBuyer;
-            } else if (document.getElementById("secondProp").checked == true) {
+            } else if (document.getElementById("secondProp").checked === true) {
                 return secBuyer;
             } else {
                 return standBuyer;
@@ -67,7 +67,7 @@ class StampDutyCalc extends Component {
                 //If it's the first calc, show the calc table
                 error = false;
                 toggleUICalcTable();
-            } else if (error == true) {
+            } else if (error === true) {
                 //If the last house price was an error, show the calc table and hide the error message
                 error = false;
                 toggleUIError();
@@ -81,7 +81,7 @@ class StampDutyCalc extends Component {
                 //If it's the first calc, show the error message
                 error = true;
                 toggleUIError();
-            } else if (error == false) {
+            } else if (error === false) {
                 //If the last house price was valid, hide the calc table and show the error message
                 error = true;
                 toggleUIError();
