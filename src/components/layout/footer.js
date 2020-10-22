@@ -12,7 +12,7 @@ class Footer extends Component {
 		//const currentYear = currentDate.getFullYear();
 
 		return (
-			<div className={footerStyles.footerCon}>
+			<footer className={footerStyles.footerCon}>
 				<div className={footerStyles.footerLinks} id="contact">
 					<a aria-label="Email button" href="mailto: davidwillprice@gmail.com">
 						<EmailIcon className={footerStyles.footerLinkItem} />
@@ -34,7 +34,7 @@ class Footer extends Component {
 					</p>
 				</div>
 				*/}
-			</div>
+			</footer>
 		);
 	}
 }

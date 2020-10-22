@@ -32,7 +32,7 @@ class Layout extends Component {
 		return (
 			<div className={globalStyles.pageCon + ' ' + navType}>
 				<Header />
-				<div className={globalStyles.contentCon}>{this.props.children}</div>
+				<main className={globalStyles.contentCon}>{this.props.children}</main>
 				<Footer />
 			</div>
 		);

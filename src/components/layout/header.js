@@ -19,7 +19,7 @@ class Header extends Component {
 
 		return (
 			<div className={headerStyles.headerCon}>
-				<div className={headerStyles.header + headerExpClass}>
+				<header className={headerStyles.header + headerExpClass}>
 					<Link aria-label="David Price Logo" to={`/`}>
 						<Logo className={headerStyles.headerLogo} />
 					</Link>
@@ -44,7 +44,7 @@ class Header extends Component {
 							Contact
 						</a>
 					</div>
-				</div>
+				</header>
 			</div >
 		);
 	}
