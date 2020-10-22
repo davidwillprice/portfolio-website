@@ -1,0 +1,23 @@
+.container {
+    width:100%;
+    position:relative;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom:10px;
+    display:flex;
+}
+.container img {
+    width:100%;
+}
+.container img:first-child {
+    position: absolute;
+    height:100%;
+    animation: fade forwards ease-in-out 8s infinite;
+}
+@keyframes fade {
+    0% { opacity: 0; }
+    30% { opacity: 0; }
+    40% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
