@@ -1,8 +1,9 @@
 import React from 'react';
 /*import { Link } from 'gatsby';*/
 import Layout from '../components/layout/layout';
-import TitleBanner from '../components/layout/title-banner';
+import SEO from '../components/head/seo';
 import SqBrushMask from '../components/sq-brush-mask';
+import TitleBanner from '../components/layout/title-banner';
 
 import brushConStyles from '../styles/component/brushcon.module.css';
 /*
@@ -14,6 +15,7 @@ import SpringholmLogo from '../images/freelance-logos/springholm-wells-farm-logo
 export default function GraphicDesign() {
 	return (
 		<Layout>
+			<SEO title="Graphic design" description="Showcase of the graphic design different projects I have worked on" />
 			<TitleBanner>
 				<h1>Graphic design</h1>
 			</TitleBanner>
