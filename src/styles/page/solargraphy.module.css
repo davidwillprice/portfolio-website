@@ -1,0 +1,25 @@
+.dualImages {
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dualImages > div {
+    width:49%;
+}
+.dualImages > div > img {
+    width:100%;
+    border-radius: 5px;
+}
+
+@media (max-width:600px) {
+    .dualImages {
+        flex-direction:column;
+    }
+    .dualImages > div { 
+        width:100%;
+    }
+    .dualImages > div > img {
+        margin-bottom:10px;
+    }
+}
