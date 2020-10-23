@@ -1,4 +1,4 @@
-
+<img src="/src/images/homepage-screenshot.png" align="right" />
 <h1 align="center">
 Portfolio website
 </h1>
