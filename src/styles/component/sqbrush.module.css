@@ -1,14 +1,15 @@
 .workExampleCon {
 	width: 100%;
 	display: flex;
-}
-.workExampleCon:nth-child(n + 3) {
 	margin-top: -75px;
+}
+.workExampleCon:first-child {
+	margin-top: 0px;
 }
 .workExampleConR .workExampleText {
 	order: 1;
 	text-align: right;
-	margin: 0 0 30px 20px;
+	margin: 0 0 0 20px;
 }
 .workExampleText h3 {
 	font-size: 2em;
@@ -20,10 +21,10 @@
 	align-content: center;
 	flex-direction: column;
 	width: 100%;
-	margin: 0 20px 30px 0;
+	margin: 0 20px 0 0;
 }
 .workExampleLink {
-	width: 100%;
+	width: 75%;
 }
 .brushPreviewCon {
 	max-width: 600px;
@@ -70,8 +71,11 @@
 }
 
 @media (max-width: 1000px) {
-	.workExampleCon:nth-child(n + 3) {
+	.workExampleCon {
 		margin-top: -25px;
+	}
+	.workExampleLink {
+		width: 100%;
 	}
 }
 
@@ -79,7 +83,7 @@
 	.workExampleText h3 {
 		font-size: 1.3em;
 	}
-	.workExampleCon:nth-child(n + 3) {
+	.workExampleCon {
 		margin-top: 0;
 	}
 }
