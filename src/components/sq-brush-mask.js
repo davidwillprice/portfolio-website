@@ -18,7 +18,7 @@ class SqBrushMask extends Component {
 								alt={this.props.imgAlt}
 								src={this.props.img}
 								className={sqBrushStyles.image}
-								style={{ maskImage: 'url(' + this.props.brush + ')', maskSize: '100%' }}
+								style={{ maskImage: 'url(' + this.props.brush + ')', maskSize: '100%', WebkitMaskImage: 'url(' + this.props.brush + ')' }}
 							/>
 						</div>
 					</div>
