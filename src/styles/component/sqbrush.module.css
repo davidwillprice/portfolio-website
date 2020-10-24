@@ -35,6 +35,7 @@
 	width: 100%;
 	height: 100%;
 	padding-top: 100%;
+	z-index: -1;
 }
 .brushBg {
 	fill: #007a90;
