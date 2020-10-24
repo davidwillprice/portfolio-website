@@ -50,7 +50,7 @@ export default function GraphicDesign() {
 					linkDesc="Aberystwyth university graphic design"
 					linkUrl="/graphic-design/aberystwyth-university/"
 				>
-					<h3>Aberystwyth Univeristy</h3>
+					<h3>Aberystwyth University</h3>
 					<p>Jan 2015 - Feb 2015</p>
 					<p>Logos, posters and a mural that I designed while working at Aberystwyth University.</p>
 				</SqBrushMask>
