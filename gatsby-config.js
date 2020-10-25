@@ -5,9 +5,11 @@ module.exports = {
 		description: `Portfolio website for a Bristol based web developer & designer`,
 		author: `David Price`,
 		image: '/src/images/icon.png',
+		siteUrl: "https://www.davidwillprice.com",
 		url: "https://www.davidwillprice.com"
 	},
 	plugins: [
+		`gatsby-plugin-sitemap`,
 		/*{
 			resolve: `gatsby-plugin-google-analytics`,
 			options: {
