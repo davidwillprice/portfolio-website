@@ -1,15 +1,8 @@
-.indexTitleBanCon {
-	min-height: calc(100vh - 120px);
-	display:flex;
-	align-items: center;
-}
-
 .indexTitleBan {
 	width: 100%;
 	position: relative;
 	
 }
-
 .indexTitleBanText {
 	position:absolute;
 	top:0;
@@ -51,9 +44,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-	.indexTitleBanCon {
-		min-height: calc(100vh - 145px);
-	}
 	.indexTitle {
 		font-size:3em;
 	}

@@ -1,0 +1,16 @@
+.fullHeightCon {
+	min-height: calc(100vh - 120px);
+	display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.fullHeight {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+@media only screen and (max-width: 600px) {
+	.fullHeightCon {
+		min-height: calc(100vh - 145px);
+	}
+}
