@@ -17,7 +17,7 @@ export default function Art() {
 			</TitleBanner>
 			<div className={brushConStyles.workBrushCon}>
 				<SqBrushMask
-					brush={'/svgs/brush-bg-3.svg'}
+					brush={'/svgs/brush-bg-5.svg'}
 					img={Solargraphy}
 					imgAlt="Solargraphy image"
 					linkDesc="Solargraphy page"
