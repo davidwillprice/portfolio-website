@@ -1,7 +1,7 @@
 .workExampleCon {
 	width: 100%;
 	display: flex;
-	margin-top: -75px;
+	margin-top: -50px;
 }
 .workExampleCon:first-child {
 	margin-top: 0px;
