@@ -1,6 +1,8 @@
 import React from 'react';
 
+import Button from '../components/button';
 import Layout from '../components/layout/layout';
+import { Link } from 'gatsby';
 import SEO from '../components/head/seo.js';
 import TitleBanner from '../components/layout/title-banner';
 import SqBrushSplash from '../components/sq-brush-splash';
@@ -34,6 +36,9 @@ export default function WebDev() {
 					<h3>Swiis International Ltd</h3>
 					<p>Feb 2019 - Current</p>
 					<p>Full time position at parent company of Swiis Foster Care, Swiis Foster Care Scotland and Swiis Healthcare.</p>
+					<Link to={`/web/swiis/`}>
+						<Button btnText="Swiis International" />
+					</Link>
 				</SqBrushSplash>
 				<SqBrushSplash
 					brush={<BrushOne />}
@@ -46,6 +51,9 @@ export default function WebDev() {
 					<h3>Love Your Postcode</h3>
 					<p>Aug 2015 - Feb 2019</p>
 					<p>Full time position at Birmingham estate agent Love Your Postcode.</p>
+					<Link to={`/web/loveyourpostcode/`}>
+						<Button btnText="Love Your Postcode" />
+					</Link>
 				</SqBrushSplash>
 				<SqBrushSplash
 					brush={<BrushTwo />}
@@ -57,10 +65,10 @@ export default function WebDev() {
 				>
 					<h3>Bristol Marketing Agency</h3>
 					<p>Feb 2018</p>
-					<p>
-						Website redesign over a weekend as part of the job application process for a Bristol based marketing
-						agency.
-				</p>
+					<p>Website redesign over a weekend as part of the job application process for a Bristol based marketing agency.</p>
+					<Link to={`/web/bristol-marketing-agency/`}>
+						<Button btnText="Bristol Marketing Agency" />
+					</Link>
 				</SqBrushSplash>
 			</div>
 		</Layout>

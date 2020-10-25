@@ -1,5 +1,6 @@
 import React from 'react';
-/*import { Link } from 'gatsby';*/
+import { Link } from 'gatsby';
+import Button from '../components/button';
 import Layout from '../components/layout/layout';
 import SEO from '../components/head/seo';
 import SqBrushMask from '../components/sq-brush-mask';
@@ -42,6 +43,9 @@ export default function GraphicDesign() {
 					<h3>TESLANOW</h3>
 					<p>Jun 2015</p>
 					<p>Icon, app and website design for a company through freelancer.com.</p>
+					<Link to={`/graphic-design/teslanow/`}>
+						<Button btnText="TESLANOW" />
+					</Link>
 				</SqBrushMask>
 				<SqBrushMask
 					brush={'/svgs/brush-bg-3.svg'}
@@ -53,6 +57,9 @@ export default function GraphicDesign() {
 					<h3>Aberystwyth University</h3>
 					<p>Jan 2015 - Feb 2015</p>
 					<p>Logos, posters and a mural that I designed while working at Aberystwyth University.</p>
+					<Link to={`/graphic-design/aberystwyth-university/`}>
+						<Button btnText="Aberystwyth University" />
+					</Link>
 				</SqBrushMask>
 
 				<SqBrushMask
@@ -66,6 +73,9 @@ export default function GraphicDesign() {
 					<h3>Freelance logos</h3>
 					<p>Feb 2015 - Aug 2015</p>
 					<p>Commissioned and practice logos created before I got my first full-time job in the industry.</p>
+					<Link to={`/graphic-design/freelance-logos/`}>
+						<Button btnText="Freelance logos" />
+					</Link>
 				</SqBrushMask>
 			</div>
 		</Layout>

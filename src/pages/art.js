@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'gatsby';
+import Button from '../components/button';
 import Layout from '../components/layout/layout';
 import SEO from '../components/head/seo';
 import SqBrushMask from '../components/sq-brush-mask';
@@ -26,6 +28,9 @@ export default function Art() {
 					<h3>Solargraphy</h3>
 					<p>Apr 2012 - Jun 2014</p>
 					<p>Pinhole photography aimed at the sky to capture the path of the sun each day.</p>
+					<Link to={`/art/solargraphy/`}>
+						<Button btnText="Solargraphy" />
+					</Link>
 				</SqBrushMask>
 			</div>
 		</Layout>
