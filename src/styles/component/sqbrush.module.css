@@ -9,19 +9,16 @@
 .workExampleConR .workExampleText {
 	order: 1;
 	text-align: right;
-	margin: 0 0 0 20px;
+	margin: 30px 0 30px 20px;
 }
 .workExampleText h3 {
 	font-size: 2em;
 	font-weight: 900;
 }
 .workExampleText {
-	display: flex;
 	align-self: center;
-	align-content: center;
-	flex-direction: column;
 	width: 100%;
-	margin: 0 20px 0 0;
+	margin: 30px 20px 30px 0;
 }
 .workExampleLink {
 	width: 75%;
@@ -95,13 +92,13 @@
 	}
 	.workExampleConR .workExampleText {
 		text-align: left;
-		margin: 0 0 20px;
+		margin: 0 0 30px;
 	}
 	.nonDesktop {
 		margin-bottom:10px;
 	}
 	.workExampleText {
-		margin: 0 0 20px;
+		margin: 0 0 30px;
 	}
 	.workExampleText {
 		order: 1;
