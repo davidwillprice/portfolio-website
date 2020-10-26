@@ -37,7 +37,7 @@ export default function WebDev() {
 					<p>Feb 2019 - Current</p>
 					<p>Full time position at parent company of Swiis Foster Care, Swiis Foster Care Scotland and Swiis Healthcare.</p>
 					<Link to={`/web/swiis/`}>
-						<Button btnText="Swiis International" />
+						<Button btnText="Learn More" />
 					</Link>
 				</SqBrushSplash>
 				<SqBrushSplash
@@ -52,7 +52,7 @@ export default function WebDev() {
 					<p>Aug 2015 - Feb 2019</p>
 					<p>Full time position at Birmingham estate agent Love Your Postcode.</p>
 					<Link to={`/web/loveyourpostcode/`}>
-						<Button btnText="Love Your Postcode" />
+						<Button btnText="Learn More" />
 					</Link>
 				</SqBrushSplash>
 				<SqBrushSplash
@@ -67,7 +67,7 @@ export default function WebDev() {
 					<p>Feb 2018</p>
 					<p>Website redesign over a weekend as part of the job application process for a Bristol based marketing agency.</p>
 					<Link to={`/web/bristol-marketing-agency/`}>
-						<Button btnText="Bristol Marketing Agency" />
+						<Button btnText="Learn More" />
 					</Link>
 				</SqBrushSplash>
 			</div>

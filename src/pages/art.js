@@ -29,7 +29,7 @@ export default function Art() {
 					<p>Apr 2012 - Jun 2014</p>
 					<p>Pinhole photography aimed at the sky to capture the path of the sun each day.</p>
 					<Link to={`/art/solargraphy/`}>
-						<Button btnText="Solargraphy" />
+						<Button btnText="Learn More" />
 					</Link>
 				</SqBrushMask>
 			</div>

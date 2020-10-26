@@ -44,7 +44,7 @@ export default function GraphicDesign() {
 					<p>Jun 2015</p>
 					<p>Icon, app and website design for a company through freelancer.com.</p>
 					<Link to={`/graphic-design/teslanow/`}>
-						<Button btnText="TESLANOW" />
+						<Button btnText="Learn More" />
 					</Link>
 				</SqBrushMask>
 				<SqBrushMask
@@ -58,7 +58,7 @@ export default function GraphicDesign() {
 					<p>Jan 2015 - Feb 2015</p>
 					<p>Logos, posters and a mural that I designed while working at Aberystwyth University.</p>
 					<Link to={`/graphic-design/aberystwyth-university/`}>
-						<Button btnText="Aberystwyth University" />
+						<Button btnText="Learn More" />
 					</Link>
 				</SqBrushMask>
 
@@ -74,7 +74,7 @@ export default function GraphicDesign() {
 					<p>Feb 2015 - Aug 2015</p>
 					<p>Commissioned and practice logos created before I got my first full-time job in the industry.</p>
 					<Link to={`/graphic-design/freelance-logos/`}>
-						<Button btnText="Freelance logos" />
+						<Button btnText="Learn More" />
 					</Link>
 				</SqBrushMask>
 			</div>
