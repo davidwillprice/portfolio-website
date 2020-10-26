@@ -15,7 +15,7 @@ export default function FourZeroFour() {
 					<p>Sorry, I'm afraid the page you are looking for could not be found.</p>
 					<br></br>
 					<Link to={`/`}>
-						<Button btnText="Return to the homepage" />
+						<Button btnText="Return to the Homepage" />
 					</Link>
 				</div>
 			</FullHeight>
