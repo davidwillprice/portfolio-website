@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import { Link } from 'gatsby';
-import footerStyles from '../../styles/component/layout/footer.module.css';
+import footerStyles from '../../styles/component/layout/footer.module.scss';
 
 import EmailIcon from '../../svgs/footer/email-icon.svg';
 import LinkedInIcon from '../../svgs/footer/linkedin-icon.svg';

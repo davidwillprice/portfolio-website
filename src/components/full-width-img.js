@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FullWidthImgStyles from '../styles/component/full-width-img.module.css';
+import FullWidthImgStyles from '../styles/component/full-width-img.module.scss';
 
 class FullWidthImage extends Component {
     render() {

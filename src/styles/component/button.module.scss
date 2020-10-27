@@ -1,8 +1,10 @@
+@import "../sass-variables.scss";
+
 .button {
-    background-color: #F05D5E;
+    background-color: $highlight-colour;
     border:none;
     border-radius:10px;
-    color:white;
+    color: $secondary-color;
     cursor: pointer;
     font-family: 'quicksand', Arial;
     font-size:1rem;

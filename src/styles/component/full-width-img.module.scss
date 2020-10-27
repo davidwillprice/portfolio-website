@@ -1,9 +1,11 @@
+@import "../sass-variables.scss";
+
 .container, .container img {
     width:100%;
 }
 .container {
     margin-bottom:20px;
-    border-radius: 5px;
+    border-radius: $std-border-radius;
     overflow: hidden;
     display:flex;
 }

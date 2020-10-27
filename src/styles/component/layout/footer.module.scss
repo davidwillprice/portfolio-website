@@ -1,6 +1,7 @@
+@import "../../sass-variables.scss";
+
 .footerCon {
 	width: 100%;
-	background-color: black;
 	display: flex;
 	flex-direction: column;
 }
@@ -9,7 +10,7 @@
 	justify-content: center;
 	align-content: center;
 	padding: 15px 30px 15px;
-	background-color: #333333;
+	background-color: $footer-links-background-color;
 }
 .footerLinks a {
 	transition: opacity 50ms linear;
@@ -26,14 +27,14 @@
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	fill:white;
+	fill: $secondary-color;
 }
 
 .footerSmallPrint {
 	padding: 10px 30px 10px;
 	text-align: center;
-	background-color: #ecf8f2;
-	color: #333333;
+	background-color: $footer-small-print-background-color;
+	color: $footer-links-background-color;
 	height:40px;
 }
 .footerSmallPrint p {
@@ -45,7 +46,7 @@
 }
 .footerSmallPrint p,
 .privPolLink {
-	color: #333333;
+	color: $footer-links-background-color;
 	font-size: .8em;
 }
 .privPolLink {

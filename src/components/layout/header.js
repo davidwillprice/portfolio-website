@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
-import headerStyles from '../../styles/component/layout/header.module.css';
+import headerStyles from '../../styles/component/layout/header.module.scss';
 import Logo from '../../svgs/personal-logo.svg';
 
 class Header extends Component {

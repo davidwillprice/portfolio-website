@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LogoShowcaseStyles from '../styles/component/logo-showcase.module.css';
+import LogoShowcaseStyles from '../styles/component/logo-showcase.module.scss';
 
 class LogoShowcase extends Component {
     render() {

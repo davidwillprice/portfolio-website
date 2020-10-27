@@ -68,7 +68,6 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-react-svg'
 		},
-		`gatsby-transformer-remark`,
 		`gatsby-plugin-react-helmet`,
 		{
 			resolve: 'gatsby-plugin-web-font-loader',
@@ -77,6 +76,8 @@ module.exports = {
 					families: ['Piccadilly', 'Source Sans Pro Light', 'Source Sans Pro Semibold']
 				}
 			}
-		}
+		},
+		`gatsby-plugin-sass`,
+		`gatsby-transformer-remark`
 	]
 };

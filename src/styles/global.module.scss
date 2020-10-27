@@ -1,3 +1,5 @@
+@import "sass-variables.scss";
+
 @font-face {
 	font-family: "Reey";
 	font-weight: 400;
@@ -11,15 +13,14 @@
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	color: white;
+	color: $secondary-color;
 }
 a > p {
-	color: white;
+	color: $secondary-color;
 }
 html {
 	font-size: 20px;
-	background: #004061;
-	/*background-image: linear-gradient(to left, #007a90, #004061); */
+	background: $background-color;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	scroll-behavior: smooth;
@@ -36,8 +37,8 @@ body {
 	width: 100%;
 }
 .contentCon {
-	padding: 55px 30px 0;
-	max-width: 1200px;
+	padding: $header-height-desktop 30px 0;
+	max-width: $layout-width;
 	margin: 0 auto;
 	transition: padding 200ms;
 }
@@ -70,7 +71,7 @@ h1,
 h2,
 p,
 li {
-	color: #00c8b4;
+	color: $primary-color;
 }
 h3 {
 	font-size:2em;
@@ -80,7 +81,7 @@ h3 {
 /*Accessibility*/
 /*The default outline styling, for greatest accessibility */
 .usingKeys *:focus, .usingKeys *:focus ~ span {
-    outline: 3px solid #F05D5E;   
+    outline: 3px solid $highlight-colour;   
 }
   /* When mouse is detected, ALL focused elements have outline removed */
 .usingMouse *:focus {

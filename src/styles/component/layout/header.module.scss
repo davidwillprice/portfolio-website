@@ -1,14 +1,16 @@
+@import "../../sass-variables.scss";
+
 .headerCon {
 	position: fixed;
 	width: 100%;
 	z-index: 100;
-	background-color: rgba(0, 64, 97, 0.9);
+	background-color: $background-color-low-opacity;
 }
 .header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 1200px;
+	max-width: $layout-width;
 	margin: 0 auto;
 	height: 55px;
 	overflow: hidden;
@@ -19,7 +21,7 @@
 	height: 40px;
 }
 .headerLogo {
-	fill: white;
+	fill: $secondary-color;
 	width: 40px;
 	height: 40px;
 	transition: opacity 200ms;
@@ -31,7 +33,7 @@
 	margin-right: 30px;
 }
 .headerMenuItem {
-	color: white;
+	color: $secondary-color;
 	margin-left: 6%;
 	font-size: 1em;
 	text-align: center;
@@ -44,7 +46,7 @@
 }
 .headerMenuTrig {
 	display: none;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: $menu-background-color-low-opacity;
 	width: 50px;
 	height: 50px;
 	cursor: pointer;
@@ -54,7 +56,7 @@
 	border-width: 0;
 }
 .headerTrigLines {
-	background-color: white;
+	background-color: $secondary-color;
 	height: 5px;
 	width: 35px;
 	position: absolute;
@@ -118,7 +120,7 @@
 		overflow-y: auto;
 	}
 	.header.expandedHeader {
-		background-color: rgba(0, 0, 0, 0.87);
+		background-color: $menu-background-color;
 		transition: background-color 200ms linear;
 		height: auto;
 	}

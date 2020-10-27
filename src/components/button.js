@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LogoShowcaseStyles from '../styles/component/button.module.css';
+import LogoShowcaseStyles from '../styles/component/button.module.scss';
 
 class Button extends Component {
     render() {
