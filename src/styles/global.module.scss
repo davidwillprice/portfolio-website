@@ -1,5 +1,4 @@
 @import "sass-variables.scss";
-
 @font-face {
 	font-family: "Reey";
 	font-weight: 400;
@@ -7,15 +6,11 @@
 	src: url("../fonts/ReeyRegular.ttf") format("ttf"), url("../fonts/ReeyRegular.woff2") format("woff2"),
 		url("../fonts/ReeyRegular.woff") format("woff");
 }
-
 * {
 	text-decoration: none;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	color: $secondary-color;
-}
-a > p {
 	color: $secondary-color;
 }
 html {
@@ -31,17 +26,6 @@ body {
 	width: 100%;
 	height: 100%;
 }
-
-.pageCon {
-	display: inline-block;
-	width: 100%;
-}
-.contentCon {
-	padding: $header-height-desktop $page-margin-desktop 0;
-	max-width: $layout-width;
-	margin: 0 auto;
-	transition: padding 200ms;
-}
 h1,
 h2,
 h3,
@@ -52,20 +36,21 @@ li {
 	font-weight: 400;
 	margin-top: 0;
 }
-
+h1,
+h2,
+h3,
+p,
+li {
+	margin-bottom: 20px;
+}
 h1 {
 	font-family: 'reey', Arial;
 	font-weight: 800;
 	font-size: 4rem;
 }
-h2 {
+h2, 
+h3 {
 	font-size: 2rem;
-}
-
-h2,
-h3,
-a {
-	font-weight: 400;
 }
 h1,
 h2,
@@ -73,9 +58,19 @@ p,
 li {
 	color: $primary-color;
 }
-h3 {
-	font-size:2rem;
-	margin-bottom:20px;
+a > p {
+	color: $secondary-color;
+}
+
+.pageCon {
+	display: inline-block;
+	width: 100%;
+}
+.contentCon {
+	padding: $header-height-desktop $page-margin-desktop 0;
+	max-width: $layout-width;
+	margin: 0 auto;
+	transition: padding 200ms;
 }
 
 /*Accessibility*/
