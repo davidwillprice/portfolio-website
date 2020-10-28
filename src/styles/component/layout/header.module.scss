@@ -50,7 +50,7 @@
 	width: 50px;
 	height: 50px;
 	cursor: pointer;
-	margin-right: 15px;
+	margin-right: $page-margin-mobile;
 	position: relative;
 	border-radius: 3px;
 	border-width: 0;
@@ -116,7 +116,7 @@
 		display: flex;
 		justify-content: flex-start;
 		padding-left: 0;
-		margin: 15px 0;
+		margin: $page-margin-mobile;
 		overflow-y: auto;
 	}
 	.header.expandedHeader {
@@ -135,7 +135,7 @@
 		padding-top: 15px;
 	}
 	.header > a {
-		margin-left: 15px;
+		margin-left: $page-margin-mobile;
 		height: 50px;
 	}
 	.headerLogo {
@@ -143,7 +143,7 @@
 		height: 50px;
 	}
 	.headerMenuItem {
-		padding: 20px;
+		padding: 20px 0;
 		text-align: center;
 		font-size: 2rem;
 		margin-left:0;
