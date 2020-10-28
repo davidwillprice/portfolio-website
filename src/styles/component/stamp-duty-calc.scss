@@ -9,14 +9,10 @@
     margin: 30px auto;
     background: #eef0ee;
     border-radius: 5px;
-}
-.cost-container {
-    display:flex;
-    margin-bottom:5px;
-}
-.stamp_container *{
-    color:#505050;
-    font-family:arial;
+    * {
+        color:#505050;
+        font-family:arial;
+    }
 }
 .stamp_background {
     max-width:650px;
@@ -24,11 +20,11 @@
     overflow: hidden;
     margin:0 auto;
     color: #505050;
-}
-.stamp_background h2 {
-	font-size: 24px; 
-	text-align: center; 
-	color: #1D859B;
+    h2 {
+        font-size: 24px; 
+        text-align: center; 
+        color: #1D859B;
+    }
 }
 .stamp_cost_table {
     margin: 0 auto;
@@ -37,40 +33,128 @@
     display:flex;
     justify-content: space-between;
     align-items: flex-start;
+    .input-container {
+        display:flex;
+        flex-direction: column;
+        width:100%;
+    }
+    input {
+        width: 21px;
+        height: 21px;
+        margin: 8px 0 0;
+        color: #1D859B;
+        cursor: text;
+    }
+    td, th{
+        border: 0px solid #333;
+    }
+    .calcstampduty {
+        font-size: 17px!important;
+        padding: 11px 20px!important;
+        border: 1px solid #59585a!important;
+        background-color: #59585a;
+        width: 140px;
+        position: relative;
+        display: inline-block;
+        font-size: 13px;
+        line-height: 24px;
+        font-weight: 700;
+        padding: 12px 34px;
+        color: #fff;
+        border-radius: 3px;
+        cursor:pointer;
+        &:hover {
+            background: 0 0;
+            color: #59585a;
+            transition: color 0.3s, background-color 0.2s;
+        }
+    }
 }
-.stamp_cost_table .input-container {
+.cost-container {
     display:flex;
-    flex-direction: column;
-    width:100%;
-}
-.stamp_cost_table input{
-    width: 21px;
-    height: 21px;
-    margin: 8px 0 0;
-    color: #1D859B;
-    cursor: text;
+    margin-bottom:5px;
+    .pound_box {
+        height: 48px;
+        width: 48px;
+        border-radius: 5px;
+        border: 1px solid #d5d5d5;
+        box-shadow: none;
+        padding: 0px;
+        background-color: #fff;
+        font-size: 40px;
+        line-height: 43.5px;
+        text-align: center;
+        font-weight: 600;
+        margin-right:5px;
+    }
+    .costofhouse {
+        font-size: 20px;
+        font-weight: 500;
+        height: 48px;
+        border-radius: 5px;
+        width: 100%;
+        padding: 6px;
+        margin: 0 7px 0 0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        background-color: #fff;
+        border: 1px solid #ccc;
+    }
+    .error-message {
+        display:flex;
+        svg {
+            float:left;
+            fill: red;
+            margin-right:5px;
+            padding: 1px;
+            overflow: visible;
+        }
+        p {
+            color:red;
+            font-style: italic;
+            margin:2px 0 0;
+        }
+    }
 }
 .stamp_buyer_type {
     margin:10px 0 10px;
-}
-.error-message {
-    display:flex;
-}
-.error-message svg {
-    float:left;
-    fill: red;
-    margin-right:5px;
-    padding: 1px;
-    overflow: visible;
-}
-.error-message p {
-    color:red;
-    font-style: italic;
-    margin:2px 0 0;
-}
-
-.stamp_cost_table td, .stamp_cost_table th{
-    border: 0px solid #333;
+    tr {
+        margin-bottom:5px;
+        display: block;
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 25px;
+        width: 25px;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        margin: 0;
+    }
+    .stamp_checkbox { 
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: white;
+            border-radius:5px;
+            border: 1px solid #ccc;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+            transition: 0.3s background-color;
+        }
+    }
 }
 
 .stamp-duty-table {
@@ -78,51 +162,10 @@
     border-collapse: collapse;
     border-spacing: 0;
     margin:20px auto 0;
-}
-
-.stamp-duty-table td, .stamp-duty-table th {
-    padding: 5px;
-    text-align:center;
-}
-.pound_box {
-    height: 48px;
-    width: 48px;
-    border-radius: 5px;
-    border: 1px solid #d5d5d5;
-    box-shadow: none;
-    padding: 0px;
-    background-color: #fff;
-    font-size: 40px;
-    line-height: 43.5px;
-    text-align: center;
-    font-weight: 600;
-	margin-right:5px;
-} 
-.stamp_buyer_type tr {
-    margin-bottom:5px;
-    display: block;
-}
-.stamp_buyer_type input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 25px;
-    width: 25px;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    margin: 0;
-}
-.stamp_buyer_type .stamp_checkbox { 
-position: relative;
-padding-left: 35px;
-margin-bottom: 12px;
-cursor: pointer;
-font-size: 22px;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none;
+    td, th {
+        padding: 5px;
+        text-align:center;
+    }
 }
 .stamp_checkbox:hover input ~ .checkmark {
     background-color: #f3f3f3;
@@ -130,18 +173,6 @@ user-select: none;
 .stamp_checkbox input:checked ~ .checkmark {
     background-color: #59585a;
 }
-.stamp_buyer_type .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: white;
-    border-radius:5px;
-    border: 1px solid #ccc;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-    transition: 0.3s background-color;
-  }
 .stamp_buyer_type .checkmark:after {
     content: "";
     position: absolute;
@@ -161,39 +192,6 @@ user-select: none;
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-#costofhouse {
-    font-size: 20px;
-    font-weight: 500;
-    height: 48px;
-    border-radius: 5px;
-    width: 100%;
-    padding: 6px;
-    margin: 0 7px 0 0;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-    background-color: #fff;
-    border: 1px solid #ccc;
-}
-#calcstampduty {
-	font-size: 17px!important;
-    padding: 11px 20px!important;
-    border: 1px solid #59585a!important;
-    background-color: #59585a;
-    width: 140px;
-    position: relative;
-    display: inline-block;
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: 700;
-    padding: 12px 34px;
-    color: #fff;
-    border-radius: 3px;
-    cursor:pointer;
-}
-#calcstampduty:hover {
-    background: 0 0;
-    color: #59585a;
-    transition: color 0.3s, background-color 0.2s;
-}
 .stamp_result_title {
     border-bottom: 2px solid #59585a30;
     color: #59585a;
@@ -210,14 +208,13 @@ user-select: none;
     width: 50%;
     float: left;
     font-weight: 600!important;
+    span {
+        margin-top: 10px;
+        color: #1d859b;
+        font-size: 25px;
+        font-weight: 600;
+    }
 }
-.stamp_result_titles span {
-    margin-top: 10px;
-    color: #1d859b;
-    font-size: 25px;
-    font-weight: 600;
-}
-
 .stampDutyCalcuations {
 	width:100%;
 }
@@ -247,22 +244,6 @@ user-select: none;
 }
 /*End of Desktop CSS */
 
-@media only screen and (max-width: 1024px) {
-.page-wrap { margin-top:-4px; }
-.maintitle {
-    font-size:100px !important;
-}
-.fl-photo-caption-hover {
-    opacity:1;
-}
-.pantone_large {
-    color:white !important;
-}
-	.lyp_screenshot_con {
-		padding-top:20px;
-	}
-}
-
 @media only screen and (min-width: 767px) {
 	.show_mobile {
 		display:none !important;
@@ -285,14 +266,14 @@ user-select: none;
     .stamp_cost_table {
         flex-direction: column;
     }
-    #calcstampduty {
+    .calcstampduty {
         width:100%;
         margin-top:5px
     }
     .pound_box {
         width:30px;
     }
-    #costofhouse {
+    .costofhouse {
         margin:0;
         width:calc(100% - 35px)
     }
@@ -309,7 +290,7 @@ user-select: none;
 }
 
 @media (max-width: 350px) {
-	#costofhouse {
+	.costofhouse {
 		margin:0;
 	}
 	.stampDutyCalcuations td, .stampDutyCalcuations th {
