@@ -6,7 +6,7 @@ import SEO from '../components/head/seo';
 import SqBrushMask from '../components/sq-brush-mask';
 import TitleBanner from '../components/layout/title-banner';
 
-import brushConStyles from '../styles/component/brushcon.module.css';
+import brushConStyles from '../styles/component/brushcon.module.scss';
 /*
 import LypLeaflet from '../images/lyp/lyp-leaflet-mock-up.jpg';*/
 import TeslaNowIcon from '../images/teslanow/teslanow-icon.jpg';

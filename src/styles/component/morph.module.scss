@@ -1,7 +1,9 @@
+@import "../sass-variables.scss";
+
 .container {
     width:100%;
     position:relative;
-    border-radius: 5px;
+    border-radius: $std-border-radius;
     overflow: hidden;
     margin-bottom:10px;
     display:flex;

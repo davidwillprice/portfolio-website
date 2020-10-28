@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout/layout';
 import FullHeight from '../components/layout/full-height';
-import IndexStyles from '../styles/page/index.module.css';
-/* eslint-disable */import SolarSVGStyles from '../styles/component/svg/solarsvg.css';/* eslint-enable */
+import IndexStyles from '../styles/page/index.module.scss';
+/* eslint-disable */import SolarSVGStyles from '../styles/component/svg/solarsvg.scss';/* eslint-enable */
 import SEO from '../components/head/seo.js';
 
 import SolarSVG from '../svgs/solar.svg';

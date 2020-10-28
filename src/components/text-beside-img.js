@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import textBesideImgStyles from '../styles/component/text-beside-img.module.css';
+import textBesideImgStyles from '../styles/component/text-beside-img.module.scss';
 
 class TextBesideImg extends Component {
     render() {

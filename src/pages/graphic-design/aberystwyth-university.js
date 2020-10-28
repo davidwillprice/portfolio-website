@@ -11,7 +11,7 @@ import Illca from '../../images/aber-design/illca-logo.png';
 import StepForward from '../../images/aber-design/step-forward-poster.jpg';
 import StepForwardWelsh from '../../images/aber-design/step-forward-poster-welsh.jpg';
 
-import AberStyles from '../../styles/page/aber.module.css'
+import AberStyles from '../../styles/page/aber.module.scss'
 
 export default function FreelanceLogo() {
     return (

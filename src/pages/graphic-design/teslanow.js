@@ -6,7 +6,7 @@ import SEO from '../../components/head/seo';
 import StandardCentralText from '../../components/standard-central-text';
 import TitleBanner from '../../components/layout/title-banner';
 
-import TeslaStyles from '../../styles/page/teslanow.module.css'
+import TeslaStyles from '../../styles/page/teslanow.module.scss'
 
 import Logo from '../../images/teslanow/teslanow-logo.png';
 import IconShowcase from '../../images/teslanow/icon-showcase.jpg';

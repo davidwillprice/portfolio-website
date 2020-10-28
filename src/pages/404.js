@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import FullHeight from '../components/layout/full-height';
 
-import MissingStyles from '../styles/page/missing-page.module.css';
+import MissingStyles from '../styles/page/missing-page.module.scss';
 
 export default function FourZeroFour() {
 	return (

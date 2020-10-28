@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import sqBrushStyles from '../styles/component/sqbrush.module.css';
+import sqBrushStyles from '../styles/component/sqbrush.module.scss';
 
 import { Link } from 'gatsby';
 

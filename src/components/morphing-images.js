@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import morphStyles from '../styles/component/morph.module.css';
+import morphStyles from '../styles/component/morph.module.scss';
 
 class Morph extends Component {
     render() {

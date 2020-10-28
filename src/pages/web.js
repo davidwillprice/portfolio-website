@@ -7,7 +7,7 @@ import SEO from '../components/head/seo.js';
 import TitleBanner from '../components/layout/title-banner';
 import SqBrushSplash from '../components/sq-brush-splash';
 
-import brushConStyles from '../styles/component/brushcon.module.css';
+import brushConStyles from '../styles/component/brushcon.module.scss';
 
 import BrushOne from '../svgs/brush-bg-1.svg';
 import BrushTwo from '../svgs/brush-bg-2.svg';

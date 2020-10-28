@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FullHeightStyles from '../../styles/component/layout/full-height.module.css';
+import FullHeightStyles from '../../styles/component/layout/full-height.module.scss';
 
 class FullHeight extends Component {
     render() {

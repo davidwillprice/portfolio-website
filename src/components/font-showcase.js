@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fontShowcaseStyles from '../styles/component/font-showcase.module.css';
+import fontShowcaseStyles from '../styles/component/font-showcase.module.scss';
 class FontShowcase extends Component {
     render() {
         return <div className={fontShowcaseStyles.container} style={{ fontFamily: this.props.fontFamily, color: this.props.color, backgroundColor: this.props.bgColor, fontWeight: this.props.fontWeight }}>

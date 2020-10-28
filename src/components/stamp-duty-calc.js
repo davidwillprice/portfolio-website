@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-/* eslint-disable */import stampDutyCSS from '../styles/component/stamp-duty-calc.css';/* eslint-enable */
+/* eslint-disable */import stampDutyCSS from '../styles/component/stamp-duty-calc.scss';/* eslint-enable */
 
 class StampDutyCalc extends Component {
     render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import colourPreviewStyles from '../styles/component/colour-preview.module.css';
+import colourPreviewStyles from '../styles/component/colour-preview.module.scss';
 
 class ColourPreview extends Component {
     render() {

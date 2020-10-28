@@ -1,3 +1,5 @@
+@import "../../sass-variables.scss";
+
 .bmaIcons {
     width:100%;
     border-radius: 5px;
@@ -14,10 +16,6 @@
     animation-name: rotateIcons;
     animation-duration: 9s;
     animation-iteration-count:infinite;
-}
-
-#dark-fill {
-
 }
 
 #dark-stroke {

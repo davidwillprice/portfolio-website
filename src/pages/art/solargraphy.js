@@ -6,7 +6,7 @@ import SEO from '../../components/head/seo';
 import StandardCentralText from '../../components/standard-central-text';
 import TitleBanner from '../../components/layout/title-banner';
 
-import SolarStyles from '../../styles/page/solargraphy.module.css'
+import SolarStyles from '../../styles/page/solargraphy.module.scss'
 
 import Image8 from '../../images/solargraphy/solargraph-image-8.jpg'
 import Image8NoStreaks from '../../images/solargraphy/solargraph-image-8-no-streaks.jpg';

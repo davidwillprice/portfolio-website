@@ -1,3 +1,5 @@
+@import "../sass-variables.scss";
+
 .workExampleCon {
 	width: 100%;
 	display: flex;
@@ -65,7 +67,7 @@
 	opacity: 0.5;
 }
 .brushSplashCon .workExampleLink:hover .brushBg {
-	fill: #f05d5e;
+	fill: $highlight-colour;
 }
 
 @media (max-width: 1000px) {

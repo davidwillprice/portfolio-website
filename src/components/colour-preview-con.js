@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import colourPreviewConStyles from '../styles/component/colour-preview-con.module.css';
+import colourPreviewConStyles from '../styles/component/colour-preview-con.module.scss';
 
 class ColourPreviewCon extends Component {
     render() {
