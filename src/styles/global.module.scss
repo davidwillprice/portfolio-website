@@ -56,10 +56,10 @@ li {
 h1 {
 	font-family: 'reey', Arial;
 	font-weight: 800;
-	font-size: 4em;
+	font-size: 4rem;
 }
 h2 {
-	font-size: 2em;
+	font-size: 2rem;
 }
 
 h2,
@@ -74,7 +74,7 @@ li {
 	color: $primary-color;
 }
 h3 {
-	font-size:2em;
+	font-size:2rem;
 	margin-bottom:20px;
 }
 
@@ -100,7 +100,7 @@ h3 {
 		font-size: 18px;
 	}
 	h1 {
-		font-size: 3.8em;
+		font-size: 3.8rem;
 	}
 }
 @media only screen and (max-width: 800px) {
@@ -114,7 +114,7 @@ h3 {
 		padding: 80px 15px 0;
 	}
 	h1 {
-		font-size: 2.4em;
+		font-size: 2.4rem;
 	}
 	.workExampleCon {
 		flex-direction: column;
@@ -129,12 +129,12 @@ h3 {
 
 @media only screen and (max-width: 400px) {
 	h1 {
-		font-size: 2.2em;
+		font-size: 2.2rem;
 	}
 }
 
 @media only screen and (max-width: 340px) {
 	h1 {
-		font-size: 1.8em;
+		font-size: 1.8rem;
 	}
 }
