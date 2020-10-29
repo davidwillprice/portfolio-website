@@ -91,25 +91,25 @@ class StampDutyCalc extends Component {
 
         function toggleUIError() {
             //Show/hide an error message
-            document.getElementById('error-message-con').classList.toggle('hide');
+            document.getElementById('stamp__error-message-con').classList.toggle('hide');
         }
         function toggleUICalcTable() {
             //Show/hide the stamp duty caluations
-            document.querySelector('.stampDutyCalcuations').classList.toggle('hide');
+            document.querySelector('.stamp__results-con').classList.toggle('hide');
         }
 
         function stampCalc(buyerType, housePrice) {
             var totalTax = 0;
             //Loop through the buyerType taxband values
             for (var i = 0; i < buyerType.length; i++) {
-                document.getElementById('stamp-duty-row' + i).classList.remove('hide');
+                document.getElementById('stamp__row' + i).classList.remove('hide');
                 var upBand = taxBand[i + 1];
                 var loBand = taxBand[i];
                 //Calculating Taxable sum
                 if ((housePrice - loBand) <= 0) {
                     // If the price of the house is less or equal to the lower tax band then no tax is applied and the row is removed from the UI
                     taxSum = 0;
-                    document.getElementById('stamp-duty-row' + i).classList.add('hide');
+                    document.getElementById('stamp__row' + i).classList.add('hide');
                 } else if ((housePrice - loBand) > 0 && (housePrice - loBand) < (upBand - loBand)) {
                     //If the price of the house is more than lower tax band and the difference is smaller than the difference between the upper band and the lower band, the taxable sum is the house price minus the lower tax band
                     taxSum = + (housePrice - loBand);
@@ -120,9 +120,9 @@ class StampDutyCalc extends Component {
                 //Add band's tax to total tax
                 totalTax += (buyerType[i] * taxSum);
                 //Populating row data
-                document.getElementById('stamp-b' + (i + 2)).textContent = (buyerType[i] * 100) + '%';
-                document.getElementById('stamp-c' + (i + 2)).textContent = formatMoney(taxSum);
-                document.getElementById('stamp-d' + (i + 2)).textContent = formatMoney(buyerType[i] * taxSum);
+                document.getElementById('stamp__b' + (i + 2)).textContent = (buyerType[i] * 100) + '%';
+                document.getElementById('stamp__c' + (i + 2)).textContent = formatMoney(taxSum);
+                document.getElementById('stamp__d' + (i + 2)).textContent = formatMoney(buyerType[i] * taxSum);
             }
             //Populate total tax and effective rate
             document.getElementById('stDutyTax').textContent = formatMoney(totalTax);
@@ -138,93 +138,92 @@ class StampDutyCalc extends Component {
             }
         };
 
-        return <div class="stamp_container">
-            <div class="stamp_background">
+        return <div class="stamp__con">
+            <div class="stamp__bg">
                 <div>
-                    <h2> What Stamp Duty Tax will I have to&nbsp;pay?</h2>
-                    <div class="stamp_cost_table">
-                        <div class="input-container">
-                            <div class="cost-container">
-                                <div class="pound_box border-box">£</div>
-                                <input type="text" inputMode="numeric" pattern="[0-9]*" defaultValue="200000" name="costofhouse" class="costofhouse" id="costofhouse" placeholder="Cost of house" onChange={calcInit} />
+                    <h2 class="stamp__header"> What Stamp Duty Tax will I have to&nbsp;pay?</h2>
+                    <div class="stamp__calc-con">
+                        <div class="stamp__house-price-con">
+                            <div class="stamp__house-price">
+                                <div class="stamp__currency">£</div>
+                                <input type="text" inputMode="numeric" pattern="[0-9]*" defaultValue="200000" name="costofhouse" class="stamp__house-price-input" id="costofhouse" placeholder="Cost of house" onChange={calcInit} />
                             </div>
-                            <div class="error-message-con hide" id="error-message-con">
-                                <div class="error-message" id="error-message">
+                            <div class="stamp__error-message-con hide" id="stamp__error-message-con">
+                                <div class="stamp__error-message" id="error-message">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 16.094l-4.157-4.104 4.1-4.141-1.849-1.849-4.105 4.159-4.156-4.102-1.833 1.834 4.161 4.12-4.104 4.157 1.834 1.832 4.118-4.159 4.143 4.102 1.848-1.849z" /></svg>
                                     <p>Please enter a number above&nbsp;0</p>
                                 </div>
                             </div>
                         </div>
-                        <button id="calcstampduty" class="calcstampduty" onClick={calcInit}>Calculate</button>
+                        <button class="stamp__calc-button" onClick={calcInit}>Calculate</button>
                     </div>
-
-                    <table class="stamp_buyer_type">
-                        <tbody>
-                            <tr>
-                                <td class="stamp_checkbox"><input id="firstTime" type="checkbox" onClick={firstTimeBuyer} /><span class="checkmark"></span></td>
-                                <td><div>Are you a first time buyer?</div></td>
-                            </tr>
-                            <tr>
-                                <td class="stamp_checkbox"><input id="secondProp" type="checkbox" onClick={secondPropBuyer} /><span class="checkmark"></span></td>
-                                <td><div>Is this a second property?</div></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="stampDutyCalcuations hide">
-                        <div class="stamp_results">
-                            <h3 class="stamp_result_title">Results</h3>
-                            <div class="stamp_main_results">
-                                <div class="stamp_result_titles">Stamp duty to pay <br /><span id="stDutyTax"></span></div>
-                                <div class="stamp_result_titles"> Effective rate<br /><span id="effectRate"></span></div>
+                    <div class="stamp__buyer-type-con">
+                        <div class="stamp__buyer-type">
+                            <div>
+                                <input id="firstTime" class="stamp__buyer-type-input" type="checkbox" onClick={firstTimeBuyer} /><span class="stamp__checkmark"></span>
                             </div>
+                            Are you a first time buyer?
                         </div>
-                        <table class="stamp-duty-table">
+                        <div class="stamp__buyer-type">
+                            <div>
+                                <input id="secondProp" class="stamp__buyer-type-input" type="checkbox" onClick={secondPropBuyer} /><span class="stamp__checkmark"></span>
+                            </div>
+                            <div>Is this a second property?</div>
+                        </div>
+                    </div>
+                    <div class="stamp__results-con hide">
+                        <h3>Results</h3>
+                        <div class="stamp__results-main">
+                            <div class="stamp__final-figure">Stamp duty to pay <br /><span id="stDutyTax"></span></div>
+                            <div class="stamp__final-figure"> Effective rate<br /><span id="effectRate"></span></div>
+                        </div>
+                        <table class="stamp__results-table">
                             <tbody>
                                 <tr>
-                                    <th class="col0">Tax band</th>
-                                    <th class="col1">%</th>
-                                    <th class="col2">Taxable sum</th>
-                                    <th class="col3">Tax</th>
+                                    <th class="stamp__col0">Tax band</th>
+                                    <th class="stamp__col1">%</th>
+                                    <th class="stamp__col2">Taxable sum</th>
+                                    <th class="stamp__col3">Tax</th>
                                 </tr>
-                                <tr id="stamp-duty-row0">
-                                    <td class="col0"><span class="hide_mobile">£0 – £125,000</span><span class="show_mobile">£0 – £125k</span></td>
-                                    <td class="col1"><span id="stamp-b2"></span></td>
-                                    <td class="col2"><span id="stamp-c2"></span></td>
-                                    <td class="col3"><span id="stamp-d2"></span></td>
+                                <tr id="stamp__row0">
+                                    <td class="stamp__col0"><span class="stamp__tax-band-long">£0 – £125,000</span><span class="stamp__tax-band-short">£0 – £125k</span></td>
+                                    <td class="stamp__col1"><span id="stamp__b2"></span></td>
+                                    <td class="stamp__col2"><span id="stamp__c2"></span></td>
+                                    <td class="stamp__col3"><span id="stamp__d2"></span></td>
                                 </tr>
-                                <tr id="stamp-duty-row1">
-                                    <td class="col0"><span class="hide_mobile">£125,000 – £250,000</span><span class="show_mobile">£125k – £250k</span></td>
-                                    <td class="col1"><span id="stamp-b3"></span></td>
-                                    <td class="col2"><span id="stamp-c3"></span></td>
-                                    <td class="col3"><span id="stamp-d3"></span></td>
+                                <tr id="stamp__row1">
+                                    <td class="stamp__col0"><span class="stamp__tax-band-long">£125,000 – £250,000</span><span class="stamp__tax-band-short">£125k – £250k</span></td>
+                                    <td class="stamp__col1"><span id="stamp__b3"></span></td>
+                                    <td class="stamp__col2"><span id="stamp__c3"></span></td>
+                                    <td class="stamp__col3"><span id="stamp__d3"></span></td>
                                 </tr>
-                                <tr id="stamp-duty-row2">
-                                    <td class="col0"><span class="hide_mobile">£250,000 – £300,000</span><span class="show_mobile">£250k – £300k</span></td>
-                                    <td class="col1"><span id="stamp-b4"></span></td>
-                                    <td class="col2"><span id="stamp-c4"></span></td>
-                                    <td class="col3"><span id="stamp-d4"></span></td>
+                                <tr id="stamp__row2">
+                                    <td class="stamp__col0"><span class="stamp__tax-band-long">£250,000 – £300,000</span><span class="stamp__tax-band-short">£250k – £300k</span></td>
+                                    <td class="stamp__col1"><span id="stamp__b4"></span></td>
+                                    <td class="stamp__col2"><span id="stamp__c4"></span></td>
+                                    <td class="stamp__col3"><span id="stamp__d4"></span></td>
                                 </tr>
-                                <tr id="stamp-duty-row3">
-                                    <td class="col0"><span class="hide_mobile">£300,000 – £925,000</span><span class="show_mobile">£300k – £925k</span></td>
-                                    <td class="col1"><span id="stamp-b5"></span></td>
-                                    <td class="col2"><span id="stamp-c5"></span></td>
-                                    <td class="col3"><span id="stamp-d5"></span></td>
+                                <tr id="stamp__row3">
+                                    <td class="stamp__col0"><span class="stamp__tax-band-long">£300,000 – £925,000</span><span class="stamp__tax-band-short">£300k – £925k</span></td>
+                                    <td class="stamp__col1"><span id="stamp__b5"></span></td>
+                                    <td class="stamp__col2"><span id="stamp__c5"></span></td>
+                                    <td class="stamp__col3"><span id="stamp__d5"></span></td>
                                 </tr>
-                                <tr id="stamp-duty-row4">
-                                    <td class="col0"><span class="hide_mobile">£925,000 – £1,500,000</span><span class="show_mobile">£925k – £1.5m</span></td>
-                                    <td class="col1"><span id="stamp-b6"></span></td>
-                                    <td class="col2"><span id="stamp-c6"></span></td>
-                                    <td class="col3"><span id="stamp-d6"></span></td>
+                                <tr id="stamp__row4">
+                                    <td class="stamp__col0"><span class="stamp__tax-band-long">£925,000 – £1,500,000</span><span class="stamp__tax-band-short">£925k – £1.5m</span></td>
+                                    <td class="stamp__col1"><span id="stamp__b6"></span></td>
+                                    <td class="stamp__col2"><span id="stamp__c6"></span></td>
+                                    <td class="stamp__col3"><span id="stamp__d6"></span></td>
                                 </tr>
-                                <tr id="stamp-duty-row5">
-                                    <td class="col0"><span class="hide_mobile">£1,500,000+</span><span class="show_mobile">£1.5m+</span></td>
-                                    <td class="col1"><span id="stamp-b7"></span></td>
-                                    <td class="col2"><span id="stamp-c7"></span></td>
-                                    <td class="col3"><span id="stamp-d7"></span></td>
+                                <tr id="stamp__row5">
+                                    <td class="stamp__col0"><span class="stamp__tax-band-long">£1,500,000+</span><span class="stamp__tax-band-short">£1.5m+</span></td>
+                                    <td class="stamp__col1"><span id="stamp__b7"></span></td>
+                                    <td class="stamp__col2"><span id="stamp__c7"></span></td>
+                                    <td class="stamp__col3"><span id="stamp__d7"></span></td>
                                 </tr>
                             </tbody>
                         </table>
-                        <p class="disclaimer">Correct as of Nov 2018</p>
+                        <p class="stamp__disclaimer">Correct as of Nov 2018</p>
                     </div>
                 </div>
             </div>
