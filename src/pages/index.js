@@ -16,7 +16,7 @@ export default function Index() {
 					<SolarSVG className={IndexStyles.solarSVG} />
 					<div className={IndexStyles.indexTitleBanText}>
 						<h1 className={IndexStyles.indexTitle}> David Price</h1>
-						<h2 className={IndexStyles.indexSubtitle}>Web developer & designer</h2>
+						<h2 className={IndexStyles.indexSubtitle}>Front End Web Developer</h2>
 					</div>
 				</div>
 			</FullHeight>

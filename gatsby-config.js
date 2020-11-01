@@ -2,7 +2,7 @@ module.exports = {
 	siteMetadata: {
 		title: `David Price Portfolio website`,
 		titleTemplate: "%s | David Price Web Design",
-		description: `Portfolio website for a Bristol based web developer & designer`,
+		description: `Portfolio website for a Bristol based Front End Web Developer`,
 		author: `David Price`,
 		image: '/src/images/icon.png',
 		siteUrl: "https://www.davidwillprice.com",
