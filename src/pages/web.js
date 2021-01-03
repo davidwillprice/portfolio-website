@@ -40,8 +40,9 @@ export default function WebDev() {
           <h3>Swiis International Ltd</h3>
           <p>Feb 2019 - Current</p>
           <p>
-            Full time position at parent company of Swiis Foster Care, Swiis
-            Foster Care Scotland and Swiis Healthcare.
+            Full time position as a Web Developer & Designer at Swiis
+            International; parent company of Swiis Foster Care, Swiis Foster
+            Care Scotland and Swiis Healthcare.
           </p>
           <Link to={`/web/swiis/`}>
             <Button btnText="Learn More" />
@@ -58,7 +59,8 @@ export default function WebDev() {
           <h3>Love Your Postcode</h3>
           <p>Aug 2015 - Feb 2019</p>
           <p>
-            Full time position at Birmingham estate agent Love Your Postcode.
+            Full time position as a Web / Graphic Designer at Birmingham estate
+            agent Love Your Postcode.
           </p>
           <Link to={`/web/loveyourpostcode/`}>
             <Button btnText="Learn More" />
