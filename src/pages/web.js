@@ -97,7 +97,8 @@ export default function WebDev() {
           <p>
             Side project to create an interactive illustration of the Monty Hall
             Problem. Although there are already other online versions, I wanted
-            to see if I could make a better looking version with more features.
+            to see if I could make a better looking, more accessible adaptation
+            with more features.
           </p>
           <a href="https://github.com/davidwillprice/montyhall">
             <Button btnText="Learn More" />
