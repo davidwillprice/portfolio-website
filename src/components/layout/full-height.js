@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
-import FullHeightStyles from '../../styles/component/layout/full-height.module.scss';
+import React from "react"
+import FullHeightStyles from "../../styles/component/layout/full-height.module.scss"
 
-class FullHeight extends Component {
-    render() {
-        return <div className={FullHeightStyles.fullHeightCon}>
-            <div className={FullHeightStyles.fullHeight}>
-                {this.props.children}
-            </div>
-        </div>;
-    }
-}
+const FullHeight = ({ children }) => (
+  <div className={FullHeightStyles.fullHeightCon}>
+    <div className={FullHeightStyles.fullHeight}>{children}</div>
+  </div>
+)
 
-export default FullHeight;
+export default FullHeight

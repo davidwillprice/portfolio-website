@@ -1,30 +1,31 @@
-import React, { Component } from 'react';
+import React, { Component } from "react"
 //import { Link } from 'gatsby';
-import footerStyles from '../../styles/component/layout/footer.module.scss';
+import footerStyles from "../../styles/component/layout/footer.module.scss"
 
-import EmailIcon from '../../svgs/footer/email-icon.svg';
-import LinkedInIcon from '../../svgs/footer/linkedin-icon.svg';
-import GitHubIcon from '../../svgs/footer/github-icon.svg';
+import EmailIcon from "../../svgs/footer/email-icon.svg"
+import LinkedInIcon from "../../svgs/footer/linkedin-icon.svg"
+import GitHubIcon from "../../svgs/footer/github-icon.svg"
 
-class Footer extends Component {
-	render() {
-		//const currentDate = new Date();
-		//const currentYear = currentDate.getFullYear();
+const Footer = props => (
+  //const currentDate = new Date();
+  //const currentYear = currentDate.getFullYear();
 
-		return (
-			<footer className={footerStyles.footerCon}>
-				<div className={footerStyles.footerLinks} id="contact">
-					<a aria-label="Email button" href="mailto: davidwillprice@gmail.com">
-						<EmailIcon className={footerStyles.footerLinkItem} />
-					</a>
-					<a aria-label="LinkedIn button" href="https://www.linkedin.com/in/davidwillprice/">
-						<LinkedInIcon className={footerStyles.footerLinkItem} />
-					</a>
-					<a aria-label="GitHub button" href="https://github.com/davidwillprice/">
-						<GitHubIcon className={footerStyles.footerLinkItem} />
-					</a>
-				</div>
-				{/* 
+  <footer className={footerStyles.footerCon}>
+    <div className={footerStyles.footerLinks} id="contact">
+      <a aria-label="Email button" href="mailto: davidwillprice@gmail.com">
+        <EmailIcon className={footerStyles.footerLinkItem} />
+      </a>
+      <a
+        aria-label="LinkedIn button"
+        href="https://www.linkedin.com/in/davidwillprice/"
+      >
+        <LinkedInIcon className={footerStyles.footerLinkItem} />
+      </a>
+      <a aria-label="GitHub button" href="https://github.com/davidwillprice/">
+        <GitHubIcon className={footerStyles.footerLinkItem} />
+      </a>
+    </div>
+    {/* 
 				<div className={footerStyles.footerSmallPrint}>
 					<p>
 						David Price © {currentYear} -{' '}
@@ -34,9 +35,7 @@ class Footer extends Component {
 					</p>
 				</div>
 				*/}
-			</footer>
-		);
-	}
-}
+  </footer>
+)
 
-export default Footer;
+export default Footer
