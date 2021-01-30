@@ -1,19 +1,19 @@
 @import "../sass-variables.scss";
 
 .button {
-    background-color: $highlight-colour;
-    border:none;
-    border-radius:10px;
-    color: $secondary-color;
-    cursor: pointer;
-    font-family: 'quicksand', Arial;
-    font-size:1rem;
-    font-weight:700;
-    padding:10px;
-    text-decoration: none;
-    transition: all 0.3s;
+  background-color: $highlight-colour;
+  border: none;
+  border-radius: 10px;
+  color: $secondary-color;
+  cursor: pointer;
+  font-family: "quicksand", Arial;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 .button:hover {
-    opacity: 0.5;
-    transform: translateY(-2px);
+  opacity: 0.5;
+  transform: translateY(-2px);
 }
