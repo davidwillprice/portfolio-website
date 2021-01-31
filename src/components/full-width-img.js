@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
-import FullWidthImgStyles from '../styles/component/full-width-img.module.scss';
+import React from "react"
+import FullWidthImgStyles from "../styles/component/full-width-img.module.scss"
 
-class FullWidthImage extends Component {
-    render() {
-        return <div className={FullWidthImgStyles.container}>
-            <img src={this.props.img} alt={this.props.imgAlt} />
-        </div>;
-    }
-}
+const FullWidthImage = props => (
+  <div className={FullWidthImgStyles.container}>
+    <img src={props.img} alt={props.imgAlt} />
+  </div>
+)
 
-export default FullWidthImage;
+export default FullWidthImage

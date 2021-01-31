@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import LogoShowcaseStyles from '../styles/component/logo-showcase.module.scss';
+import React from "react"
+import LogoShowcaseStyles from "../styles/component/logo-showcase.module.scss"
 
-class LogoShowcase extends Component {
-    render() {
-        return <div className={LogoShowcaseStyles.container} style={{ backgroundColor: this.props.bgColor }}>
-            {this.props.children}
-        </div>;
-    }
-}
+const LogoShowcase = props => (
+  <div
+    className={LogoShowcaseStyles.container}
+    style={{ backgroundColor: props.bgColor }}
+  >
+    {props.children}
+  </div>
+)
 
-export default LogoShowcase;
+export default LogoShowcase

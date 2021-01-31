@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
-import colourPreviewStyles from '../styles/component/colour-preview.module.scss';
+import React from "react"
+import colourPreviewStyles from "../styles/component/colour-preview.module.scss"
 
-class ColourPreview extends Component {
-    render() {
-        return <div className={colourPreviewStyles.container} style={{ backgroundColor: this.props.hexColour }}>
-            <p style={{ color: this.props.textColour }}>{this.props.hexColour} | rgb({this.props.rgbColour})</p>
-        </div>;
-    }
-}
+const ColourPreview = props => (
+  <div
+    className={colourPreviewStyles.container}
+    style={{ backgroundColor: props.hexColour }}
+  >
+    <p style={{ color: props.textColour }}>
+      {props.hexColour} | rgb({props.rgbColour})
+    </p>
+  </div>
+)
 
-export default ColourPreview;
+export default ColourPreview
