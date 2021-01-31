@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import titleBannerStyles from "../../styles/component/layout/titlebanner.module.scss"
 
 const TitleBanner = ({ children }) => (
