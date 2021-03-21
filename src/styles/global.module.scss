@@ -1,30 +1,31 @@
 @import "sass-variables.scss";
 @font-face {
-	font-family: "Reey";
-	font-weight: 400;
-	font-style: normal;
-	src: url("../fonts/ReeyRegular.ttf") format("ttf"), url("../fonts/ReeyRegular.woff2") format("woff2"),
-		url("../fonts/ReeyRegular.woff") format("woff");
+  font-family: "Reey";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/ReeyRegular.ttf") format("ttf"),
+    url("../fonts/ReeyRegular.woff2") format("woff2"),
+    url("../fonts/ReeyRegular.woff") format("woff");
 }
 * {
-	text-decoration: none;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	color: $secondary-color;
+  text-decoration: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  color: $secondary-color;
 }
 html {
-	font-size: 20px;
-	background: $background-color;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	scroll-behavior: smooth;
+  font-size: 20px;
+  background: $background-color;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
 }
 html,
 body {
-	margin: 0;
-	width: 100%;
-	height: 100%;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 h1,
 h2,
@@ -32,104 +33,112 @@ h3,
 a,
 p,
 li {
-	font-family: 'quicksand', Arial;
-	font-weight: 400;
-	margin-top: 0;
+  font-family: "quicksand", Arial;
+  font-weight: 400;
+  margin-top: 0;
 }
 h1,
 h2,
 h3,
 p,
 li {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 h1 {
-	font-family: 'reey', Arial;
-	font-weight: 800;
-	font-size: 4rem;
+  font-family: "reey", Arial;
+  font-weight: 800;
+  font-size: 4rem;
 }
-h2, 
+h2,
 h3 {
-	font-size: 2rem;
+  font-size: 2rem;
 }
 h1,
 h2,
 p,
 li {
-	color: $primary-color;
+  color: $primary-color;
 }
 a > p {
-	color: $secondary-color;
+  color: $secondary-color;
 }
 
 .pageCon {
-	display: inline-block;
-	width: 100%;
+  display: inline-block;
+  width: 100%;
 }
 .contentCon {
-	padding: $header-height-desktop $page-margin-desktop 0;
-	max-width: $layout-width;
-	margin: 0 auto;
-	transition: padding 200ms;
+  padding: $header-height-desktop 0 0;
+  margin: 0 auto;
+  transition: padding 200ms;
 }
-
+.contentConWidthStrict {
+  max-width: $layout-width;
+  padding-left: $page-margin-desktop;
+  padding-right: $page-margin-desktop;
+}
 /*Accessibility*/
 /*The default outline styling, for greatest accessibility */
-.usingKeys *:focus, .usingKeys *:focus ~ span {
-    outline: 3px solid $highlight-colour;   
+.usingKeys *:focus,
+.usingKeys *:focus ~ span {
+  outline: 3px solid $highlight-colour;
 }
-  /* When mouse is detected, ALL focused elements have outline removed */
+/* When mouse is detected, ALL focused elements have outline removed */
 .usingMouse *:focus {
-	outline: none;
+  outline: none;
 }
 /*End of Accessibility*/
 
 @media only screen and (max-width: 1200px) {
-	html {
-		font-size: 19px;
-	}
+  html {
+    font-size: 19px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
-	html {
-		font-size: 18px;
-	}
-	h1 {
-		font-size: 3.8rem;
-	}
+  html {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 3.8rem;
+  }
 }
 @media only screen and (max-width: 800px) {
-	html {
-		font-size: 17px;
-	}
+  html {
+    font-size: 17px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-	.contentCon {
-		padding: 80px $page-margin-mobile 0;
-	}
-	h1 {
-		font-size: 2.4rem;
-	}
-	.workExampleCon {
-		flex-direction: column;
-	}
-	.workExampleConR .workExampleText {
-		text-align: left;
-	}
-	.workExampleText {
-		order: 1;
-	}
+  .contentCon {
+    padding: 80px 0 0;
+  }
+  .contentConWidthStrict {
+    padding-left: $page-margin-mobile;
+    padding-right: $page-margin-mobile;
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
+  .workExampleCon {
+    flex-direction: column;
+  }
+  .workExampleConR .workExampleText {
+    text-align: left;
+  }
+  .workExampleText {
+    order: 1;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-	h1 {
-		font-size: 2.2rem;
-	}
+  h1 {
+    font-size: 2.2rem;
+  }
 }
 
 @media only screen and (max-width: 340px) {
-	h1 {
-		font-size: 1.8rem;
-	}
+  h1 {
+    font-size: 1.8rem;
+  }
 }
