@@ -3,8 +3,9 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
+import globalStyles from "../../styles/global.module.scss"
 
-const SEO = ({ title, description, image, article }) => {
+const SEO = ({ title, description, image, article, bgColor }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -22,8 +23,13 @@ const SEO = ({ title, description, image, article }) => {
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   }
+  console.log(bgColor)
+
+  let bgColourClass = bgColor ? bgColor + "Bg" : ""
+
   return (
     <Helmet
+      bodyAttributes={{ class: globalStyles[bgColourClass] }}
       title={seo.title}
       titleTemplate={
         seo.title === "David Price Web Design" ? "" : titleTemplate

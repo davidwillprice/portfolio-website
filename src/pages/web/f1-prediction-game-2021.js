@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import Layout from "../../components/layout/layout"
 import SEO from "../../components/head/seo.js"
-import FullHeight from "../../components/layout/full-height"
 
 import F1PredictionGame from "../../components/f1-prediction-game"
 
@@ -18,6 +17,7 @@ class f1Predict2021 extends Component {
         <SEO
           title="F1 Prediction Game 2021"
           description="Game to predict predict the Formula 1 2021 Driver's and Constructor's standings as accurately as possible"
+          bgColor="gray"
         />
         <div className="">
           <F1PredictionGame />
