@@ -1,0 +1,506 @@
+@import "../sass-variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
+
+.f1Main {
+  font-family: "quicksand";
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+}
+.f1Main * {
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+/*Start NavBar*/
+.navCon {
+  width: 100%;
+  background-color: white;
+}
+.navBar {
+  width: 100%;
+  max-width: $layout-width;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 $page-margin-desktop;
+}
+.navItem {
+  color: black;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-left: 1px solid #ededed;
+  cursor: pointer;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+}
+.navItem:last-child {
+  border-right: 1px solid #ededed;
+}
+.navItem:hover,
+.leaderboardMode .leaderboardBtn,
+.standingsMode .standingsBtn,
+.helpMode .helpBtn {
+  border-bottom: 5px solid red !important;
+}
+/*End NavBar*/
+.content {
+  padding: 0 $page-margin-desktop;
+  max-width: $layout-width;
+  margin: 0 auto 100px;
+}
+/*Start of options*/
+.options {
+  width: 100%;
+}
+.options select {
+  background-color: rgb(50, 50, 50);
+  font-family: "quicksand", Arial, Helvetica, sans-serif;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px 40px 10px 10px;
+  background-image: url(/svgs/dropdown.svg);
+  background-repeat: no-repeat;
+  background-size: 10px auto;
+  background-position-y: 50%;
+  background-position-x: calc(100% - 10px);
+}
+/*End of options*/
+.opening {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+.subHeading {
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+}
+/*Start of leaderboard*/
+.leaderboard {
+  padding: 5px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: none;
+}
+.leaderboard th {
+  color: #b0b0b0;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.leaderboard td {
+  padding: 10px 0;
+}
+.leaderboardPos {
+  text-align: center;
+  justify-content: center;
+  font-family: "Viga", cursive;
+  font-weight: 700;
+  display: flex;
+}
+.leaderboardName {
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-family: "Viga", cursive;
+}
+.leaderboard tr:nth-child(even) {
+  background-color: rgb(50, 50, 50);
+}
+/*End of leaderboard*/
+.tablesOverview {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.playerNumbers3.tablesOverview {
+  max-width: 800px;
+}
+.predictionTables {
+  display: flex;
+  width: calc(100% - 200px);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /*Start of carousel stuff*/
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+.predictionTables::-webkit-scrollbar {
+  display: none;
+}
+/*End of carousel stuff*/
+.predictionTables:hover > .tableContainer {
+  opacity: 0.3;
+}
+.predictionTables > .tableContainer:hover {
+  opacity: 1;
+}
+.tableContainer {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  padding-bottom: 20px;
+}
+.tableHeader {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+}
+.tableRow {
+  display: flex;
+}
+.entrantBlock {
+  display: flex;
+  height: 30px;
+  color: white;
+  overflow: hidden;
+  width: 147px;
+}
+.tableRow:first-child .entrantBlock {
+  border-radius: 3px 3px 0px 0px;
+}
+.tableRow:last-child .entrantBlock {
+  border-radius: 0px 0px 3px 3px;
+}
+.position,
+.entrantName,
+.divider {
+  vertical-align: middle;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  float: left;
+}
+.position {
+  width: 30px;
+  text-align: center;
+  justify-content: center;
+  font-family: "Viga", cursive;
+}
+.divider {
+  width: 5px;
+  height: calc(100% - 6px);
+  margin-top: 3px;
+  border-radius: 2px;
+}
+.entrantName {
+  padding: 0 10px;
+  font-size: 13px;
+  font-family: "Viga", cursive;
+  text-transform: uppercase;
+}
+.shortName {
+  text-transform: uppercase;
+  display: none;
+}
+.posDiff {
+  width: 28px;
+  height: 30px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  float: left;
+}
+.diffZero {
+  opacity: 0;
+}
+.diffLow {
+  opacity: 0.5;
+}
+.diffMed {
+  opacity: 0.75;
+}
+.diffHigh {
+  opacity: 1;
+}
+.totalDiff {
+  margin-top: 10px;
+}
+
+.mer .divider {
+  background-color: #00d2be;
+}
+.mer {
+  background-color: black;
+}
+.fer {
+  background-color: #dc0000;
+}
+.fer .divider {
+  background-color: black;
+}
+.rbr {
+  background-color: #00327d;
+}
+.rbr .divider {
+  background-color: #ea262a;
+}
+.rbr span {
+  color: #fcee3b;
+}
+.alp {
+  background-color: #007acc;
+}
+.alp .divider {
+  background-color: #e2211c;
+}
+.has {
+  background-color: white;
+}
+.has .divider {
+  background-color: red;
+}
+.has span {
+  color: blue;
+}
+.mcl {
+  background-color: #ff8700;
+}
+.mcl .divider {
+  background-color: #1264f4;
+}
+.mcl span {
+  color: rgb(4, 0, 51);
+}
+.ast {
+  background-color: #00584f;
+}
+.ast .divider {
+  background-color: #c7da00;
+}
+.alf {
+  background-color: #9b0000;
+}
+.alf .divider {
+  background-color: white;
+}
+.alt {
+  background-color: #203a54;
+}
+.alt .divider {
+  background-color: white;
+}
+.wil {
+  background-color: #061d41;
+}
+.wil .divider {
+  background-color: #00a0de;
+}
+.wil span {
+  color: #dea225;
+}
+
+/* Start of swipe prompt*/
+.predictionTables .tableContainer:first-child .swipeIconLeft {
+  display: none;
+}
+.predictionTables .tableContainer:last-child .swipeIconRight {
+  display: none;
+}
+.swipeIconCon {
+  position: absolute;
+  width: 50%;
+  padding-top: 1px;
+  display: none;
+}
+.swipeIconCon i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  animation: swipeAnimation 3s 0.2s infinite ease-in-out;
+}
+.swipeIconRight {
+  right: 0;
+}
+.swipeIconRight i {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.swipeIconRight i:first-child,
+.swipeIconLeft i:last-child {
+  animation-delay: 0.1s;
+}
+.swipeIconRight i:last-child,
+.swipeIconLeft i:first-child {
+  animation-delay: 0.3s;
+}
+.swipeIconLeft i {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+@keyframes swipeAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* End of swipe prompt*/
+/*Start of slider section*/
+.sliderFooter {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-shadow: -2px 1px 12px 0px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: -2px 1px 12px 0px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: -2px 1px 12px 0px rgba(0, 0, 0, 0.19);
+  width: calc(100%);
+  padding: 10px $page-margin-desktop;
+  left: 0;
+  right: 0;
+}
+.sliderCon {
+  color: black;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Viga", cursive;
+  font-size: 20px;
+}
+.sliderCon * {
+  color: black;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #bbb;
+  outline: none;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+/* End of slider section*/
+@media (max-width: 1200px) {
+  .playerNumbers5 .fullName {
+    display: none;
+  }
+  .playerNumbers5 .shortName {
+    display: block;
+  }
+  .playerNumbers5 .entrantBlock {
+    width: 85px;
+  }
+}
+@media (max-width: 1000px) {
+  .playerNumbers5 .predictionTables {
+    width: calc(100% - 130px);
+  }
+}
+@media (max-width: 850px) {
+  .playerNumbers5 .predictionTables {
+    flex-wrap: nowrap;
+    width: calc(100% - 150px);
+  }
+  .playerNumbers5 .predictionTables .tableContainer {
+    width: calc(50% - 20px);
+    margin-right: 20px;
+  }
+  .playerNumbers5 .swipeIconCon {
+    display: inherit;
+  }
+  .playerNumbers5 .entrantBlock {
+    width: 100%;
+  }
+  .playerNumbers5 .fullName {
+    display: block;
+  }
+  .playerNumbers5 .shortName {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .playerNumbers3 .fullName {
+    display: none;
+  }
+  .playerNumbers3 .shortName {
+    display: block;
+  }
+  .playerNumbers3 .entrantBlock {
+    width: 85px;
+  }
+  .playerNumbers3 .predictionTables {
+    width: calc(100% - 150px);
+  }
+}
+@media (max-width: 600px) {
+  .navBar,
+  .content,
+  .sliderFooter {
+    padding-left: $page-margin-mobile;
+    padding-right: $page-margin-mobile;
+  }
+}
+@media (max-width: 550px) {
+  .playerNumbers3 .predictionTables {
+    width: calc(100% - 110px);
+  }
+  .playerNumbers5 .predictionTables .tableContainer {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media (max-width: 500px) {
+  .playerNumbers3 .predictionTables {
+    flex-wrap: nowrap;
+    width: calc(100% - 150px);
+  }
+  .playerNumbers3 .predictionTables .tableContainer {
+    width: 100%;
+    margin-right: 0;
+  }
+  .playerNumbers3 .swipeIconCon {
+    display: inherit;
+  }
+  .playerNumbers3 .entrantBlock {
+    width: 100%;
+  }
+  .playerNumbers3 .fullName {
+    display: block;
+  }
+  .playerNumbers3 .shortName {
+    display: none;
+  }
+  .options select {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .navItem {
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .playerNumbers3 .predictionTables,
+  .playerNumbers5 .predictionTables {
+    width: calc(100% - 100px);
+  }
+  .playerNumbers3 .fullName,
+  .playerNumbers5 .fullName {
+    display: none;
+  }
+  .playerNumbers3 .shortName,
+  .playerNumbers5 .shortName {
+    display: block;
+  }
+}
