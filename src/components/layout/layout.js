@@ -34,8 +34,15 @@ class Layout extends Component {
     return (
       <div className={globalStyles.pageCon + " " + navType}>
         <Header />
-        <main className={globalStyles.contentCon}>{this.props.children}</main>
-        <Footer />
+        <main
+          className={`${globalStyles.contentCon} ${
+            this.props.widthLimited === true &&
+            globalStyles.contentConWidthStrict
+          }`}
+        >
+          {this.props.children}
+        </main>
+        {this.props.footer && <Footer />}
         <script
           data-goatcounter="https://davidwillprice.goatcounter.com/count"
           async
@@ -44,6 +51,11 @@ class Layout extends Component {
       </div>
     )
   }
+}
+
+Layout.defaultProps = {
+  footer: true,
+  widthLimited: true,
 }
 
 export default Layout
