@@ -552,7 +552,10 @@ function Leaderboard(props) {
   const roundNo = props.roundNo
   const listRows = roundData[roundNo].leaderboards[entrantType].map(
     (leaderboardStanding, index) => (
-      <tr className={f1PredictCSS.leaderboardRow}>
+      <tr
+        className={f1PredictCSS.leaderboardRow}
+        key={index + 1 + leaderboardStanding.player.name}
+      >
         <td className={f1PredictCSS.leaderboardPos}>{index + 1}</td>
         <td className={f1PredictCSS.leaderboardName}>
           {leaderboardStanding.player.name}
@@ -563,12 +566,14 @@ function Leaderboard(props) {
   )
   return (
     <table className={f1PredictCSS.leaderboard}>
-      <tr>
-        <th>Position</th>
-        <th>Name</th>
-        <th>% Correct</th>
-      </tr>
-      {listRows}
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Name</th>
+          <th>% Correct</th>
+        </tr>
+      </thead>
+      <tbody>{listRows}</tbody>
     </table>
   )
 }
