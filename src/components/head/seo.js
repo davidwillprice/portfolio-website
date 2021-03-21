@@ -27,7 +27,7 @@ const SEO = ({ title, description, image, article, backgroundColour }) => {
     <Helmet
       title={seo.title}
       htmlAttributes={{
-        style: `background-color:${backgroundColour}`,
+        style: { backgroundColor: `${backgroundColour}` },
       }}
       titleTemplate={
         seo.title === "David Price Web Design" ? "" : titleTemplate
