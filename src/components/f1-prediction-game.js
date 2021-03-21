@@ -414,7 +414,7 @@ function calcData() {
 //The leadboards have been generated, but aren't in the correct order
 function orderLeaderboards(entrantType) {
   //Loop through each round
-  for (const [roundNo, round] of Object.entries(rounds)) {
+  for (const round of Object.values(rounds)) {
     //Sort the players by their percentage correct, highest first
     round.leaderboards[entrantType].sort((a, b) =>
       a.percentCorrect < b.percentCorrect ? 1 : -1
@@ -477,7 +477,7 @@ function diffOpacity(posDiff, entrantType) {
   if (entrantType === "driver") {
     if (posDiff > 0 && posDiff <= 3) {
       diffOpacityClass = "diffLow"
-    } else if (posDiff == 0) {
+    } else if (posDiff === 0) {
       diffOpacityClass = "diffZero"
     } else if (posDiff > 3 && posDiff <= 6) {
       diffOpacityClass = "diffMed"
@@ -487,7 +487,7 @@ function diffOpacity(posDiff, entrantType) {
   } else {
     if (posDiff > 0 && posDiff <= 2) {
       diffOpacityClass = "diffLow"
-    } else if (posDiff == 0) {
+    } else if (posDiff === 0) {
       diffOpacityClass = "diffZero"
     } else if (posDiff > 2 && posDiff <= 4) {
       diffOpacityClass = "diffMed"
@@ -644,6 +644,7 @@ class F1PredictionGame extends Component {
     this.setState({ entrantType: event.target.value })
   }
   changePlayerGroup(event) {
+    console.log(event)
     this.setState({ playerGroup: event.target.value })
   }
   changeRound(event) {
@@ -655,7 +656,7 @@ class F1PredictionGame extends Component {
   render() {
     /*Change what is displayed depending on what mode is selected*/
     let display
-    if (this.state.mode == "standings") {
+    if (this.state.mode === "standings") {
       display = (
         <div
           className={`${f1PredictCSS.tablesOverview} ${
@@ -678,7 +679,7 @@ class F1PredictionGame extends Component {
           />
         </div>
       )
-    } else if (this.state.mode == "leaderboard") {
+    } else if (this.state.mode === "leaderboard") {
       display = (
         <Leaderboard
           playerData={filteredPlayers(this.state.playerGroup)}
@@ -715,20 +716,20 @@ class F1PredictionGame extends Component {
       >
         <div className={f1PredictCSS.navCon}>
           <nav className={f1PredictCSS.navBar}>
-            <a
+            <button
               data-mode="leaderboard"
               className={`${f1PredictCSS.navItem} ${f1PredictCSS.leaderboardBtn}`}
               onClick={event => this.changeMode(event)}
             >
               Leaderboard
-            </a>
-            <a
+            </button>
+            <button
               data-mode="standings"
               className={`${f1PredictCSS.navItem} ${f1PredictCSS.standingsBtn}`}
               onClick={event => this.changeMode(event)}
             >
               Full standings
-            </a>
+            </button>
             {/*<a
             data-mode="help"
             className={`${f1PredictCSS.navItem} ${f1PredictCSS.helpBtn}`}

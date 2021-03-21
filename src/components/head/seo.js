@@ -23,7 +23,6 @@ const SEO = ({ title, description, image, article, bgColor }) => {
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   }
-  console.log(bgColor)
 
   let bgColourClass = bgColor ? bgColor + "Bg" : ""
 

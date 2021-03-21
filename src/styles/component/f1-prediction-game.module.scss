@@ -28,9 +28,11 @@
   padding: 10px 20px;
   text-transform: uppercase;
   border-left: 1px solid #ededed;
+  border-right: none;
   cursor: pointer;
   border-top: 5px solid white;
   border-bottom: 5px solid white;
+  background-color: transparent;
 }
 .navItem:last-child {
   border-right: 1px solid #ededed;
