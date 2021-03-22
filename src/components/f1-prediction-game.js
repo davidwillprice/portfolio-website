@@ -403,6 +403,7 @@ function calcData() {
               200) *
               100
           ),
+          prevRdDiff: 0,
         })
       }
       calcLeaderboard("driver", player)
@@ -410,7 +411,31 @@ function calcData() {
     }
   }
 }
-
+//
+function calcLeaderboardRdDiffs(entrantType) {
+  for (const [roundNo, round] of Object.entries(rounds)) {
+    //Making sure it doesn't try and calc a nonexistent round
+    if (roundNo + 1 < rounds.length) {
+      //Loop over the order of the leaderboard
+      for (const [prevPos, prevRdPlayerData] of Object.entries(
+        round.leaderboards[entrantType]
+      )) {
+        //Set the current round and make sure it is a number
+        const curRoundNo = parseFloat(roundNo) + 1
+        //Find player's location in the next round to find 'currentPos'
+        for (const [curPos, curRdPlayerData] of Object.entries(
+          rounds[curRoundNo].leaderboards[entrantType]
+        )) {
+          if (curRdPlayerData.player.name === prevRdPlayerData.player.name) {
+            const rdDiff = prevPos - curPos
+            //Update prevRdDiff for that player in current round
+            curRdPlayerData.prevRdDiff = rdDiff
+          }
+        }
+      }
+    }
+  }
+}
 //The leadboards have been generated, but aren't in the correct order
 function orderLeaderboards(entrantType) {
   //Loop through each round
@@ -425,6 +450,8 @@ function orderLeaderboards(entrantType) {
 calcData()
 orderLeaderboards("driver")
 orderLeaderboards("team")
+calcLeaderboardRdDiffs("driver")
+calcLeaderboardRdDiffs("team")
 
 console.log("players")
 console.log(players)
@@ -543,6 +570,14 @@ function PredictionTables(props) {
   return <div className={f1PredictCSS.predictionTables}>{listTables}</div>
 }
 
+function prevRdDiffUI(prevRdDiff) {
+  return prevRdDiff > 0
+    ? "posLeaderboardChg"
+    : prevRdDiff < 0
+    ? "negLeaderboardChg"
+    : "noLeaderboardChg"
+}
+
 function Leaderboard(props) {
   //playerData is data of the players that will displayed
   const roundData = props.roundData
@@ -557,6 +592,13 @@ function Leaderboard(props) {
         key={index + 1 + leaderboardStanding.player.name}
       >
         <td className={f1PredictCSS.leaderboardPos}>{index + 1}</td>
+        <td
+          className={`${f1PredictCSS.leaderboardPosDiff} ${
+            f1PredictCSS[prevRdDiffUI(leaderboardStanding.prevRdDiff)]
+          }`}
+        >
+          <i></i>
+        </td>
         <td className={f1PredictCSS.leaderboardName}>
           {leaderboardStanding.player.name}
         </td>
@@ -569,6 +611,7 @@ function Leaderboard(props) {
       <thead>
         <tr>
           <th>Position</th>
+          <th></th>
           <th>Name</th>
           <th>% Correct</th>
         </tr>
