@@ -318,6 +318,13 @@ let players = {
     ],
     [mer, rbr, mcl, fer, ast, alp, alt, alf, wil, has]
   ),
+  formula1: new Player(
+    //https://www.formula1.com/en/latest/article.f1-power-rankings-weve-ranked-the-teams-from-10-to-1-after-pre-season.6DKunC8CA9nHHu6MkuiIQQ.html
+    "formula1.com",
+    ["misc"],
+    [],
+    [rbr, mer, mcl, alp, fer, alt, ast, alf, wil, has]
+  ),
 }
 class Round {
   constructor(trackName, driverStandings, teamStandings) {
@@ -375,20 +382,22 @@ function calcData() {
       function calcRoundPerformance(entrantType, player) {
         // console.log("entrantType")
         // console.log(entrantType)
-        for (const [predictedPos, entrant] of Object.entries(
-          player[entrantType + "Table"]
-        )) {
-          //Find the position the player predicted that entrant would come in the standings
-          const actualPos = round.standings[entrantType].indexOf(entrant)
-          //Work out how many positions the player is off
-          const posDiff = Math.abs(predictedPos - actualPos)
-          //Add the posDiff to their total for this round
-          player.season["round" + roundNo][entrantType].diffTotal += posDiff
-          //Add the entrant and their posDiff to the Player's data
-          player.season["round" + roundNo][entrantType].diffs.push({
-            entrant: entrant,
-            posDiff,
-          })
+        if (player[entrantType + "Table"].length > 0) {
+          for (const [predictedPos, entrant] of Object.entries(
+            player[entrantType + "Table"]
+          )) {
+            //Find the position the player predicted that entrant would come in the standings
+            const actualPos = round.standings[entrantType].indexOf(entrant)
+            //Work out how many positions the player is off
+            const posDiff = Math.abs(predictedPos - actualPos)
+            //Add the posDiff to their total for this round
+            player.season["round" + roundNo][entrantType].diffTotal += posDiff
+            //Add the entrant and their posDiff to the Player's data
+            player.season["round" + roundNo][entrantType].diffs.push({
+              entrant: entrant,
+              posDiff,
+            })
+          }
         }
       }
       calcRoundPerformance("driver", player)
@@ -536,7 +545,10 @@ function PredictionTables(props) {
   //round decides which race data to show
   const round = "round" + props.roundNo
   //Map through each player
-  const listTables = Object.keys(playerData).map((player, i) => (
+  console.log(playerData)
+  const playersWithData = filterPlayersWithoutData(playerData, entrantType)
+
+  const listTables = Object.keys(playersWithData).map((player, i) => (
     //Create a HTML around each table, calling the PredictionTable component (With the table data passed in) to create the table itself
     <div
       id={playerData[player].name + "-table"}
@@ -587,27 +599,30 @@ function Leaderboard(props) {
   const entrantType = props.entrantType
   //round decides which race data to show
   const roundNo = props.roundNo
-  const listRows = roundData[roundNo].leaderboards[entrantType].map(
-    (leaderboardStanding, index) => (
-      <tr
-        className={f1PredictCSS.leaderboardRow}
-        key={index + 1 + leaderboardStanding.player.name}
-      >
-        <td className={f1PredictCSS.leaderboardPos}>{index + 1}</td>
-        <td
-          className={`${f1PredictCSS.leaderboardPosDiff} ${
-            f1PredictCSS[prevRdDiffUI(leaderboardStanding.prevRdDiff)]
-          }`}
-        >
-          <i></i>
-        </td>
-        <td className={f1PredictCSS.leaderboardName}>
-          {leaderboardStanding.player.name}
-        </td>
-        <td>{leaderboardStanding.percentCorrect}%</td>
-      </tr>
-    )
+  //Go to the leaderboards of the selected entrantType in the selected round and filter out any players which didn't make predictions for that entrant type
+  const filteredRoundData = roundData[roundNo].leaderboards[entrantType].filter(
+    leaderboardStanding =>
+      leaderboardStanding.player[entrantType + "Table"].length > 0
   )
+  const listRows = filteredRoundData.map((leaderboardStanding, index) => (
+    <tr
+      className={f1PredictCSS.leaderboardRow}
+      key={index + 1 + leaderboardStanding.player.name}
+    >
+      <td className={f1PredictCSS.leaderboardPos}>{index + 1}</td>
+      <td
+        className={`${f1PredictCSS.leaderboardPosDiff} ${
+          f1PredictCSS[prevRdDiffUI(leaderboardStanding.prevRdDiff)]
+        }`}
+      >
+        <i></i>
+      </td>
+      <td className={f1PredictCSS.leaderboardName}>
+        {leaderboardStanding.player.name}
+      </td>
+      <td>{leaderboardStanding.percentCorrect}%</td>
+    </tr>
+  ))
   return (
     <table className={f1PredictCSS.leaderboard}>
       <thead>
@@ -669,6 +684,16 @@ const filteredPlayers = function (playerGroup) {
   const obj = {}
   for (const key of Object.keys(players)) {
     if (players[key].groups.includes(playerGroup)) {
+      obj[key] = players[key]
+    }
+  }
+  return obj
+}
+
+function filterPlayersWithoutData(players, entrantType) {
+  const obj = {}
+  for (const key of Object.keys(players)) {
+    if (players[key][entrantType + "Table"].length > 0) {
       obj[key] = players[key]
     }
   }
@@ -755,6 +780,7 @@ class F1PredictionGame extends Component {
           <option value="brr">BRR</option>
           <option value="dyson">Dyson</option>
           <option value="herefordshire">Herefordshire</option>
+          <option value="misc">Miscellaneous</option>
         </select>
       )
     }
