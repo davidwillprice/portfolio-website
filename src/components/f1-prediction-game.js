@@ -395,12 +395,14 @@ function calcData() {
       calcRoundPerformance("team", player)
       //Populate leaderboard for selected player within selected round
       function calcLeaderboard(entrantType, player) {
+        const maxDiff = entrantType === "driver" ? 200 : 50
         round.leaderboards[entrantType].push({
           player: player,
           //The % a table is to correct is difference of 200 and the diffTotal as a percentage of 200
           percentCorrect: Math.round(
-            ((200 - player.season["round" + roundNo][entrantType].diffTotal) /
-              200) *
+            ((maxDiff -
+              player.season["round" + roundNo][entrantType].diffTotal) /
+              maxDiff) *
               100
           ),
           prevRdDiff: 0,
