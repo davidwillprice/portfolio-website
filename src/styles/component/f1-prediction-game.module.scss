@@ -111,18 +111,18 @@
   padding: 3px;
 }
 .posLeaderboardChg i {
-  transform: rotate(225deg);
+  transform: rotate(225deg) translate(-1px, -1px);
   border-color: green;
 }
 .negLeaderboardChg i {
-  transform: rotate(45deg);
+  transform: rotate(45deg) translate(-2px, -2px);
   border-color: red;
 }
 .noLeaderboardChg i {
   border-width: 0 0 3px 0;
-  padding: 1.5px 3px;
-  transform: translateY(-3px);
-  opacity: 0.5;
+  padding: 1.5px 5px;
+  transform: translateY(-4px);
+  opacity: 0.2;
 }
 .leaderboardName {
   padding: 0 10px;
