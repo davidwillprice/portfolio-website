@@ -373,7 +373,7 @@ let rounds = [
       sch,
       maz,
     ],
-    [mer, mcl, fer, ast, alt, alp, alf, wil, has, rbr]
+    [mer, wil, alt, rbr, alf, ast, fer, alp, mcl, has]
   ),
 ]
 function calcData() {
