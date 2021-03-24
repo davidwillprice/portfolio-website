@@ -325,6 +325,7 @@ let players = {
     [],
     [rbr, mer, mcl, alp, fer, alt, ast, alf, wil, has]
   ),
+  average: new Player("average", ["misc"], [], []),
 }
 class Round {
   constructor(trackName, driverStandings, teamStandings) {
@@ -457,7 +458,32 @@ function orderLeaderboards(entrantType) {
     )
   }
 }
-
+function generateAverageTables(entrantData, entrantType) {
+  //Loop over each entrant, finding their index in each player's prediction table and totalling them in a new avgPrePos property
+  for (const entrant of Object.values(entrantData)) {
+    let predictionPosTotal = 0
+    let noOfPlayers = 0
+    for (const player of Object.values(players)) {
+      //Checking player does actually predict entrant
+      if (player[entrantType + "Table"].indexOf(entrant) !== -1) {
+        predictionPosTotal += player[entrantType + "Table"].indexOf(entrant) + 1
+        noOfPlayers++
+      }
+    }
+    entrant.avgPrePos = predictionPosTotal / noOfPlayers
+    players.average[entrantType + "Table"].push(entrant)
+  }
+}
+generateAverageTables(drivers, "driver")
+generateAverageTables(teams, "team")
+function orderAverageTables(entrantType) {
+  //Sort the players by their percentage correct, highest first
+  players.average[entrantType + "Table"].sort((a, b) =>
+    a.avgPrePos > b.avgPrePos ? 1 : -1
+  )
+}
+orderAverageTables("driver")
+orderAverageTables("team")
 calcData()
 orderLeaderboards("driver")
 orderLeaderboards("team")
