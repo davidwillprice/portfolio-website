@@ -800,9 +800,57 @@ class F1PredictionGame extends Component {
           roundData={rounds}
         />
       )
+    } else if (this.state.mode === "help") {
+      display = (
+        <div className={f1PredictCSS.helpCon}>
+          <h1>F1 Prediction game&nbsp;2021</h1>
+          <h2>Rules</h2>
+          <ol>
+            <li>
+              One penalty point is awarded for every position that a driver/team
+              is from their actual standing - These are shown to the right of
+              each predicted table row;
+            </li>
+            <li>
+              The total penalty points for each player is shown at the bottom of
+              their prediction tables;
+            </li>
+            <li>
+              Each players' accuracy rating in the leaderboard shows how close
+              they are to a prefectly predicted table;
+            </li>
+            <li>
+              The player(s) with the most accurate driver and constructor tables
+              at the end of the season win.
+            </li>
+          </ol>
+          <h2>Additional info</h2>
+          <ul>
+            <li>
+              Stand-in drivers won't be added to the driver standings
+              (Hulkenberg didn't join the game's driver standings last year);
+            </li>
+            <li>
+              Other than that, the game's standings will be ordered as they are
+              in real life;
+            </li>
+            <li>
+              <a href="https://www.formula1.com/en/latest/article.f1-power-rankings-weve-ranked-the-teams-from-10-to-1-after-pre-season.6DKunC8CA9nHHu6MkuiIQQ.html">
+                formula1.com
+              </a>{" "}
+              and{" "}
+              <a href="https://twitter.com/karunchandhok/status/1371374740217159680">
+                Sky F1 Analyst Karun Chandok
+              </a>{" "}
+              made their predictions after preseason testing so had an
+              advantage.
+            </li>
+          </ul>
+        </div>
+      )
     }
     let playersSelect
-    if (this.state.mode !== "leaderboard") {
+    if (this.state.mode === "standings") {
       playersSelect = (
         <select
           name="playerGroup"
@@ -818,6 +866,40 @@ class F1PredictionGame extends Component {
           <option value="herefordshire">Herefordshire</option>
           <option value="misc">Miscellaneous</option>
         </select>
+      )
+    }
+    let entrantTypeSelect
+    let sliderFooter
+    if (this.state.mode !== "help") {
+      entrantTypeSelect = (
+        <select
+          name="entrantType"
+          id="entrantType"
+          onChange={event => this.changeEntrantType(event)}
+        >
+          <option value="driver">Driver Standings</option>
+          <option value="team">Constructor Standings</option>
+        </select>
+      )
+      sliderFooter = (
+        <div className={f1PredictCSS.sliderFooter}>
+          <div className={f1PredictCSS.sliderCon}>
+            Round {parseInt(this.state.selectedRound) + 1} :
+            <span id="track-name">
+              {" " + rounds[this.state.selectedRound].trackName}
+            </span>
+            {rounds.length > 1 && (
+              <input
+                onChange={event => this.changeRound(event)}
+                aria-label="Grand Prix race slider"
+                type="range"
+                min="0"
+                max={rounds.length - 1}
+                className={f1PredictCSS.slider}
+              />
+            )}
+          </div>
+        </div>
       )
     }
     return (
@@ -842,56 +924,27 @@ class F1PredictionGame extends Component {
             >
               Full standings
             </button>
-            {/*<a
-            data-mode="help"
-            className={`${f1PredictCSS.navItem} ${f1PredictCSS.helpBtn}`}
-            onClick={event => this.changeMode(event)}
-          >
-            Help
-          </a>*/}
+            <button
+              data-mode="help"
+              className={`${f1PredictCSS.navItem} ${f1PredictCSS.helpBtn}`}
+              onClick={event => this.changeMode(event)}
+            >
+              Help
+            </button>
           </nav>
         </div>
         <div className={f1PredictCSS.content}>
           <div className={f1PredictCSS.opening}>
             <div className={f1PredictCSS.introOptions}>
-              {/*<p className={f1PredictCSS.subHeading}>
-              One point for every position a driver/team is from their actual
-              standing - The lower the points, the more accurate the predicted
-              table
-            </p> */}
               <div className={f1PredictCSS.options}>
                 {playersSelect}
-                <select
-                  name="entrantType"
-                  id="entrantType"
-                  onChange={event => this.changeEntrantType(event)}
-                >
-                  <option value="driver">Driver Standings</option>
-                  <option value="team">Constructor Standings</option>
-                </select>
+                {entrantTypeSelect}
               </div>
             </div>
           </div>
           {display}
         </div>
-        <div className={f1PredictCSS.sliderFooter}>
-          <div className={f1PredictCSS.sliderCon}>
-            Round {parseInt(this.state.selectedRound) + 1} :
-            <span id="track-name">
-              {" " + rounds[this.state.selectedRound].trackName}
-            </span>
-            {rounds.length > 1 && (
-              <input
-                onChange={event => this.changeRound(event)}
-                aria-label="Grand Prix race slider"
-                type="range"
-                min="0"
-                max={rounds.length - 1}
-                className={f1PredictCSS.slider}
-              />
-            )}
-          </div>
-        </div>
+        {sliderFooter}
       </div>
     )
   }

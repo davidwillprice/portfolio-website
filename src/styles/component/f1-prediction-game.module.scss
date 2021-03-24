@@ -90,7 +90,7 @@
   border: none;
   text-align: left;
 }
-.leaderboard tr:nth-child(even) {
+.leaderboard tbody tr:nth-child(odd) {
   background-color: rgb(50, 50, 50);
 }
 .leaderboard th {
@@ -423,6 +423,36 @@
   margin-top: 10px;
 }
 /* End of slider section*/
+/*Start of help*/
+.helpMode .opening {
+  margin: 10px 0;
+}
+.helpCon * {
+  color: white;
+  font-size: 1rem;
+  text-align: left;
+}
+.helpCon h1 {
+  font-family: "Viga", cursive;
+  font-size: 3rem;
+}
+.helpCon h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.helpCon ul,
+.helpCon ol {
+  padding-left: 20px;
+}
+.helpCon ul li {
+  font-size: 0.8rem;
+}
+.helpCon a {
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+/*End of help*/
 @media (max-width: 1200px) {
   .playerNumbers5 .fullName {
     display: none;
@@ -474,6 +504,9 @@
   .playerNumbers3 .predictionTables {
     width: calc(100% - 150px);
   }
+  .helpCon h1 {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 600px) {
   .navBar,
@@ -522,6 +555,9 @@
   }
   .navItem {
     padding: 10px 10px;
+  }
+  .helpCon h1 {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 400px) {
