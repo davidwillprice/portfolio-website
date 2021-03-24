@@ -572,9 +572,8 @@ function PredictionTables(props) {
   const round = "round" + props.roundNo
   //Map through each player
   console.log(playerData)
-  const playersWithData = filterPlayersWithoutData(playerData, entrantType)
 
-  const listTables = Object.keys(playersWithData).map((player, i) => (
+  const listTables = Object.keys(playerData).map((player, i) => (
     //Create a HTML around each table, calling the PredictionTable component (With the table data passed in) to create the table itself
     <div
       id={playerData[player].name + "-table"}
@@ -705,21 +704,14 @@ function ActualTable(props) {
   )
 }
 
-//Populate filteredPlayerData with the players which will be shown depending on the playerGroup selected
-const filteredPlayers = function (playerGroup) {
+//Populate filteredPlayers with the players that match the selected playerGroup and have predictions for the slected entrantType
+const filteredPlayers = function (playerGroup, entrantType) {
   const obj = {}
   for (const key of Object.keys(players)) {
-    if (players[key].groups.includes(playerGroup)) {
-      obj[key] = players[key]
-    }
-  }
-  return obj
-}
-
-function filterPlayersWithoutData(players, entrantType) {
-  const obj = {}
-  for (const key of Object.keys(players)) {
-    if (players[key][entrantType + "Table"].length > 0) {
+    if (
+      players[key].groups.includes(playerGroup) &&
+      players[key][entrantType + "Table"].length > 0
+    ) {
       obj[key] = players[key]
     }
   }
@@ -763,7 +755,12 @@ class F1PredictionGame extends Component {
           className={`${f1PredictCSS.tablesOverview} ${
             f1PredictCSS[
               "playerNumbers" +
-                Object.keys(filteredPlayers(this.state.playerGroup)).length
+                Object.keys(
+                  filteredPlayers(
+                    this.state.playerGroup,
+                    this.state.entrantType
+                  )
+                ).length
             ]
           }`}
         >
@@ -773,7 +770,10 @@ class F1PredictionGame extends Component {
             roundNo={this.state.selectedRound}
           />
           <PredictionTables
-            playerData={filteredPlayers(this.state.playerGroup)}
+            playerData={filteredPlayers(
+              this.state.playerGroup,
+              this.state.entrantType
+            )}
             entrantType={this.state.entrantType}
             playerGroup={this.state.playerGroup}
             roundNo={this.state.selectedRound}
@@ -783,7 +783,10 @@ class F1PredictionGame extends Component {
     } else if (this.state.mode === "leaderboard") {
       display = (
         <Leaderboard
-          playerData={filteredPlayers(this.state.playerGroup)}
+          playerData={filteredPlayers(
+            this.state.playerGroup,
+            this.state.entrantType
+          )}
           entrantType={this.state.entrantType}
           playerGroup={this.state.playerGroup}
           roundNo={this.state.selectedRound}
