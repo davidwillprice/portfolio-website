@@ -142,8 +142,14 @@
   justify-content: space-between;
   margin: 0 auto;
 }
+.playerNumbers1.tablesOverview {
+  max-width: 375px;
+}
 .playerNumbers3.tablesOverview {
   max-width: 800px;
+}
+.playerNumbers1.tablesOverview .predictionTables {
+  justify-content: flex-end;
 }
 .predictionTables {
   display: flex;
@@ -516,6 +522,20 @@
   }
   .navItem {
     padding: 10px 10px;
+  }
+}
+@media (max-width: 400px) {
+  .playerNumbers1 .fullName {
+    display: none;
+  }
+  .playerNumbers1 .shortName {
+    display: block;
+  }
+  .playerNumbers1 .entrantBlock {
+    width: 85px;
+  }
+  .playerNumbers1 .predictionTables {
+    width: calc(100% - 100px);
   }
 }
 
