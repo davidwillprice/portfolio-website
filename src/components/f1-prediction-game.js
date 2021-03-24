@@ -326,6 +326,13 @@ let players = {
     [rbr, mer, mcl, alp, fer, alt, ast, alf, wil, has]
   ),
   average: new Player("average", ["misc"], [], []),
+  karun: new Player(
+    //https://twitter.com/karunchandhok/status/1371374740217159680
+    "Karun Sky F1",
+    ["misc"],
+    [],
+    [rbr, mer, alt, mcl, alp, fer, ast, alf, wil, has]
+  ),
 }
 class Round {
   constructor(trackName, driverStandings, teamStandings) {
