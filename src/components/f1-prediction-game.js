@@ -653,10 +653,10 @@ function Leaderboard(props) {
     <table className={f1PredictCSS.leaderboard}>
       <thead>
         <tr>
-          <th>Position</th>
+          <th>Pos</th>
           <th></th>
           <th>Name</th>
-          <th>% Correct</th>
+          <th>Accuracy</th>
         </tr>
       </thead>
       <tbody>{listRows}</tbody>
