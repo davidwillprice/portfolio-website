@@ -346,6 +346,10 @@ class Round {
       driver: [],
       team: [],
     }
+    this.entrantDiffTotals = {
+      driver: [],
+      team: [],
+    }
   }
 }
 let rounds = [
@@ -497,6 +501,54 @@ orderLeaderboards("team")
 calcLeaderboardRdDiffs("driver")
 calcLeaderboardRdDiffs("team")
 
+function generateEntrantDiffTotals(entrantType, entrantData) {
+  //Loop over rounds to generate the EntrantDiffTotals for each round
+  for (const roundNo of Object.keys(rounds)) {
+    //Loop over players to get their diffs for each entrant
+    for (const player of Object.values(players)) {
+      //Loop over entrants to add each entrant's diffs to each total before moving onto the next player
+      for (const entrant of Object.values(entrantData)) {
+        //Find if the entrantDiffTotals doesn't already contain an object for the entrant, push {entrant:[entrant], diffTotal:0}
+        if (
+          !rounds[roundNo].entrantDiffTotals[entrantType].find(
+            x => x.entrant === entrant
+          )
+        ) {
+          rounds[roundNo].entrantDiffTotals[entrantType].push({
+            entrant: entrant,
+            diffTotal: 0,
+          })
+        }
+        //Checking if the player made predictions for that entrantType
+        if (player.season["round" + roundNo][entrantType].diffs.length > 0) {
+          //Find entrant in player's predictions for the round
+          const entrantStanding = player.season["round" + roundNo][
+            entrantType
+          ].diffs.find(element => element.entrant.sName === entrant.sName)
+          //Find entrantDiff total
+          let entrantTotal = rounds[roundNo].entrantDiffTotals[
+            entrantType
+          ].find(element => element.entrant === entrant)
+          //Add entrantStanding.posDiff to entrant's diff total
+          entrantTotal.diffTotal += entrantStanding.posDiff
+        }
+      }
+    }
+  }
+}
+generateEntrantDiffTotals("driver", drivers)
+generateEntrantDiffTotals("team", teams)
+function orderEntrantDiffTotals(entrantType) {
+  //Loop over rounds
+  for (const round of Object.values(rounds)) {
+    //Sort the players by their percentage correct, highest first
+    round.entrantDiffTotals[entrantType].sort((a, b) =>
+      a.diffTotal > b.diffTotal ? 1 : -1
+    )
+  }
+}
+orderEntrantDiffTotals("driver")
+orderEntrantDiffTotals("team")
 console.log("players")
 console.log(players)
 console.log("rounds")
@@ -577,8 +629,6 @@ function PredictionTables(props) {
   const entrantType = props.entrantType
   //round decides which race data to show
   const round = "round" + props.roundNo
-  //Map through each player
-  console.log(playerData)
 
   const listTables = Object.keys(playerData).map((player, i) => (
     //Create a HTML around each table, calling the PredictionTable component (With the table data passed in) to create the table itself
@@ -744,7 +794,6 @@ class F1PredictionGame extends Component {
     this.setState({ entrantType: event.target.value })
   }
   changePlayerGroup(event) {
-    console.log(event)
     this.setState({ playerGroup: event.target.value })
   }
   changeRound(event) {
@@ -803,7 +852,7 @@ class F1PredictionGame extends Component {
     } else if (this.state.mode === "help") {
       display = (
         <div className={f1PredictCSS.helpCon}>
-          <h1>F1 Prediction game&nbsp;2021</h1>
+          <h1>F1 Prediction Game&nbsp;2021</h1>
           <h2>Rules</h2>
           <ol>
             <li>
