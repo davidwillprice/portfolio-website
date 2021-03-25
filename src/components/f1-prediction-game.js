@@ -860,6 +860,30 @@ class F1PredictionGame extends Component {
               is from their actual standing - These are shown to the right of
               each predicted table row;
             </li>
+            <div className={f1PredictCSS.preview}>
+              <div className={f1PredictCSS.tableRow}>
+                <div
+                  className={`${f1PredictCSS.entrantBlock} ${f1PredictCSS.rbr}`}
+                >
+                  <div className={f1PredictCSS.position}>
+                    <span>2</span>
+                  </div>
+                  <div className={f1PredictCSS.divider}></div>
+                  <div className={f1PredictCSS.entrantName}>
+                    <span className={f1PredictCSS.fullName}>Verstappen</span>
+                  </div>
+                </div>
+                <div
+                  className={`${f1PredictCSS.posDiff} ${f1PredictCSS.diffMed}`}
+                >
+                  <span>5</span>
+                </div>
+              </div>
+              <p>
+                Verstappen was predicted to finish 2nd, but is actually 5
+                positions away from that in the current standings.
+              </p>
+            </div>
             <li>
               The total penalty points for each player is shown at the bottom of
               their prediction tables;
@@ -873,7 +897,7 @@ class F1PredictionGame extends Component {
               at the end of the season win.
             </li>
           </ol>
-          <h2>Additional info</h2>
+          <h2>Additional Info</h2>
           <ul>
             <li>
               Stand-in drivers won't be added to the driver standings
