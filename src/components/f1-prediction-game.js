@@ -934,28 +934,44 @@ class F1PredictionGame extends Component {
                 rounds[this.state.selectedRound].entrantDiffTotals.driver[0]
                   .entrant.fName
               }{" "}
-              is the most accurately predicted driver;
+              is the most accurately predicted driver, with the average player
+              only mispredicting him by{" "}
+              {rounds[this.state.selectedRound].entrantDiffTotals.driver[0]
+                .diffTotal / 10}{" "}
+              positions;
             </li>
             <li>
               {
                 rounds[this.state.selectedRound].entrantDiffTotals.driver[19]
                   .entrant.fName
               }{" "}
-              is the least accurately predicted driver;
+              is the least accurately predicted driver, with the average player
+              mispredicting him by{" "}
+              {rounds[this.state.selectedRound].entrantDiffTotals.driver[19]
+                .diffTotal / 10}{" "}
+              positions;
             </li>
             <li>
               {
                 rounds[this.state.selectedRound].entrantDiffTotals.team[0]
                   .entrant.fName
               }{" "}
-              is the most accurately predicted team;
+              are the most accurately predicted team, with the average player
+              only mispredicting them by{" "}
+              {rounds[this.state.selectedRound].entrantDiffTotals.team[0]
+                .diffTotal / 10}{" "}
+              positions;
             </li>
             <li>
               {
                 rounds[this.state.selectedRound].entrantDiffTotals.team[9]
                   .entrant.fName
               }{" "}
-              is the least accurately predicted team.
+              are the least accurately predicted team, with the average player
+              mispredicting them by{" "}
+              {rounds[this.state.selectedRound].entrantDiffTotals.team[9]
+                .diffTotal / 12}{" "}
+              positions;
             </li>
           </ul>
           <h2>Initial Prediction Notes</h2>
