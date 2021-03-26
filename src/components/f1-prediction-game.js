@@ -101,6 +101,9 @@ let players = {
       maz,
     ],
     [mer, rbr, fer, ast, mcl, alp, alt, alf, wil, has]
+    //Post pre season testing predictions
+    //[ham,ves,bot,per,ric,nor,vet,lec,str,alo,sai,gas,ocon,tsu,rai,gio,rus,sch,lat,maz]
+    //[mer, rbr, mcl, ast, fer, alp, alt, alf, wil, has]
   ),
   jack: new Player(
     "jack",
