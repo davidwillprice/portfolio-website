@@ -921,6 +921,91 @@ class F1PredictionGame extends Component {
           </ul>
         </div>
       )
+    } else if (this.state.mode === "stats") {
+      display = (
+        <div className={f1PredictCSS.statsCon}>
+          <h2>Current Result Stats</h2>
+          <ul>
+            <li>
+              {
+                rounds[this.state.selectedRound].entrantDiffTotals.driver[0]
+                  .entrant.fName
+              }{" "}
+              is the most accurately predicted driver;
+            </li>
+            <li>
+              {
+                rounds[this.state.selectedRound].entrantDiffTotals.driver[19]
+                  .entrant.fName
+              }{" "}
+              is the least accurately predicted driver;
+            </li>
+            <li>
+              {
+                rounds[this.state.selectedRound].entrantDiffTotals.team[0]
+                  .entrant.fName
+              }{" "}
+              is the most accurately predicted team;
+            </li>
+            <li>
+              {
+                rounds[this.state.selectedRound].entrantDiffTotals.team[9]
+                  .entrant.fName
+              }{" "}
+              is the least accurately predicted team.
+            </li>
+          </ul>
+          <h2>Initial Prediction Notes</h2>
+          <ul>
+            <li>
+              Alex has the most 'controversial' driver predictions, as they have
+              the largest difference from the average prediction table (24
+              position changes);
+            </li>
+            <li>
+              Tom has the least 'controversial' driver predictions, as they have
+              the smallest difference from the average prediction table (8
+              position changes);
+            </li>
+            <li>
+              Will was the only person who didn't predict that Hamilton would
+              win the drivers title, opting for Verstappen;
+            </li>
+            <li>
+              Will and Pete were the only people who didn't predict that
+              Mercedes would win the drivers title, opting for Red Bull;
+            </li>
+            <li>
+              Nobody predicted Hamilton, Leclerc, Gasly, Raikkonen, Schumacher
+              or Russell would be beaten by their team mate;
+            </li>
+            <li>
+              Pete was the only person to predict that Perez would beat
+              Verstappen, while Alex was the only person to predict Perez
+              wouldn't finish in the top 6 (10th).
+            </li>
+            <li>
+              David was the only person to predict that Ferrari would finish as
+              high as 3rd;
+            </li>
+            <li>
+              Alex was the only person to predict that Norris would beat
+              Riccardo;
+            </li>
+            <li>
+              James was the only person to predict that Stroll would beat
+              Vettel;
+            </li>
+            <li>
+              Annie was the only person to predict that Ocon would beat Alonso;
+            </li>
+            <li>
+              James was the only person to predict that Alfa Romeo wouldn't come
+              8th (9th) and the only person to put Haas as high as 8th.
+            </li>
+          </ul>
+        </div>
+      )
     }
     let playersSelect
     if (this.state.mode === "standings") {
@@ -943,7 +1028,7 @@ class F1PredictionGame extends Component {
     }
     let entrantTypeSelect
     let sliderFooter
-    if (this.state.mode !== "help") {
+    if (this.state.mode !== "help" && this.state.mode !== "stats") {
       entrantTypeSelect = (
         <select
           name="entrantType"
@@ -954,6 +1039,8 @@ class F1PredictionGame extends Component {
           <option value="team">Constructor Standings</option>
         </select>
       )
+    }
+    if (this.state.mode !== "help") {
       sliderFooter = (
         <div className={f1PredictCSS.sliderFooter}>
           <div className={f1PredictCSS.sliderCon}>
@@ -1003,6 +1090,13 @@ class F1PredictionGame extends Component {
               onClick={event => this.changeMode(event)}
             >
               Help
+            </button>
+            <button
+              data-mode="stats"
+              className={`${f1PredictCSS.navItem} ${f1PredictCSS.statsBtn}`}
+              onClick={event => this.changeMode(event)}
+            >
+              Stats
             </button>
           </nav>
         </div>

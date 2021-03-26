@@ -424,13 +424,16 @@
 }
 /* End of slider section*/
 /*Start of help*/
-.helpMode .opening {
+.helpMode .opening,
+.statsMode .opening {
   margin: 10px 0;
 }
-.helpMode .content {
+.helpMode .content,
+.statsCon .content {
   margin-bottom: 30px;
 }
-.helpCon * {
+.helpCon *,
+.statsCon * {
   color: white;
   font-size: 1rem;
   text-align: left;
@@ -439,12 +442,14 @@
   font-family: "Viga", cursive;
   font-size: 3rem;
 }
-.helpCon h2 {
+.helpCon h2,
+.statsCon h2 {
   font-weight: bold;
   font-size: 1.5rem;
 }
 .helpCon ul,
-.helpCon ol {
+.helpCon ol,
+.statsCon ul {
   padding-left: 20px;
 }
 .helpCon ul li {
