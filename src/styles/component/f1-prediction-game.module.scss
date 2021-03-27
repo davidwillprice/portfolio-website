@@ -102,7 +102,8 @@
 .leaderboard th:first-child {
   text-align: center;
 }
-.leaderboard td {
+.leaderboard td,
+.leaderboard th {
   padding: 10px 0;
 }
 .leaderboardPos {
@@ -540,7 +541,8 @@
     padding-left: $page-margin-mobile;
     padding-right: $page-margin-mobile;
   }
-  .leaderboard td {
+  .leaderboard td,
+  .leaderboard th {
     padding: 5px;
   }
   .helpCon .preview {
@@ -615,5 +617,8 @@
   .playerNumbers3 .shortName,
   .playerNumbers5 .shortName {
     display: block;
+  }
+  .perfectPredictions {
+    display: none;
   }
 }

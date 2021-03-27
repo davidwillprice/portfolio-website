@@ -390,8 +390,12 @@ function calcData() {
     for (const player of Object.values(players)) {
       //Create blank properties ready for the player's performance in this round
       player.season["round" + roundNo] = {
-        driver: { diffTotal: 0, diffs: [] },
-        team: { diffTotal: 0, diffs: [] },
+        driver: { diffTotal: 0, diffs: [], diffCounts: [] },
+        team: { diffTotal: 0, diffs: [], diffCounts: [] },
+      }
+      for (let i = 0; i < 20; i++) {
+        player.season["round" + roundNo].driver.diffCounts.push(0)
+        player.season["round" + roundNo].team.diffCounts.push(0)
       }
       //Loop the player's predictions, each driver and their pos difference from that round's standings
       function calcRoundPerformance(entrantType, player) {
@@ -405,6 +409,7 @@ function calcData() {
             const actualPos = round.standings[entrantType].indexOf(entrant)
             //Work out how many positions the player is off
             const posDiff = Math.abs(predictedPos - actualPos)
+            player.season["round" + roundNo][entrantType].diffCounts[posDiff]++
             //Add the posDiff to their total for this round
             player.season["round" + roundNo][entrantType].diffTotal += posDiff
             //Add the entrant and their posDiff to the Player's data
@@ -465,11 +470,34 @@ function calcLeaderboardRdDiffs(entrantType) {
 //The leadboards have been generated, but aren't in the correct order
 function orderLeaderboards(entrantType) {
   //Loop through each round
-  for (const round of Object.values(rounds)) {
-    //Sort the players by their percentage correct, highest first
-    round.leaderboards[entrantType].sort((a, b) =>
-      a.percentCorrect < b.percentCorrect ? 1 : -1
-    )
+  for (const [roundNo, round] of Object.entries(rounds)) {
+    round.leaderboards[entrantType].sort(function (a, b) {
+      //If their percentage correct is the same, sort by perfect predictions
+      if (a.percentCorrect === b.percentCorrect) {
+        //Loop from 0 to 19
+        //If a has bigger diffCount than b return 1
+        for (let i = 0; i < 20; i++) {
+          if (
+            a.player.season["round" + roundNo][entrantType].diffCounts[i] <
+            b.player.season["round" + roundNo][entrantType].diffCounts[i]
+          ) {
+            return 1
+          } else if (
+            //If b has bigger diffCount than a return -1
+            a.player.season["round" + roundNo][entrantType].diffCounts[i] >
+            b.player.season["round" + roundNo][entrantType].diffCounts[i]
+          ) {
+            return -1
+          } else {
+            //If they have the same diffCount, continue the loop and compare a lower level of diffCount
+            continue
+          }
+        }
+      } else {
+        //Else sort by percentage correct, highest first
+        return a.percentCorrect < b.percentCorrect ? 1 : -1
+      }
+    })
   }
 }
 function generateAverageTables(entrantData, entrantType) {
@@ -706,6 +734,12 @@ function Leaderboard(props) {
         {leaderboardStanding.player.name}
       </td>
       <td>{leaderboardStanding.percentCorrect}%</td>
+      <td className={f1PredictCSS.perfectPredictions}>
+        {
+          leaderboardStanding.player.season["round" + roundNo][entrantType]
+            .diffCounts[0]
+        }
+      </td>
     </tr>
   ))
   return (
@@ -716,6 +750,9 @@ function Leaderboard(props) {
           <th></th>
           <th>Name</th>
           <th>Accuracy</th>
+          <th className={f1PredictCSS.perfectPredictions}>
+            Perfect Predictions
+          </th>
         </tr>
       </thead>
       <tbody>{listRows}</tbody>
@@ -902,6 +939,14 @@ class F1PredictionGame extends Component {
           </ol>
           <h2>Additional Info</h2>
           <ul>
+            <li>
+              If players have equal accuracy ratings, the player with the more
+              perfect predictions will be ranked higher. If they are still even,
+              the player who was only 1 position off with more of their
+              predictions will be ranked higher. If they are still even, the
+              player who was only 2 positions off with more of their predictions
+              will be ranked higher and so on.
+            </li>
             <li>
               Stand-in drivers won't be added to the driver standings
               (Hulkenberg didn't join the game's driver standings last year);
