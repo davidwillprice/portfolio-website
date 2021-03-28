@@ -85,7 +85,7 @@
 .leaderboard {
   padding: 5px;
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto;
   border-collapse: collapse;
   border: none;
@@ -113,6 +113,9 @@
   font-weight: 700;
   display: flex;
 }
+.leaderboardPosDiff {
+  width: 20px;
+}
 .leaderboardPosDiff i {
   border: solid white;
   border-width: 0 3px 3px 0;
@@ -137,6 +140,9 @@
   padding: 0 10px;
   text-transform: uppercase;
   font-family: "Viga", cursive;
+}
+.perfectPredictions {
+  width: 20%;
 }
 /*End of leaderboard*/
 .tablesOverview {
