@@ -948,6 +948,11 @@ class F1PredictionGame extends Component {
               will be ranked higher and so on.
             </li>
             <li>
+              The 'Average' prediction tables were worked out by calculating the
+              mean position of each driver/team across the other player's
+              prediction tables;
+            </li>
+            <li>
               Stand-in drivers won't be added to the driver standings
               (Hulkenberg didn't join the game's driver standings last year);
             </li>
