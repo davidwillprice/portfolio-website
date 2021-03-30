@@ -986,8 +986,15 @@ class F1PredictionGame extends Component {
               }{" "}
               is the most accurately predicted driver, with the average player
               only mispredicting him by{" "}
-              {rounds[this.state.selectedRound].entrantDiffTotals.driver[0]
-                .diffTotal / 10}{" "}
+              {
+                //Get diff total, average it out by no of players and then round to one decimal place
+                Math.round(
+                  (rounds[this.state.selectedRound].entrantDiffTotals.driver[0]
+                    .diffTotal /
+                    10) *
+                    10
+                ) / 10
+              }{" "}
               positions;
             </li>
             <li>
@@ -997,8 +1004,12 @@ class F1PredictionGame extends Component {
               }{" "}
               is the least accurately predicted driver, with the average player
               mispredicting him by{" "}
-              {rounds[this.state.selectedRound].entrantDiffTotals.driver[19]
-                .diffTotal / 10}{" "}
+              {Math.round(
+                (rounds[this.state.selectedRound].entrantDiffTotals.driver[19]
+                  .diffTotal /
+                  10) *
+                  10
+              ) / 10}{" "}
               positions;
             </li>
             <li>
@@ -1008,8 +1019,12 @@ class F1PredictionGame extends Component {
               }{" "}
               are the most accurately predicted team, with the average player
               only mispredicting them by{" "}
-              {rounds[this.state.selectedRound].entrantDiffTotals.team[0]
-                .diffTotal / 10}{" "}
+              {Math.round(
+                (rounds[this.state.selectedRound].entrantDiffTotals.team[0]
+                  .diffTotal /
+                  10) *
+                  10
+              ) / 10}{" "}
               positions;
             </li>
             <li>
@@ -1019,8 +1034,12 @@ class F1PredictionGame extends Component {
               }{" "}
               are the least accurately predicted team, with the average player
               mispredicting them by{" "}
-              {rounds[this.state.selectedRound].entrantDiffTotals.team[9]
-                .diffTotal / 12}{" "}
+              {Math.round(
+                (rounds[this.state.selectedRound].entrantDiffTotals.team[9]
+                  .diffTotal /
+                  12) *
+                  10
+              ) / 10}{" "}
               positions;
             </li>
           </ul>
