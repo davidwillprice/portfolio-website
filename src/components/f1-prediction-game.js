@@ -1,72 +1,69 @@
 import React, { Component } from "react"
 import f1PredictCSS from "../styles/component/f1-prediction-game.module.scss"
 
-const drivers = {
-  ham: { fName: "Hamilton", sName: "ham", team: "mer" },
-  bot: { fName: "Bottas", sName: "bot", team: "mer" },
-  lec: { fName: "Leclerc", sName: "lec", team: "fer" },
-  sai: { fName: "Sainz", sName: "sai", team: "fer" },
-  ves: { fName: "Verstappen", sName: "ves", team: "rbr" },
-  per: { fName: "Perez", sName: "per", team: "rbr" },
-  alo: { fName: "Alonso", sName: "alo", team: "alp" },
-  oco: { fName: "Ocon", sName: "oco", team: "alp" },
-  sch: { fName: "Schumacher", sName: "sch", team: "has" },
-  maz: { fName: "Mazepin", sName: "maz", team: "has" },
-  nor: { fName: "Norris", sName: "nor", team: "mcl" },
-  ric: { fName: "Ricciardo", sName: "ric", team: "mcl" },
-  vet: { fName: "Vettel", sName: "vet", team: "ast" },
-  str: { fName: "Stroll", sName: "str", team: "ast" },
-  rai: { fName: "Raikkonen", sName: "rai", team: "alf" },
-  gio: { fName: "Giovinazzi", sName: "gio", team: "alf" },
-  tsu: { fName: "Tsunoda", sName: "tsu", team: "alt" },
-  gas: { fName: "Gasly", sName: "gas", team: "alt" },
-  lat: { fName: "Latifi", sName: "lat", team: "wil" },
-  rus: { fName: "Russell", sName: "rus", team: "wil" },
+//All entrant starting (driver/team) data
+const entrantData = {
+  drivers: {
+    ham: { fName: "Hamilton", sName: "ham", team: "mer" },
+    bot: { fName: "Bottas", sName: "bot", team: "mer" },
+    lec: { fName: "Leclerc", sName: "lec", team: "fer" },
+    sai: { fName: "Sainz", sName: "sai", team: "fer" },
+    ves: { fName: "Verstappen", sName: "ves", team: "rbr" },
+    per: { fName: "Perez", sName: "per", team: "rbr" },
+    alo: { fName: "Alonso", sName: "alo", team: "alp" },
+    oco: { fName: "Ocon", sName: "oco", team: "alp" },
+    sch: { fName: "Schumacher", sName: "sch", team: "has" },
+    maz: { fName: "Mazepin", sName: "maz", team: "has" },
+    nor: { fName: "Norris", sName: "nor", team: "mcl" },
+    ric: { fName: "Ricciardo", sName: "ric", team: "mcl" },
+    vet: { fName: "Vettel", sName: "vet", team: "ast" },
+    str: { fName: "Stroll", sName: "str", team: "ast" },
+    rai: { fName: "Raikkonen", sName: "rai", team: "alf" },
+    gio: { fName: "Giovinazzi", sName: "gio", team: "alf" },
+    tsu: { fName: "Tsunoda", sName: "tsu", team: "alt" },
+    gas: { fName: "Gasly", sName: "gas", team: "alt" },
+    lat: { fName: "Latifi", sName: "lat", team: "wil" },
+    rus: { fName: "Russell", sName: "rus", team: "wil" },
+  },
+  teams: {
+    mer: { fName: "Mercedes", sName: "mer" },
+    fer: { fName: "Ferrari", sName: "fer" },
+    rbr: { fName: "Red Bull", sName: "rbr" },
+    mcl: { fName: "McLaren", sName: "mcl" },
+    alp: { fName: "Alpine", sName: "alp" },
+    alt: { fName: "Alpha Tauri", sName: "alt" },
+    ast: { fName: "Aston Martin", sName: "ast" },
+    has: { fName: "Haas", sName: "has" },
+    alf: { fName: "Alfa Romeo", sName: "alf" },
+    wil: { fName: "Williams", sName: "wil" },
+  },
 }
-var teams = {
-  mer: { fName: "Mercedes", sName: "mer" },
-  fer: { fName: "Ferrari", sName: "fer" },
-  rbr: { fName: "Red Bull", sName: "rbr" },
-  mcl: { fName: "McLaren", sName: "mcl" },
-  alp: { fName: "Alpine", sName: "alp" },
-  alt: { fName: "Alpha Tauri", sName: "alt" },
-  ast: { fName: "Aston Martin", sName: "ast" },
-  has: { fName: "Haas", sName: "has" },
-  alf: { fName: "Alfa Romeo", sName: "alf" },
-  wil: { fName: "Williams", sName: "wil" },
-}
-const ham = drivers.ham
-const bot = drivers.bot
-const vet = drivers.vet
-const lec = drivers.lec
-const ves = drivers.ves
-const gas = drivers.gas
-const ric = drivers.ric
-const oco = drivers.oco
-const sch = drivers.sch
-const maz = drivers.maz
-const nor = drivers.nor
-const sai = drivers.sai
-const per = drivers.per
-const str = drivers.str
-const rai = drivers.rai
-const gio = drivers.gio
-const tsu = drivers.tsu
-const alo = drivers.alo
-const lat = drivers.lat
-const rus = drivers.rus
-
-const mer = teams.mer
-const fer = teams.fer
-const rbr = teams.rbr
-const mcl = teams.mcl
-const alp = teams.alp
-const alt = teams.alt
-const ast = teams.ast
-const has = teams.has
-const alf = teams.alf
-const wil = teams.wil
-
+const drivers = entrantData.drivers
+const teams = entrantData.teams
+const {
+  ham,
+  bot,
+  lec,
+  sai,
+  ves,
+  per,
+  alo,
+  oco,
+  sch,
+  maz,
+  nor,
+  ric,
+  vet,
+  str,
+  rai,
+  gio,
+  tsu,
+  gas,
+  lat,
+  rus,
+} = entrantData.drivers
+const { mer, fer, rbr, mcl, alp, alt, ast, has, alf, wil } = entrantData.teams
+//Object constructors for players
 function Player(name, groups, driverTable, teamTable) {
   this.name = name
   this.groups = groups
@@ -74,6 +71,7 @@ function Player(name, groups, driverTable, teamTable) {
   this.teamTable = teamTable
   this.season = {}
 }
+//Player data
 let players = {
   david: new Player(
     "david",
@@ -337,6 +335,7 @@ let players = {
     [rbr, mer, alt, mcl, alp, fer, ast, alf, wil, has]
   ),
 }
+//Object constructors for rounds
 class Round {
   constructor(trackName, driverStandings, teamStandings) {
     this.trackName = trackName
@@ -355,6 +354,7 @@ class Round {
     }
   }
 }
+//Round data
 let rounds = [
   new Round(
     "Bahrain GP",
@@ -383,6 +383,33 @@ let rounds = [
     [mer, rbr, mcl, fer, alt, ast, alf, alp, wil, has]
   ),
 ]
+function generateAverageTables(entrantData, entrantType) {
+  //Loop over each entrant, finding their index in each player's prediction table and totalling them in a new avgPrePos property
+  for (const entrant of Object.values(entrantData)) {
+    let predictionPosTotal = 0
+    let noOfPlayers = 0
+    for (const player of Object.values(players)) {
+      //Checking player does actually predict entrant
+      if (player[entrantType + "Table"].indexOf(entrant) !== -1) {
+        predictionPosTotal += player[entrantType + "Table"].indexOf(entrant) + 1
+        noOfPlayers++
+      }
+    }
+    entrant.avgPrePos = predictionPosTotal / noOfPlayers
+    players.average[entrantType + "Table"].push(entrant)
+  }
+}
+generateAverageTables(drivers, "driver")
+generateAverageTables(teams, "team")
+function orderAverageTables(entrantType) {
+  //Sort the players by their percentage correct, highest first
+  players.average[entrantType + "Table"].sort((a, b) =>
+    a.avgPrePos > b.avgPrePos ? 1 : -1
+  )
+}
+orderAverageTables("driver")
+orderAverageTables("team")
+//Based on the player predictions and round data, calculate the differences in entrant predictions for each player, their total diff totals and their count of each diffs
 function calcData() {
   //Loop through each round
   for (const [roundNo, round] of Object.entries(rounds)) {
@@ -500,32 +527,6 @@ function orderLeaderboards(entrantType) {
     })
   }
 }
-function generateAverageTables(entrantData, entrantType) {
-  //Loop over each entrant, finding their index in each player's prediction table and totalling them in a new avgPrePos property
-  for (const entrant of Object.values(entrantData)) {
-    let predictionPosTotal = 0
-    let noOfPlayers = 0
-    for (const player of Object.values(players)) {
-      //Checking player does actually predict entrant
-      if (player[entrantType + "Table"].indexOf(entrant) !== -1) {
-        predictionPosTotal += player[entrantType + "Table"].indexOf(entrant) + 1
-        noOfPlayers++
-      }
-    }
-    entrant.avgPrePos = predictionPosTotal / noOfPlayers
-    players.average[entrantType + "Table"].push(entrant)
-  }
-}
-generateAverageTables(drivers, "driver")
-generateAverageTables(teams, "team")
-function orderAverageTables(entrantType) {
-  //Sort the players by their percentage correct, highest first
-  players.average[entrantType + "Table"].sort((a, b) =>
-    a.avgPrePos > b.avgPrePos ? 1 : -1
-  )
-}
-orderAverageTables("driver")
-orderAverageTables("team")
 calcData()
 orderLeaderboards("driver")
 orderLeaderboards("team")
