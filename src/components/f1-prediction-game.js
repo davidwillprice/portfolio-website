@@ -1041,7 +1041,7 @@ class F1PredictionGame extends Component {
                   12) *
                   10
               ) / 10}{" "}
-              positions;
+              positions.
             </li>
           </ul>
           <h2>Initial Prediction Notes</h2>
