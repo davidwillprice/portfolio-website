@@ -36,16 +36,25 @@ class Header extends Component {
           </button>
           <div className={headerStyles.headerNav}>
             {/*<div className={classnames(headerStyles.headerNav, headerStyles.expandedHeaderNav)}>*/}
-            <Link className={headerStyles.headerMenuItem} to={`/web/`}>
+            <Link
+              className={headerStyles.headerMenuItem}
+              to={`/web/`}
+              activeClassName={headerStyles.activeHeaderMenuItem}
+            >
               Web development
             </Link>
             <Link
               className={headerStyles.headerMenuItem}
               to={`/graphic-design/`}
+              activeClassName={headerStyles.activeHeaderMenuItem}
             >
               Graphic design
             </Link>
-            <Link className={headerStyles.headerMenuItem} to={`/art/`}>
+            <Link
+              className={headerStyles.headerMenuItem}
+              to={`/art/`}
+              activeClassName={headerStyles.activeHeaderMenuItem}
+            >
               Art
             </Link>
             <a
