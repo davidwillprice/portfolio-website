@@ -11,6 +11,9 @@ class Header extends Component {
   toggleMobMenu = () => {
     this.setState(state => ({ isMobMenuTrig: !state.isMobMenuTrig }))
   }
+  closeMobMenu = () => {
+    this.setState(state => ({ isMobMenuTrig: false }))
+  }
   render() {
     const genRandomHeader =
       this.state.randomNo > 0.9 ? headerStyles.secretMenuExp : ""
@@ -36,13 +39,14 @@ class Header extends Component {
           </button>
           <div className={headerStyles.headerNav}>
             {/*<div className={classnames(headerStyles.headerNav, headerStyles.expandedHeaderNav)}>*/}
-            <Link
+            <a
+              href="/#web"
               className={headerStyles.headerMenuItem}
-              to={`/web/`}
               activeClassName={headerStyles.activeHeaderMenuItem}
+              onClick={this.closeMobMenu}
             >
               Web development
-            </Link>
+            </a>
             <Link
               className={headerStyles.headerMenuItem}
               to={`/graphic-design/`}

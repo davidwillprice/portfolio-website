@@ -1,62 +1,67 @@
 @import "../../styles/sass-variables.scss";
 .indexTitleBan {
-	width: 100%;
-	position: relative;
-	
+  width: 100%;
+  position: relative;
 }
 .indexTitleBanText {
-	position:absolute;
-	top:0;
-	right:0;
-	bottom:0;
-	text-align:right;
-	margin:auto;
-	height:50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+  margin: auto;
+  height: 50%;
 }
 .solarSVG {
-	width:70%;
+  width: 70%;
 }
 .indexTitle {
-	font-size:3rem;
-	padding-left:25px;
+  font-size: 3rem;
+  padding-left: 25px;
 }
 .indexSubtitle {
-	font-size:1.5rem;
+  font-size: 1.5rem;
+}
+.projectsHeader {
+  text-align: center;
+  font-family: "reey", Arial;
+  font-weight: 800;
+  font-size: 3rem;
 }
 
 @media only screen and (max-width: 900px) {
-	.indexTitleBan {
-		display:flex;
-		flex-direction:column;
-	}
-	.solarSVG {
-		width:100%;
-		margin:0 auto;
-	}
-	.indexTitleBanText {
-		position:relative;
-		height: auto; 
-		text-align:center;
-		margin-top:20px;
-	}
-	.indexTitle {
-		font-size:4rem;
-	}
+  .indexTitleBan {
+    display: flex;
+    flex-direction: column;
+  }
+  .solarSVG {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .indexTitleBanText {
+    position: relative;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .indexTitle {
+    font-size: 4rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-	.indexTitle {
-		font-size:3rem;
-	}
+  .indexTitle {
+    font-size: 3rem;
+  }
 }
 
 @media only screen and (max-width: 500px) {
-	.indexTitle {
-		font-size:2rem;
-	}
+  .indexTitle {
+    font-size: 2rem;
+  }
 }
 @media only screen and (max-width: 350px) {
-	.indexSubtitle {
-		font-size: 1.1rem;
-	}
+  .indexSubtitle {
+    font-size: 1.1rem;
+  }
 }
