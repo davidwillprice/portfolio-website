@@ -1,57 +1,87 @@
 @import "../../sass-variables.scss";
 
 .footerCon {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $footer-links-background-color;
 }
-.footerLinks {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	padding: 15px 30px 15px;
-	background-color: $footer-links-background-color;
+.footer {
+  padding: 15px 30px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
-.footerLinks a {
-	transition: opacity 50ms linear;
+.footer .smallPrint * {
+  margin-bottom: 0;
+  color: white;
+  font-size: 0.8rem;
 }
-.footerLinks a:hover {
-	opacity: 0.5;
+.footer .smallPrint a {
+  text-decoration: underline;
+}
+.footer a {
+  transition: opacity 50ms linear;
+}
+.footer a:hover {
+  opacity: 0.5;
+}
+.footer .links {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 .footerLinkItem {
-	border-width: 0;
-	margin: 0 20px;
-	width: 50px;
-	height: 50px;
-	max-height:35px;
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	fill: $secondary-color;
+  border-width: 0;
+  margin: 0 20px;
+  width: 50px;
+  height: 50px;
+  max-height: 35px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  fill: $secondary-color;
+}
+.footer .links a:last-child .footerLinkItem {
+  margin-right: 0;
 }
 
-.footerSmallPrint {
-	padding: 10px 30px 10px;
-	text-align: center;
-	background-color: $footer-small-print-background-color;
-	color: $footer-links-background-color;
-	height:40px;
+@media (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer .smallPrint {
+    margin-top: 20px;
+    text-align: center;
+    order: 1;
+  }
+  .footer .links {
+    order: 0;
+  }
+  .footer .links a:first-child .footerLinkItem {
+    margin-left: 0;
+  }
 }
-.footerSmallPrint p {
-	margin: 0;
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 15px 15px 15px;
+  }
 }
-.privPolLink {
-	display: inline-block;
-	transition: opacity 200ms;
-}
-.footerSmallPrint p,
-.privPolLink {
-	color: $footer-links-background-color;
-	font-size: .8rem;
-}
-.privPolLink {
-	font-size: 1rem;
-}
-.privPolLink:hover {
-	opacity: 0.5;
+
+@media (max-width: 350px) {
+  .footer .smallPrint a {
+    display: block;
+  }
+  .footer .links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer .footerLinkItem {
+    margin: 0;
+  }
 }
