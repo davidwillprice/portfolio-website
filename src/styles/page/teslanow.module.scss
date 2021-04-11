@@ -1,29 +1,44 @@
 @import "../../styles/sass-variables.scss";
 .inCarMockupCon {
-    width:100%;
-    position:relative;
-    display:block;
+  width: 100%;
+  position: relative;
+  display: block;
 }
 .inCarMockup {
-    width:100%;
-    display:block;
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
 }
 .appSpritesheet {
-    position:absolute;
-    background-image: url('../../images/teslanow/app-spritesheet.jpg');
-    background-size:300% auto;
-    width:26.7%;
-    padding-bottom: 31.3%;
-    top:19.1%;
-    right:14.3%;
-    animation: app-scroll 10s linear infinite;
-    transform: skew(-1deg, -1deg);
+  position: absolute;
+  background-image: url("../../images/teslanow/app-spritesheet.jpg");
+  background-size: 300% auto;
+  width: 26.7%;
+  padding-bottom: 31.3%;
+  top: 19.1%;
+  right: 14.3%;
+  animation: app-scroll 10s linear infinite;
+  transform: skew(-1deg, -1deg);
 }
 
 @keyframes app-scroll {
-    0%, 22% {background-position:0%;}
-    25%, 46% {background-position:50% 0%;}
-    50%, 71% {background-position:100% 0%;}
-    75%, 96% {background-position:50% 0%;}
-    100% {background-position:0%;}
-} 
+  0%,
+  22% {
+    background-position: 0%;
+  }
+  25%,
+  46% {
+    background-position: 50% 0%;
+  }
+  50%,
+  71% {
+    background-position: 100% 0%;
+  }
+  75%,
+  96% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
