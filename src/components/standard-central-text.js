@@ -1,11 +1,23 @@
-import React from "react"
+import React, { Component } from "react"
 import StandCenTexStyles from "../styles/component/stand-cent-tex.module.scss"
 
-const StandardCentralText = props => (
-  <div className={StandCenTexStyles.standardTexCon}>
-    <h3 className={StandCenTexStyles.textSubheader}>{props.headerText}</h3>
-    {props.children}
-  </div>
-)
+class StandardCentralText extends Component {
+  render() {
+    let header
+    if (this.props.headerText) {
+      header = (
+        <h3 className={StandCenTexStyles.textSubheader}>
+          {this.props.headerText}
+        </h3>
+      )
+    }
+    return (
+      <div className={StandCenTexStyles.standardTexCon}>
+        {header}
+        {this.props.children}
+      </div>
+    )
+  }
+}
 
 export default StandardCentralText
