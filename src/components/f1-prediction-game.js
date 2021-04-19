@@ -1073,12 +1073,12 @@ class F1PredictionGame extends Component {
           <h2>Initial Prediction Notes</h2>
           <ul>
             <li>
-              Alex has the most 'controversial' driver predictions, as they have
+              Alex had the most 'controversial' driver predictions, as they had
               the largest difference from the average prediction table (24
               position changes);
             </li>
             <li>
-              Tom has the least 'controversial' driver predictions, as they have
+              Tom had the least 'controversial' driver predictions, as they had
               the smallest difference from the average prediction table (8
               position changes);
             </li>
