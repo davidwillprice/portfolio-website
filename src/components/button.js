@@ -12,6 +12,7 @@ class Button extends Component {
   render() {
     return (
       <button
+        tabindex="-1"
         className={`${LogoShowcaseStyles.button} ${
           this.props.btnColor
             ? LogoShowcaseStyles[this.props.btnColor]
