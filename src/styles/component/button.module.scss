@@ -14,7 +14,6 @@
   transition: all 0.3s;
 }
 .button:hover {
-  opacity: 0.5;
   transform: translateY(-2px);
 }
 .button svg {
@@ -24,7 +23,13 @@
   color: $secondary-color;
   background-color: $highlight-colour;
 }
+.button.primary:hover {
+  background-color: $highlight-colour-alt;
+}
 .button.secondary {
-  color: $footer-links-background-color;
+  color: $tertiary-color;
+  background-color: $secondary-color-alt;
+}
+.button.secondary:hover {
   background-color: $secondary-color;
 }

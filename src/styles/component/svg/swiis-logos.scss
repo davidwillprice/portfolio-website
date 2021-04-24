@@ -1,45 +1,73 @@
 @import "../../sass-variables.scss";
 
 .SwiisLogos {
-    background-color: white; 
-    animation-name: rotateLogoBg;
-    animation-duration: 10s;
-    animation-iteration-count:infinite;
+  background-color: white;
+  animation-name: rotateLogoBg;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
-.SwiisLogos #swiis-logos > g{
-    opacity:0;
-    animation-name: rotateLogos;
-    animation-duration: 10s;
-    animation-iteration-count:infinite;
+.SwiisLogos #swiis-logos > g {
+  opacity: 0;
+  animation-name: rotateLogos;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 #swiis-international {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
 #swiis-fc-eng {
-    animation-delay: 2.4s;
+  animation-delay: 2.4s;
 }
 #swiis-fc-scot {
-    animation-delay: 4.8s;
+  animation-delay: 4.8s;
 }
 #swiis-healthcare {
-    animation-delay: 7.2s;
+  animation-delay: 7.2s;
 }
 @keyframes rotateLogoBg {
-    0% {background-color: white}
-    20% {background-color: white}
-    25% {background-color: #e9510e}
-    45% {background-color: #e9510e}
-    50% {background-color: #FFA100}
-    70% {background-color: #FFA100}
-    75% {background-color: #0061a1}
-    95% {background-color: #0061a1}
-    100% {background-color: white}
+  0% {
+    background-color: white;
+  }
+  20% {
+    background-color: white;
+  }
+  25% {
+    background-color: #e9510e;
+  }
+  45% {
+    background-color: #e9510e;
+  }
+  50% {
+    background-color: #ffa100;
+  }
+  70% {
+    background-color: #ffa100;
+  }
+  75% {
+    background-color: #0061a1;
+  }
+  95% {
+    background-color: #0061a1;
+  }
+  100% {
+    background-color: white;
+  }
 }
 @keyframes rotateLogos {
-    0% {opacity:1}
-    20% {opacity:1}
-    25% {opacity:0}
-    95% {opacity:0}
-    100% {opacity:1}
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
