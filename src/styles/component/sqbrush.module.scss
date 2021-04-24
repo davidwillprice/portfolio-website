@@ -13,6 +13,9 @@
   text-align: right;
   margin: 30px 0 30px 20px;
 }
+.workExampleConR .workExampleText a {
+  float: right;
+}
 .workExampleText h3 {
   font-size: 2rem;
   font-weight: 900;
@@ -95,6 +98,9 @@
   .workExampleConR .workExampleText {
     text-align: left;
     margin: 0 0 30px;
+  }
+  .workExampleConR .workExampleText a {
+    float: none;
   }
   .nonDesktop {
     margin-bottom: 10px;
