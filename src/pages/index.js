@@ -5,6 +5,7 @@ import StandardCentralText from "../components/standard-central-text"
 import SEO from "../components/head/seo.js"
 import SqBrushSplash from "../components/sq-brush-splash"
 import Button from "../components/button"
+import ButtonCon from "../components/button-con"
 import { Link } from "gatsby"
 
 import IndexStyles from "../styles/page/index.module.scss"
@@ -71,9 +72,11 @@ export default function Index() {
             International; parent company of Swiis Foster Care, Swiis Foster
             Care Scotland and Swiis Healthcare.
           </p>
-          <Link to={`/swiis/`}>
-            <Button btnText="Learn More" />
-          </Link>
+          <ButtonCon>
+            <Link to={`/swiis/`}>
+              <Button btnText="Learn More" />
+            </Link>
+          </ButtonCon>
         </SqBrushSplash>
         <SqBrushSplash
           brush={<BrushOne />}
@@ -89,9 +92,11 @@ export default function Index() {
             Full time position as a Web / Graphic Designer at Birmingham estate
             agent Love Your Postcode.
           </p>
-          <Link to={`/loveyourpostcode/`}>
-            <Button btnText="Learn More" />
-          </Link>
+          <ButtonCon dirTxtRight={true}>
+            <Link to={`/loveyourpostcode/`}>
+              <Button btnText="Learn More" />
+            </Link>
+          </ButtonCon>
         </SqBrushSplash>
         <SqBrushSplash
           brush={<BrushTwo />}
@@ -107,9 +112,11 @@ export default function Index() {
             Website redesign over a weekend as part of the job application
             process for a Bristol based marketing agency.
           </p>
-          <Link to={`/bristol-marketing-agency/`}>
-            <Button btnText="Learn More" />
-          </Link>
+          <ButtonCon>
+            <Link to={`/bristol-marketing-agency/`}>
+              <Button btnText="Learn More" />
+            </Link>
+          </ButtonCon>
         </SqBrushSplash>
         <SqBrushSplash
           brush={<BrushThree />}
