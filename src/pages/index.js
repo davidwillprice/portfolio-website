@@ -20,6 +20,7 @@ import LypPropSearchDesktopImg from "../images/lyp/lyp-property-search-desktop.p
 import BmaHpMobImg from "../images/bma/bma-hp-mob.png"
 import SwiisWhyFosterTabImg from "../images/swiis/swiis-fc-why-foster-tablet.png"
 import MontyHallImg from "../images/monty-hall/monty-hall-3-doors.png"
+import f1Img from "../images/f1-prediction-game/f1-prediction-game-screenshot.png"
 
 export default function Index() {
   return (
@@ -134,13 +135,41 @@ export default function Index() {
             to see if I could make a better looking, more accessible adaptation
             with more features.
           </p>
-          <a href="https://github.com/davidwillprice/montyhall">
-            <Button
-              btnText="View Source"
-              btnColor="secondary"
-              btnIcon="github"
-            />
-          </a>
+          <ButtonCon dirTxtRight={true}>
+            <a href="https://github.com/davidwillprice/montyhall">
+              <Button
+                btnText="View Source"
+                btnColor="secondary"
+                btnIcon="github"
+              />
+            </a>
+          </ButtonCon>
+        </SqBrushSplash>
+        <SqBrushSplash
+          brush={<BrushOne />}
+          img={f1Img}
+          imgAlt="F1 prediction game screenshot"
+          linkUrl="/f1-prediction-game-2021/"
+          linkDesc="Github page for my Monty Hall Problem code"
+        >
+          <h3>F1 Prediction Game</h3>
+          <p>2021</p>
+          <p>
+            Side project to create a game where people guess the final standings
+            of the 2021 Formula 1 season.
+          </p>
+          <ButtonCon>
+            <Link to={`/f1-prediction-game-2021/`}>
+              <Button btnText="View Game" />
+            </Link>
+            <a href="https://github.com/davidwillprice/portfolio-website/blob/master/src/components/f1-prediction-game.js">
+              <Button
+                btnText="View Source"
+                btnColor="secondary"
+                btnIcon="github"
+              />
+            </a>
+          </ButtonCon>
         </SqBrushSplash>
       </div>
     </Layout>
