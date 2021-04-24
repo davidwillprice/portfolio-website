@@ -128,7 +128,11 @@ export default function Index() {
             with more features.
           </p>
           <a href="https://github.com/davidwillprice/montyhall">
-            <Button btnText="View Source" btnColor="secondary" />
+            <Button
+              btnText="View Source"
+              btnColor="secondary"
+              btnIcon="github"
+            />
           </a>
         </SqBrushSplash>
       </div>

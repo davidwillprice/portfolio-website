@@ -1,6 +1,8 @@
 @import "../sass-variables.scss";
 
 .button {
+  display: flex;
+  align-items: center;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -14,6 +16,9 @@
 .button:hover {
   opacity: 0.5;
   transform: translateY(-2px);
+}
+.button svg {
+  margin-left: 15px;
 }
 .button.primary {
   color: $secondary-color;

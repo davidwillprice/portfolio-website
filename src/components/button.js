@@ -1,15 +1,27 @@
-import React from "react"
+import React, { Component } from "react"
 import LogoShowcaseStyles from "../styles/component/button.module.scss"
 
-const Button = props => (
-  <button
-    className={`${LogoShowcaseStyles.button} ${
-      props.btnColor
-        ? LogoShowcaseStyles[props.btnColor]
-        : LogoShowcaseStyles.primary
-    }`}
-  >
-    {props.btnText}
-  </button>
-)
+import GitHubIcon from "../svgs/footer/github-icon.svg"
+
+class Button extends Component {
+  icon = function () {
+    if (this.props.btnIcon === "github") {
+      return <GitHubIcon></GitHubIcon>
+    }
+  }
+  render() {
+    return (
+      <button
+        className={`${LogoShowcaseStyles.button} ${
+          this.props.btnColor
+            ? LogoShowcaseStyles[this.props.btnColor]
+            : LogoShowcaseStyles.primary
+        }`}
+      >
+        {this.props.btnText}
+        {this.icon()}
+      </button>
+    )
+  }
+}
 export default Button
