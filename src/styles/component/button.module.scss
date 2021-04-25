@@ -20,16 +20,16 @@
   margin-left: 15px;
 }
 .button.primary {
-  color: $secondary-color;
-  background-color: $highlight-colour;
+  color: var(--secondary-color);
+  background-color: var(--highlight-colour);
 }
 .button.primary:hover {
-  background-color: $highlight-colour-alt;
+  background-color: var(--highlight-colour-alt);
 }
 .button.secondary {
-  color: $tertiary-color;
-  background-color: $secondary-color-alt;
+  color: var(--tertiary-color);
+  background-color: var(--secondary-color-alt);
 }
 .button.secondary:hover {
-  background-color: $secondary-color;
+  background-color: var(--secondary-color);
 }

@@ -49,7 +49,7 @@
   z-index: -1;
 }
 .brushBg {
-  fill: $background-color-alt;
+  fill: var(--background-color-alt);
   z-index: -1;
   width: 100%;
   transition: fill 1000ms;
@@ -79,7 +79,7 @@
   opacity: 0.5;
 }
 .brushSplashCon .workExampleLink:hover .brushBg {
-  fill: $highlight-colour;
+  fill: var(--highlight-colour);
 }
 
 @media (max-width: 1000px) {

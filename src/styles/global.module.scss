@@ -12,15 +12,28 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  color: $secondary-color;
+  color: var(--secondary-color);
   scroll-margin-top: $header-height-desktop + 10px;
+}
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --secondary-color-alt: #{$secondary-color-alt};
+  --background-color: #{$background-color};
+  --background-color-low-opacity: #{$background-color-low-opacity};
+  --background-color-alt: #{$background-color-alt};
+  --highlight-colour: #{$highlight-colour};
+  --highlight-colour-alt: #{$highlight-colour-alt};
+  --tertiary-color: #{$tertiary-color};
+  --menu-background-color: #{$menu-background-color};
+  --menu-background-color-low-opacity: #{$menu-background-color-low-opacity};
 }
 html {
   font-size: 20px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   scroll-behavior: smooth;
-  background: $background-color;
+  background: var(--background-color);
 }
 html,
 body {
@@ -62,10 +75,10 @@ h1,
 h2,
 p,
 li {
-  color: $primary-color;
+  color: var(--primary-color);
 }
 a > p {
-  color: $secondary-color;
+  color: var(--secondary-color);
 }
 
 .pageCon {
@@ -89,7 +102,7 @@ a > p {
 /*The default outline styling, for greatest accessibility */
 .usingKeys *:focus,
 .usingKeys *:focus ~ span {
-  outline: 3px solid $highlight-colour;
+  outline: 3px solid var(--highlight-colour);
 }
 /* When mouse is detected, ALL focused elements have outline removed */
 .usingMouse *:focus {

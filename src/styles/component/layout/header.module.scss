@@ -4,7 +4,7 @@
   position: fixed;
   width: 100%;
   z-index: 100;
-  background-color: $background-color-low-opacity;
+  background-color: var(--background-color-low-opacity);
 }
 .header {
   display: flex;
@@ -21,7 +21,7 @@
   height: 40px;
 }
 .headerLogo {
-  fill: $secondary-color;
+  fill: var(--secondary-color);
   width: 40px;
   height: 40px;
   transition: opacity 200ms;
@@ -33,7 +33,7 @@
   margin-right: 30px;
 }
 .headerMenuItem {
-  color: $secondary-color;
+  color: var(--secondary-color);
   margin-left: 6%;
   font-size: 1rem;
   text-align: center;
@@ -50,7 +50,7 @@
   right: -0.1em;
   bottom: 0;
   transition: 0.2s;
-  background-color: $background-color-alt;
+  background-color: var(--background-color-alt);
 }
 .headerMenuItem:hover,
 .headerLogo:hover {
@@ -58,7 +58,7 @@
 }
 .headerMenuTrig {
   display: none;
-  background-color: $menu-background-color-low-opacity;
+  background-color: var(--menu-background-color-low-opacity);
   width: 50px;
   height: 50px;
   cursor: pointer;
@@ -68,7 +68,7 @@
   border-width: 0;
 }
 .headerTrigLines {
-  background-color: $secondary-color;
+  background-color: var(--secondary-color);
   height: 5px;
   width: 35px;
   position: absolute;
@@ -134,7 +134,7 @@
     overflow-y: auto;
   }
   .header.expandedHeader {
-    background-color: $menu-background-color;
+    background-color: var(--menu-background-color);
     transition: background-color 200ms linear;
     height: auto;
   }
