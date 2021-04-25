@@ -54,7 +54,9 @@
   width: 100%;
   transition: fill 1000ms;
 }
-
+[data-theme="dark"] .brushBg {
+  display: none;
+}
 .image {
   width: 100%;
   transition: opacity 200ms;

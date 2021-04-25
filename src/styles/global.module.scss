@@ -30,6 +30,12 @@
   --menu-background-color: #{$menu-background-color};
   --menu-background-color-low-opacity: #{$menu-background-color-low-opacity};
 }
+[data-theme="dark"] {
+  --background-color: black;
+  --primary-color: white;
+  --tertiary-color: black;
+  --background-color-low-opacity: rgba(0, 0, 0, 0.8);
+}
 html {
   font-size: 20px;
   background-repeat: no-repeat;
@@ -78,6 +84,9 @@ h2,
 p,
 li {
   color: var(--primary-color);
+}
+[data-theme="dark"] p > a {
+  text-decoration: underline;
 }
 a > p {
   color: var(--secondary-color);

@@ -52,6 +52,14 @@
   transition: 0.2s;
   background-color: var(--background-color-alt);
 }
+[data-theme="dark"] .activeHeaderMenuItem,
+[data-theme="dark"] .headerMenuItem:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+[data-theme="dark"] .activeHeaderMenuItem:after {
+  background-color: black;
+}
 .headerMenuItem:hover,
 .headerLogo:hover {
   opacity: 0.5;
