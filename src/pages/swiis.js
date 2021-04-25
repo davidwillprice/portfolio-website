@@ -10,7 +10,7 @@ import SwiisLogos from "../svgs/swiis-logos.svg"
 
 export default function SwiisDigital() {
   return (
-    <Layout>
+    <Layout marginTopDesktop={true}>
       <SEO
         title="Swiis International"
         description="I am currently in a full-time position as a Web Developer & Designer at Swiis International"

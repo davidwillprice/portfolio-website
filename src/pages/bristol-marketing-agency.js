@@ -25,7 +25,7 @@ import mobileMenuGif from "../images/bma/bma-mob-menu.gif"
 
 export default function bristolAgency() {
   return (
-    <Layout>
+    <Layout marginTopDesktop={true}>
       <SEO
         title="Bristol marketing agency"
         description="As part of a job application, I was tasked with redesigning the website of a Bristol based marketing agency"

@@ -17,7 +17,7 @@ import FactsTab from "../images/lyp/lyp-facts-tablet.jpg"
 
 export default function LypDigital() {
   return (
-    <Layout>
+    <Layout marginTopDesktop={true}>
       <SEO
         title="Love Your Postcode"
         description="I worked for 'Love Your Postcode Estate Agents' full-time as a Web / Graphic Designer for three and a half years"

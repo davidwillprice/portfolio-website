@@ -38,7 +38,7 @@ class Layout extends Component {
           className={`${globalStyles.contentCon} ${
             this.props.widthLimited === true &&
             globalStyles.contentConWidthStrict
-          }`}
+          } ${this.props.marginTopDesktop ? globalStyles.addedMargin : ""}`}
         >
           {this.props.children}
         </main>
