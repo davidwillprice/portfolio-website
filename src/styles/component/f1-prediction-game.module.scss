@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
 
 .f1Main {
-  font-family: "quicksand";
+  font-family: var(--text-font);
   text-align: center;
   font-size: 14px;
   position: relative;
@@ -55,7 +55,7 @@
 }
 .options select {
   background-color: rgb(50, 50, 50);
-  font-family: "quicksand", Arial, Helvetica, sans-serif;
+  font-family: var(--text-font);
   border: none;
   text-transform: uppercase;
   color: white;

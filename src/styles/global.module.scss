@@ -16,6 +16,8 @@
   scroll-margin-top: $header-height-desktop + 10px;
 }
 :root {
+  --heading-font: #{$heading-font};
+  --text-font: #{$text-font};
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
   --secondary-color-alt: #{$secondary-color-alt};
@@ -51,7 +53,7 @@ h3,
 a,
 p,
 li {
-  font-family: "quicksand", Arial;
+  font-family: var(--text-font);
   font-weight: 400;
   margin-top: 0;
 }
@@ -63,7 +65,7 @@ li {
   margin-bottom: 20px;
 }
 h1 {
-  font-family: "reey", Arial;
+  font-family: var(--heading-font);
   font-weight: 800;
   font-size: 4rem;
 }
