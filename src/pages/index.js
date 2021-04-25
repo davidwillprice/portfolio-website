@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "../components/layout/layout"
-import StandardCentralText from "../components/standard-central-text"
 /* eslint-disable */ import SolarSVGStyles from "../styles/component/svg/solarsvg.scss" /* eslint-enable */
 import SEO from "../components/head/seo.js"
 import SqBrushSplash from "../components/sq-brush-splash"
+import SqBrushMask from "../components/sq-brush-mask"
 import Button from "../components/button"
 import ButtonCon from "../components/button-con"
 import { Link } from "gatsby"
@@ -21,6 +21,7 @@ import BmaHpMobImg from "../images/bma/bma-hp-mob.png"
 import SwiisWhyFosterTabImg from "../images/swiis/swiis-fc-why-foster-tablet.png"
 import MontyHallImg from "../images/monty-hall/monty-hall-3-doors.png"
 import f1Img from "../images/f1-prediction-game/f1-prediction-game-screenshot.png"
+import portrait from "../images/david-price-portrait.jpg"
 
 export default function Index() {
   return (
@@ -36,7 +37,14 @@ export default function Index() {
           <h2 className={IndexStyles.indexSubtitle}>Front End Web Developer</h2>
         </div>
       </div>
-      <StandardCentralText>
+      <SqBrushMask
+        brush={"/svgs/brush-bg-1.svg"}
+        img={portrait}
+        imgAlt="David Price Portrait"
+        linkDesc="David Price LinkedIn Profile"
+        linkUrl="https://www.linkedin.com/in/davidwillprice/"
+        size={"small"}
+      >
         <p>
           Having graduated with a Fine Art degree in 2014, I taught myself HTML
           and CSS to earn my first Web Developer & Designer position in 2015.
@@ -53,7 +61,7 @@ export default function Index() {
           I believe my creative background helps me approach problem solving and
           UI from a unique perspective.
         </p>
-      </StandardCentralText>
+      </SqBrushMask>
       <h2 id="web" className={IndexStyles.projectsHeader}>
         Projects
       </h2>
