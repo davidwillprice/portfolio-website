@@ -5,6 +5,9 @@
   display: flex;
   margin-top: -50px;
 }
+.small.workExampleCon {
+  margin-top: 20px;
+}
 .workExampleCon:first-child {
   margin-top: 0px;
 }
@@ -25,8 +28,14 @@
   width: 100%;
   margin: 30px 20px 30px 0;
 }
+.small .workExampleText {
+  margin-top: 0;
+}
 .workExampleLink {
   width: 75%;
+}
+.small .workExampleLink {
+  width: 30%;
 }
 .brushPreviewCon {
   max-width: 600px;
@@ -80,6 +89,9 @@
   .workExampleLink {
     width: 100%;
   }
+  .small .workExampleLink {
+    width: 50%;
+  }
 }
 
 @media (max-width: 800px) {
@@ -102,11 +114,20 @@
   .workExampleConR .workExampleText a {
     float: none;
   }
+  .small .workExampleLink,
+  .small .brushPreviewCon {
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+  }
   .nonDesktop {
     margin-bottom: 10px;
   }
   .workExampleText {
     margin: 0 0 30px;
+  }
+  .small .workExampleText {
+    margin-top: 20px;
   }
   .workExampleText {
     order: 1;
