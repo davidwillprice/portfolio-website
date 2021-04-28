@@ -11,7 +11,7 @@ class Button extends Component {
     }
   }
   html = function () {
-    if (this.props.type === "ext") {
+    if (this.props.external) {
       return (
         <a
           href={this.props.url}

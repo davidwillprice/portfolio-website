@@ -138,7 +138,7 @@ export default function Index() {
           </p>
           <ButtonCon dirTxtRight={true}>
             <Button
-              type="ext"
+              external={true}
               url="https://github.com/davidwillprice/montyhall"
               btnText="View Source"
               btnColor="secondary"
@@ -162,7 +162,7 @@ export default function Index() {
           <ButtonCon>
             <Button url="/f1-prediction-game-2021/" btnText="View Game" />
             <Button
-              type="ext"
+              external={true}
               url="https://github.com/davidwillprice/portfolio-website/blob/master/src/components/f1-prediction-game.js"
               btnText="View Source"
               btnColor="secondary"
