@@ -607,10 +607,6 @@ function orderEntrantDiffTotals(entrantType) {
 }
 orderEntrantDiffTotals("driver")
 orderEntrantDiffTotals("team")
-console.log("players")
-console.log(players)
-console.log("rounds")
-console.log(rounds)
 
 //Component to render a particular prediction tables
 function PredictionTable(props) {
@@ -774,7 +770,7 @@ function Leaderboard(props) {
       <thead>
         <tr>
           <th>Pos</th>
-          <th></th>
+          <th aria-label="Position change header"></th>
           <th>Name</th>
           <th>Accuracy</th>
           <th className={f1PredictCSS.perfectPredictions}>
@@ -1126,6 +1122,7 @@ class F1PredictionGame extends Component {
     if (this.state.mode === "standings") {
       playersSelect = (
         <select
+          aria-label="Select player group to display"
           name="playerGroup"
           id="playerGroup"
           onChange={event => this.changePlayerGroup(event)}
@@ -1146,6 +1143,7 @@ class F1PredictionGame extends Component {
     if (this.state.mode !== "help" && this.state.mode !== "stats") {
       entrantTypeSelect = (
         <select
+          aria-label="Select championship type"
           name="entrantType"
           id="entrantType"
           onChange={event => this.changeEntrantType(event)}
@@ -1186,6 +1184,8 @@ class F1PredictionGame extends Component {
         <div className={f1PredictCSS.navCon}>
           <nav className={f1PredictCSS.navBar}>
             <button
+              type="button"
+              aria-label="View leaderboards"
               data-mode="leaderboard"
               className={`${f1PredictCSS.navItem} ${f1PredictCSS.leaderboardBtn}`}
               onClick={event => this.changeMode(event)}
@@ -1193,6 +1193,8 @@ class F1PredictionGame extends Component {
               Leaderboard
             </button>
             <button
+              type="button"
+              aria-label="View full standings"
               data-mode="standings"
               className={`${f1PredictCSS.navItem} ${f1PredictCSS.standingsBtn}`}
               onClick={event => this.changeMode(event)}
@@ -1200,6 +1202,8 @@ class F1PredictionGame extends Component {
               Full standings
             </button>
             <button
+              type="button"
+              aria-label="View information"
               data-mode="help"
               className={`${f1PredictCSS.navItem} ${f1PredictCSS.helpBtn}`}
               onClick={event => this.changeMode(event)}
@@ -1207,6 +1211,8 @@ class F1PredictionGame extends Component {
               Help
             </button>
             <button
+              type="button"
+              aria-label="View stats"
               data-mode="stats"
               className={`${f1PredictCSS.navItem} ${f1PredictCSS.statsBtn}`}
               onClick={event => this.changeMode(event)}
