@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Button from "../components/button"
 import ButtonCon from "../components/button-con"
 import Layout from "../components/layout/layout"
@@ -50,9 +49,7 @@ export default function GraphicDesign() {
             Icon, app and website design for a company through freelancer.com.
           </p>
           <ButtonCon dirTxtRight={true}>
-            <Link to={`/graphic-design/teslanow/`}>
-              <Button btnText="Learn More" />
-            </Link>
+            <Button url="/graphic-design/teslanow/" btnText="Learn More" />
           </ButtonCon>
         </SqBrushMask>
         <SqBrushMask
@@ -69,9 +66,10 @@ export default function GraphicDesign() {
             Aberystwyth University.
           </p>
           <ButtonCon>
-            <Link to={`/graphic-design/aberystwyth-university/`}>
-              <Button btnText="Learn More" />
-            </Link>
+            <Button
+              url="/graphic-design/aberystwyth-university/"
+              btnText="Learn More"
+            />
           </ButtonCon>
         </SqBrushMask>
 
@@ -90,9 +88,10 @@ export default function GraphicDesign() {
             full-time job in the industry.
           </p>
           <ButtonCon dirTxtRight={true}>
-            <Link to={`/graphic-design/freelance-logos/`}>
-              <Button btnText="Learn More" />
-            </Link>
+            <Button
+              url="/graphic-design/freelance-logos/"
+              btnText="Learn More"
+            />
           </ButtonCon>
         </SqBrushMask>
       </div>

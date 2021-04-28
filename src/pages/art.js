@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import ButtonCon from "../components/button-con"
 import Button from "../components/button"
 import Layout from "../components/layout/layout"
@@ -36,9 +35,7 @@ export default function Art() {
             each day.
           </p>
           <ButtonCon>
-            <Link to={`/art/solargraphy/`}>
-              <Button btnText="Learn More" />
-            </Link>
+            <Button url="/art/solargraphy/" btnText="Learn More" />
           </ButtonCon>
         </SqBrushMask>
       </div>

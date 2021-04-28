@@ -6,7 +6,6 @@ import SqBrushSplash from "../components/sq-brush-splash"
 import SqBrushMask from "../components/sq-brush-mask"
 import Button from "../components/button"
 import ButtonCon from "../components/button-con"
-import { Link } from "gatsby"
 
 import IndexStyles from "../styles/page/index.module.scss"
 import brushConStyles from "../styles/component/brushcon.module.scss"
@@ -82,9 +81,7 @@ export default function Index() {
             Care Scotland and Swiis Healthcare.
           </p>
           <ButtonCon>
-            <Link to={`/swiis/`}>
-              <Button btnText="Learn More" />
-            </Link>
+            <Button url="/swiis/" btnText="Learn More" />
           </ButtonCon>
         </SqBrushSplash>
         <SqBrushSplash
@@ -102,9 +99,7 @@ export default function Index() {
             agent Love Your Postcode.
           </p>
           <ButtonCon dirTxtRight={true}>
-            <Link to={`/loveyourpostcode/`}>
-              <Button btnText="Learn More" />
-            </Link>
+            <Button url="/loveyourpostcode/" btnText="Learn More" />
           </ButtonCon>
         </SqBrushSplash>
         <SqBrushSplash
@@ -122,9 +117,7 @@ export default function Index() {
             process for a Bristol based marketing agency.
           </p>
           <ButtonCon>
-            <Link to={`/bristol-marketing-agency/`}>
-              <Button btnText="Learn More" />
-            </Link>
+            <Button url="/bristol-marketing-agency/" btnText="Learn More" />
           </ButtonCon>
         </SqBrushSplash>
         <SqBrushSplash
@@ -144,13 +137,13 @@ export default function Index() {
             with more features.
           </p>
           <ButtonCon dirTxtRight={true}>
-            <a href="https://github.com/davidwillprice/montyhall">
-              <Button
-                btnText="View Source"
-                btnColor="secondary"
-                btnIcon="github"
-              />
-            </a>
+            <Button
+              type="ext"
+              url="https://github.com/davidwillprice/montyhall"
+              btnText="View Source"
+              btnColor="secondary"
+              btnIcon="github"
+            />
           </ButtonCon>
         </SqBrushSplash>
         <SqBrushSplash
@@ -167,16 +160,14 @@ export default function Index() {
             of the 2021 Formula 1 season.
           </p>
           <ButtonCon>
-            <Link to={`/f1-prediction-game-2021/`}>
-              <Button btnText="View Game" />
-            </Link>
-            <a href="https://github.com/davidwillprice/portfolio-website/blob/master/src/components/f1-prediction-game.js">
-              <Button
-                btnText="View Source"
-                btnColor="secondary"
-                btnIcon="github"
-              />
-            </a>
+            <Button url="/f1-prediction-game-2021/" btnText="View Game" />
+            <Button
+              type="ext"
+              url="https://github.com/davidwillprice/portfolio-website/blob/master/src/components/f1-prediction-game.js"
+              btnText="View Source"
+              btnColor="secondary"
+              btnIcon="github"
+            />
           </ButtonCon>
         </SqBrushSplash>
       </div>
