@@ -525,6 +525,7 @@ function orderLeaderboards(entrantType) {
   //Loop through each round
   for (const [roundNo, round] of Object.entries(rounds)) {
     round.leaderboards[entrantType].sort(function (a, b) {
+      let x
       //If their percentage correct is the same, sort by perfect predictions
       if (a.percentCorrect === b.percentCorrect) {
         //Loop from 0 to 19
@@ -534,13 +535,13 @@ function orderLeaderboards(entrantType) {
             a.player.season["round" + roundNo][entrantType].diffCounts[i] <
             b.player.season["round" + roundNo][entrantType].diffCounts[i]
           ) {
-            return 1
+            x = 1
           } else if (
             //If b has bigger diffCount than a return -1
             a.player.season["round" + roundNo][entrantType].diffCounts[i] >
             b.player.season["round" + roundNo][entrantType].diffCounts[i]
           ) {
-            return -1
+            x = -1
           } else {
             //If they have the same diffCount, continue the loop and compare a lower level of diffCount
             continue
@@ -548,8 +549,9 @@ function orderLeaderboards(entrantType) {
         }
       } else {
         //Else sort by percentage correct, highest first
-        return a.percentCorrect < b.percentCorrect ? 1 : -1
+        return a.percentCorrect < b.percentCorrect ? (x = 1) : (x = -1)
       }
+      return x
     })
   }
 }
