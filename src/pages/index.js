@@ -37,6 +37,7 @@ export default function Index() {
         </div>
       </div>
       <SqBrushMask
+        external={true}
         brush={"/svgs/brush-bg-1.svg"}
         img={portrait}
         imgAlt="David Price Portrait"
@@ -123,6 +124,7 @@ export default function Index() {
         <SqBrushSplash
           brush={<BrushThree />}
           dirTxtRight={true}
+          external={true}
           img={MontyHallImg}
           imgAlt="Monty Hall's 3 doors"
           linkUrl="https://github.com/davidwillprice/montyhall"

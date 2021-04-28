@@ -19,33 +19,52 @@ class SqBrushSplash extends Component {
     }
     return classes
   }
-
-  render() {
-    let ModConClasses = this.CalcModCon()
-    let brushConClasses = this.CalcBrushCon()
-    return (
-      <div className={ModConClasses}>
-        <div className={sqBrushStyles.workExampleText}>
-          {this.props.children}
+  html = () => {
+    const brushContent = (
+      <div className={this.CalcBrushCon()}>
+        <div className={sqBrushStyles.brushPreview}>
+          <img
+            alt={this.props.imgAlt}
+            src={this.props.img}
+            className={sqBrushStyles.image}
+          />
+          {React.cloneElement(this.props.brush, {
+            className: sqBrushStyles.brushBg,
+          })}
         </div>
+      </div>
+    )
+    //If the link is external, wrap in an <a> tag instead of a <Link> component
+    if (this.props.external) {
+      return (
+        <a
+          className={sqBrushStyles.workExampleLink}
+          aria-label={this.props.linkDesc}
+          href={this.props.linkUrl}
+        >
+          {brushContent}
+        </a>
+      )
+    } else {
+      return (
         <Link
           className={sqBrushStyles.workExampleLink}
           aria-label={this.props.linkDesc}
           to={this.props.linkUrl}
         >
-          <div className={brushConClasses}>
-            <div className={sqBrushStyles.brushPreview}>
-              <img
-                alt={this.props.imgAlt}
-                src={this.props.img}
-                className={sqBrushStyles.image}
-              />
-              {React.cloneElement(this.props.brush, {
-                className: sqBrushStyles.brushBg,
-              })}
-            </div>
-          </div>
+          {brushContent}
         </Link>
+      )
+    }
+  }
+
+  render() {
+    return (
+      <div className={this.CalcModCon()}>
+        <div className={sqBrushStyles.workExampleText}>
+          {this.props.children}
+        </div>
+        {this.html()}
       </div>
     )
   }
