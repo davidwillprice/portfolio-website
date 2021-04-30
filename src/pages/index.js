@@ -9,6 +9,7 @@ import ButtonCon from "../components/button-con"
 
 import IndexStyles from "../styles/page/index.module.scss"
 import brushConStyles from "../styles/component/brushcon.module.scss"
+import globalStyles from "../styles/global.module.scss"
 
 import SolarSVG from "../svgs/solar.svg"
 import BrushOne from "../svgs/brush-bg-1.svg"
@@ -62,7 +63,10 @@ export default function Index() {
           UI from a unique perspective.
         </p>
       </SqBrushMask>
-      <h2 id="web" className={IndexStyles.projectsHeader}>
+      <h2
+        id="web"
+        className={`${IndexStyles.projectsHeader} ${globalStyles.anchor}`}
+      >
         Projects
       </h2>
       <div className={brushConStyles.workBrushCon}>

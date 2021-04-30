@@ -9,6 +9,7 @@ module.exports = {
     url: "https://www.davidwillprice.com",
   },
   plugins: [
+    `gatsby-plugin-anchor-links`,
     `gatsby-plugin-sitemap`,
     /*{
 			resolve: `gatsby-plugin-google-analytics`,

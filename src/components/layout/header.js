@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import headerStyles from "../../styles/component/layout/header.module.scss"
 import Logo from "../../svgs/personal-logo.svg"
 
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+
 class Header extends Component {
   state = {
     isMobMenuTrig: false,
@@ -39,14 +41,13 @@ class Header extends Component {
           </button>
           <div className={headerStyles.headerNav}>
             {/*<div className={classnames(headerStyles.headerNav, headerStyles.expandedHeaderNav)}>*/}
-            <a
-              href="/#web"
+            <AnchorLink
+              to="/#web"
               className={headerStyles.headerMenuItem}
-              activeClassName={headerStyles.activeHeaderMenuItem}
-              onClick={this.closeMobMenu}
+              onAnchorLinkClick={this.closeMobMenu}
             >
               Web development
-            </a>
+            </AnchorLink>
             <Link
               className={headerStyles.headerMenuItem}
               to={`/graphic-design/`}
