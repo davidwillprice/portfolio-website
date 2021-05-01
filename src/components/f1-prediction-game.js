@@ -1127,6 +1127,7 @@ class F1PredictionGame extends Component {
           aria-label="Select player group to display"
           name="playerGroup"
           id="playerGroup"
+          onBlur={event => this.changePlayerGroup(event)}
           onChange={event => this.changePlayerGroup(event)}
         >
           <option value="aberystwyth" hidden>
@@ -1148,6 +1149,7 @@ class F1PredictionGame extends Component {
           aria-label="Select championship type"
           name="entrantType"
           id="entrantType"
+          onBlur={event => this.changeEntrantType(event)}
           onChange={event => this.changeEntrantType(event)}
         >
           <option value="driver">Driver Standings</option>
