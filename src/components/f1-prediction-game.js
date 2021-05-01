@@ -1165,6 +1165,7 @@ class F1PredictionGame extends Component {
             <span id="track-name">
               {" " + rounds[this.state.selectedRound].trackName}
             </span>
+            {/*If there is data for more than once race, show the range slider*/}
             {rounds.length > 1 && (
               <input
                 onChange={event => this.changeRound(event)}
