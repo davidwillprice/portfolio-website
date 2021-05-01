@@ -1198,12 +1198,12 @@ class F1PredictionGame extends Component {
             </button>
             <button
               type="button"
-              aria-label="View full standings"
+              aria-label="View F1 standings"
               data-mode="standings"
               className={`${f1PredictCSS.navItem} ${f1PredictCSS.standingsBtn}`}
               onClick={event => this.changeMode(event)}
             >
-              Full standings
+              F1 standings
             </button>
             <button
               type="button"
