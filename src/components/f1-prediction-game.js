@@ -478,8 +478,6 @@ function calcData() {
       }
       //Loop the player's predictions, each driver and their pos difference from that round's standings
       function calcRoundPerformance(entrantType, player) {
-        // console.log("entrantType")
-        // console.log(entrantType)
         if (player[entrantType + "Table"].length > 0) {
           for (const [predictedPos, entrant] of Object.entries(
             player[entrantType + "Table"]
@@ -523,25 +521,22 @@ function calcData() {
 }
 //
 function calcLeaderboardRdDiffs(entrantType) {
+  //Loop over the rounds to calculate each of their leaderboard round changes
   for (const [roundNo, round] of Object.entries(rounds)) {
-    //Making sure it doesn't try and calc a nonexistent round
-    if (roundNo + 1 < rounds.length) {
-      //Loop over the order of the leaderboard
-      for (const [prevPos, prevRdPlayerData] of Object.entries(
+    //Don't calculate the leaderboard changes of the first round
+    if (roundNo > 0) {
+      //Loop over each player in order of the looped round's leaderboard
+      for (const [currentLbPos, currentPlayerData] of Object.entries(
         round.leaderboards[entrantType]
       )) {
-        //Set the current round and make sure it is a number
-        const curRoundNo = parseFloat(roundNo) + 1
-        //Find player's location in the next round to find 'currentPos'
-        for (const [curPos, curRdPlayerData] of Object.entries(
-          rounds[curRoundNo].leaderboards[entrantType]
-        )) {
-          if (curRdPlayerData.player.name === prevRdPlayerData.player.name) {
-            const rdDiff = prevPos - curPos
-            //Update prevRdDiff for that player in current round
-            curRdPlayerData.prevRdDiff = rdDiff
-          }
-        }
+        //Find that player's position in the leaderboard of the round previous to the looped round
+        const previousLbPos = rounds[roundNo - 1].leaderboards[
+          entrantType
+        ].findIndex(
+          entrant => entrant.player.name === currentPlayerData.player.name
+        )
+        //Attach the player's leaderboard position change from the previous round to their data for the looped round
+        currentPlayerData.prevRdDiff = previousLbPos - currentLbPos
       }
     }
   }
@@ -755,7 +750,6 @@ function prevRdDiffUI(prevRdDiff) {
     ? "negLeaderboardChg"
     : "noLeaderboardChg"
 }
-
 function Leaderboard(props) {
   //playerData is data of the players that will displayed
   const roundData = props.roundData
@@ -768,6 +762,7 @@ function Leaderboard(props) {
     leaderboardStanding =>
       leaderboardStanding.player[entrantType + "Table"].length > 0
   )
+  // console.log(filteredRoundData)
   const listRows = filteredRoundData.map((leaderboardStanding, index) => (
     <tr
       className={f1PredictCSS.leaderboardRow}
