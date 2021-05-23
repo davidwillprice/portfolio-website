@@ -1247,6 +1247,7 @@ class F1PredictionGame extends Component {
                 min="0"
                 max={rounds.length - 1}
                 className={f1PredictCSS.slider}
+                value={parseInt(this.state.selectedRound)}
               />
             )}
           </div>
