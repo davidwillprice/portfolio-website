@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import globalStyles from "../../styles/global.module.scss"
 import Header from "./header"
 import Footer from "./footer"
+import Accessibility from "./accessibility"
 
 class Layout extends Component {
   state = {
@@ -43,6 +44,7 @@ class Layout extends Component {
           {this.props.children}
         </main>
         {this.props.footer && <Footer />}
+        <Accessibility />
         <script
           data-goatcounter="https://davidwillprice.goatcounter.com/count"
           async

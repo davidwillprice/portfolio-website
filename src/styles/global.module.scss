@@ -7,6 +7,14 @@
     url("../fonts/ReeyRegular.woff2") format("woff2"),
     url("../fonts/ReeyRegular.woff") format("woff");
 }
+@font-face {
+  font-family: "Open Dyslexic";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/OpenDyslexic-Regular.otf") format("otf"),
+    url("../fonts/OpenDyslexic-Regular.woff2") format("woff2"),
+    url("../fonts/OpenDyslexic-Regular.woff") format("woff");
+}
 * {
   text-decoration: none;
   box-sizing: border-box;
@@ -36,6 +44,11 @@
   --tertiary-color: black;
   --background-color-low-opacity: rgba(0, 0, 0, 0.8);
 }
+[data-font="dyslexic"] {
+  --text-font: "Open Dyslexic";
+  --heading-font: "Open Dyslexic";
+  font-size: 16px;
+}
 html {
   font-size: 20px;
   background-repeat: no-repeat;
@@ -58,7 +71,8 @@ h2,
 h3,
 a,
 p,
-li {
+li,
+button {
   font-family: var(--text-font);
   font-weight: 400;
   margin-top: 0;
@@ -90,6 +104,10 @@ li {
 }
 a > p {
   color: var(--secondary-color);
+}
+button {
+  font-size: 1rem;
+  padding: 10px;
 }
 
 .pageCon {

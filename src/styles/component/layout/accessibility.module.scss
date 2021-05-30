@@ -1,0 +1,122 @@
+@import "../../sass-variables.scss";
+
+.optionCon {
+  background-color: var(--menu-background-color);
+  border-radius: 3px;
+  bottom: 80px;
+  padding: 15px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  display: none;
+  padding-bottom: 50px;
+  max-width: 300px;
+  h3 {
+    font-size: 1.5rem;
+  }
+  button {
+    width: 100%;
+    text-decoration: none;
+    border: 3px rgba(255, 255, 255, 0.5) solid;
+    background-color: transparent;
+    border-radius: 3px;
+    margin-bottom: 15px;
+  }
+}
+.iconCon {
+  align-items: center;
+  background-color: var(--menu-background-color);
+  border: none;
+  border-radius: 0 3px 3px 0;
+  bottom: 80px;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  left: 0;
+  padding: 7px;
+  position: fixed;
+  text-decoration: none;
+  width: 50px;
+  svg {
+    width: 100%;
+    height: 100%;
+    transition: opacity 400ms ease-in-out;
+  }
+}
+.closeMenuLine {
+  background-color: var(--secondary-color);
+  height: 5px;
+  width: 35px;
+  position: absolute;
+  border-radius: 5px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+  &:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  &:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
+.activeMenu {
+  .optionCon {
+    display: block;
+  }
+  .iconCon svg {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+  .closeMenuLine {
+    opacity: 1;
+  }
+}
+/*Dark Theme CSS*/
+[data-theme="dark"] {
+  .optionCon,
+  .iconCon {
+    background-color: white;
+  }
+  .iconCon {
+    span {
+      background-color: black;
+    }
+    svg {
+      fill: black;
+    }
+  }
+  .optionCon h3,
+  button {
+    color: black;
+  }
+  .optionCon button {
+    border: 3px rgba(0, 0, 0, 0.5) solid;
+  }
+}
+
+@media (max-width: 800px) {
+  .iconCon,
+  .optionCon {
+    bottom: 45px;
+  }
+}
+
+@media (max-width: 500px) {
+  .optionCon,
+  .iconCon {
+    bottom: 110px;
+  }
+  .optionCon {
+    width: 100%;
+    max-width: none;
+  }
+  .iconCon {
+    bottom: 110px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+  }
+}
