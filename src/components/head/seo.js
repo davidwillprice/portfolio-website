@@ -34,6 +34,49 @@ const SEO = ({ title, description, image, article, bgColor }) => {
         seo.title === "David Price Web Design" ? "" : titleTemplate
       }
     >
+      <script type="javascript">
+        {(function () {
+          function setTheme(theme) {
+            if (theme === "highContrast") {
+              document
+                .querySelector("html")
+                .setAttribute("data-theme", "highContrast")
+            }
+            window.__theme = theme
+          }
+          window.__setPreferredTheme = function (theme) {
+            setTheme(theme)
+            try {
+              localStorage.setItem("preferred-theme", theme)
+            } catch (e) {}
+          }
+          var preferredTheme
+          try {
+            preferredTheme = localStorage.getItem("preferred-theme")
+          } catch (e) {}
+          setTheme(preferredTheme)
+
+          function setFont(font) {
+            if (font === "dyslexic") {
+              document
+                .querySelector("html")
+                .setAttribute("data-font", "dyslexic")
+            }
+            window.__font = font
+          }
+          window.__setPreferredFont = function (font) {
+            setFont(font)
+            try {
+              localStorage.setItem("preferred-font", font)
+            } catch (e) {}
+          }
+          var preferredFont
+          try {
+            preferredFont = localStorage.getItem("preferred-font")
+          } catch (e) {}
+          setFont(preferredFont)
+        })()}
+      </script>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 
