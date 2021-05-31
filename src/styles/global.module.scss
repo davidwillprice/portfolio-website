@@ -38,7 +38,7 @@
   --menu-background-color: #{$menu-background-color};
   --menu-background-color-low-opacity: #{$menu-background-color-low-opacity};
 }
-[data-theme="dark"] {
+[data-theme="highContrast"] {
   --background-color: black;
   --primary-color: white;
   --tertiary-color: black;
