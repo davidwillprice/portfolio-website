@@ -36,45 +36,47 @@ const SEO = ({ title, description, image, article, bgColor }) => {
     >
       <script type="javascript">
         {(function () {
-          function setTheme(theme) {
-            if (theme === "highContrast") {
-              document
-                .querySelector("html")
-                .setAttribute("data-theme", "highContrast")
+          if (typeof window !== "undefined") {
+            function setTheme(theme) {
+              if (theme === "highContrast") {
+                document
+                  .querySelector("html")
+                  .setAttribute("data-theme", "highContrast")
+              }
+              window.__theme = theme
             }
-            window.__theme = theme
-          }
-          window.__setPreferredTheme = function (theme) {
-            setTheme(theme)
+            window.__setPreferredTheme = function (theme) {
+              setTheme(theme)
+              try {
+                localStorage.setItem("preferred-theme", theme)
+              } catch (e) {}
+            }
+            var preferredTheme
             try {
-              localStorage.setItem("preferred-theme", theme)
+              preferredTheme = localStorage.getItem("preferred-theme")
             } catch (e) {}
-          }
-          var preferredTheme
-          try {
-            preferredTheme = localStorage.getItem("preferred-theme")
-          } catch (e) {}
-          setTheme(preferredTheme)
+            setTheme(preferredTheme)
 
-          function setFont(font) {
-            if (font === "dyslexic") {
-              document
-                .querySelector("html")
-                .setAttribute("data-font", "dyslexic")
+            function setFont(font) {
+              if (font === "dyslexic") {
+                document
+                  .querySelector("html")
+                  .setAttribute("data-font", "dyslexic")
+              }
+              window.__font = font
             }
-            window.__font = font
-          }
-          window.__setPreferredFont = function (font) {
-            setFont(font)
+            window.__setPreferredFont = function (font) {
+              setFont(font)
+              try {
+                localStorage.setItem("preferred-font", font)
+              } catch (e) {}
+            }
+            var preferredFont
             try {
-              localStorage.setItem("preferred-font", font)
+              preferredFont = localStorage.getItem("preferred-font")
             } catch (e) {}
+            setFont(preferredFont)
           }
-          var preferredFont
-          try {
-            preferredFont = localStorage.getItem("preferred-font")
-          } catch (e) {}
-          setFont(preferredFont)
         })()}
       </script>
       <meta name="description" content={seo.description} />
