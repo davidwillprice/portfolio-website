@@ -48,6 +48,18 @@
 .footer .links a:last-child .footerLinkItem {
   margin-right: 0;
 }
+/*High Constrast Theme CSS*/
+[data-theme="highContrast"] {
+  .footerCon {
+    background-color: var(--primary-color);
+    .smallPrint * {
+      color: var(--background-color);
+    }
+  }
+  .footerLinkItem {
+    fill: var(--background-color);
+  }
+}
 
 @media (max-width: 800px) {
   .footer {

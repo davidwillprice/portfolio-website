@@ -52,14 +52,33 @@
   transition: 0.2s;
   background-color: var(--background-color-alt);
 }
-[data-theme="highContrast"] .activeHeaderMenuItem,
-[data-theme="highContrast"] .headerMenuItem:hover {
-  text-decoration: underline;
-  opacity: 1;
+/*High Constrast Theme CSS*/
+[data-theme="highContrast"] {
+  .headerCon {
+    background-color: var(--primary-color);
+  }
+  .headerLogo path {
+    fill: var(--background-color) !important;
+  }
+  .headerMenuItem {
+    color: var(--background-color);
+  }
+  .headerMenuTrig {
+    background-color: var(--background-color);
+  }
+  .activeHeaderMenuItem,
+  .headerMenuItem:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+  .activeHeaderMenuItem:after {
+    background-color: var(--background-color);
+  }
+  .header.expandedHeader {
+    background-color: var(--primary-color);
+  }
 }
-[data-theme="highContrast"] .activeHeaderMenuItem:after {
-  background-color: black;
-}
+
 .headerMenuItem:hover,
 .headerLogo:hover {
   opacity: 0.5;
