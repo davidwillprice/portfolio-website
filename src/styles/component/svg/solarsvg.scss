@@ -29,6 +29,10 @@
   animation: expand forwards ease-in-out 3s infinite;
 }
 
+[data-theme="highContrast"] #foreground path {
+  fill: var(--background-color) !important;
+}
+
 @-webkit-keyframes expand {
   0% {
     transform: scale(1, 1);
