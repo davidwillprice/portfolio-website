@@ -74,23 +74,23 @@
     opacity: 1;
   }
 }
-/*Dark Theme CSS*/
+/*High Constrast Theme CSS*/
 [data-theme="highContrast"] {
   .optionCon,
   .iconCon {
-    background-color: white;
+    background-color: var(--primary-color);
   }
   .iconCon {
     span {
-      background-color: black;
+      background-color: var(--background-color);
     }
     svg {
-      fill: black;
+      fill: var(--background-color);
     }
   }
   .optionCon h3,
   button {
-    color: black;
+    color: var(--background-color);
   }
   .optionCon button {
     border: 3px rgba(0, 0, 0, 0.5) solid;
