@@ -16,7 +16,7 @@
 .button:hover {
   transform: translateY(-2px);
 }
-[data-theme="dark"] .button:hover {
+[data-theme="highContrast"] .button:hover {
   text-decoration: underline;
 }
 .button svg {
@@ -30,11 +30,11 @@
   background-color: var(--highlight-colour-alt);
 }
 .button.secondary,
-[data-theme="dark"] .button {
+[data-theme="highContrast"] .button {
   color: var(--tertiary-color);
   background-color: var(--secondary-color-alt);
 }
 .button.secondary:hover,
-[data-theme="dark"] .button:hover {
+[data-theme="highContrast"] .button:hover {
   background-color: var(--secondary-color);
 }

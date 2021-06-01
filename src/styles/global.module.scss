@@ -99,7 +99,7 @@ p,
 li {
   color: var(--primary-color);
 }
-[data-theme="dark"] p > a {
+[data-theme="highContrast"] p > a {
   text-decoration: underline;
 }
 a > p {

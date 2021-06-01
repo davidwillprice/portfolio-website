@@ -52,12 +52,12 @@
   transition: 0.2s;
   background-color: var(--background-color-alt);
 }
-[data-theme="dark"] .activeHeaderMenuItem,
-[data-theme="dark"] .headerMenuItem:hover {
+[data-theme="highContrast"] .activeHeaderMenuItem,
+[data-theme="highContrast"] .headerMenuItem:hover {
   text-decoration: underline;
   opacity: 1;
 }
-[data-theme="dark"] .activeHeaderMenuItem:after {
+[data-theme="highContrast"] .activeHeaderMenuItem:after {
   background-color: black;
 }
 .headerMenuItem:hover,
