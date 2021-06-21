@@ -512,6 +512,32 @@ let rounds = [
     ],
     [rbr, mer, fer, mcl, alt, ast, alp, alf, has, wil]
   ),
+  new Round(
+    "French GP",
+    [
+      ves,
+      ham,
+      per,
+      nor,
+      bot,
+      lec,
+      sai,
+      gas,
+      ric,
+      vet,
+      alo,
+      oco,
+      str,
+      tsu,
+      rai,
+      gio,
+      rus,
+      sch,
+      maz,
+      lat,
+    ],
+    [rbr, mer, mcl, fer, alt, ast, alp, alf, wil, has]
+  ),
 ]
 function generateAverageTables(entrantData, entrantType) {
   //Loop over each entrant, finding their index in each player's prediction table and totalling them in a new avgPrePos property
