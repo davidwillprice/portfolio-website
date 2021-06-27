@@ -538,6 +538,32 @@ let rounds = [
     ],
     [rbr, mer, mcl, fer, alt, ast, alp, alf, wil, has]
   ),
+  new Round(
+    "Styrian GP",
+    [
+      ves,
+      ham,
+      per,
+      nor,
+      bot,
+      lec,
+      sai,
+      gas,
+      ric,
+      vet,
+      alo,
+      str,
+      oco,
+      tsu,
+      rai,
+      gio,
+      rus,
+      sch,
+      maz,
+      lat,
+    ],
+    [rbr, mer, mcl, fer, alt, ast, alp, alf, wil, has]
+  ),
 ]
 function generateAverageTables(entrantData, entrantType) {
   //Loop over each entrant, finding their index in each player's prediction table and totalling them in a new avgPrePos property
