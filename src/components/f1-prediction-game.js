@@ -1339,6 +1339,7 @@ class F1PredictionGame extends Component {
       playerGroup: "aberystwyth",
       selectedRound: rounds.length - 1,
       mode: "leaderboard",
+      seasonOver: rounds.length === 21,
     }
     //Binding 'this' to the UI methods
     this.changeEntrantType = this.changeEntrantType.bind(this)
@@ -1353,7 +1354,10 @@ class F1PredictionGame extends Component {
     this.setState({ playerGroup: event.target.value })
   }
   changeRound(event) {
-    this.setState({ selectedRound: event.target.value })
+    this.setState({
+      selectedRound: +event.target.value,
+      seasonOver: +event.target.value + 1 === 21,
+    })
   }
   changeMode(event) {
     this.setState({ mode: event.target.getAttribute("data-mode") })
@@ -1493,15 +1497,16 @@ class F1PredictionGame extends Component {
     } else if (this.state.mode === "stats") {
       display = (
         <div className={f1PredictCSS.statsCon}>
-          <h2>Current Result Stats</h2>
+          <h2>Standings Stats</h2>
           <ul>
             <li>
               {
                 rounds[this.state.selectedRound].entrantDiffTotals.driver[0]
                   .entrant.fName
               }{" "}
-              is the most accurately predicted driver, with the average player
-              only mispredicting him by{" "}
+              {this.state.seasonOver ? "was" : "is"} the most accurately
+              predicted driver, with the average player only mispredicting him
+              by{" "}
               {
                 //Get diff total, average it out by no of players and then round to one decimal place
                 Math.round(
@@ -1518,8 +1523,8 @@ class F1PredictionGame extends Component {
                 rounds[this.state.selectedRound].entrantDiffTotals.driver[19]
                   .entrant.fName
               }{" "}
-              is the least accurately predicted driver, with the average player
-              mispredicting him by{" "}
+              {this.state.seasonOver ? "was" : "is"} the least accurately
+              predicted driver, with the average player mispredicting him by{" "}
               {Math.round(
                 (rounds[this.state.selectedRound].entrantDiffTotals.driver[19]
                   .diffTotal /
@@ -1533,8 +1538,8 @@ class F1PredictionGame extends Component {
                 rounds[this.state.selectedRound].entrantDiffTotals.team[0]
                   .entrant.fName
               }{" "}
-              are the most accurately predicted team, with the average player
-              only mispredicting them by{" "}
+              {this.state.seasonOver ? "were" : "are"} the most accurately
+              predicted team, with the average player only mispredicting them by{" "}
               {Math.round(
                 (rounds[this.state.selectedRound].entrantDiffTotals.team[0]
                   .diffTotal /
@@ -1548,8 +1553,8 @@ class F1PredictionGame extends Component {
                 rounds[this.state.selectedRound].entrantDiffTotals.team[9]
                   .entrant.fName
               }{" "}
-              are the least accurately predicted team, with the average player
-              mispredicting them by{" "}
+              {this.state.seasonOver ? "were" : "are"} the least accurately
+              predicted team, with the average player mispredicting them by{" "}
               {Math.round(
                 (rounds[this.state.selectedRound].entrantDiffTotals.team[9]
                   .diffTotal /
@@ -1559,7 +1564,7 @@ class F1PredictionGame extends Component {
               positions.
             </li>
           </ul>
-          <h2>Initial Prediction Notes</h2>
+          <h2>Predictions Triva</h2>
           <ul>
             <li>
               Alex had the most 'controversial' driver predictions, as they had
@@ -1572,40 +1577,100 @@ class F1PredictionGame extends Component {
               position changes);
             </li>
             <li>
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.tick}>✔</span>
+              )}{" "}
               Will was the only person who didn't predict that Hamilton would
               win the drivers title, opting for Verstappen;
             </li>
             <li>
+              {
+                (console.log(this.state.selectedRound),
+                console.log(this.state.seasonOver),
+                console.log(this.state.seasonOver && "✔"))
+              }
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.cross}>✖</span>
+              )}{" "}
               Will and Pete were the only people who didn't predict that
-              Mercedes would win the drivers title, opting for Red Bull;
+              Mercedes would win the constructors title, opting for Red Bull;
             </li>
             <li>
-              Nobody predicted Hamilton, Leclerc, Gasly, Raikkonen, Schumacher
-              or Russell would be beaten by their team mate;
+              Nobody predicted{" "}
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.tick}>✔</span>
+              )}{" "}
+              Hamilton,{" "}
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.cross}>✖</span>
+              )}{" "}
+              Leclerc,{" "}
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.tick}>✔</span>
+              )}{" "}
+              Gasly,{" "}
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.tick}>✔</span>
+              )}{" "}
+              Raikkonen,{" "}
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.tick}>✔</span>
+              )}{" "}
+              Schumacher or{" "}
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.tick}>✔</span>
+              )}{" "}
+              Russell would be beaten by their team mate;
             </li>
             <li>
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.cross}>✖</span>
+              )}{" "}
               Pete was the only person to predict that Perez would beat
-              Verstappen, while Alex was the only person to predict Perez
-              wouldn't finish in the top 6 (10th).
+              Verstappen, while{" "}
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.cross}>✖</span>
+              )}{" "}
+              Alex was the only person to predict Perez wouldn't finish in the
+              top 6 (10th).
             </li>
             <li>
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.tick}>✔</span>
+              )}{" "}
               David was the only person to predict that Ferrari would finish as
               high as 3rd;
             </li>
             <li>
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.tick}>✔</span>
+              )}{" "}
               Alex was the only person to predict that Norris would beat
               Riccardo;
             </li>
             <li>
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.cross}>✖</span>
+              )}{" "}
               James was the only person to predict that Stroll would beat
               Vettel;
             </li>
             <li>
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.cross}>✖</span>
+              )}{" "}
               Annie was the only person to predict that Ocon would beat Alonso;
             </li>
             <li>
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.tick}>✔</span>
+              )}{" "}
               James was the only person to predict that Alfa Romeo wouldn't come
-              8th (9th) and the only person to put Haas as high as 8th.
+              8th (9th) and the{" "}
+              {this.state.seasonOver && (
+                <span className={f1PredictCSS.cross}>✖</span>
+              )}{" "}
+              only person to put Haas as high as 8th.
             </li>
           </ul>
         </div>
