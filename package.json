@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "david-price-portfolio-website",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Built with Gatsby (HTML, CSS, JavaScript and React), my portfolio website showcases my web development, graphic design and art",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -12,7 +12,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "gatdev" : "gatsby develop --host 0.0.0.0 -p 8080"
+    "gatdev": "gatsby develop --host 0.0.0.0 -p 8080"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
