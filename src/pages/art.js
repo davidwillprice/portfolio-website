@@ -3,7 +3,7 @@ import ButtonCon from "../components/button-con"
 import Button from "../components/button"
 import Layout from "../components/layout/layout"
 import FullHeight from "../components/layout/full-height"
-import SEO from "../components/head/seo"
+import Seo from "../components/head/seo"
 import SqBrushMask from "../components/sq-brush-mask"
 import TitleBanner from "../components/layout/title-banner"
 
@@ -14,7 +14,7 @@ import Solargraphy from "../images/solargraphy/solargraph-image-34-thumbnail.jpg
 export default function Art() {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Art"
         description="Pinhole photography aimed at the sky to capture the path of the sun each day."
       />

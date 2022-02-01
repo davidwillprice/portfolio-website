@@ -2,7 +2,7 @@ import React from "react"
 import FullWidthImage from "../../components/full-width-img"
 import Layout from "../../components/layout/layout"
 import LogoShowcase from "../../components/logo-showcase"
-import SEO from "../../components/head/seo"
+import Seo from "../../components/head/seo"
 import StandardCentralText from "../../components/standard-central-text"
 import TitleBanner from "../../components/layout/title-banner"
 
@@ -15,7 +15,7 @@ import InCarMockup from "../../images/teslanow/in-car-mock-up.jpg"
 export default function Teslanow() {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Teslanow"
         description="Icon, app and website design for a company through freelancer.com."
       />

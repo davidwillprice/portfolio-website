@@ -5,7 +5,7 @@ import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 import * as globalStyles from "../../styles/global.module.scss"
 
-const SEO = ({ title, description, image, article, bgColor }) => {
+const Seo = ({ title, description, image, article, bgColor }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -105,16 +105,16 @@ const SEO = ({ title, description, image, article, bgColor }) => {
   )
 }
 
-export default SEO
+export default Seo
 
-SEO.propTypes = {
+Seo.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
   article: PropTypes.bool,
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   title: null,
   description: null,
   image: null,

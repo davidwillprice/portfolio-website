@@ -2,7 +2,7 @@ import React from "react"
 import FullWidthImage from "../../components/full-width-img"
 import Layout from "../../components/layout/layout"
 import Morph from "../../components/morphing-images"
-import SEO from "../../components/head/seo"
+import Seo from "../../components/head/seo"
 import StandardCentralText from "../../components/standard-central-text"
 import TitleBanner from "../../components/layout/title-banner"
 
@@ -26,7 +26,7 @@ import Image73 from "../../images/solargraphy/solargraph-image-73.jpg"
 export default function Solargraphy() {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Solargraphy"
         description="Pinhole photography aimed at the sky to capture the path of the sun each day"
       />

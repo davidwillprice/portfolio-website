@@ -1,7 +1,7 @@
 import React from "react"
 /*import { Link } from 'gatsby';*/
 import Layout from "../components/layout/layout"
-import SEO from "../components/head/seo.js"
+import Seo from "../components/head/seo.js"
 import StandardCentralText from "../components/standard-central-text"
 import TextBesideImg from "../components/text-beside-img"
 import ColourPreview from "../components/colour-preview"
@@ -26,7 +26,7 @@ import mobileMenuGif from "../images/bma/bma-mob-menu.gif"
 export default function bristolAgency() {
   return (
     <Layout marginTopDesktop={true}>
-      <SEO
+      <Seo
         title="Bristol marketing agency"
         description="As part of a job application, I was tasked with redesigning the website of a Bristol based marketing agency"
       />

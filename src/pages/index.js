@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout/layout"
 /* eslint-disable */ import SolarSVGStyles from "../styles/component/svg/solarsvg.scss" /* eslint-enable */
-import SEO from "../components/head/seo.js"
+import Seo from "../components/head/seo.js"
 import SqBrushSplash from "../components/sq-brush-splash"
 import SqBrushMask from "../components/sq-brush-mask"
 import Button from "../components/button"
@@ -26,7 +26,7 @@ import portrait from "../images/david-price-portrait.jpg"
 export default function Index() {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="David Price Web Design"
         description="I am currently in a full-time position as a Web Developer & Designer at Swiis International"
       />

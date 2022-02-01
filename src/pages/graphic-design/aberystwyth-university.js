@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../../components/layout/layout"
 import LogoShowcase from "../../components/logo-showcase"
-import SEO from "../../components/head/seo"
+import Seo from "../../components/head/seo"
 import StandardCentralText from "../../components/standard-central-text"
 import TitleBanner from "../../components/layout/title-banner"
 
@@ -16,7 +16,7 @@ import * as AberStyles from "../../styles/page/aber.module.scss"
 export default function FreelanceLogo() {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Freelance logos"
         description="Commissioned and practice logos created before I got my first full-time job in the industry."
       />

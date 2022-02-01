@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout/layout"
 import StandardCentralText from "../components/standard-central-text"
-import SEO from "../components/head/seo.js"
+import Seo from "../components/head/seo.js"
 
 import * as ShowcaseStyles from "../styles/page/showcasepage.module.scss"
 /* eslint-disable */ import SwiisLogosCSS from "../styles/component/svg/swiis-logos.scss" /* eslint-enable */
@@ -11,7 +11,7 @@ import SwiisLogos from "../svgs/swiis-logos.svg"
 export default function SwiisDigital() {
   return (
     <Layout marginTopDesktop={true}>
-      <SEO
+      <Seo
         title="Swiis International"
         description="I am currently in a full-time position as a Web Developer & Designer at Swiis International"
       />

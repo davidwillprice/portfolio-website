@@ -2,7 +2,7 @@ import React from "react"
 import Button from "../components/button"
 import ButtonCon from "../components/button-con"
 import Layout from "../components/layout/layout"
-import SEO from "../components/head/seo"
+import Seo from "../components/head/seo"
 import SqBrushMask from "../components/sq-brush-mask"
 import TitleBanner from "../components/layout/title-banner"
 
@@ -16,7 +16,7 @@ import SpringholmLogo from "../images/freelance-logos/springholm-wells-farm-logo
 export default function GraphicDesign() {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Graphic design"
         description="Showcase of the graphic design different projects I have worked on"
       />
