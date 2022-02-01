@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import FullHeight from "../components/layout/full-height"
 
-import MissingStyles from "../styles/page/missing-page.module.scss"
+import * as MissingStyles from "../styles/page/missing-page.module.scss"
 
 export default function PrivacyPolicy() {
   return (

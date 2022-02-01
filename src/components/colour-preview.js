@@ -1,5 +1,5 @@
 import React from "react"
-import colourPreviewStyles from "../styles/component/colour-preview.module.scss"
+import * as colourPreviewStyles from "../styles/component/colour-preview.module.scss"
 
 const ColourPreview = props => (
   <div

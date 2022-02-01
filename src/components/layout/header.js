@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import headerStyles from "../../styles/component/layout/header.module.scss"
+import * as headerStyles from "../../styles/component/layout/header.module.scss"
 import Logo from "../../svgs/personal-logo.svg"
 
 import { AnchorLink } from "gatsby-plugin-anchor-links"

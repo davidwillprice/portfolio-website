@@ -7,7 +7,7 @@ import SEO from "../components/head/seo"
 import SqBrushMask from "../components/sq-brush-mask"
 import TitleBanner from "../components/layout/title-banner"
 
-import brushConStyles from "../styles/component/brushcon.module.scss"
+import * as brushConStyles from "../styles/component/brushcon.module.scss"
 
 import Solargraphy from "../images/solargraphy/solargraph-image-34-thumbnail.jpg"
 

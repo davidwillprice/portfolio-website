@@ -7,8 +7,8 @@ import StandardCentralText from "../components/standard-central-text"
 import ColourPreviewCon from "../components/colour-preview-con"
 import StampDutyCalc from "../components/stamp-duty-calc.js"
 
-import LypDigStyles from "../styles/page/lypdig.module.scss"
-import ShowcaseStyles from "../styles/page/showcasepage.module.scss"
+import * as LypDigStyles from "../styles/page/lypdig.module.scss"
+import * as ShowcaseStyles from "../styles/page/showcasepage.module.scss"
 
 import LypLogo from "../svgs/lyp-logo.svg"
 

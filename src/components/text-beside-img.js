@@ -1,5 +1,5 @@
 import React from "react"
-import textBesideImgStyles from "../styles/component/text-beside-img.module.scss"
+import * as textBesideImgStyles from "../styles/component/text-beside-img.module.scss"
 
 const TextBesideImg = props => (
   <div className={textBesideImgStyles.container}>

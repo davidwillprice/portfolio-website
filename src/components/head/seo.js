@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
-import globalStyles from "../../styles/global.module.scss"
+import * as globalStyles from "../../styles/global.module.scss"
 
 const SEO = ({ title, description, image, article, bgColor }) => {
   const { pathname } = useLocation()

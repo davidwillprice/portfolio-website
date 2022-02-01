@@ -3,7 +3,7 @@ import Layout from "../components/layout/layout"
 import StandardCentralText from "../components/standard-central-text"
 import SEO from "../components/head/seo.js"
 
-import ShowcaseStyles from "../styles/page/showcasepage.module.scss"
+import * as ShowcaseStyles from "../styles/page/showcasepage.module.scss"
 /* eslint-disable */ import SwiisLogosCSS from "../styles/component/svg/swiis-logos.scss" /* eslint-enable */
 
 import SwiisLogos from "../svgs/swiis-logos.svg"

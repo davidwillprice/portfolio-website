@@ -9,8 +9,8 @@ import FullWidthImage from "../components/full-width-img"
 import FontShowcase from "../components/font-showcase.js"
 import ColourPreviewCon from "../components/colour-preview-con"
 
-import BrisAgencyStyles from "../styles/page/bristolagency.module.scss"
-/* eslint-disable */ import IconsSVGStyles from "../styles/component/svg/bma-icons.scss" /* eslint-enable */
+import * as BrisAgencyStyles from "../styles/page/bristolagency.module.scss"
+/* eslint-disable */ import * as IconsSVGStyles from "../styles/component/svg/bma-icons.scss" /* eslint-enable */
 
 import BristolLandscapeSVG from "../svgs/bristol-landscape.svg"
 import BristolAgencyLogoSVG from "../svgs/bristol-marketing-agency-logo.svg"

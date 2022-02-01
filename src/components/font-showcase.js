@@ -1,5 +1,5 @@
 import React from "react"
-import fontShowcaseStyles from "../styles/component/font-showcase.module.scss"
+import * as fontShowcaseStyles from "../styles/component/font-showcase.module.scss"
 const FontShowcase = props => (
   <div
     className={fontShowcaseStyles.container}

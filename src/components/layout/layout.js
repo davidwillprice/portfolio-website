@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import globalStyles from "../../styles/global.module.scss"
+import * as globalStyles from "../../styles/global.module.scss"
 import Header from "./header"
 import Footer from "./footer"
 import Accessibility from "./accessibility"

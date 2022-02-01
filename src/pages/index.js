@@ -7,9 +7,9 @@ import SqBrushMask from "../components/sq-brush-mask"
 import Button from "../components/button"
 import ButtonCon from "../components/button-con"
 
-import IndexStyles from "../styles/page/index.module.scss"
-import brushConStyles from "../styles/component/brushcon.module.scss"
-import globalStyles from "../styles/global.module.scss"
+import * as IndexStyles from "../styles/page/index.module.scss"
+import * as brushConStyles from "../styles/component/brushcon.module.scss"
+import * as globalStyles from "../styles/global.module.scss"
 
 import SolarSVG from "../svgs/solar.svg"
 import BrushOne from "../svgs/brush-bg-1.svg"

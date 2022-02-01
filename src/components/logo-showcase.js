@@ -1,5 +1,5 @@
 import React from "react"
-import LogoShowcaseStyles from "../styles/component/logo-showcase.module.scss"
+import * as LogoShowcaseStyles from "../styles/component/logo-showcase.module.scss"
 
 const LogoShowcase = props => (
   <div

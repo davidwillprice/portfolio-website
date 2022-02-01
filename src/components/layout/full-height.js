@@ -1,5 +1,5 @@
 import React from "react"
-import FullHeightStyles from "../../styles/component/layout/full-height.module.scss"
+import * as FullHeightStyles from "../../styles/component/layout/full-height.module.scss"
 
 const FullHeight = ({ children }) => (
   <div className={FullHeightStyles.fullHeightCon}>

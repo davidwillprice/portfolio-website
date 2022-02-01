@@ -1,5 +1,5 @@
 import React from "react"
-import FullWidthImgStyles from "../styles/component/full-width-img.module.scss"
+import * as FullWidthImgStyles from "../styles/component/full-width-img.module.scss"
 
 const FullWidthImage = props => (
   <div className={FullWidthImgStyles.container}>

@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import buttonConStyles from "../styles/component/button-con.module.scss"
+import * as buttonConStyles from "../styles/component/button-con.module.scss"
 
 class ButtonCon extends Component {
   render() {

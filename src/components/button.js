@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import LogoShowcaseStyles from "../styles/component/button.module.scss"
+import * as LogoShowcaseStyles from "../styles/component/button.module.scss"
 import { Link } from "gatsby"
 
 import GitHubIcon from "../svgs/footer/github-icon.svg"

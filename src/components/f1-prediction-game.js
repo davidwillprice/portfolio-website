@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import f1PredictCSS from "../styles/component/f1-prediction-game.module.scss"
+import * as f1PredictCSS from "../styles/component/f1-prediction-game.module.scss"
 
 //All entrant starting (driver/team) data
 const entrantData = {

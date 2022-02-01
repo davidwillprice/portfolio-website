@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import accessibStyles from "../../styles/component/layout/accessibility.module.scss"
+import * as accessibStyles from "../../styles/component/layout/accessibility.module.scss"
 
 import AccessibilityIcon from "../../svgs/accessibility.svg"
 
