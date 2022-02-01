@@ -38,8 +38,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `quicksand`,
-          `300,500,700`, // you can also specify font weights and styles
+          `quicksand\:300,500,700`, // you can also specify font weights and styles
         ],
         display: "swap",
       },
@@ -65,13 +64,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `src`,
+    //     path: `${__dirname}/src/`,
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-react-svg",
     },
@@ -89,6 +88,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    `gatsby-transformer-remark`,
+    // `gatsby-transformer-remark`,
   ],
 }
