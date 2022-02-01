@@ -1,8 +1,6 @@
 import React from "react"
-import * as morphStyles from "../styles/component/morph.module.scss"
+import { container } from "../styles/component/morph.module.scss"
 
-const Morph = props => (
-  <div className={morphStyles.container}>{props.children}</div>
-)
+const Morph = props => <div className={container}>{props.children}</div>
 
 export default Morph

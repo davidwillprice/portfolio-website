@@ -1,11 +1,15 @@
 import React from "react"
-import * as textBesideImgStyles from "../styles/component/text-beside-img.module.scss"
+import {
+  container,
+  textCon,
+  textSubheader,
+} from "../styles/component/text-beside-img.module.scss"
 
 const TextBesideImg = props => (
-  <div className={textBesideImgStyles.container}>
+  <div className={container}>
     <img src={props.img} alt={props.imgAlt} />
-    <div className={textBesideImgStyles.textCon}>
-      <h3 className={textBesideImgStyles.textSubheader}>{props.headerText}</h3>
+    <div className={textCon}>
+      <h3 className={textSubheader}>{props.headerText}</h3>
       {props.children}
     </div>
   </div>
