@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import NavBar from "./navBar"
 import Help from "./help"
+import FooterSlider from "./footer-slider"
 import * as f1PredictCSS from "../../styles/component/f1-prediction-game.module.scss"
 
 //All entrant starting (driver/team) data
@@ -1642,28 +1643,15 @@ export default class F1Container extends Component {
         </select>
       )
     }
+    //If not in help mode, display the footer slider
     if (this.state.mode !== "help") {
       sliderFooter = (
-        <div className={f1PredictCSS.sliderFooter}>
-          <div className={f1PredictCSS.sliderCon}>
-            Round {parseInt(this.state.selectedRound) + 1} :
-            <span id="track-name">
-              {" " + rounds[this.state.selectedRound].trackName}
-            </span>
-            {/*If there is data for more than once race, show the range slider*/}
-            {rounds.length > 1 && (
-              <input
-                onChange={event => this.changeRound(event)}
-                aria-label="Grand Prix race slider"
-                type="range"
-                min="0"
-                max={rounds.length - 1}
-                className={f1PredictCSS.slider}
-                value={parseInt(this.state.selectedRound)}
-              />
-            )}
-          </div>
-        </div>
+        <FooterSlider
+          selectedRound={this.state.selectedRound}
+          noOfRounds={rounds.length}
+          trackName={rounds[this.state.selectedRound].trackName}
+          changeRound={this.changeRound}
+        />
       )
     }
     return (
