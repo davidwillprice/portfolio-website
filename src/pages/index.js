@@ -156,7 +156,7 @@ export default function Index() {
           brush={<BrushOne />}
           img={f1Img}
           imgAlt="F1 prediction game screenshot"
-          linkUrl="/f1-prediction-game-2021/"
+          linkUrl="/f1-prediction-game/2021/"
           linkDesc="Github page for my Monty Hall Problem code"
         >
           <h3>F1 Prediction Game</h3>
@@ -166,7 +166,7 @@ export default function Index() {
             of the 2021 Formula 1 season.
           </p>
           <ButtonCon>
-            <Button url="/f1-prediction-game-2021/" btnText="View Game" />
+            <Button url="/f1-prediction-game/2021/" btnText="View Game" />
             <Button
               external={true}
               url="https://github.com/davidwillprice/portfolio-website/blob/master/src/components/f1-prediction-game.js"

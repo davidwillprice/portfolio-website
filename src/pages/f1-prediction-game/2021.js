@@ -1,8 +1,8 @@
 import React, { Component } from "react"
-import Layout from "../components/layout/layout"
-import Seo from "../components/head/seo.js"
+import Layout from "../../components/layout/layout"
+import Seo from "../../components/head/seo.js"
 
-import F1PredictionGame from "../components/f1-prediction-game"
+import F1PredictionGame from "../../components/f1-prediction-game"
 
 class f1Predict2021 extends Component {
   componentDidMount() {
