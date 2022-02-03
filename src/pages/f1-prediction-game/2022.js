@@ -1,0 +1,28 @@
+import React, { Component } from "react"
+import Layout from "../../components/layout/layout"
+import Seo from "../../components/head/seo.js"
+
+import F1Container from "../../components/f1/container"
+
+export default class f1Predict2022 extends Component {
+  componentDidMount() {
+    document.querySelector("html").style.backgroundColor = "#242424"
+  }
+  componentWillUnmount() {
+    document.querySelector("html").removeAttribute("style")
+  }
+  render() {
+    return (
+      <Layout footer={false} widthLimited={false}>
+        <Seo
+          title="F1 Prediction Game 2022"
+          description="Game to predict predict the Formula 1 2022 Driver's and Constructor's standings as accurately as possible"
+          bgColor="gray"
+        />
+        <div className="">
+          <F1Container />
+        </div>
+      </Layout>
+    )
+  }
+}
