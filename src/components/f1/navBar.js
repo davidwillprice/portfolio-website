@@ -7,7 +7,7 @@ import {
   standingsBtn,
   helpBtn,
   statsBtn,
-} from "../../styles/component/f1-prediction-game.module.scss"
+} from "../../styles/component/f1/navBar.module.scss"
 
 export default function NavBar(props) {
   function onClickHandler(event) {

@@ -1,0 +1,45 @@
+@import "../../sass-variables.scss";
+.navCon {
+  width: 100%;
+  background-color: white;
+  overflow-x: auto;
+}
+.navBar {
+  width: 100%;
+  max-width: $layout-width;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 $page-margin-desktop;
+}
+.navItem {
+  color: black;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-left: 1px solid #ededed;
+  border-right: none;
+  cursor: pointer;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  background-color: transparent;
+  font-size: 14px;
+  :last-child {
+    border-right: 1px solid #ededed;
+  }
+}
+.navItem:hover,
+.leaderboardMode .leaderboardBtn,
+.standingsMode .standingsBtn,
+.helpMode .helpBtn {
+  border-bottom: 5px solid red !important;
+}
+@media (max-width: 600px) {
+  .navBar {
+    padding-left: $page-margin-mobile;
+    padding-right: $page-margin-mobile;
+  }
+}
+@media (max-width: 500px) {
+  .navItem {
+    padding: 10px 10px;
+  }
+}
