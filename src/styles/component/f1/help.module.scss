@@ -1,0 +1,26 @@
+.helpCon {
+  * {
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+  }
+  h1 {
+    font-family: "Viga", cursive;
+    font-size: 3rem;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+  ul li {
+    font-size: 0.8rem;
+  }
+  a {
+    font-size: inherit;
+    text-decoration: underline;
+  }
+}
