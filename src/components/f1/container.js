@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import NavBar from "./navBar"
 import Help from "./help"
 import FooterSlider from "./footer-slider"
+import Leaderboard from "./leaderboard"
+
 import * as f1PredictCSS from "../../styles/component/f1-prediction-game.module.scss"
 
 //All entrant starting (driver/team) data
@@ -1216,69 +1218,6 @@ function PredictionTables(props) {
   return <div className={f1PredictCSS.predictionTables}>{listTables}</div>
 }
 
-function prevRdDiffUI(prevRdDiff) {
-  return prevRdDiff > 0
-    ? "posLeaderboardChg"
-    : prevRdDiff < 0
-    ? "negLeaderboardChg"
-    : "noLeaderboardChg"
-}
-function Leaderboard(props) {
-  //playerData is data of the players that will displayed
-  const roundData = props.roundData
-  //entrantType decides whether to generate a driver or team table
-  const entrantType = props.entrantType
-  //round decides which race data to show
-  const roundNo = props.roundNo
-  //Go to the leaderboards of the selected entrantType in the selected round and filter out any players which didn't make predictions for that entrant type
-  const filteredRoundData = roundData[roundNo].leaderboards[entrantType].filter(
-    leaderboardStanding =>
-      leaderboardStanding.player[entrantType + "Table"].length > 0
-  )
-  // console.log(filteredRoundData)
-  const listRows = filteredRoundData.map((leaderboardStanding, index) => (
-    <tr
-      className={f1PredictCSS.leaderboardRow}
-      key={index + 1 + leaderboardStanding.player.name}
-    >
-      <td className={f1PredictCSS.leaderboardPos}>{index + 1}</td>
-      <td
-        className={`${f1PredictCSS.leaderboardPosDiff} ${
-          f1PredictCSS[prevRdDiffUI(leaderboardStanding.prevRdDiff)]
-        }`}
-      >
-        <i></i>
-      </td>
-      <td className={f1PredictCSS.leaderboardName}>
-        {leaderboardStanding.player.name}
-      </td>
-      <td>{leaderboardStanding.percentCorrect}%</td>
-      <td className={f1PredictCSS.perfectPredictions}>
-        {
-          leaderboardStanding.player.season["round" + roundNo][entrantType]
-            .diffCounts[0]
-        }
-      </td>
-    </tr>
-  ))
-  return (
-    <table className={f1PredictCSS.leaderboard}>
-      <thead>
-        <tr>
-          <th>Pos</th>
-          <th aria-label="Position change header"></th>
-          <th>Name</th>
-          <th>Accuracy</th>
-          <th className={f1PredictCSS.perfectPredictions}>
-            Perfect Predictions
-          </th>
-        </tr>
-      </thead>
-      <tbody>{listRows}</tbody>
-    </table>
-  )
-}
-
 //Component to render the actual standings of a given round and entrant type
 function ActualTable(props) {
   //roundData is all the race results
@@ -1628,7 +1567,6 @@ export default class F1Container extends Component {
       )
     }
     let entrantTypeSelect
-    let sliderFooter
     if (this.state.mode !== "help" && this.state.mode !== "stats") {
       entrantTypeSelect = (
         <select
@@ -1643,17 +1581,7 @@ export default class F1Container extends Component {
         </select>
       )
     }
-    //If not in help mode, display the footer slider
-    if (this.state.mode !== "help") {
-      sliderFooter = (
-        <FooterSlider
-          selectedRound={this.state.selectedRound}
-          noOfRounds={rounds.length}
-          trackName={rounds[this.state.selectedRound].trackName}
-          changeRound={this.changeRound}
-        />
-      )
-    }
+
     return (
       <div
         className={`${f1PredictCSS.f1Main} ${
@@ -1672,7 +1600,17 @@ export default class F1Container extends Component {
           </div>
           {display}
         </div>
-        {sliderFooter}
+        {
+          //If not in help mode, display the footer slider
+          this.state.mode !== "help" && (
+            <FooterSlider
+              selectedRound={this.state.selectedRound}
+              noOfRounds={rounds.length}
+              trackName={rounds[this.state.selectedRound].trackName}
+              changeRound={this.changeRound}
+            />
+          )
+        }
       </div>
     )
   }
