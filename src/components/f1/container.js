@@ -1545,43 +1545,6 @@ export default class F1Container extends Component {
         </div>
       )
     }
-    let playersSelect
-    if (this.state.mode === "standings") {
-      playersSelect = (
-        <select
-          aria-label="Select player group to display"
-          name="playerGroup"
-          id="playerGroup"
-          onBlur={event => this.changePlayerGroup(event)}
-          onChange={event => this.changePlayerGroup(event)}
-        >
-          <option value="aberystwyth" hidden>
-            Player group
-          </option>
-          <option value="aberystwyth">Aberystwyth</option>
-          <option value="brr">BRR</option>
-          <option value="dyson">Dyson</option>
-          <option value="herefordshire">Herefordshire</option>
-          <option value="misc">Miscellaneous</option>
-        </select>
-      )
-    }
-    let entrantTypeSelect
-    if (this.state.mode !== "help" && this.state.mode !== "stats") {
-      entrantTypeSelect = (
-        <select
-          aria-label="Select championship type"
-          name="entrantType"
-          id="entrantType"
-          onBlur={event => this.changeEntrantType(event)}
-          onChange={event => this.changeEntrantType(event)}
-        >
-          <option value="driver">Driver Standings</option>
-          <option value="team">Constructor Standings</option>
-        </select>
-      )
-    }
-
     return (
       <div
         className={`${f1PredictCSS.f1Main} ${
@@ -1593,13 +1556,48 @@ export default class F1Container extends Component {
           <div className={f1PredictCSS.opening}>
             <div className={f1PredictCSS.introOptions}>
               <div className={f1PredictCSS.options}>
-                {playersSelect}
-                {entrantTypeSelect}
+                {
+                  //If in standings mode, allow the player to pick which player group to show
+                  this.state.mode === "standings" && (
+                    <select
+                      aria-label="Select player group to display"
+                      name="playerGroup"
+                      id="playerGroup"
+                      onBlur={event => this.changePlayerGroup(event)}
+                      onChange={event => this.changePlayerGroup(event)}
+                    >
+                      <option value="aberystwyth" hidden>
+                        Player group
+                      </option>
+                      <option value="aberystwyth">Aberystwyth</option>
+                      <option value="brr">BRR</option>
+                      <option value="dyson">Dyson</option>
+                      <option value="herefordshire">Herefordshire</option>
+                      <option value="misc">Miscellaneous</option>
+                    </select>
+                  )
+                }
+                {
+                  //If in the leaderboard or standings section, allow the user to pick whether they want to see the driver or constructor standings/leaderboard
+                  this.state.mode !== "help" && this.state.mode !== "stats" && (
+                    <select
+                      aria-label="Select championship type"
+                      name="entrantType"
+                      id="entrantType"
+                      onBlur={event => this.changeEntrantType(event)}
+                      onChange={event => this.changeEntrantType(event)}
+                    >
+                      <option value="driver">Driver Standings</option>
+                      <option value="team">Constructor Standings</option>
+                    </select>
+                  )
+                }
               </div>
             </div>
           </div>
           {display}
         </div>
+
         {
           //If not in help mode, display the footer slider
           this.state.mode !== "help" && (
