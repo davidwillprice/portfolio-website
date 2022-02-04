@@ -1660,7 +1660,7 @@ export default class F1Container extends Component {
           f1PredictCSS[this.state.entrantType + "Tables"]
         } ${f1PredictCSS[this.state.mode + "Mode"]}`}
       >
-        <NavBar changeMode={this.changeMode} />
+        <NavBar changeMode={this.changeMode} activeMode={this.state.mode} />
         <div className={f1PredictCSS.content}>
           <div className={f1PredictCSS.opening}>
             <div className={f1PredictCSS.introOptions}>

@@ -29,7 +29,8 @@
 .navItem:hover,
 .leaderboardMode .leaderboardBtn,
 .standingsMode .standingsBtn,
-.helpMode .helpBtn {
+.helpMode .helpBtn,
+.active {
   border-bottom: 5px solid red !important;
 }
 @media (max-width: 600px) {
