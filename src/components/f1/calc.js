@@ -205,3 +205,13 @@ export function filteredPlayers(players, playerGroup, entrantType) {
   }
   return obj
 }
+
+export function getPlayerGroups(players) {
+  let playerGroups = new Set()
+  for (const player in players) {
+    for (const group of players[player].groups) {
+      playerGroups.add(group)
+    }
+  }
+  return [...playerGroups]
+}

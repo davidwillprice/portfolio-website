@@ -18,10 +18,10 @@ import {
   generateEntrantDiffTotals,
   orderEntrantDiffTotals,
   filteredPlayers,
+  getPlayerGroups,
 } from "../calc"
 
 const year = 2022
-console.log(players)
 
 //Populate players.average with prediction tables created by finding the mean positions of everyone else's predictions
 generateAverageTable(players, drivers, "driver")
@@ -50,6 +50,9 @@ generateEntrantDiffTotals(rounds, players, "team", teams)
 orderEntrantDiffTotals(rounds, "driver")
 orderEntrantDiffTotals(rounds, "team")
 
+//Get player groups for the options menu
+const playerGroupsArr = getPlayerGroups(players)
+
 ////Data requires from UI
 //selected entrantType
 //Selected playerGroup
@@ -59,6 +62,8 @@ orderEntrantDiffTotals(rounds, "team")
 ////UI requires from data
 //Most/least accurately predicted driver/team of selected round and how off players were
 //Players with most/least 'controversial' driver predictions based on how much they differed from the average prediction table
+
+console.log(players)
 
 export default class F1Container extends Component {
   constructor(props) {
@@ -113,14 +118,14 @@ export default class F1Container extends Component {
                       onBlur={event => this.changePlayerGroup(event)}
                       onChange={event => this.changePlayerGroup(event)}
                     >
-                      <option value="aberystwyth" hidden>
+                      <option value={playerGroupsArr[0]} hidden>
                         Player group
                       </option>
-                      <option value="aberystwyth">Aberystwyth</option>
-                      <option value="brr">BRR</option>
-                      <option value="dyson">Dyson</option>
-                      <option value="herefordshire">Herefordshire</option>
-                      <option value="misc">Miscellaneous</option>
+                      {playerGroupsArr.map(group => (
+                        <option key={group} value={group}>
+                          {group}
+                        </option>
+                      ))}
                     </select>
                   )
                 }
