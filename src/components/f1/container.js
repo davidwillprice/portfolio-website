@@ -1,9 +1,9 @@
 import React, { Component } from "react"
-import NavBar from "./navBar"
-import Help from "./help"
-import FooterSlider from "./footer-slider"
-import Leaderboard from "./leaderboard"
-import Standings from "./standings"
+import NavBar from "./ui/navBar"
+import Help from "./ui/help"
+import FooterSlider from "./ui/footer-slider"
+import Leaderboard from "./ui/leaderboard"
+import Standings from "./ui/standings"
 
 import * as f1PredictCSS from "../../styles/component/f1-prediction-game.module.scss"
 

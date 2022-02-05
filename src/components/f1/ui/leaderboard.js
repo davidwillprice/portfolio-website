@@ -9,7 +9,7 @@ import {
   noLeaderboardChg,
   leaderboardName,
   perfectPredictions,
-} from "../../styles/component/f1/leaderboard.module.scss"
+} from "../../../styles/component/f1/leaderboard.module.scss"
 
 function prevRdDiffUI(prevRdDiff) {
   return prevRdDiff > 0

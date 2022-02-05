@@ -1,6 +1,6 @@
 import React from "react"
 
-import { helpCon } from "../../styles/component/f1/help.module.scss"
+import { helpCon } from "../../../styles/component/f1/help.module.scss"
 
 export default function Help(props) {
   return (

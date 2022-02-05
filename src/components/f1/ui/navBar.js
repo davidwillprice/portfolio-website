@@ -8,7 +8,7 @@ import {
   helpBtn,
   statsBtn,
   active,
-} from "../../styles/component/f1/navBar.module.scss"
+} from "../../../styles/component/f1/navBar.module.scss"
 
 export default function NavBar(props) {
   function onClickHandler(event) {

@@ -8,7 +8,7 @@ import {
   playerNumbers3,
   playerNumbers5,
   playerNumbers1,
-} from "../../styles/component/f1/table.module.scss"
+} from "../../../styles/component/f1/table.module.scss"
 
 export default function Standings(props) {
   const numberOfPlayers = Object.keys(props.filteredPlayers).length

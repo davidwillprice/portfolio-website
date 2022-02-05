@@ -10,8 +10,8 @@ import {
   shortName,
   tableContainer,
   tableHeader,
-} from "../../styles/component/f1/table.module.scss"
-import * as teamColours from "../../styles/component/f1/team-colours.module.scss"
+} from "../../../styles/component/f1/table.module.scss"
+import * as teamColours from "../../../styles/component/f1/team-colours.module.scss"
 
 export default function ActualTable(props) {
   //roundData is all the race results

@@ -10,8 +10,8 @@ import {
   swipeIconLeft,
   predictionTables,
   totalDiff,
-} from "../../styles/component/f1/table.module.scss"
-import * as teamColours from "../../styles/component/f1/team-colours.module.scss"
+} from "../../../styles/component/f1/table.module.scss"
+import * as teamColours from "../../../styles/component/f1/team-colours.module.scss"
 
 //Component to render all prediction tables
 export default function PredictionTables(props) {

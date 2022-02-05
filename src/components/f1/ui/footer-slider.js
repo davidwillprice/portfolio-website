@@ -4,7 +4,7 @@ import {
   sliderFooter,
   sliderCon,
   slider,
-} from "../../styles/component/f1/footer-slider.module.scss"
+} from "../../../styles/component/f1/footer-slider.module.scss"
 
 export default function FooterSlider(props) {
   function onChangeHandler(event) {

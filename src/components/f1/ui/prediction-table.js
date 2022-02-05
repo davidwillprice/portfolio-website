@@ -9,8 +9,8 @@ import {
   fullName,
   shortName,
   posDiff,
-} from "../../styles/component/f1/table.module.scss"
-import * as teamColours from "../../styles/component/f1/team-colours.module.scss"
+} from "../../../styles/component/f1/table.module.scss"
+import * as teamColours from "../../../styles/component/f1/team-colours.module.scss"
 
 //Function to assign a class to the posDiff div depending on how high the posDiff is
 function diffOpacity(posDiff, entrantType) {
