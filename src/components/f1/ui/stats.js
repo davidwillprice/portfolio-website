@@ -1,0 +1,64 @@
+import React from "react"
+
+import { statsCon } from "../../../styles/component/f1/stats.module.scss"
+
+export default function Stats(props) {
+  const roundDataDiffTotals =
+    props.roundData[props.selectedRound].entrantDiffTotals
+  const noOfDrivers = roundDataDiffTotals.driver.length
+  const noOfTeams = roundDataDiffTotals.team.length
+  const mostAccDriver = roundDataDiffTotals.driver[0]
+  const leastAccDriver = roundDataDiffTotals.driver[noOfDrivers - 1]
+  const mostAccTeam = roundDataDiffTotals.team[0]
+  const leastAccTeam = roundDataDiffTotals.team[noOfTeams - 1]
+
+  //Get diff total, average it out by no of entrants and then round to one decimal place
+  function calcMisprediction(entrant, noOfEntrants) {
+    return Math.round((entrant.diffTotal / noOfEntrants) * 10) / 10
+  }
+
+  return (
+    <div className={statsCon}>
+      <h2>Standings Stats</h2>
+      <ul>
+        <li>
+          {mostAccDriver.entrant.fName} {props.isSeasonOver ? "was" : "is"} the
+          most accurately predicted driver, with the average player only
+          mispredicting him by {calcMisprediction(mostAccDriver, noOfDrivers)}{" "}
+          positions;
+        </li>
+        <li>
+          {leastAccDriver.entrant.fName} {props.isSeasonOver ? "was" : "is"} the
+          least accurately predicted driver, with the average player
+          mispredicting him by {calcMisprediction(leastAccDriver, noOfDrivers)}{" "}
+          positions;
+        </li>
+        <li>
+          {mostAccTeam.entrant.fName} {props.isSeasonOver ? "were" : "are"} the
+          most accurately predicted team, with the average player only
+          mispredicting them by {calcMisprediction(mostAccTeam, noOfTeams)}{" "}
+          positions;
+        </li>
+        <li>
+          {leastAccTeam.entrant.fName} {props.isSeasonOver ? "were" : "are"} the
+          least accurately predicted team, with the average player mispredicting
+          them by {calcMisprediction(leastAccTeam, noOfTeams)} positions.
+        </li>
+      </ul>
+      <h2>Predictions Triva</h2>
+      <ul>
+        <li>
+          Alex had the most 'controversial' driver predictions, as they had the
+          largest difference from the average prediction table (24 position
+          changes);
+        </li>
+        <li>
+          Tom had the least 'controversial' driver predictions, as they had the
+          smallest difference from the average prediction table (8 position
+          changes);
+        </li>
+        {props.children}
+      </ul>
+    </div>
+  )
+}
