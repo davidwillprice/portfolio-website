@@ -1,4 +1,4 @@
 [[redirects]]
-  from = "/web/f1-prediction-game-2021/*"
-  to = "/f1-prediction-game-2021/:splat"
+  from = "/f1-prediction-game-2021/*"
+  to = "/f1-prediction-game/2021/:splat"
   status = 301
