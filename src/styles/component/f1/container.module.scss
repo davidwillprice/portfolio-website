@@ -1,0 +1,28 @@
+@import "../../sass-variables.scss";
+.f1Main {
+  font-family: var(--text-font);
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  * {
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+  }
+}
+.content {
+  padding: 0 $page-margin-desktop;
+  max-width: $layout-width;
+  margin: 0 auto 100px;
+}
+.tick {
+  color: rgb(0, 235, 0);
+}
+.cross {
+  color: rgb(235, 0, 0);
+}
+@media (max-width: 600px) {
+  .content {
+    padding-left: $page-margin-mobile;
+    padding-right: $page-margin-mobile;
+  }
+}

@@ -7,7 +7,12 @@ import Standings from "../ui/standings"
 import Options from "../ui/options"
 import Stats from "../ui/stats"
 
-import * as f1PredictCSS from "../../../styles/component/f1-prediction-game.module.scss"
+import {
+  f1Main,
+  content,
+  tick,
+  cross,
+} from "../../../styles/component/f1/container.module.scss"
 
 import { teams, drivers, rounds, players } from "./season-data"
 
@@ -92,13 +97,9 @@ export default class F1Container extends Component {
   }
   render() {
     return (
-      <div
-        className={`${f1PredictCSS.f1Main} ${
-          f1PredictCSS[this.state.entrantType + "Tables"]
-        } ${f1PredictCSS[this.state.mode + "Mode"]}`}
-      >
+      <div className={f1Main}>
         <NavBar changeMode={this.changeMode} activeMode={this.state.mode} />
-        <div className={f1PredictCSS.content}>
+        <div className={content}>
           <Options
             mode={this.state.mode}
             playerGroupsArr={playerGroupsArr}
@@ -148,96 +149,63 @@ export default class F1Container extends Component {
               isSeasonOver={this.state.seasonOver}
             >
               <li>
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.tick}>✔</span>
-                )}{" "}
-                Will was the only person who didn't predict that Hamilton would
-                win the drivers title, opting for Verstappen;
+                {this.state.seasonOver && <span className={tick}>✔</span>} Will
+                was the only person who didn't predict that Hamilton would win
+                the drivers title, opting for Verstappen;
               </li>
               <li>
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.cross}>✖</span>
-                )}{" "}
-                Will and Pete were the only people who didn't predict that
-                Mercedes would win the constructors title, opting for Red Bull;
+                {this.state.seasonOver && <span className={cross}>✖</span>} Will
+                and Pete were the only people who didn't predict that Mercedes
+                would win the constructors title, opting for Red Bull;
               </li>
               <li>
                 Nobody predicted{" "}
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.tick}>✔</span>
-                )}{" "}
+                {this.state.seasonOver && <span className={tick}>✔</span>}{" "}
                 Hamilton,{" "}
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.cross}>✖</span>
-                )}{" "}
+                {this.state.seasonOver && <span className={cross}>✖</span>}{" "}
                 Leclerc,{" "}
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.tick}>✔</span>
-                )}{" "}
+                {this.state.seasonOver && <span className={tick}>✔</span>}{" "}
                 Gasly,{" "}
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.tick}>✔</span>
-                )}{" "}
+                {this.state.seasonOver && <span className={tick}>✔</span>}{" "}
                 Raikkonen,{" "}
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.tick}>✔</span>
-                )}{" "}
+                {this.state.seasonOver && <span className={tick}>✔</span>}{" "}
                 Schumacher or{" "}
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.tick}>✔</span>
-                )}{" "}
+                {this.state.seasonOver && <span className={tick}>✔</span>}{" "}
                 Russell would be beaten by their team mate;
               </li>
               <li>
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.cross}>✖</span>
-                )}{" "}
-                Pete was the only person to predict that Perez would beat
-                Verstappen, while{" "}
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.cross}>✖</span>
-                )}{" "}
-                Alex was the only person to predict Perez wouldn't finish in the
-                top 6 (10th).
+                {this.state.seasonOver && <span className={cross}>✖</span>} Pete
+                was the only person to predict that Perez would beat Verstappen,
+                while{" "}
+                {this.state.seasonOver && <span className={cross}>✖</span>} Alex
+                was the only person to predict Perez wouldn't finish in the top
+                6 (10th).
               </li>
               <li>
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.tick}>✔</span>
-                )}{" "}
-                David was the only person to predict that Ferrari would finish
-                as high as 3rd;
+                {this.state.seasonOver && <span className={tick}>✔</span>} David
+                was the only person to predict that Ferrari would finish as high
+                as 3rd;
               </li>
               <li>
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.tick}>✔</span>
-                )}{" "}
-                Alex was the only person to predict that Norris would beat
-                Riccardo;
+                {this.state.seasonOver && <span className={tick}>✔</span>} Alex
+                was the only person to predict that Norris would beat Riccardo;
               </li>
               <li>
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.cross}>✖</span>
-                )}{" "}
+                {this.state.seasonOver && <span className={cross}>✖</span>}{" "}
                 James was the only person to predict that Stroll would beat
                 Vettel;
               </li>
               <li>
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.cross}>✖</span>
-                )}{" "}
+                {this.state.seasonOver && <span className={cross}>✖</span>}{" "}
                 Annie was the only person to predict that Ocon would beat
                 Alonso;
               </li>
               <li>
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.tick}>✔</span>
-                )}{" "}
-                James was the only person to predict that Alfa Romeo wouldn't
-                come 8th (9th) and the{" "}
-                {this.state.seasonOver && (
-                  <span className={f1PredictCSS.cross}>✖</span>
-                )}{" "}
-                only person to put Haas as high as 8th.
+                {this.state.seasonOver && <span className={tick}>✔</span>} James
+                was the only person to predict that Alfa Romeo wouldn't come 8th
+                (9th) and the{" "}
+                {this.state.seasonOver && <span className={cross}>✖</span>} only
+                person to put Haas as high as 8th.
               </li>
             </Stats>
           )}
