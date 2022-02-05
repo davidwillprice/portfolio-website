@@ -3,8 +3,11 @@ import NavBar from "./navBar"
 import Help from "./help"
 import FooterSlider from "./footer-slider"
 import Leaderboard from "./leaderboard"
+import Standings from "./standings"
 
 import * as f1PredictCSS from "../../styles/component/f1-prediction-game.module.scss"
+
+const year = 2022
 
 //All entrant starting (driver/team) data
 const entrantData = {
@@ -1106,159 +1109,6 @@ function orderEntrantDiffTotals(entrantType) {
 orderEntrantDiffTotals("driver")
 orderEntrantDiffTotals("team")
 
-//Component to render a particular prediction tables
-function PredictionTable(props) {
-  //Shortcut the table order
-  const tableOrder = props.tableOrder
-  //Kept entrant type for posDiff classes calc
-  const entrantType = props.entrantType
-  //Map through each table row
-  const listRows = tableOrder.map((entrantData, index) => (
-    //Create HTML for each table row using the data passed in as a prop
-    <div className={f1PredictCSS.tableRow} key={entrantData.entrant.fName}>
-      <div
-        className={`${f1PredictCSS.entrantBlock} ${
-          f1PredictCSS[entrantData.entrant.team ?? entrantData.entrant.sName]
-        }`}
-      >
-        <div className={f1PredictCSS.position}>
-          <span>{index + 1}</span>
-        </div>
-        <div className={f1PredictCSS.divider}></div>
-        <div className={f1PredictCSS.entrantName}>
-          <span className={f1PredictCSS.fullName}>
-            {entrantData.entrant.fName}
-          </span>
-          <span className={f1PredictCSS.shortName}>
-            {entrantData.entrant.sName}
-          </span>
-        </div>
-      </div>
-      <div
-        className={`${f1PredictCSS.posDiff} ${
-          f1PredictCSS[diffOpacity(entrantData.posDiff, entrantType)]
-        }`}
-      >
-        <span>{entrantData.posDiff}</span>
-      </div>
-    </div>
-  ))
-  return <div className="table">{listRows}</div>
-}
-
-//Function to assign a class to the posDiff div depending on how high the posDiff is
-function diffOpacity(posDiff, entrantType) {
-  let diffOpacityClass
-  if (entrantType === "driver") {
-    if (posDiff > 0 && posDiff <= 3) {
-      diffOpacityClass = "diffLow"
-    } else if (posDiff === 0) {
-      diffOpacityClass = "diffZero"
-    } else if (posDiff > 3 && posDiff <= 6) {
-      diffOpacityClass = "diffMed"
-    } else {
-      diffOpacityClass = "diffHigh"
-    }
-  } else {
-    if (posDiff > 0 && posDiff <= 2) {
-      diffOpacityClass = "diffLow"
-    } else if (posDiff === 0) {
-      diffOpacityClass = "diffZero"
-    } else if (posDiff > 2 && posDiff <= 4) {
-      diffOpacityClass = "diffMed"
-    } else {
-      diffOpacityClass = "diffHigh"
-    }
-  }
-  return diffOpacityClass
-}
-
-//Component to render all prediction tables
-function PredictionTables(props) {
-  //playerData is data of the players that will displayed
-  let playerData = props.playerData
-  //entrantType decides whether to generate a driver or team table
-  const entrantType = props.entrantType
-  //round decides which race data to show
-  const round = "round" + props.roundNo
-
-  const listTables = Object.keys(playerData).map((player, i) => (
-    //Create a HTML around each table, calling the PredictionTable component (With the table data passed in) to create the table itself
-    <div
-      id={playerData[player].name + "-table"}
-      className={f1PredictCSS.tableContainer}
-      key={playerData[player].name}
-    >
-      <div className={f1PredictCSS.tableHeader}>
-        <div
-          className={`${f1PredictCSS.swipeIconCon} ${f1PredictCSS.swipeIconRight}`}
-        >
-          <i></i>
-          <i></i>
-          <i></i>
-        </div>
-        <div
-          className={`${f1PredictCSS.swipeIconCon} ${f1PredictCSS.swipeIconLeft}`}
-        >
-          <i></i>
-          <i></i>
-          <i></i>
-        </div>
-        {playerData[player].name}
-      </div>
-      <PredictionTable
-        tableOrder={playerData[player].season[round][entrantType].diffs}
-        entrantType={entrantType}
-      />
-      <div className={f1PredictCSS.totalDiff}>
-        Total: {playerData[player].season[round][entrantType].diffTotal}
-      </div>
-    </div>
-  ))
-  return <div className={f1PredictCSS.predictionTables}>{listTables}</div>
-}
-
-//Component to render the actual standings of a given round and entrant type
-function ActualTable(props) {
-  //roundData is all the race results
-  const roundData = props.roundData
-  //entrantType decides whether to generate a driver or team table
-  const entrantType = props.entrantType
-  //roundNo decides which race data to show
-  const roundNo = props.roundNo
-  const listRows = roundData[roundNo].standings[entrantType].map(
-    (entrant, index) => (
-      //Create HTML for each table row using the data passed in as a prop
-
-      <div
-        className={f1PredictCSS.tableRow}
-        key={index + 1 + "-" + entrant.fName}
-      >
-        <div
-          className={`${f1PredictCSS.entrantBlock} ${
-            f1PredictCSS[entrant.team ?? entrant.sName]
-          }`}
-        >
-          <div className={f1PredictCSS.position}>
-            <span>{index + 1}</span>
-          </div>
-          <div className={f1PredictCSS.divider}></div>
-          <div className={f1PredictCSS.entrantName}>
-            <span className={f1PredictCSS.fullName}>{entrant.fName}</span>
-            <span className={f1PredictCSS.shortName}>{entrant.sName}</span>
-          </div>
-        </div>
-      </div>
-    )
-  )
-  return (
-    <div className={f1PredictCSS.tableContainer}>
-      <div className={f1PredictCSS.tableHeader}>Standings</div>
-      <div className="table">{listRows}</div>
-    </div>
-  )
-}
-
 //Populate filteredPlayers with the players that match the selected playerGroup and have predictions for the slected entrantType
 const filteredPlayers = function (playerGroup, entrantType) {
   const obj = {}
@@ -1319,34 +1169,17 @@ export default class F1Container extends Component {
     let display
     if (this.state.mode === "standings") {
       display = (
-        <div
-          className={`${f1PredictCSS.tablesOverview} ${
-            f1PredictCSS[
-              "playerNumbers" +
-                Object.keys(
-                  filteredPlayers(
-                    this.state.playerGroup,
-                    this.state.entrantType
-                  )
-                ).length
-            ]
-          }`}
-        >
-          <ActualTable
-            roundData={rounds}
-            entrantType={this.state.entrantType}
-            roundNo={this.state.selectedRound}
-          />
-          <PredictionTables
-            playerData={filteredPlayers(
-              this.state.playerGroup,
-              this.state.entrantType
-            )}
-            entrantType={this.state.entrantType}
-            playerGroup={this.state.playerGroup}
-            roundNo={this.state.selectedRound}
-          />
-        </div>
+        <Standings
+          year={year}
+          roundData={rounds}
+          entrantType={this.state.entrantType}
+          playerGroup={this.state.playerGroup}
+          roundNo={this.state.selectedRound}
+          filteredPlayers={filteredPlayers(
+            this.state.playerGroup,
+            this.state.entrantType
+          )}
+        />
       )
     } else if (this.state.mode === "leaderboard") {
       display = (
@@ -1356,7 +1189,6 @@ export default class F1Container extends Component {
             this.state.entrantType
           )}
           entrantType={this.state.entrantType}
-          playerGroup={this.state.playerGroup}
           roundNo={this.state.selectedRound}
           roundData={rounds}
         />
@@ -1597,7 +1429,6 @@ export default class F1Container extends Component {
           </div>
           {display}
         </div>
-
         {
           //If not in help mode, display the footer slider
           this.state.mode !== "help" && (

@@ -1,0 +1,296 @@
+.tablesOverview {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.playerNumbers1.tablesOverview {
+  max-width: 375px;
+}
+.playerNumbers3.tablesOverview {
+  max-width: 800px;
+}
+.playerNumbers1.tablesOverview .predictionTables {
+  justify-content: flex-end;
+}
+.predictionTables {
+  display: flex;
+  width: calc(100% - 200px);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /*Start of carousel stuff*/
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+.predictionTables::-webkit-scrollbar {
+  display: none;
+}
+/*End of carousel stuff*/
+.predictionTables:hover > .tableContainer {
+  opacity: 0.3;
+}
+.predictionTables > .tableContainer:hover {
+  opacity: 1;
+}
+.tableContainer {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  padding-bottom: 20px;
+}
+.tableHeader {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+}
+.tableRow {
+  display: flex;
+}
+.entrantBlock {
+  display: flex;
+  height: 30px;
+  color: white;
+  overflow: hidden;
+  width: 147px;
+}
+.tableRow:first-child .entrantBlock {
+  border-radius: 3px 3px 0px 0px;
+}
+.tableRow:last-child .entrantBlock {
+  border-radius: 0px 0px 3px 3px;
+}
+.position,
+.entrantName,
+.divider {
+  vertical-align: middle;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  float: left;
+}
+.position {
+  width: 30px;
+  text-align: center;
+  justify-content: center;
+  font-family: "Viga", cursive;
+}
+.divider {
+  width: 5px;
+  height: calc(100% - 6px);
+  margin-top: 3px;
+  border-radius: 2px;
+}
+.entrantName {
+  padding: 0 10px;
+  font-size: 13px;
+  font-family: "Viga", cursive;
+  text-transform: uppercase;
+}
+.shortName {
+  text-transform: uppercase;
+  display: none;
+}
+.posDiff {
+  width: 28px;
+  height: 30px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  float: left;
+}
+.diffZero {
+  opacity: 0;
+}
+.diffLow {
+  opacity: 0.5;
+}
+.diffMed {
+  opacity: 0.75;
+}
+.diffHigh {
+  opacity: 1;
+}
+.totalDiff {
+  margin-top: 10px;
+}
+
+/* Start of swipe prompt*/
+.predictionTables .tableContainer:first-child .swipeIconLeft {
+  display: none;
+}
+.predictionTables .tableContainer:last-child .swipeIconRight {
+  display: none;
+}
+.swipeIconCon {
+  position: absolute;
+  width: 50%;
+  padding-top: 1px;
+  display: none;
+}
+.swipeIconCon i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  animation: swipeAnimation 3s 0.2s infinite ease-in-out;
+}
+.swipeIconRight {
+  right: 0;
+}
+.swipeIconRight i {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.swipeIconRight i:first-child,
+.swipeIconLeft i:last-child {
+  animation-delay: 0.1s;
+}
+.swipeIconRight i:last-child,
+.swipeIconLeft i:first-child {
+  animation-delay: 0.3s;
+}
+.swipeIconLeft i {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+@keyframes swipeAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* End of swipe prompt*/
+
+@media (max-width: 1200px) {
+  .playerNumbers5 .fullName {
+    display: none;
+  }
+  .playerNumbers5 .shortName {
+    display: block;
+  }
+  .playerNumbers5 .entrantBlock {
+    width: 85px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .playerNumbers5 .predictionTables {
+    width: calc(100% - 130px);
+  }
+}
+@media (max-width: 850px) {
+  .playerNumbers5 .predictionTables {
+    flex-wrap: nowrap;
+    width: calc(100% - 150px);
+  }
+  .playerNumbers5 .predictionTables .tableContainer {
+    width: calc(50% - 20px);
+    margin-right: 20px;
+  }
+  .playerNumbers5 .swipeIconCon {
+    display: inherit;
+  }
+  .playerNumbers5 .entrantBlock {
+    width: 100%;
+  }
+  .playerNumbers5 .fullName {
+    display: block;
+  }
+  .playerNumbers5 .shortName {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .playerNumbers3 .fullName {
+    display: none;
+  }
+  .playerNumbers3 .shortName {
+    display: block;
+  }
+  .playerNumbers3 .entrantBlock {
+    width: 85px;
+  }
+  .playerNumbers3 .predictionTables {
+    width: calc(100% - 150px);
+  }
+}
+@media (max-width: 550px) {
+  .playerNumbers3 .predictionTables {
+    width: calc(100% - 110px);
+  }
+  .playerNumbers5 .predictionTables .tableContainer {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media (max-width: 500px) {
+  .playerNumbers3 .predictionTables {
+    flex-wrap: nowrap;
+    width: calc(100% - 150px);
+  }
+  .playerNumbers3 .predictionTables .tableContainer {
+    width: 100%;
+    margin-right: 0;
+  }
+  .playerNumbers3 .swipeIconCon {
+    display: inherit;
+  }
+  .playerNumbers3 .entrantBlock {
+    width: 100%;
+  }
+  .playerNumbers3 .fullName {
+    display: block;
+  }
+  .playerNumbers3 .shortName {
+    display: none;
+  }
+  .options select {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 400px) {
+  .playerNumbers1 .fullName {
+    display: none;
+  }
+  .playerNumbers1 .shortName {
+    display: block;
+  }
+  .playerNumbers1 .entrantBlock {
+    width: 85px;
+  }
+  .playerNumbers1 .predictionTables {
+    width: calc(100% - 100px);
+  }
+}
+
+@media (max-width: 350px) {
+  .playerNumbers3 .predictionTables,
+  .playerNumbers5 .predictionTables {
+    width: calc(100% - 100px);
+  }
+  .playerNumbers3 .fullName,
+  .playerNumbers5 .fullName {
+    display: none;
+  }
+  .playerNumbers3 .shortName,
+  .playerNumbers5 .shortName {
+    display: block;
+  }
+  .perfectPredictions {
+    display: none;
+  }
+}
