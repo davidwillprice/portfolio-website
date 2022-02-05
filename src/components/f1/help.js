@@ -61,24 +61,12 @@ export default function Help(props) {
           mean position of each driver/team across the other player's prediction
           tables;
         </li>
-        <li>
-          Stand-in drivers won't be added to the driver standings (Hulkenberg
-          didn't join the game's driver standings last year);
-        </li>
+        <li>Stand-in drivers won't be added to the driver standings;</li>
         <li>
           Other than that, the game's standings will be ordered as they are in
           real life;
         </li>
-        <li>
-          <a href="https://www.formula1.com/en/latest/article.f1-power-rankings-weve-ranked-the-teams-from-10-to-1-after-pre-season.6DKunC8CA9nHHu6MkuiIQQ.html">
-            formula1.com
-          </a>{" "}
-          and{" "}
-          <a href="https://twitter.com/karunchandhok/status/1371374740217159680">
-            Sky F1 Analyst Karun Chandok
-          </a>{" "}
-          made their predictions after preseason testing so had an advantage.
-        </li>
+        {props.children}
       </ul>
     </div>
   )
