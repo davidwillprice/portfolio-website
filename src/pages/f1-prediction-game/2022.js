@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Layout from "../../components/layout/layout"
 import Seo from "../../components/head/seo.js"
 
-import F1Container from "../../components/f1/container"
+import F1Container from "../../components/f1/2022/container"
 
 export default class f1Predict2022 extends Component {
   componentDidMount() {

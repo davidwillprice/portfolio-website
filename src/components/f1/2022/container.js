@@ -1,11 +1,11 @@
 import React, { Component } from "react"
-import NavBar from "./ui/navBar"
-import Help from "./ui/help"
-import FooterSlider from "./ui/footer-slider"
-import Leaderboard from "./ui/leaderboard"
-import Standings from "./ui/standings"
+import NavBar from "../ui/navBar"
+import Help from "../ui/help"
+import FooterSlider from "../ui/footer-slider"
+import Leaderboard from "../ui/leaderboard"
+import Standings from "../ui/standings"
 
-import * as f1PredictCSS from "../../styles/component/f1-prediction-game.module.scss"
+import * as f1PredictCSS from "../../../styles/component/f1-prediction-game.module.scss"
 
 const year = 2022
 
@@ -1240,7 +1240,7 @@ export default class F1Container extends Component {
             />
           )}
           {this.state.mode === "help" && (
-            <Help year="2022">
+            <Help year={year}>
               <li>
                 <a href="https://www.formula1.com/en/latest/article.f1-power-rankings-weve-ranked-the-teams-from-10-to-1-after-pre-season.6DKunC8CA9nHHu6MkuiIQQ.html">
                   formula1.com
