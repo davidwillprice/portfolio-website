@@ -4,6 +4,7 @@ import Help from "../ui/help"
 import FooterSlider from "../ui/footer-slider"
 import Leaderboard from "../ui/leaderboard"
 import Standings from "../ui/standings"
+import Options from "../ui/options"
 
 import * as f1PredictCSS from "../../../styles/component/f1-prediction-game.module.scss"
 
@@ -63,8 +64,6 @@ const playerGroupsArr = getPlayerGroups(players)
 //Most/least accurately predicted driver/team of selected round and how off players were
 //Players with most/least 'controversial' driver predictions based on how much they differed from the average prediction table
 
-console.log(players)
-
 export default class F1Container extends Component {
   constructor(props) {
     super(props)
@@ -105,48 +104,12 @@ export default class F1Container extends Component {
       >
         <NavBar changeMode={this.changeMode} activeMode={this.state.mode} />
         <div className={f1PredictCSS.content}>
-          <div className={f1PredictCSS.opening}>
-            <div className={f1PredictCSS.introOptions}>
-              <div className={f1PredictCSS.options}>
-                {
-                  //If in standings mode, allow the player to pick which player group to show
-                  this.state.mode === "standings" && (
-                    <select
-                      aria-label="Select player group to display"
-                      name="playerGroup"
-                      id="playerGroup"
-                      onBlur={event => this.changePlayerGroup(event)}
-                      onChange={event => this.changePlayerGroup(event)}
-                    >
-                      <option value={playerGroupsArr[0]} hidden>
-                        Player group
-                      </option>
-                      {playerGroupsArr.map(group => (
-                        <option key={group} value={group}>
-                          {group}
-                        </option>
-                      ))}
-                    </select>
-                  )
-                }
-                {
-                  //If in the leaderboard or standings section, allow the user to pick whether they want to see the driver or constructor standings/leaderboard
-                  this.state.mode !== "help" && this.state.mode !== "stats" && (
-                    <select
-                      aria-label="Select championship type"
-                      name="entrantType"
-                      id="entrantType"
-                      onBlur={event => this.changeEntrantType(event)}
-                      onChange={event => this.changeEntrantType(event)}
-                    >
-                      <option value="driver">Driver Standings</option>
-                      <option value="team">Constructor Standings</option>
-                    </select>
-                  )
-                }
-              </div>
-            </div>
-          </div>
+          <Options
+            mode={this.state.mode}
+            playerGroupsArr={playerGroupsArr}
+            changePlayerGroup={this.changePlayerGroup}
+            changeEntrantType={this.changeEntrantType}
+          />
           {this.state.mode === "leaderboard" && (
             <Leaderboard
               entrantType={this.state.entrantType}

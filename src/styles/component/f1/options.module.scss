@@ -1,0 +1,34 @@
+/*Start of options*/
+.options {
+  width: 100%;
+  select {
+    background-color: rgb(50, 50, 50);
+    font-family: var(--text-font);
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px 40px 10px 10px;
+    background-image: url(/svgs/dropdown.svg);
+    background-repeat: no-repeat;
+    background-size: 10px auto;
+    background-position-y: 50%;
+    background-position-x: calc(100% - 10px);
+    font-size: 16px;
+  }
+}
+
+/*End of options*/
+.opening {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+@media (max-width: 500px) {
+  .options select {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
