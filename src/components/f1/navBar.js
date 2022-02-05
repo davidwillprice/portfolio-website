@@ -14,7 +14,6 @@ export default function NavBar(props) {
   function onClickHandler(event) {
     props.changeMode(event)
   }
-  console.log(props.activeMode)
   return (
     <div className={navCon}>
       <nav className={navBar}>
