@@ -24,7 +24,7 @@ import {
 } from "../calc"
 
 const year = 2022
-const finalNoOfRaces = 22
+const finalNoOfRaces = 21
 
 //Populate players.average with prediction tables created by finding the mean positions of everyone else's predictions
 generateAverageTable(players, drivers, "driver")
@@ -67,7 +67,7 @@ export default class F1Container extends Component {
       playerGroup: "aberystwyth",
       selectedRound: rounds.length - 1,
       mode: "leaderboard",
-      seasonOver: rounds.length === finalNoOfRaces + 1,
+      seasonOver: rounds.length === finalNoOfRaces,
     }
     //Binding 'this' to the UI methods
     this.changeEntrantType = this.changeEntrantType.bind(this)
