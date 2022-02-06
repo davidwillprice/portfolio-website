@@ -7,10 +7,10 @@ import {
 
 export default function Options(props) {
   function changePlayerGroupHandler(event) {
-    props.changeEntrantType(event)
+    props.changePlayerGroup(event)
   }
   function changeEntrantTypeHandler(event) {
-    props.changePlayerGroup(event)
+    props.changeEntrantType(event)
   }
   return (
     //If in the leaderboard or standings section, allow the user to pick whether they want to see the driver or constructor standings/leaderboard
