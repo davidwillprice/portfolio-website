@@ -223,7 +223,7 @@ export function getControPlayers(players, entrantType) {
   for (const player of Object.values(players)) {
     //If the player is "average" or doesn't have predictions for that entrant type, skip them
     if (
-      player.name === "average" ||
+      player.name === "Average" ||
       player[entrantType + "Table"].length === 0
     ) {
       continue

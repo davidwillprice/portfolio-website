@@ -72,7 +72,7 @@ function Player(name, groups, driverTable, teamTable) {
 //Player data
 export const players = {
   david: new Player(
-    "david",
+    "David",
     ["aberystwyth", "brr", "herefordshire"],
     [
       ham,
@@ -102,7 +102,7 @@ export const players = {
     //[mer, rbr, mcl, ast, fer, alp, alt, alf, wil, has]
   ),
   jack: new Player(
-    "jack",
+    "Jack",
     ["aberystwyth", "brr"],
     [
       ham,
@@ -129,7 +129,7 @@ export const players = {
     [mer, rbr, ast, fer, mcl, alp, alt, alf, wil, has]
   ),
   tom: new Player(
-    "tom",
+    "Tom",
     ["brr", "dyson", "herefordshire"],
     [
       ham,
@@ -156,7 +156,7 @@ export const players = {
     [mer, rbr, mcl, ast, fer, alp, alt, alf, wil, has]
   ),
   pete: new Player(
-    "pete",
+    "Pete",
     ["herefordshire"],
     [
       ham,
@@ -183,7 +183,7 @@ export const players = {
     [rbr, mer, mcl, ast, fer, alp, alt, alf, has, wil]
   ),
   will: new Player(
-    "will",
+    "Will",
     ["aberystwyth"],
     [
       ves,
@@ -210,7 +210,7 @@ export const players = {
     [rbr, mer, mcl, ast, alp, fer, alt, alf, has, wil]
   ),
   annie: new Player(
-    "annie",
+    "Annie",
     ["dyson"],
     [
       ham,
@@ -237,7 +237,7 @@ export const players = {
     [mer, rbr, ast, mcl, fer, alp, alt, alf, has, wil]
   ),
   james: new Player(
-    "james",
+    "James",
     ["dyson"],
     [
       ham,
@@ -264,7 +264,7 @@ export const players = {
     [mer, rbr, mcl, ast, fer, alp, alt, has, alf, wil]
   ),
   jacopo: new Player(
-    "jacopo",
+    "Jacopo",
     ["dyson"],
     [
       ham,
@@ -291,7 +291,7 @@ export const players = {
     [mer, rbr, mcl, fer, ast, alp, alt, alf, has, wil]
   ),
   alex: new Player(
-    "alex",
+    "Alex",
     ["dyson"],
     [
       ham,
@@ -324,7 +324,7 @@ export const players = {
     [],
     [rbr, mer, mcl, alp, fer, alt, ast, alf, wil, has]
   ),
-  average: new Player("average", ["misc"], [], []),
+  average: new Player("Average", ["misc"], [], []),
   karun: new Player(
     //https://twitter.com/karunchandhok/status/1371374740217159680
     "Karun Sky F1",
