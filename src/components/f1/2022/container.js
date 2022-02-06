@@ -26,6 +26,7 @@ import {
   orderEntrantDiffTotals,
   filteredPlayers,
   getPlayerGroups,
+  getControPlayers,
 } from "../calc"
 
 const year = 2022
@@ -60,6 +61,11 @@ orderEntrantDiffTotals(rounds, "team")
 
 //Get player groups for the options menu
 const playerGroupsArr = getPlayerGroups(players)
+
+console.log(players)
+
+const controDriverPredictions = getControPlayers(players, "driver")
+const controTeamPredictions = getControPlayers(players, "team")
 
 ////UI requires from data
 //Players with most/least 'controversial' driver predictions based on how much they differed from the average prediction table
@@ -147,6 +153,8 @@ export default class F1Container extends Component {
               roundData={rounds}
               selectedRound={this.state.selectedRound}
               isSeasonOver={this.state.seasonOver}
+              controDriverPredictions={controDriverPredictions}
+              controTeamPredictions={controTeamPredictions}
             >
               <li>
                 {this.state.seasonOver && <span className={tick}>✔</span>} Will

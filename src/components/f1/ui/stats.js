@@ -12,6 +12,9 @@ export default function Stats(props) {
   const mostAccTeam = roundDataDiffTotals.team[0]
   const leastAccTeam = roundDataDiffTotals.team[noOfTeams - 1]
 
+  const controDriverPredicts = props.controDriverPredictions
+  const controTeamPredicts = props.controTeamPredictions
+
   //Get diff total, average it out by no of entrants and then round to one decimal place
   function calcMisprediction(entrant, noOfEntrants) {
     return Math.round((entrant.diffTotal / noOfEntrants) * 10) / 10
@@ -48,14 +51,25 @@ export default function Stats(props) {
       <h2>Predictions Triva</h2>
       <ul>
         <li>
-          Alex had the most 'controversial' driver predictions, as they had the
-          largest difference from the average prediction table (24 position
-          changes);
+          {controDriverPredicts.most.playerNames} had the most 'controversial'
+          driver predictions, as they had the largest difference from the
+          average prediction table ({controDriverPredicts.most.guessesFromAvg}{" "}
+          position change
+          {controDriverPredicts.most.guessesFromAvg !== 1 ? "s" : ""});
         </li>
         <li>
-          Tom had the least 'controversial' driver predictions, as they had the
-          smallest difference from the average prediction table (8 position
-          changes);
+          {controDriverPredicts.least.playerNames} had the least 'controversial'
+          driver predictions, as they had the smallest difference from the
+          average prediction table ({controDriverPredicts.least.guessesFromAvg}{" "}
+          position change
+          {controDriverPredicts.least.guessesFromAvg !== 1 ? "s" : ""});
+        </li>
+        <li>
+          {controTeamPredicts.most.playerNames} had the most 'controversial'
+          team predictions, as they had the largest difference from the average
+          prediction table ({controTeamPredicts.most.guessesFromAvg} position
+          change
+          {controTeamPredicts.most.guessesFromAvg !== 1 ? "s" : ""});
         </li>
         {props.children}
       </ul>

@@ -215,3 +215,53 @@ export function getPlayerGroups(players) {
   }
   return [...playerGroups]
 }
+
+export function getControPlayers(players, entrantType) {
+  let mostControPlayers = { playerNames: [], guessesFromAvg: "" }
+  let leastControPlayers = { playerNames: [], guessesFromAvg: "" }
+  //Loop through each player
+  for (const player of Object.values(players)) {
+    //If the player is "average" or doesn't have predictions for that entrant type, skip them
+    if (
+      player.name === "average" ||
+      player[entrantType + "Table"].length === 0
+    ) {
+      continue
+    }
+    let totalGuessesfromAverage = 0
+    //Loop over their entrants, adding their difference from average to total
+    for (const [predictedPos, entrant] of Object.entries(
+      player[entrantType + "Table"]
+    )) {
+      const avgPredictedPos = players.average[entrantType + "Table"].indexOf(
+        entrant
+      )
+      const posDiffs = Math.abs(predictedPos - avgPredictedPos)
+      totalGuessesfromAverage += posDiffs
+    }
+    // If the player's guesses were further from the average than the previous highest, change them to the most contro player
+    if (totalGuessesfromAverage > mostControPlayers.guessesFromAvg) {
+      mostControPlayers = {
+        playerNames: [player.name],
+        guessesFromAvg: totalGuessesfromAverage,
+      }
+    } else if (totalGuessesfromAverage === mostControPlayers.guessesFromAvg) {
+      mostControPlayers.playerNames.push(player.name)
+    }
+    // If the player's guesses were less from the average than the previous lowest, change them to the least contro player
+    if (
+      (totalGuessesfromAverage < leastControPlayers.guessesFromAvg) |
+      !leastControPlayers.guessesFromAvg
+    ) {
+      leastControPlayers = {
+        playerNames: [player.name],
+        guessesFromAvg: totalGuessesfromAverage,
+      }
+    } else if (totalGuessesfromAverage === leastControPlayers.guessesFromAvg) {
+      leastControPlayers.playerNames.push(player.name)
+    }
+  }
+  leastControPlayers.playerNames.join(", ")
+  mostControPlayers.playerNames.join(", ")
+  return { most: mostControPlayers, least: leastControPlayers }
+}
