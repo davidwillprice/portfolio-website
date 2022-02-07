@@ -75,7 +75,7 @@ export default class F1Container extends Component {
     super(props)
     this.state = {
       entrantType: "driver",
-      playerGroup: "aberystwyth",
+      playerGroup: playerGroupsArr[0],
       selectedRound: rounds.length - 1,
       mode: "leaderboard",
       seasonOver: rounds.length === finalNoOfRaces,
