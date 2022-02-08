@@ -2,7 +2,17 @@ import React, { Component } from "react"
 import Layout from "../../components/layout/layout"
 import Seo from "../../components/head/seo.js"
 
-import F1Container from "../../components/f1/2022/container"
+import F1Container from "../../components/f1/container"
+
+import { helpNotes, statsNotes } from "../../components/f1/2021/extra-text"
+
+import {
+  teams,
+  drivers,
+  rounds,
+  players,
+  playerGroupsArr,
+} from "../../components/f1/2022/season-data"
 
 export default class f1Predict2022 extends Component {
   componentDidMount() {
@@ -20,7 +30,17 @@ export default class f1Predict2022 extends Component {
           bgColor="gray"
         />
         <div className="">
-          <F1Container />
+          <F1Container
+            teams={teams}
+            drivers={drivers}
+            rounds={rounds}
+            players={players}
+            year={2022}
+            finalNoOfRaces={21}
+            helpNotes={helpNotes}
+            statsNotes={statsNotes}
+            playerGroupsArr={playerGroupsArr}
+          />
         </div>
       </Layout>
     )

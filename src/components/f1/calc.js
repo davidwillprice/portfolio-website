@@ -1,4 +1,8 @@
 export function generateAverageTable(players, entrantData, entrantType) {
+  //Delete the average table if it exists from a previous render
+  if (players.average[entrantType + "Table"]) {
+    players.average[entrantType + "Table"] = []
+  }
   //Loop over each entrant, finding their index in each player's prediction table and totalling them in a new avgPrePos property
   for (const entrant of Object.values(entrantData)) {
     let predictionPosTotal = 0
@@ -27,6 +31,11 @@ export function orderAverageTable(players, entrantType) {
 export function calcData(players, rounds) {
   //Loop through each round
   for (const [roundNo, round] of Object.entries(rounds)) {
+    //Delete the leaderboards if they exist from a previous render
+    if (round.leaderboards) {
+      round.leaderboards.driver = []
+      round.leaderboards.team = []
+    }
     //Loop through each player to generate their team and driver differences
     for (const player of Object.values(players)) {
       //Create blank properties ready for the player's performance in this round

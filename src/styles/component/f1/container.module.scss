@@ -14,12 +14,6 @@
   max-width: $layout-width;
   margin: 0 auto 100px;
 }
-.tick {
-  color: rgb(0, 235, 0);
-}
-.cross {
-  color: rgb(235, 0, 0);
-}
 @media (max-width: 600px) {
   .content {
     padding-left: $page-margin-mobile;

@@ -1,3 +1,5 @@
+import { getPlayerGroups } from "../calc"
+
 //All entrant starting (driver/team) data
 export const entrantData = {
   drivers: {
@@ -333,6 +335,8 @@ export const players = {
     [rbr, mer, alt, mcl, alp, fer, ast, alf, wil, has]
   ),
 }
+export const playerGroupsArr = getPlayerGroups(players)
+
 //Object constructors for rounds
 class Round {
   constructor(trackName, driverStandings, teamStandings) {
