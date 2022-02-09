@@ -4,7 +4,7 @@ import Seo from "../../components/head/seo.js"
 
 import F1Container from "../../components/f1/container"
 
-import { helpNotes, statsNotes } from "../../components/f1/2021/extra-text"
+import { helpNotes, statsNotes } from "../../components/f1/2022/extra-text"
 
 import {
   teams,
@@ -36,7 +36,7 @@ export default class f1Predict2022 extends Component {
             rounds={rounds}
             players={players}
             year={2022}
-            finalNoOfRaces={21}
+            finalNoOfRaces={24}
             helpNotes={helpNotes}
             statsNotes={statsNotes}
             playerGroupsArr={playerGroupsArr}

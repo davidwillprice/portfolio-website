@@ -2,9 +2,19 @@ import React, { Component } from "react"
 import Layout from "../../components/layout/layout"
 import Seo from "../../components/head/seo.js"
 
-import F1PredictionGame from "../../components/f1-prediction-game"
+import F1Container from "../../components/f1/container"
 
-class f1Predict2021 extends Component {
+import { helpNotes, statsNotes } from "../../components/f1/2021/extra-text"
+
+import {
+  teams,
+  drivers,
+  rounds,
+  players,
+  playerGroupsArr,
+} from "../../components/f1/2021/season-data"
+
+export default class f1Predict2021 extends Component {
   componentDidMount() {
     document.querySelector("html").style.backgroundColor = "#242424"
   }
@@ -19,12 +29,20 @@ class f1Predict2021 extends Component {
           description="Game to predict predict the Formula 1 2021 Driver's and Constructor's standings as accurately as possible"
           bgColor="gray"
         />
-        <div className="">
-          <F1PredictionGame />
+        <div>
+          <F1Container
+            teams={teams}
+            drivers={drivers}
+            rounds={rounds}
+            players={players}
+            year={2021}
+            finalNoOfRaces={22}
+            helpNotes={helpNotes}
+            statsNotes={statsNotes}
+            playerGroupsArr={playerGroupsArr}
+          />
         </div>
       </Layout>
     )
   }
 }
-
-export default f1Predict2021

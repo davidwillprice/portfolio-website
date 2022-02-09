@@ -169,7 +169,7 @@ export default function Index() {
             <Button url="/f1-prediction-game/2021/" btnText="View Game" />
             <Button
               external={true}
-              url="https://github.com/davidwillprice/portfolio-website/blob/master/src/components/f1-prediction-game.js"
+              url="https://github.com/davidwillprice/portfolio-website/tree/main/src/components/f1"
               btnText="View Source"
               btnColor="secondary"
               btnIcon="github"
