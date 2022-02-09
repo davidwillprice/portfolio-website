@@ -34,6 +34,12 @@
     url("../fonts/Quicksand-SemiBold.woff2") format("woff2"),
     url("../fonts/Quicksand-SemiBold.woff") format("woff");
 }
+@font-face {
+  font-family: "viga";
+  src: url("../fonts/Viga-Regular.ttf") format("ttf"),
+    url("../fonts/Viga-Regular.woff2") format("woff2"),
+    url("../fonts/Viga-Regular.woff") format("woff");
+}
 * {
   text-decoration: none;
   box-sizing: border-box;
