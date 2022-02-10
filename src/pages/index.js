@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 /* eslint-disable */ import SolarSVGStyles from "../styles/component/svg/solarsvg.scss" /* eslint-enable */
 import Seo from "../components/head/seo.js"
@@ -21,9 +22,9 @@ import BmaHpMobImg from "../images/bma/bma-hp-mob.png"
 import SwiisWhyFosterTabImg from "../images/swiis/swiis-fc-why-foster-tablet.png"
 import MontyHallImg from "../images/monty-hall/monty-hall-3-doors.png"
 import f1Img from "../images/f1-prediction-game/f1-prediction-game-screenshot.png"
-import portrait from "../images/david-price-portrait.jpg"
 
-export default function Index() {
+export default function Index({ data }) {
+  const portrait = data.file.childImageSharp.gatsbyImageData
   return (
     <Layout>
       <Seo
@@ -180,3 +181,12 @@ export default function Index() {
     </Layout>
   )
 }
+export const pageQuery = graphql`
+  query {
+    file(relativePath: { eq: "david-price-portrait.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`

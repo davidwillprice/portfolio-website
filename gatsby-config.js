@@ -10,13 +10,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-anchor-links`,
-    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {
         lang: "en",
       },
     },
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -32,10 +32,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-react-svg",
     },
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -48,7 +51,13 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-sass`,
-    // `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    `gatsby-transformer-sharp`,
   ],
 }

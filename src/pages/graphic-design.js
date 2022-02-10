@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Button from "../components/button"
 import ButtonCon from "../components/button-con"
 import Layout from "../components/layout/layout"
@@ -9,11 +10,12 @@ import TitleBanner from "../components/layout/title-banner"
 import * as brushConStyles from "../styles/component/brushcon.module.scss"
 /*
 import LypLeaflet from '../images/lyp/lyp-leaflet-mock-up.jpg';*/
-import TeslaNowIcon from "../images/teslanow/teslanow-icon.jpg"
-import AberLogo from "../images/aber-design/aber-inspired-logo-thumbnail.jpg"
-import SpringholmLogo from "../images/freelance-logos/springholm-wells-farm-logo-thumbnail.jpg"
 
-export default function GraphicDesign() {
+export default function GraphicDesign({ data }) {
+  console.log(data)
+  const teslaNowIcon = data.teslaNowIcon.childImageSharp.gatsbyImageData
+  const aberLogo = data.aberLogo.childImageSharp.gatsbyImageData
+  const springholmLogo = data.springholmLogo.childImageSharp.gatsbyImageData
   return (
     <Layout>
       <Seo
@@ -38,7 +40,7 @@ export default function GraphicDesign() {
         <SqBrushMask
           brush={"/svgs/brush-bg-1.svg"}
           dirTxtRight={true}
-          img={TeslaNowIcon}
+          img={teslaNowIcon}
           imgAlt="TESLANOW icon"
           linkDesc="TESLANOW page"
           linkUrl="/graphic-design/teslanow/"
@@ -54,7 +56,7 @@ export default function GraphicDesign() {
         </SqBrushMask>
         <SqBrushMask
           brush={"/svgs/brush-bg-3.svg"}
-          img={AberLogo}
+          img={aberLogo}
           imgAlt="Aberystwyth Inspired logo"
           linkDesc="Aberystwyth university graphic design"
           linkUrl="/graphic-design/aberystwyth-university/"
@@ -75,7 +77,7 @@ export default function GraphicDesign() {
 
         <SqBrushMask
           brush={"/svgs/brush-bg-4.svg"}
-          img={SpringholmLogo}
+          img={springholmLogo}
           imgAlt="Logo for an Australian summer retreat camp"
           linkDesc="Freelance logos"
           linkUrl="/graphic-design/freelance-logos/"
@@ -98,3 +100,28 @@ export default function GraphicDesign() {
     </Layout>
   )
 }
+export const pageQuery = graphql`
+  query {
+    teslaNowIcon: file(relativePath: { eq: "teslanow/teslanow-icon.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    aberLogo: file(
+      relativePath: { eq: "aber-design/aber-inspired-logo-thumbnail.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    springholmLogo: file(
+      relativePath: {
+        eq: "freelance-logos/springholm-wells-farm-logo-thumbnail.jpg"
+      }
+    ) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`

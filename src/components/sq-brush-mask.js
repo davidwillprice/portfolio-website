@@ -2,15 +2,16 @@ import React, { Component } from "react"
 import * as sqBrushStyles from "../styles/component/sqbrush.module.scss"
 
 import { Link } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 class SqBrushMask extends Component {
   html = () => {
     const brushContent = (
       <div className={sqBrushStyles.brushPreviewCon}>
         <div className={sqBrushStyles.brushPreview}>
-          <img
+          <GatsbyImage
             alt={this.props.imgAlt}
-            src={this.props.img}
+            image={this.props.img}
             className={sqBrushStyles.image}
             style={{
               maskImage: "url(" + this.props.brush + ")",

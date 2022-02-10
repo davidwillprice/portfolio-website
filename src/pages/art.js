@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import ButtonCon from "../components/button-con"
 import Button from "../components/button"
 import Layout from "../components/layout/layout"
@@ -9,9 +10,8 @@ import TitleBanner from "../components/layout/title-banner"
 
 import * as brushConStyles from "../styles/component/brushcon.module.scss"
 
-import Solargraphy from "../images/solargraphy/solargraph-image-34-thumbnail.jpg"
-
-export default function Art() {
+export default function Art({ data }) {
+  const solargraphy = data.file.childImageSharp.gatsbyImageData
   return (
     <Layout>
       <Seo
@@ -25,7 +25,7 @@ export default function Art() {
         <div className={brushConStyles.workBrushCon}>
           <SqBrushMask
             brush={"/svgs/brush-bg-5.svg"}
-            img={Solargraphy}
+            img={solargraphy}
             imgAlt="Solargraphy image"
             linkDesc="Solargraphy page"
             linkUrl="/art/solargraphy/"
@@ -45,3 +45,14 @@ export default function Art() {
     </Layout>
   )
 }
+export const pageQuery = graphql`
+  query {
+    file(
+      relativePath: { eq: "solargraphy/solargraph-image-34-thumbnail.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`
