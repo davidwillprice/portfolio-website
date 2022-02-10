@@ -2,7 +2,6 @@ import React from "react"
 import {
   container,
   textCon,
-  textSubheader,
 } from "../styles/component/text-beside-img.module.scss"
 
 const TextBesideImg = props => (
