@@ -1,6 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
-import * as footerStyles from "../../styles/component/layout/footer.module.scss"
+import {
+  footerCon,
+  footer,
+  smallPrint,
+  links,
+  link,
+} from "../../styles/component/layout/footer.module.scss"
 
 import EmailIcon from "../../svgs/footer/email-icon.svg"
 import LinkedInIcon from "../../svgs/footer/linkedin-icon.svg"
@@ -10,38 +16,31 @@ import CVIcon from "../../svgs/footer/cv-icon.svg"
 import CV from "../../documents/2021_david-price-cv.pdf"
 
 const Footer = props => (
-  //const currentDate = new Date();
-  //const currentYear = currentDate.getFullYear();
-
-  <footer className={footerStyles.footerCon}>
-    <div className={footerStyles.footer} id="contact">
-      <div className={footerStyles.smallPrint}>
+  <footer className={footerCon}>
+    <div className={footer} id="contact">
+      <div className={smallPrint}>
         <p>
           David Price - Built with Gatsby -{" "}
-          <Link
-            className={footerStyles.privPolLink}
-            to={`/privacy-policy/`}
-            aria-label="Privacy Policy"
-          >
+          <Link to={`/privacy-policy/`} aria-label="Privacy Policy">
             Privacy&nbsp;policy
           </Link>
         </p>
       </div>
-      <div className={footerStyles.links}>
+      <div className={links}>
         <a aria-label="Download CV button" href={CV} download>
-          <CVIcon className={footerStyles.footerLinkItem} />
+          <CVIcon className={link} />
         </a>
         <a aria-label="Email button" href="mailto: davidwillprice@gmail.com">
-          <EmailIcon className={footerStyles.footerLinkItem} />
+          <EmailIcon className={link} />
         </a>
         <a
           aria-label="LinkedIn button"
           href="https://www.linkedin.com/in/davidwillprice/"
         >
-          <LinkedInIcon className={footerStyles.footerLinkItem} />
+          <LinkedInIcon className={link} />
         </a>
         <a aria-label="GitHub button" href="https://github.com/davidwillprice/">
-          <GitHubIcon className={footerStyles.footerLinkItem} />
+          <GitHubIcon className={link} />
         </a>
       </div>
     </div>

@@ -14,27 +14,30 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  .smallPrint * {
+    margin-bottom: 0;
+    color: white;
+    font-size: 0.8rem;
+  }
+  .smallPrint a {
+    text-decoration: underline;
+  }
+  a {
+    transition: opacity 50ms linear;
+    :hover {
+      opacity: 0.5;
+    }
+    :last-child .link {
+      margin-right: 0;
+    }
+  }
+  .links {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
 }
-.footer .smallPrint * {
-  margin-bottom: 0;
-  color: white;
-  font-size: 0.8rem;
-}
-.footer .smallPrint a {
-  text-decoration: underline;
-}
-.footer a {
-  transition: opacity 50ms linear;
-}
-.footer a:hover {
-  opacity: 0.5;
-}
-.footer .links {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-.footerLinkItem {
+.link {
   border-width: 0;
   margin: 0 20px;
   width: 50px;
@@ -45,9 +48,6 @@
   align-content: center;
   fill: var(--secondary-color);
 }
-.footer .links a:last-child .footerLinkItem {
-  margin-right: 0;
-}
 /*High Constrast Theme CSS*/
 [data-theme="highContrast"] {
   .footerCon {
@@ -56,7 +56,7 @@
       color: var(--background-color);
     }
   }
-  .footerLinkItem {
+  .link {
     fill: var(--background-color);
   }
 }
@@ -64,17 +64,17 @@
 @media (max-width: 800px) {
   .footer {
     flex-direction: column;
-  }
-  .footer .smallPrint {
-    margin-top: 20px;
-    text-align: center;
-    order: 1;
-  }
-  .footer .links {
-    order: 0;
-  }
-  .footer .links a:first-child .footerLinkItem {
-    margin-left: 0;
+    .smallPrint {
+      margin-top: 20px;
+      text-align: center;
+      order: 1;
+    }
+    .links {
+      order: 0;
+    }
+    .links a:first-child .link {
+      margin-left: 0;
+    }
   }
 }
 
@@ -85,15 +85,17 @@
 }
 
 @media (max-width: 350px) {
-  .footer .smallPrint a {
-    display: block;
-  }
-  .footer .links {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .footer .footerLinkItem {
-    margin: 0;
+  .footer {
+    .smallPrint a {
+      display: block;
+    }
+    .links {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .link {
+      margin: 0;
+    }
   }
 }

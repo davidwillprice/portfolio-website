@@ -1,62 +1,65 @@
 @import "../sass-variables.scss";
 
 @font-face {
-	font-family: "Adamina";
-	src: url("../../fonts/Adamina-Regular.woff2") format("woff2"),
-		url("../../fonts/Adamina-Regular.woff") format("woff");
+  font-family: "Adamina";
+  src: url("../../fonts/Adamina-Regular.woff2") format("woff2"),
+    url("../../fonts/Adamina-Regular.woff") format("woff");
 }
 
 @font-face {
-	font-family: "Source Sans Pro Light";
-	src: url("../../fonts/SourceSansPro-Light.woff2") format("woff2"),
-		url("../../fonts/SourceSansPro-Light.woff") format("woff");
+  font-family: "Source Sans Pro Light";
+  src: url("../../fonts/SourceSansPro-Light.woff2") format("woff2"),
+    url("../../fonts/SourceSansPro-Light.woff") format("woff");
 }
 
 @font-face {
-	font-family: "Source Sans Pro Semibold";
-	src: url("../../fonts/SourceSansPro-SemiBold.woff2") format("woff2"),
-		url("../../fonts/SourceSansPro-SemiBold.woff") format("woff");
+  font-family: "Source Sans Pro Semibold";
+  src: url("../../fonts/SourceSansPro-SemiBold.woff2") format("woff2"),
+    url("../../fonts/SourceSansPro-SemiBold.woff") format("woff");
 }
 
 .container {
-    text-align:center;
-    border-radius: 5px;
-    padding:20px 20px 25px;
-    margin-bottom:20px;
-    max-width:750px;
-    margin:0 auto;
-}
-.container h4{
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px 20px 25px;
+  margin-bottom: 20px;
+  max-width: 750px;
+  margin: 0 auto 10px;
+  h4 {
     font-size: 2rem;
-    color:inherit;
-    margin:0 auto 10px;
-    font-weight:inherit;
+    color: inherit;
+    margin: 0 auto 10px;
+    font-weight: inherit;
+  }
+  hr {
+    color: inherit;
+    width: 50%;
+    max-width: 400px;
+    opacity: 0.5;
+  }
+  p,
+  span {
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    font-weight: inherit;
+  }
+  span {
+    display: block;
+  }
 }
-.container hr {
-    color:inherit;
-    width:50%;
-    max-width:400px;
-    opacity:0.5;
-}
-.container p, .container span { 
-    font-family:inherit;
-    color:inherit;
-    font-size:1.5rem;
-    margin-bottom:0;
-    font-weight:inherit;
-}
-.container span {
-    display:block;
-}
-
 @media only screen and (max-width: 600px) {
-    .container h4{
-        font-size: 1.5rem;
+  .container {
+    h4 {
+      font-size: 1.5rem;
     }
-    .container p, .container span { 
-        font-size: 1.1rem;
+    p,
+    span {
+      font-size: 1.1rem;
     }
-    .container span {
-        display:inline;
+    span {
+      display: inline;
     }
+  }
 }

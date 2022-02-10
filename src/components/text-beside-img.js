@@ -9,7 +9,7 @@ const TextBesideImg = props => (
   <div className={container}>
     <img src={props.img} alt={props.imgAlt} />
     <div className={textCon}>
-      <h3 className={textSubheader}>{props.headerText}</h3>
+      <h3>{props.headerText}</h3>
       {props.children}
     </div>
   </div>

@@ -1,6 +1,11 @@
 import React, { Component } from "react"
 
-import * as accessibStyles from "../../styles/component/layout/accessibility.module.scss"
+import {
+  activeMenu,
+  optionCon,
+  iconCon,
+  closeMenuLine,
+} from "../../styles/component/layout/accessibility.module.scss"
 
 import AccessibilityIcon from "../../svgs/accessibility.svg"
 
@@ -40,12 +45,8 @@ class Accessibility extends Component {
   }
   render() {
     return (
-      <div
-        className={`${accessibStyles.con} ${
-          this.state.activeMenu ? accessibStyles.activeMenu : ""
-        }`}
-      >
-        <div className={accessibStyles.optionCon}>
+      <div className={this.state.activeMenu ? activeMenu : undefined}>
+        <div className={optionCon}>
           <h3>Accessibility options</h3>
           <button
             onClick={e => this.toggleTheme("data-theme", "highContrast", e)}
@@ -58,7 +59,7 @@ class Accessibility extends Component {
           <button onClick={this.resetSettings}>Reset settings</button>
         </div>
         <button
-          className={accessibStyles.iconCon}
+          className={iconCon}
           onClick={this.toggleMenu}
           aria-label={
             this.state.activeMenu
@@ -67,8 +68,8 @@ class Accessibility extends Component {
           }
         >
           <AccessibilityIcon />
-          <span className={accessibStyles.closeMenuLine} />
-          <span className={accessibStyles.closeMenuLine} />
+          <span className={closeMenuLine} />
+          <span className={closeMenuLine} />
         </button>
       </div>
     )

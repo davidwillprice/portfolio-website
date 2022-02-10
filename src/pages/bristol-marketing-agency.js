@@ -116,9 +116,7 @@ export default function bristolAgency() {
           </div>
         </div>
         <div className={BrisAgencyStyles.bmaIconsText}>
-          <h3 className={BrisAgencyStyles.heading}>
-            Minimalist icons & typefaces
-          </h3>
+          <h3>Minimalist icons & typefaces</h3>
           <p>
             I kept the icons as simple as possible to match the simple colour
             scheme.
@@ -136,8 +134,8 @@ export default function bristolAgency() {
           </p>
         </div>
       </div>
-      <div class={BrisAgencyStyles.egServicesBg}>
-        <div class={BrisAgencyStyles.egServicesCon}>
+      <div className={BrisAgencyStyles.egServicesBg}>
+        <div className={BrisAgencyStyles.egServicesCon}>
           <div></div>
           <div></div>
           <div></div>
@@ -158,10 +156,10 @@ export default function bristolAgency() {
           icons.
         </p>
       </StandardCentralText>
-      <div class={BrisAgencyStyles.mobMenuCon}>
-        <div class={BrisAgencyStyles.mobMenuDesigns}>
+      <div className={BrisAgencyStyles.mobMenuCon}>
+        <div className={BrisAgencyStyles.mobMenuDesigns}>
           <img src={MobileMenu} alt="Mobile menu design" />
-          <div class={BrisAgencyStyles.mobMenuGifCon}>
+          <div className={BrisAgencyStyles.mobMenuGifCon}>
             <BlankMobile />
             <img
               src={mobileMenuGif}
@@ -170,8 +168,8 @@ export default function bristolAgency() {
             />
           </div>
         </div>
-        <div class={BrisAgencyStyles.mobMenuText}>
-          <h3 className={BrisAgencyStyles.heading}>Seemless mobile menu</h3>
+        <div className={BrisAgencyStyles.mobMenuText}>
+          <h3>Seemless mobile menu</h3>
           <p>
             I created a mock up GIF showcasing tapping the mobile menu button.
           </p>
@@ -215,7 +213,6 @@ export default function bristolAgency() {
         </p>
       </StandardCentralText>
       <FontShowcase
-        className={BrisAgencyStyles.test}
         bgColor="white"
         color="#48616e"
         fontName="Source Sans Pro Semibold"
