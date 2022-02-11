@@ -143,6 +143,14 @@
 }
 /*End Secret header exp */
 
+@media (min-width: 600px) and (max-width: 700px) {
+  [data-font="dyslexic"] {
+    .headerNav > a:last-child {
+      display: none;
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .headerMenuTrig {
     display: inline;
