@@ -7,6 +7,7 @@ import SqBrushSplash from "../components/sq-brush-splash"
 import SqBrushMask from "../components/sq-brush-mask"
 import Button from "../components/button"
 import ButtonCon from "../components/button-con"
+import StandardCentralText from "../components/standard-central-text"
 
 import * as IndexStyles from "../styles/page/index.module.scss"
 import * as brushConStyles from "../styles/component/brushcon.module.scss"
@@ -64,129 +65,159 @@ export default function Index({ data }) {
           UI from a unique perspective.
         </p>
       </SqBrushMask>
-      <h2
-        id="web"
-        className={`${IndexStyles.projectsHeader} ${globalStyles.anchor}`}
-      >
-        Projects
-      </h2>
-      <div className={brushConStyles.workBrushCon}>
-        <SqBrushSplash
-          brush={<BrushThree />}
-          img={swiisImg}
-          imgAlt="Swiis Foster Care Why Foster on tablet"
-          linkDesc="Swiis international web development page"
-          linkUrl="/swiis/"
-          nonDesktop={true}
+      <section>
+        <h2
+          id="web"
+          className={`${IndexStyles.projectsHeader} ${globalStyles.anchor}`}
         >
-          <h3>Swiis International Ltd</h3>
-          <p>Feb 2019 - Current</p>
-          <p>
-            Full time position as a Web Developer & Designer at Swiis
-            International; parent company of Swiis Foster Care, Swiis Foster
-            Care Scotland and Swiis Healthcare.
+          Projects
+        </h2>
+        <div className={brushConStyles.workBrushCon}>
+          <SqBrushSplash
+            brush={<BrushThree />}
+            img={swiisImg}
+            imgAlt="Swiis Foster Care Why Foster on tablet"
+            linkDesc="Swiis international web development page"
+            linkUrl="/swiis/"
+            nonDesktop={true}
+          >
+            <h3>Swiis International Ltd</h3>
+            <p>Feb 2019 - Current</p>
+            <p>
+              Full time position as a Web Developer & Designer at Swiis
+              International; parent company of Swiis Foster Care, Swiis Foster
+              Care Scotland and Swiis Healthcare.
+            </p>
+            <ButtonCon>
+              <Button url="/swiis/" btnText="Learn More" />
+            </ButtonCon>
+          </SqBrushSplash>
+          <SqBrushSplash
+            brush={<BrushOne />}
+            dirTxtRight={true}
+            img={lypImg}
+            imgAlt="Love Your Postcode property search page on desktop"
+            linkDesc="Love Your Postcode web development page"
+            linkUrl="/loveyourpostcode/"
+          >
+            <h3>Love Your Postcode</h3>
+            <p>Aug 2015 - Feb 2019</p>
+            <p>
+              Full time position as a Web / Graphic Designer at Birmingham
+              estate agent Love Your Postcode.
+            </p>
+            <ButtonCon align={"right"}>
+              <Button
+                url="/loveyourpostcode/"
+                linkDesc="Love Your Postcode web development page"
+                btnText="Learn More"
+              />
+            </ButtonCon>
+          </SqBrushSplash>
+          <SqBrushSplash
+            brush={<BrushTwo />}
+            img={bmaImg}
+            imgAlt="Bristol Marketing Agency homepage on mobile"
+            linkDesc="Bristol Marketing Agency web design page"
+            linkUrl="/bristol-marketing-agency/"
+            nonDesktop={true}
+          >
+            <h3>Bristol Marketing Agency</h3>
+            <p>Feb 2018</p>
+            <p>
+              Website redesign over a weekend as part of the job application
+              process for a Bristol based marketing agency.
+            </p>
+            <ButtonCon>
+              <Button
+                url="/bristol-marketing-agency/"
+                linkDesc="Bristol Marketing Agency web design page"
+                btnText="Learn More"
+              />
+            </ButtonCon>
+          </SqBrushSplash>
+          <SqBrushSplash
+            brush={<BrushThree />}
+            dirTxtRight={true}
+            external={true}
+            img={montyImg}
+            imgAlt="Monty Hall's 3 doors"
+            linkUrl="https://github.com/davidwillprice/montyhall"
+            linkDesc="Github page for my Monty Hall Problem code"
+          >
+            <h3>Monty Hall Problem</h3>
+            <p>Dec 2020</p>
+            <p>
+              Side project to create an interactive illustration of the Monty
+              Hall Problem. Although there are already other online versions, I
+              wanted to see if I could make a better looking, more accessible
+              adaptation with more features.
+            </p>
+            <ButtonCon align="right">
+              <Button
+                external={true}
+                url="https://github.com/davidwillprice/montyhall"
+                btnText="View Source"
+                btnColor="secondary"
+                btnIcon="github"
+                linkDesc="Github page for my Monty Hall Problem code"
+              />
+            </ButtonCon>
+          </SqBrushSplash>
+          <SqBrushSplash
+            brush={<BrushOne />}
+            img={f1Img}
+            imgAlt="F1 prediction game screenshot"
+            linkUrl="/f1-prediction-game/2021/"
+            linkDesc="Github page for my Monty Hall Problem code"
+          >
+            <h3>F1 Prediction Game</h3>
+            <p>2021</p>
+            <p>
+              Side project to create a game where people guess the final
+              standings of the 2021 Formula 1 season.
+            </p>
+            <ButtonCon>
+              <Button url="/f1-prediction-game/2021/" btnText="View Game" />
+              <Button
+                external={true}
+                url="https://github.com/davidwillprice/portfolio-website/tree/main/src/components/f1"
+                btnText="View Source"
+                btnColor="secondary"
+                btnIcon="github"
+              />
+            </ButtonCon>
+          </SqBrushSplash>
+        </div>
+      </section>
+      <section>
+        <h2 id="web" className={IndexStyles.projectsHeader}>
+          Completed Courses
+        </h2>
+        <StandardCentralText width="750">
+          <p style={{ marginTop: 50 }}>
+            2022 -{" "}
+            <a href="https://www.udemy.com/course/nextjs-react-the-complete-guide/">
+              "Next.js & React - The Complete Guide"
+            </a>{" "}
+            by Maximilian Schwarzmüller{" "}
           </p>
-          <ButtonCon>
-            <Button url="/swiis/" btnText="Learn More" />
-          </ButtonCon>
-        </SqBrushSplash>
-        <SqBrushSplash
-          brush={<BrushOne />}
-          dirTxtRight={true}
-          img={lypImg}
-          imgAlt="Love Your Postcode property search page on desktop"
-          linkDesc="Love Your Postcode web development page"
-          linkUrl="/loveyourpostcode/"
-        >
-          <h3>Love Your Postcode</h3>
-          <p>Aug 2015 - Feb 2019</p>
           <p>
-            Full time position as a Web / Graphic Designer at Birmingham estate
-            agent Love Your Postcode.
+            2021 -{" "}
+            <a href="https://www.udemy.com/course/understanding-typescript/">
+              "Understanding TypeScript"
+            </a>{" "}
+            by Maximilian Schwarzmüller{" "}
           </p>
-          <ButtonCon align={"right"}>
-            <Button
-              url="/loveyourpostcode/"
-              linkDesc="Love Your Postcode web development page"
-              btnText="Learn More"
-            />
-          </ButtonCon>
-        </SqBrushSplash>
-        <SqBrushSplash
-          brush={<BrushTwo />}
-          img={bmaImg}
-          imgAlt="Bristol Marketing Agency homepage on mobile"
-          linkDesc="Bristol Marketing Agency web design page"
-          linkUrl="/bristol-marketing-agency/"
-          nonDesktop={true}
-        >
-          <h3>Bristol Marketing Agency</h3>
-          <p>Feb 2018</p>
           <p>
-            Website redesign over a weekend as part of the job application
-            process for a Bristol based marketing agency.
+            2021 -{" "}
+            <a href="https://www.udemy.com/course/the-complete-javascript-course/">
+              "The Complete JavaScript Course"
+            </a>{" "}
+            by Jonas Schmedtmann{" "}
           </p>
-          <ButtonCon>
-            <Button
-              url="/bristol-marketing-agency/"
-              linkDesc="Bristol Marketing Agency web design page"
-              btnText="Learn More"
-            />
-          </ButtonCon>
-        </SqBrushSplash>
-        <SqBrushSplash
-          brush={<BrushThree />}
-          dirTxtRight={true}
-          external={true}
-          img={montyImg}
-          imgAlt="Monty Hall's 3 doors"
-          linkUrl="https://github.com/davidwillprice/montyhall"
-          linkDesc="Github page for my Monty Hall Problem code"
-        >
-          <h3>Monty Hall Problem</h3>
-          <p>Dec 2020</p>
-          <p>
-            Side project to create an interactive illustration of the Monty Hall
-            Problem. Although there are already other online versions, I wanted
-            to see if I could make a better looking, more accessible adaptation
-            with more features.
-          </p>
-          <ButtonCon align="right">
-            <Button
-              external={true}
-              url="https://github.com/davidwillprice/montyhall"
-              btnText="View Source"
-              btnColor="secondary"
-              btnIcon="github"
-              linkDesc="Github page for my Monty Hall Problem code"
-            />
-          </ButtonCon>
-        </SqBrushSplash>
-        <SqBrushSplash
-          brush={<BrushOne />}
-          img={f1Img}
-          imgAlt="F1 prediction game screenshot"
-          linkUrl="/f1-prediction-game/2021/"
-          linkDesc="Github page for my Monty Hall Problem code"
-        >
-          <h3>F1 Prediction Game</h3>
-          <p>2021</p>
-          <p>
-            Side project to create a game where people guess the final standings
-            of the 2021 Formula 1 season.
-          </p>
-          <ButtonCon>
-            <Button url="/f1-prediction-game/2021/" btnText="View Game" />
-            <Button
-              external={true}
-              url="https://github.com/davidwillprice/portfolio-website/tree/main/src/components/f1"
-              btnText="View Source"
-              btnColor="secondary"
-              btnIcon="github"
-            />
-          </ButtonCon>
-        </SqBrushSplash>
-      </div>
+        </StandardCentralText>
+      </section>
     </Layout>
   )
 }
