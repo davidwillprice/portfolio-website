@@ -113,6 +113,8 @@ h1 {
   font-family: var(--heading-font);
   font-weight: 800;
   font-size: 4rem;
+  position: relative;
+  z-index: 1;
 }
 h2,
 h3 {
