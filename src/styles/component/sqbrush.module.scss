@@ -46,7 +46,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  padding-top: 100%;
   z-index: -1;
 }
 .brushBg {
@@ -68,15 +67,6 @@
   mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-}
-.image,
-.brushBg {
-  top: 50%;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  height: auto;
 }
 .brushMaskCon :hover img {
   opacity: 0.5;
