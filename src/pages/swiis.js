@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout"
 import StandardCentralText from "../components/standard-central-text"
 import Seo from "../components/head/seo.js"
 
+import { textLink } from "../styles/global.module.scss"
 import * as ShowcaseStyles from "../styles/page/showcasepage.module.scss"
 /* eslint-disable */ import SwiisLogosCSS from "../styles/component/svg/swiis-logos.scss" /* eslint-enable */
 
@@ -22,8 +23,26 @@ export default function SwiisDigital() {
         <div className={ShowcaseStyles.introText}>
           <p>
             I am currently in a full-time position as a Web Developer & Designer
-            at Swiis International, the parent company of Swiis Foster Care,
-            Swiis Foster Care Scotland and Swiis Healthcare.
+            at{" "}
+            <a className={textLink} href="https://www.swiis.com">
+              Swiis International
+            </a>
+            , the parent company of{" "}
+            <a className={textLink} href="https://www.swiisfostercare.com">
+              Swiis Foster Care
+            </a>
+            ,{" "}
+            <a
+              className={textLink}
+              href="https://www.swiisfostercarescotland.com"
+            >
+              Swiis Foster Care Scotland
+            </a>{" "}
+            and{" "}
+            <a className={textLink} href="https://www.swiishealthcare.com">
+              Swiis Healthcare
+            </a>
+            .
           </p>
           <p>Duties include:</p>
           <ul>
