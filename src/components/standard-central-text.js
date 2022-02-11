@@ -3,13 +3,12 @@ import { standardTexCon } from "../styles/component/stand-cent-tex.module.scss"
 
 class StandardCentralText extends Component {
   render() {
-    let header
-    if (this.props.headerText) {
-      header = <h3>{this.props.headerText}</h3>
-    }
     return (
-      <div className={standardTexCon}>
-        {header}
+      <div
+        className={standardTexCon}
+        style={this.props.width && { maxWidth: +this.props.width }}
+      >
+        {this.props.headerText && <h3>{this.props.headerText}</h3>}
         {this.props.children}
       </div>
     )
