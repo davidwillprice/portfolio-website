@@ -17,13 +17,13 @@ import BristolAgencyLogoSVG from "../svgs/bristol-marketing-agency-logo.svg"
 import IconsSVG from "../svgs/bma-icons.svg"
 import BlankMobile from "../svgs/blank-mobile.svg"
 
-import ConceptBoard from "../images/bma/concept-board.jpg"
 import MobileMenu from "../images/bma/bma-mobile-menu-full.png"
 
 import mobileMenuGif from "../images/bma/bma-mob-menu.gif"
 
 export default function bristolAgency({ data }) {
   const threeDeviceHp = data.threeDeviceHp.childImageSharp.gatsbyImageData
+  const conceptBoard = data.conceptBoard.childImageSharp.gatsbyImageData
   return (
     <Layout marginTopDesktop={true}>
       <Seo
@@ -47,7 +47,7 @@ export default function bristolAgency({ data }) {
       </StandardCentralText>
       <TextBesideImg
         headerText="An earthy, clean and natural colour scheme"
-        img={ConceptBoard}
+        img={conceptBoard}
         imgAlt="Earthy concept board"
       >
         <p>
@@ -235,6 +235,11 @@ export const pageQuery = graphql`
     ) {
       childImageSharp {
         gatsbyImageData(placeholder: NONE)
+      }
+    }
+    conceptBoard: file(relativePath: { eq: "bma/concept-board.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
       }
     }
   }
