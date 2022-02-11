@@ -72,7 +72,7 @@
     opacity: 1;
   }
   .activeHeaderMenuItem:after {
-    background-color: var(--background-color);
+    opacity: 0;
   }
   .header.expandedHeader {
     background-color: var(--primary-color);
