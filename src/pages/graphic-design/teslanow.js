@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import FullWidthImage from "../../components/full-width-img"
 import Layout from "../../components/layout/layout"
 import LogoShowcase from "../../components/logo-showcase"
@@ -9,10 +10,10 @@ import TitleBanner from "../../components/layout/title-banner"
 import * as TeslaStyles from "../../styles/page/teslanow.module.scss"
 
 import Logo from "../../images/teslanow/teslanow-logo.png"
-import IconShowcase from "../../images/teslanow/icon-showcase.jpg"
 import InCarMockup from "../../images/teslanow/in-car-mock-up.jpg"
 
-export default function Teslanow() {
+export default function Teslanow({ data }) {
+  const icons = data.icons.childImageSharp.gatsbyImageData
   return (
     <Layout>
       <Seo
@@ -51,7 +52,7 @@ export default function Teslanow() {
         </p>
       </StandardCentralText>
       <FullWidthImage
-        img={IconShowcase}
+        img={icons}
         imgAlt="Showcase of the different icons I made for the TeslaNow project"
       />
       <StandardCentralText headerText="Clean tailor-made&nbsp;icons">
@@ -67,3 +68,12 @@ export default function Teslanow() {
     </Layout>
   )
 }
+export const pageQuery = graphql`
+  query {
+    icons: file(relativePath: { eq: "teslanow/icon-showcase.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`

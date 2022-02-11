@@ -1,5 +1,5 @@
 import React from "react"
-/*import { Link } from 'gatsby';*/
+import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import Seo from "../components/head/seo.js"
 import StandardCentralText from "../components/standard-central-text"
@@ -18,12 +18,12 @@ import IconsSVG from "../svgs/bma-icons.svg"
 import BlankMobile from "../svgs/blank-mobile.svg"
 
 import ConceptBoard from "../images/bma/concept-board.jpg"
-import ThreeDeviceHp from "../images/bma/homepage-multiple-devices.jpg"
 import MobileMenu from "../images/bma/bma-mobile-menu-full.png"
 
 import mobileMenuGif from "../images/bma/bma-mob-menu.gif"
 
-export default function bristolAgency() {
+export default function bristolAgency({ data }) {
+  const threeDeviceHp = data.threeDeviceHp.childImageSharp.gatsbyImageData
   return (
     <Layout marginTopDesktop={true}>
       <Seo
@@ -87,7 +87,7 @@ export default function bristolAgency() {
         />
       </ColourPreviewCon>
       <FullWidthImage
-        img={ThreeDeviceHp}
+        img={threeDeviceHp}
         imgAlt="Homepage design previews on desktop, tablet and mobile"
       />
 
@@ -228,3 +228,14 @@ export default function bristolAgency() {
     </Layout>
   )
 }
+export const pageQuery = graphql`
+  query {
+    threeDeviceHp: file(
+      relativePath: { eq: "bma/homepage-multiple-devices.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(placeholder: NONE)
+      }
+    }
+  }
+`

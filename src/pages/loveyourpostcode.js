@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import Seo from "../components/head/seo.js"
 import ColourPreview from "../components/colour-preview"
@@ -13,9 +14,9 @@ import * as ShowcaseStyles from "../styles/page/showcasepage.module.scss"
 import LypLogo from "../svgs/lyp-logo.svg"
 
 import LypBirm from "../images/lyp/lyp-birmingham-banner.jpg"
-import FactsTab from "../images/lyp/lyp-facts-tablet.jpg"
 
-export default function LypDigital() {
+export default function LypDigital({ data }) {
+  const factsTab = data.factsTab.childImageSharp.gatsbyImageData
   return (
     <Layout marginTopDesktop={true}>
       <Seo
@@ -120,7 +121,7 @@ export default function LypDigital() {
         </p>
       </StandardCentralText>
       <FullWidthImage
-        img={FactsTab}
+        img={factsTab}
         imgAlt="Love Your Postcode's homepage facts and figures on tablet"
       />
       <StandardCentralText headerText="Clean but eye-catching design">
@@ -188,3 +189,12 @@ export default function LypDigital() {
     </Layout>
   )
 }
+export const pageQuery = graphql`
+  query {
+    factsTab: file(relativePath: { eq: "lyp/lyp-facts-tablet.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`

@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql } from "gatsby"
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
 import FullWidthImage from "../../components/full-width-img"
 import Layout from "../../components/layout/layout"
 import Morph from "../../components/morphing-images"
@@ -8,22 +10,20 @@ import TitleBanner from "../../components/layout/title-banner"
 
 import * as SolarStyles from "../../styles/page/solargraphy.module.scss"
 
-import Image8 from "../../images/solargraphy/solargraph-image-8.jpg"
-import Image8NoStreaks from "../../images/solargraphy/solargraph-image-8-no-streaks.jpg"
-import Image17 from "../../images/solargraphy/solargraph-image-17.jpg"
-import Image28 from "../../images/solargraphy/solargraph-image-28.jpg"
-import Image28Zoom from "../../images/solargraphy/solargraph-image-28-zoom.jpg"
-import Image28ZoomView from "../../images/solargraphy/solargraph-image-28-zoom-view.jpg"
-import Image34 from "../../images/solargraphy/solargraph-image-34.jpg"
-import Image35 from "../../images/solargraphy/solargraph-image-35.jpg"
-import Image36 from "../../images/solargraphy/solargraph-image-36.jpg"
-import Image44 from "../../images/solargraphy/solargraph-image-44.jpg"
-import Image50 from "../../images/solargraphy/solargraph-image-50.jpg"
-import Image50Inverted from "../../images/solargraphy/solargraph-image-50-inverted.jpg"
-import Image62 from "../../images/solargraphy/solargraph-image-62.jpg"
-import Image73 from "../../images/solargraphy/solargraph-image-73.jpg"
-
-export default function Solargraphy() {
+export default function Solargraphy({ data }) {
+  const image8 = data.image8.childImageSharp.gatsbyImageData
+  const image8NoStreaks = data.image8NoStreaks.childImageSharp.gatsbyImageData
+  const image17 = data.image17.childImageSharp.gatsbyImageData
+  const image28Zoom = data.image28Zoom.childImageSharp.gatsbyImageData
+  const image28ZoomView = data.image28ZoomView.childImageSharp.gatsbyImageData
+  const image34 = data.image34.childImageSharp.gatsbyImageData
+  const image35 = data.image35.childImageSharp.gatsbyImageData
+  const image36 = data.image36.childImageSharp.gatsbyImageData
+  const image44 = data.image44.childImageSharp.gatsbyImageData
+  const image50 = data.image50.childImageSharp.gatsbyImageData
+  const image50Inverted = data.image50Inverted.childImageSharp.gatsbyImageData
+  const image62 = data.image62.childImageSharp.gatsbyImageData
+  const image73 = data.image73.childImageSharp.gatsbyImageData
   return (
     <Layout>
       <Seo
@@ -34,7 +34,7 @@ export default function Solargraphy() {
         <h1>Solargraphy</h1>
       </TitleBanner>
       <FullWidthImage
-        img={Image35}
+        img={image35}
         imgAlt="Solargraph of my parents house in Herefordshire, with the road visible in the foreground"
       />
       <StandardCentralText headerText="The Sun written in silver">
@@ -45,7 +45,7 @@ export default function Solargraphy() {
         </p>
       </StandardCentralText>
       <FullWidthImage
-        img={Image34}
+        img={image34}
         imgAlt="Solargraph of my parents house in Herefordshire"
       />
       <StandardCentralText>
@@ -56,12 +56,12 @@ export default function Solargraphy() {
         </p>
       </StandardCentralText>
       <Morph>
-        <img
-          src={Image8}
+        <GatsbyImage
+          image={image8}
           alt="Solargraph from my parents house in Herefordshire"
         />
-        <img
-          src={Image8NoStreaks}
+        <GatsbyImage
+          image={image8NoStreaks}
           alt="Solargraph from my parents house in Herefordshire with no streaks"
         />
       </Morph>
@@ -76,12 +76,12 @@ export default function Solargraphy() {
         </p>
       </StandardCentralText>
       <Morph>
-        <img
-          src={Image50}
+        <GatsbyImage
+          image={image50}
           alt="Solargraph from my parents house that has been heavily affected by mould"
         />
-        <img
-          src={Image50Inverted}
+        <GatsbyImage
+          image={image50Inverted}
           alt="Solargraph before it has been digitally inverted"
         />
       </Morph>
@@ -97,7 +97,7 @@ export default function Solargraphy() {
         </p>
       </StandardCentralText>
       <FullWidthImage
-        img={Image17}
+        img={image17}
         imgAlt="Solargraph that didn't catch any sun but does have interesting mould patterns"
       />
       <StandardCentralText>
@@ -114,7 +114,7 @@ export default function Solargraphy() {
           areas around the&nbsp;edges.
         </p>
       </StandardCentralText>
-      <FullWidthImage img={Image44} imgAlt="Solargraph of Goodrich Castle" />
+      <FullWidthImage img={image44} imgAlt="Solargraph of Goodrich Castle" />
       <StandardCentralText>
         <p>
           While they are intended to be fixed, the cameras often get moved
@@ -128,7 +128,7 @@ export default function Solargraphy() {
         </p>
       </StandardCentralText>
       <FullWidthImage
-        img={Image62}
+        img={image62}
         imgAlt="Solargraph of the Aberystwyth coast featuring lots of insect faeces"
       />
       <StandardCentralText>
@@ -152,7 +152,7 @@ export default function Solargraphy() {
         </p>
       </StandardCentralText>
       <FullWidthImage
-        img={Image36}
+        img={image36}
         imgAlt="Solargraph of a field with a church in the background"
       />
       <StandardCentralText>
@@ -173,15 +173,21 @@ export default function Solargraphy() {
       </StandardCentralText>
       <div className={SolarStyles.dualImages}>
         <div>
-          <img src={Image28} alt="Solargraph of Aberystwyth" />
+          <StaticImage
+            src={"../../images/solargraphy/solargraph-image-28.jpg"}
+            alt="Solargraph of Aberystwyth"
+          />
         </div>
         <div>
           <Morph>
-            <img
-              src={Image28ZoomView}
+            <GatsbyImage
+              image={image28ZoomView}
               alt="View of Aberystwyth to compare with the Solargraph"
             />
-            <img src={Image28Zoom} alt="Cropped Solargraph of Aberystwyth" />
+            <GatsbyImage
+              image={image28Zoom}
+              alt="Cropped Solargraph of Aberystwyth"
+            />
           </Morph>
         </div>
       </div>
@@ -203,7 +209,7 @@ export default function Solargraphy() {
         </p>
       </StandardCentralText>
       <FullWidthImage
-        img={Image73}
+        img={image73}
         imgAlt="Solargraph of a field with the fence it is attached to clearly visible on the right"
       />
       <StandardCentralText>
@@ -220,3 +226,80 @@ export default function Solargraphy() {
     </Layout>
   )
 }
+export const pageQuery = graphql`
+  query {
+    image8: file(relativePath: { eq: "solargraphy/solargraph-image-8.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    image8NoStreaks: file(
+      relativePath: { eq: "solargraphy/solargraph-image-8-no-streaks.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    image17: file(relativePath: { eq: "solargraphy/solargraph-image-17.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    image28Zoom: file(
+      relativePath: { eq: "solargraphy/solargraph-image-28-zoom.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    image28ZoomView: file(
+      relativePath: { eq: "solargraphy/solargraph-image-28-zoom-view.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    image34: file(relativePath: { eq: "solargraphy/solargraph-image-34.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    image35: file(relativePath: { eq: "solargraphy/solargraph-image-35.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    image36: file(relativePath: { eq: "solargraphy/solargraph-image-36.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    image44: file(relativePath: { eq: "solargraphy/solargraph-image-44.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    image50: file(relativePath: { eq: "solargraphy/solargraph-image-50.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    image50Inverted: file(
+      relativePath: { eq: "solargraphy/solargraph-image-50-inverted.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    image62: file(relativePath: { eq: "solargraphy/solargraph-image-62.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    image73: file(relativePath: { eq: "solargraphy/solargraph-image-73.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`
