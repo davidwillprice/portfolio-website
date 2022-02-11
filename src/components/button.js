@@ -14,6 +14,7 @@ class Button extends Component {
     if (this.props.external) {
       return (
         <a
+          aria-label={this.props.linkDesc}
           href={this.props.url}
           className={`${LogoShowcaseStyles.button} ${
             this.props.btnColor
@@ -28,6 +29,7 @@ class Button extends Component {
     } else {
       return (
         <Link
+          aria-label={this.props.linkDesc}
           to={this.props.url}
           className={`${LogoShowcaseStyles.button} ${
             this.props.btnColor

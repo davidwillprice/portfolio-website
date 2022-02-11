@@ -50,7 +50,11 @@ export default function GraphicDesign({ data }) {
             Icon, app and website design for a company through freelancer.com.
           </p>
           <ButtonCon dirTxtRight={true}>
-            <Button url="/graphic-design/teslanow/" btnText="Learn More" />
+            <Button
+              url="/graphic-design/teslanow/"
+              linkDesc="TESLANOW page"
+              btnText="Learn More"
+            />
           </ButtonCon>
         </SqBrushMask>
         <SqBrushMask
@@ -68,6 +72,7 @@ export default function GraphicDesign({ data }) {
           </p>
           <ButtonCon>
             <Button
+              linkDesc="Aberystwyth university graphic design"
               url="/graphic-design/aberystwyth-university/"
               btnText="Learn More"
             />
@@ -90,6 +95,7 @@ export default function GraphicDesign({ data }) {
           </p>
           <ButtonCon dirTxtRight={true}>
             <Button
+              linkDesc="Freelance logos"
               url="/graphic-design/freelance-logos/"
               btnText="Learn More"
             />

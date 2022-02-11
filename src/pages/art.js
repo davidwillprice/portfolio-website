@@ -37,7 +37,11 @@ export default function Art({ data }) {
               sun each day.
             </p>
             <ButtonCon>
-              <Button url="/art/solargraphy/" btnText="Learn More" />
+              <Button
+                url="/art/solargraphy/"
+                btnText="Learn More"
+                linkDesc="Solargraphy page"
+              />
             </ButtonCon>
           </SqBrushMask>
         </div>

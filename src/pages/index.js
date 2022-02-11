@@ -105,7 +105,11 @@ export default function Index({ data }) {
             agent Love Your Postcode.
           </p>
           <ButtonCon dirTxtRight={true}>
-            <Button url="/loveyourpostcode/" btnText="Learn More" />
+            <Button
+              url="/loveyourpostcode/"
+              linkDesc="Love Your Postcode web development page"
+              btnText="Learn More"
+            />
           </ButtonCon>
         </SqBrushSplash>
         <SqBrushSplash
@@ -123,7 +127,11 @@ export default function Index({ data }) {
             process for a Bristol based marketing agency.
           </p>
           <ButtonCon>
-            <Button url="/bristol-marketing-agency/" btnText="Learn More" />
+            <Button
+              url="/bristol-marketing-agency/"
+              linkDesc="Bristol Marketing Agency web design page"
+              btnText="Learn More"
+            />
           </ButtonCon>
         </SqBrushSplash>
         <SqBrushSplash
@@ -150,6 +158,7 @@ export default function Index({ data }) {
               btnText="View Source"
               btnColor="secondary"
               btnIcon="github"
+              linkDesc="Github page for my Monty Hall Problem code"
             />
           </ButtonCon>
         </SqBrushSplash>
