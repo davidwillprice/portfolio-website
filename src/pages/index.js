@@ -191,7 +191,7 @@ export default function Index({ data }) {
         <h2 id="web" className={IndexStyles.projectsHeader}>
           Completed Courses
         </h2>
-        <StandardCentralText width="750">
+        <StandardCentralText width="650">
           <p style={{ marginTop: 50 }}>
             2022 -{" "}
             <a
