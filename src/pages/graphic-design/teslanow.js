@@ -29,7 +29,7 @@ export default function Teslanow({ data }) {
       <StandardCentralText headerText="TESLANOW app, icon and&nbsp;website">
         <p>
           This project was the winning submission to a contest on{" "}
-          <a href="freelancer.com" rel="nofollow">
+          <a href="https://www.freelancer.com/" rel="nofollow">
             freelancer.com
           </a>{" "}
           to design an icon, app and website for an application called
