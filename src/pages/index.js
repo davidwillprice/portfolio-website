@@ -104,7 +104,7 @@ export default function Index({ data }) {
             Full time position as a Web / Graphic Designer at Birmingham estate
             agent Love Your Postcode.
           </p>
-          <ButtonCon dirTxtRight={true}>
+          <ButtonCon align={"right"}>
             <Button
               url="/loveyourpostcode/"
               linkDesc="Love Your Postcode web development page"
@@ -151,7 +151,7 @@ export default function Index({ data }) {
             to see if I could make a better looking, more accessible adaptation
             with more features.
           </p>
-          <ButtonCon dirTxtRight={true}>
+          <ButtonCon align="right">
             <Button
               external={true}
               url="https://github.com/davidwillprice/montyhall"

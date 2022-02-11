@@ -49,7 +49,7 @@ export default function GraphicDesign({ data }) {
           <p>
             Icon, app and website design for a company through freelancer.com.
           </p>
-          <ButtonCon dirTxtRight={true}>
+          <ButtonCon align={"right"}>
             <Button
               url="/graphic-design/teslanow/"
               linkDesc="TESLANOW page"
@@ -93,7 +93,7 @@ export default function GraphicDesign({ data }) {
             Commissioned and practice logos created before I got my first
             full-time job in the industry.
           </p>
-          <ButtonCon dirTxtRight={true}>
+          <ButtonCon align={"right"}>
             <Button
               linkDesc="Freelance logos"
               url="/graphic-design/freelance-logos/"

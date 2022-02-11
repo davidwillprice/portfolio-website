@@ -7,7 +7,11 @@ class ButtonCon extends Component {
     return (
       <div
         className={`${buttonConStyles.con} ${
-          this.props.dirTxtRight ? buttonConStyles.alignRight : ""
+          this.props.align === "right"
+            ? buttonConStyles.alignRight
+            : this.props.align === "center"
+            ? buttonConStyles.alignCenter
+            : ""
         }`}
       >
         {this.props.children}
