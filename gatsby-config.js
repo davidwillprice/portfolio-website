@@ -37,7 +37,15 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
     },
     `gatsby-plugin-sass`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: "blurred",
+          quality: 60,
+        },
+      },
+    },
     `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-web-font-loader",
