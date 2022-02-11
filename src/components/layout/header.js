@@ -46,14 +46,14 @@ class Header extends Component {
               className={headerStyles.headerMenuItem}
               onAnchorLinkClick={this.closeMobMenu}
             >
-              Web development
+              Web Development
             </AnchorLink>
             <Link
               className={headerStyles.headerMenuItem}
               to={`/graphic-design/`}
               activeClassName={headerStyles.activeHeaderMenuItem}
             >
-              Graphic design
+              Graphic Design
             </Link>
             <Link
               className={headerStyles.headerMenuItem}
