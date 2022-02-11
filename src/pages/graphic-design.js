@@ -12,7 +12,6 @@ import * as brushConStyles from "../styles/component/brushcon.module.scss"
 import LypLeaflet from '../images/lyp/lyp-leaflet-mock-up.jpg';*/
 
 export default function GraphicDesign({ data }) {
-  console.log(data)
   const teslaNowIcon = data.teslaNowIcon.childImageSharp.gatsbyImageData
   const aberLogo = data.aberLogo.childImageSharp.gatsbyImageData
   const springholmLogo = data.springholmLogo.childImageSharp.gatsbyImageData

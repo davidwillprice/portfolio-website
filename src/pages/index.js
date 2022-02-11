@@ -190,22 +190,22 @@ export const pageQuery = graphql`
     }
     swiis: file(relativePath: { eq: "swiis/swiis-fc-why-foster-tablet.png" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(placeholder: NONE)
       }
     }
     lyp: file(relativePath: { eq: "lyp/lyp-property-search-desktop.png" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(placeholder: NONE)
       }
     }
     bma: file(relativePath: { eq: "bma/bma-hp-mob.png" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(placeholder: NONE)
       }
     }
     monty: file(relativePath: { eq: "monty-hall/monty-hall-3-doors.png" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(placeholder: NONE)
       }
     }
     f1: file(
@@ -214,7 +214,7 @@ export const pageQuery = graphql`
       }
     ) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(placeholder: NONE)
       }
     }
   }
