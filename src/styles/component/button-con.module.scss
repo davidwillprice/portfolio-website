@@ -4,12 +4,12 @@
   display: flex;
   a {
     margin: 0 10px;
-    :first-child {
-      margin-left: 0;
-    }
-    :last-child {
-      margin-right: 0;
-    }
+  }
+  a:first-child {
+    margin-left: 0;
+  }
+  a:last-child {
+    margin-right: 0;
   }
 }
 .alignCenter {
