@@ -5,6 +5,8 @@ import Seo from "../../components/head/seo"
 import StandardCentralText from "../../components/standard-central-text"
 import TitleBanner from "../../components/layout/title-banner"
 
+import { textLink } from "../../styles/global.module.scss"
+
 import Bayouanimal from "../../images/freelance-logos/bayouanimal-gym.jpg"
 import EuroZone from "../../images/freelance-logos/eurozone-tuning.png"
 import Ozone from "../../images/freelance-logos/ozone-gaming.jpg"
@@ -28,7 +30,11 @@ export default function FreelanceLogo() {
       <StandardCentralText headerText="Springholm Wellness Farm">
         <p>
           Created for a summer retreat camp that requested a logo on{" "}
-          <a href="https://www.reddit.com/r/logorequests/" rel="nofollow">
+          <a
+            className={textLink}
+            href="https://www.reddit.com/r/logorequests/"
+            rel="nofollow"
+          >
             /r/logorequests
           </a>
           .
@@ -101,7 +107,11 @@ export default function FreelanceLogo() {
       <StandardCentralText headerText="Ozone Gaming">
         <p>
           Logo created for a requested on{" "}
-          <a href="https://www.reddit.com/r/logorequests/" rel="nofollow">
+          <a
+            className={textLink}
+            href="https://www.reddit.com/r/logorequests/"
+            rel="nofollow"
+          >
             /r/logorequests
           </a>{" "}
           by a gaming team called 'Ozone Gaming'.

@@ -11,7 +11,7 @@ import StandardCentralText from "../components/standard-central-text"
 
 import * as IndexStyles from "../styles/page/index.module.scss"
 import * as brushConStyles from "../styles/component/brushcon.module.scss"
-import * as globalStyles from "../styles/global.module.scss"
+import { anchor, textLink } from "../styles/global.module.scss"
 
 import SolarSVG from "../svgs/solar.svg"
 import BrushOne from "../svgs/brush-bg-1.svg"
@@ -66,10 +66,7 @@ export default function Index({ data }) {
         </p>
       </SqBrushMask>
       <section>
-        <h2
-          id="web"
-          className={`${IndexStyles.projectsHeader} ${globalStyles.anchor}`}
-        >
+        <h2 id="web" className={`${IndexStyles.projectsHeader} ${anchor}`}>
           Projects
         </h2>
         <div className={brushConStyles.workBrushCon}>
@@ -197,21 +194,30 @@ export default function Index({ data }) {
         <StandardCentralText width="750">
           <p style={{ marginTop: 50 }}>
             2022 -{" "}
-            <a href="https://www.udemy.com/course/nextjs-react-the-complete-guide/">
+            <a
+              className={textLink}
+              href="https://www.udemy.com/course/nextjs-react-the-complete-guide/"
+            >
               "Next.js & React - The Complete Guide"
             </a>{" "}
             by Maximilian Schwarzmüller{" "}
           </p>
           <p>
             2021 -{" "}
-            <a href="https://www.udemy.com/course/understanding-typescript/">
+            <a
+              className={textLink}
+              href="https://www.udemy.com/course/understanding-typescript/"
+            >
               "Understanding TypeScript"
             </a>{" "}
             by Maximilian Schwarzmüller{" "}
           </p>
           <p>
             2021 -{" "}
-            <a href="https://www.udemy.com/course/the-complete-javascript-course/">
+            <a
+              className={textLink}
+              href="https://www.udemy.com/course/the-complete-javascript-course/"
+            >
               "The Complete JavaScript Course"
             </a>{" "}
             by Jonas Schmedtmann{" "}

@@ -162,6 +162,22 @@ button {
   visibility: hidden;
   pointer-events: none;
 }
+.textLink {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: underline;
+  text-decoration-thickness: auto;
+  text-decoration-thickness: max(1px, 0.0625rem);
+  text-underline-offset: 0.1em;
+  transition: 0.1s text-decoration-thickness;
+}
+.textLink:hover {
+  text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip: none;
+  text-decoration-skip: none;
+}
 /*Accessibility*/
 /*The default outline styling, for greatest accessibility */
 .usingKeys *:focus,

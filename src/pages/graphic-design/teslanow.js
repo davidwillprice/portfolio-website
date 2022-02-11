@@ -8,6 +8,7 @@ import StandardCentralText from "../../components/standard-central-text"
 import TitleBanner from "../../components/layout/title-banner"
 
 import * as TeslaStyles from "../../styles/page/teslanow.module.scss"
+import { textLink } from "../../styles/global.module.scss"
 
 import Logo from "../../images/teslanow/teslanow-logo.png"
 import InCarMockup from "../../images/teslanow/in-car-mock-up.jpg"
@@ -29,7 +30,11 @@ export default function Teslanow({ data }) {
       <StandardCentralText headerText="TESLANOW app, icon and&nbsp;website">
         <p>
           This project was the winning submission to a contest on{" "}
-          <a href="https://www.freelancer.com/" rel="nofollow">
+          <a
+            className={textLink}
+            href="https://www.freelancer.com/"
+            rel="nofollow"
+          >
             freelancer.com
           </a>{" "}
           to design an icon, app and website for an application called
