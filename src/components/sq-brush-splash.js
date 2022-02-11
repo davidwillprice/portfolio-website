@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import * as sqBrushStyles from "../styles/component/sqbrush.module.scss"
 
 import { Link } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 class SqBrushSplash extends Component {
   CalcModCon = () => {
@@ -23,9 +24,9 @@ class SqBrushSplash extends Component {
     const brushContent = (
       <div className={this.CalcBrushCon()}>
         <div className={sqBrushStyles.brushPreview}>
-          <img
+          <GatsbyImage
             alt={this.props.imgAlt}
-            src={this.props.img}
+            image={this.props.img}
             className={sqBrushStyles.image}
           />
           {React.cloneElement(this.props.brush, {

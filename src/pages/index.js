@@ -17,14 +17,14 @@ import BrushOne from "../svgs/brush-bg-1.svg"
 import BrushTwo from "../svgs/brush-bg-2.svg"
 import BrushThree from "../svgs/brush-bg-3.svg"
 
-import LypPropSearchDesktopImg from "../images/lyp/lyp-property-search-desktop.png"
-import BmaHpMobImg from "../images/bma/bma-hp-mob.png"
-import SwiisWhyFosterTabImg from "../images/swiis/swiis-fc-why-foster-tablet.png"
-import MontyHallImg from "../images/monty-hall/monty-hall-3-doors.png"
-import f1Img from "../images/f1-prediction-game/f1-prediction-game-screenshot.png"
-
 export default function Index({ data }) {
-  const portrait = data.file.childImageSharp.gatsbyImageData
+  const portrait = data.portrait.childImageSharp.gatsbyImageData
+  const swiisImg = data.swiis.childImageSharp.gatsbyImageData
+  const lypImg = data.lyp.childImageSharp.gatsbyImageData
+  const bmaImg = data.bma.childImageSharp.gatsbyImageData
+  const montyImg = data.monty.childImageSharp.gatsbyImageData
+  const f1Img = data.f1.childImageSharp.gatsbyImageData
+
   return (
     <Layout>
       <Seo
@@ -73,7 +73,7 @@ export default function Index({ data }) {
       <div className={brushConStyles.workBrushCon}>
         <SqBrushSplash
           brush={<BrushThree />}
-          img={SwiisWhyFosterTabImg}
+          img={swiisImg}
           imgAlt="Swiis Foster Care Why Foster on tablet"
           linkDesc="Swiis international web development page"
           linkUrl="/swiis/"
@@ -93,7 +93,7 @@ export default function Index({ data }) {
         <SqBrushSplash
           brush={<BrushOne />}
           dirTxtRight={true}
-          img={LypPropSearchDesktopImg}
+          img={lypImg}
           imgAlt="Love Your Postcode property search page on desktop"
           linkDesc="Love Your Postcode web development page"
           linkUrl="/loveyourpostcode/"
@@ -110,7 +110,7 @@ export default function Index({ data }) {
         </SqBrushSplash>
         <SqBrushSplash
           brush={<BrushTwo />}
-          img={BmaHpMobImg}
+          img={bmaImg}
           imgAlt="Bristol Marketing Agency homepage on mobile"
           linkDesc="Bristol Marketing Agency web design page"
           linkUrl="/bristol-marketing-agency/"
@@ -130,7 +130,7 @@ export default function Index({ data }) {
           brush={<BrushThree />}
           dirTxtRight={true}
           external={true}
-          img={MontyHallImg}
+          img={montyImg}
           imgAlt="Monty Hall's 3 doors"
           linkUrl="https://github.com/davidwillprice/montyhall"
           linkDesc="Github page for my Monty Hall Problem code"
@@ -183,7 +183,36 @@ export default function Index({ data }) {
 }
 export const pageQuery = graphql`
   query {
-    file(relativePath: { eq: "david-price-portrait.jpg" }) {
+    portrait: file(relativePath: { eq: "david-price-portrait.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    swiis: file(relativePath: { eq: "swiis/swiis-fc-why-foster-tablet.png" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    lyp: file(relativePath: { eq: "lyp/lyp-property-search-desktop.png" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    bma: file(relativePath: { eq: "bma/bma-hp-mob.png" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    monty: file(relativePath: { eq: "monty-hall/monty-hall-3-doors.png" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    f1: file(
+      relativePath: {
+        eq: "f1-prediction-game/f1-prediction-game-screenshot.png"
+      }
+    ) {
       childImageSharp {
         gatsbyImageData
       }
