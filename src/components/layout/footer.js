@@ -13,7 +13,7 @@ import LinkedInIcon from "../../svgs/footer/linkedin-icon.svg"
 import GitHubIcon from "../../svgs/footer/github-icon.svg"
 import CVIcon from "../../svgs/footer/cv-icon.svg"
 
-import CV from "../../documents/2021_david-price-cv.pdf"
+import CV from "../../documents/2022_david-price-cv.pdf"
 
 const Footer = props => (
   <footer className={footerCon}>
