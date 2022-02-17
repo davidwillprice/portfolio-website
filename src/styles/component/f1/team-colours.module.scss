@@ -36,18 +36,18 @@
     }
   }
   .mcl {
-    background-color: #ff8700;
+    background-color: rgb(255, 128, 0);
     :nth-child(2) {
-      background-color: #1264f4;
+      background-color: #47c7fc;
     }
     span {
-      color: rgb(4, 0, 51);
+      color: black;
     }
   }
   .ast {
-    background-color: #00584f;
+    background-color: #00594f;
     :nth-child(2) {
-      background-color: #c7da00;
+      background-color: #cedc00;
     }
   }
   .alf {
@@ -63,12 +63,12 @@
     }
   }
   .wil {
-    background-color: #061d41;
+    background-color: #041e42;
     :nth-child(2) {
-      background-color: #00a0de;
+      background-color: #00a3e0;
     }
     span {
-      color: #dea225;
+      color: #ff004f;
     }
   }
 }
