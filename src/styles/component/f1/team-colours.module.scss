@@ -1,8 +1,11 @@
 .teams2022 {
   .mer {
-    background-color: black;
+    background-color: #c6c6c6;
     :nth-child(2) {
       background-color: #00d2be;
+    }
+    span {
+      color: black;
     }
   }
   .fer {
@@ -23,7 +26,7 @@
   .alp {
     background-color: #007acc;
     :nth-child(2) {
-      background-color: #e2211c;
+      background-color: #f196c6;
     }
   }
   .has {
