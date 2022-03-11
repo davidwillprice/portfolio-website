@@ -11,7 +11,7 @@ export const entrantData = {
     alo: { fName: "Alonso", sName: "alo", team: "alp" },
     oco: { fName: "Ocon", sName: "oco", team: "alp" },
     sch: { fName: "Schumacher", sName: "sch", team: "has" },
-    maz: { fName: "Mazepin", sName: "maz", team: "has" },
+    mag: { fName: "Magnussen", sName: "mag", team: "has" },
     nor: { fName: "Norris", sName: "nor", team: "mcl" },
     ric: { fName: "Ricciardo", sName: "ric", team: "mcl" },
     vet: { fName: "Vettel", sName: "vet", team: "ast" },
@@ -46,7 +46,7 @@ const {
   alo,
   oco,
   sch,
-  maz,
+  mag,
   nor,
   ric,
   vet,
@@ -95,11 +95,11 @@ export const players = {
       rus,
       sch,
       lat,
-      maz,
+      mag,
     ],
     [mer, rbr, fer, ast, mcl, alp, alt, alf, wil, has]
     //Post pre season testing predictions
-    //[ham,ves,bot,per,ric,nor,vet,lec,str,alo,sai,gas,ocon,tsu,zho,alb,rus,sch,lat,maz]
+    //[ham,ves,bot,per,ric,nor,vet,lec,str,alo,sai,gas,ocon,tsu,zho,alb,rus,sch,lat,mag]
     //[mer, rbr, mcl, ast, fer, alp, alt, alf, wil, has]
   ),
   jack: new Player(
@@ -124,7 +124,7 @@ export const players = {
       alb,
       rus,
       sch,
-      maz,
+      mag,
       lat,
     ],
     [mer, rbr, ast, fer, mcl, alp, alt, alf, wil, has]
@@ -151,7 +151,7 @@ export const players = {
       alb,
       rus,
       sch,
-      maz,
+      mag,
       lat,
     ],
     [mer, rbr, mcl, ast, fer, alp, alt, alf, wil, has]
@@ -177,7 +177,7 @@ export const players = {
       zho,
       alb,
       sch,
-      maz,
+      mag,
       rus,
       lat,
     ],
@@ -205,7 +205,7 @@ export const players = {
       alb,
       sch,
       rus,
-      maz,
+      mag,
       lat,
     ],
     [rbr, mer, mcl, ast, alp, fer, alt, alf, has, wil]
@@ -232,7 +232,7 @@ export const players = {
       rus,
       alb,
       sch,
-      maz,
+      mag,
       lat,
     ],
     [mer, rbr, ast, mcl, fer, alp, alt, alf, has, wil]
@@ -257,7 +257,7 @@ export const players = {
       tsu,
       sch,
       zho,
-      maz,
+      mag,
       rus,
       alb,
       lat,
@@ -286,7 +286,7 @@ export const players = {
       sch,
       rus,
       tsu,
-      maz,
+      mag,
       lat,
     ],
     [mer, rbr, mcl, fer, ast, alp, alt, alf, has, wil]
@@ -313,7 +313,7 @@ export const players = {
       alb,
       rus,
       sch,
-      maz,
+      mag,
       lat,
     ],
     [mer, rbr, mcl, fer, ast, alp, alt, alf, wil, has]
@@ -378,7 +378,7 @@ export let rounds = [
       gas,
       lat,
       alo,
-      maz,
+      mag,
     ],
     [mer, rbr, mcl, fer, alt, ast, alf, alp, wil, has]
   ),
@@ -403,7 +403,7 @@ export let rounds = [
       rus,
       vet,
       sch,
-      maz,
+      mag,
       lat,
     ],
     [mer, rbr, mcl, fer, alt, ast, alp, alf, wil, has]
@@ -429,7 +429,7 @@ export let rounds = [
       vet,
       rus,
       sch,
-      maz,
+      mag,
       lat,
     ],
     [mer, rbr, mcl, fer, alp, alt, ast, alf, wil, has]
@@ -456,7 +456,7 @@ export let rounds = [
       rus,
       sch,
       lat,
-      maz,
+      mag,
     ],
     [mer, rbr, mcl, fer, alp, alt, ast, alf, wil, has]
   ),
@@ -482,7 +482,7 @@ export let rounds = [
       rus,
       lat,
       sch,
-      maz,
+      mag,
     ],
     [rbr, mer, mcl, fer, ast, alt, alp, alf, wil, has]
   ),
@@ -507,7 +507,7 @@ export let rounds = [
       alb,
       sch,
       rus,
-      maz,
+      mag,
       lat,
     ],
     [rbr, mer, fer, mcl, alt, ast, alp, alf, has, wil]
@@ -533,7 +533,7 @@ export let rounds = [
       alb,
       rus,
       sch,
-      maz,
+      mag,
       lat,
     ],
     [rbr, mer, mcl, fer, alt, ast, alp, alf, wil, has]
@@ -559,7 +559,7 @@ export let rounds = [
       alb,
       rus,
       sch,
-      maz,
+      mag,
       lat,
     ],
     [rbr, mer, mcl, fer, alt, ast, alp, alf, wil, has]
@@ -585,7 +585,7 @@ export let rounds = [
       alb,
       rus,
       sch,
-      maz,
+      mag,
       lat,
     ],
     [rbr, mer, mcl, fer, alt, ast, alp, alf, wil, has]
@@ -612,7 +612,7 @@ export let rounds = [
       zho,
       alb,
       sch,
-      maz,
+      mag,
     ],
     [mer, rbr, mcl, fer, alp, ast, alt, wil, alf, has]
   ),
@@ -638,7 +638,7 @@ export let rounds = [
       zho,
       alb,
       sch,
-      maz,
+      mag,
     ],
     [rbr, mer, mcl, fer, alp, alt, ast, wil, alf, has]
   ),
@@ -664,7 +664,7 @@ export let rounds = [
       zho,
       alb,
       sch,
-      maz,
+      mag,
     ],
     [mer, rbr, fer, mcl, alp, alt, ast, wil, alf, has]
   ),
@@ -690,7 +690,7 @@ export let rounds = [
       zho,
       alb,
       sch,
-      maz,
+      mag,
     ],
     [mer, rbr, mcl, fer, alp, alt, ast, wil, alf, has]
   ),
@@ -716,7 +716,7 @@ export let rounds = [
       zho,
       alb,
       sch,
-      maz,
+      mag,
     ],
     [mer, rbr, mcl, fer, alp, alt, ast, wil, alf, has]
   ),
@@ -742,7 +742,7 @@ export let rounds = [
       zho,
       alb,
       sch,
-      maz,
+      mag,
     ],
     [mer, rbr, mcl, fer, alp, alt, ast, wil, alf, has]
   ),
@@ -768,7 +768,7 @@ export let rounds = [
       zho,
       alb,
       sch,
-      maz,
+      mag,
     ],
     [mer, rbr, mcl, fer, alp, alt, ast, wil, alf, has]
   ),
@@ -794,7 +794,7 @@ export let rounds = [
       lat,
       alb,
       sch,
-      maz,
+      mag,
     ],
     [mer, rbr, fer, mcl, alp, alt, ast, wil, alf, has]
   ),
@@ -820,7 +820,7 @@ export let rounds = [
       lat,
       alb,
       sch,
-      maz,
+      mag,
     ],
     [mer, rbr, fer, mcl, alp, alt, ast, wil, alf, has]
   ),
@@ -846,7 +846,7 @@ export let rounds = [
       lat,
       alb,
       sch,
-      maz,
+      mag,
     ],
     [mer, rbr, fer, mcl, alp, alt, ast, wil, alf, has]
   ),
@@ -872,7 +872,7 @@ export let rounds = [
       lat,
       alb,
       sch,
-      maz,
+      mag,
     ],
     [mer, rbr, fer, mcl, alp, alt, ast, wil, alf, has]
   ),
@@ -898,7 +898,7 @@ export let rounds = [
       lat,
       alb,
       sch,
-      maz,
+      mag,
     ],
     [mer, rbr, fer, mcl, alp, alt, ast, wil, alf, has]
   ),
