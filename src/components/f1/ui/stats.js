@@ -71,6 +71,13 @@ export default function Stats(props) {
           change
           {controTeamPredicts.most.guessesFromAvg !== 1 ? "s" : ""});
         </li>
+        <li>
+          {controTeamPredicts.least.playerNames} had the least 'controversial'
+          team predictions, as they had the smallest difference from the average
+          prediction table ({controTeamPredicts.least.guessesFromAvg} position
+          change
+          {controTeamPredicts.least.guessesFromAvg !== 1 ? "s" : ""}).
+        </li>
         {props.children}
       </ul>
     </div>

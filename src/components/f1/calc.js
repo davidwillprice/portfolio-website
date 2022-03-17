@@ -270,7 +270,21 @@ export function getControPlayers(players, entrantType) {
       leastControPlayers.playerNames.push(player.name)
     }
   }
-  leastControPlayers.playerNames.join(", ")
-  mostControPlayers.playerNames.join(", ")
+  mostControPlayers.playerNames = formatArrayIntoList(
+    mostControPlayers.playerNames
+  )
+  leastControPlayers.playerNames = formatArrayIntoList(
+    leastControPlayers.playerNames
+  )
   return { most: mostControPlayers, least: leastControPlayers }
+}
+
+//Take an array, if it is more than 1 in length then add "& " at start of the last element and then add ", " between every element to make it into a list
+function formatArrayIntoList(arr) {
+  if (arr.length === 1) {
+    return arr
+  }
+  arr[arr.length - 1] = "& " + arr[arr.length - 1]
+  arr = arr.join(", ")
+  return arr
 }
