@@ -285,6 +285,10 @@ function formatArrayIntoList(arr) {
     return arr
   }
   arr[arr.length - 1] = "& " + arr[arr.length - 1]
-  arr = arr.join(", ")
+  if (arr.length === 2) {
+    arr = arr.join(" ")
+  } else {
+    arr = arr.join(", ")
+  }
   return arr
 }
