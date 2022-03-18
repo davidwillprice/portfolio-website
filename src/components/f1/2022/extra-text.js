@@ -19,5 +19,21 @@ export const helpNotes = (
 )
 
 export function statsNotes(isSeasonOver) {
-  return <Fragment></Fragment>
+  return (
+    <Fragment>
+      <li>
+        Nobody predicted Verstappen, Hamilton, Vettel, Gasly, Magnussen, or
+        Bottas would be beaten by their team mate;
+      </li>
+      <li>
+        Pete was the only person to predict a Ferrari constructors title, or a
+        Ferrari driver's title (Sainz);
+      </li>
+      <li>Pete was the only person to predict Ocon would beat Alonso;</li>
+      <li>
+        Everyone predicted McLaren would finish in 4th and Haas would finish in
+        8th.
+      </li>
+    </Fragment>
+  )
 }
