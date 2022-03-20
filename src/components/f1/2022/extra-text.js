@@ -26,14 +26,31 @@ export function statsNotes(isSeasonOver) {
         Bottas would be beaten by their team mate;
       </li>
       <li>
-        Pete was the only person to predict a Ferrari constructors title, or a
-        Ferrari driver's title (Sainz);
+        Pete & Sam were the only people to predict Ocon would beat Alonso;
       </li>
-      <li>Pete was the only person to predict Ocon would beat Alonso;</li>
       <li>
-        Everyone predicted McLaren would finish in 4th and Haas would finish in
-        8th.
+        Jack & Will were the only people to predict Riccardo would beat Norris;
       </li>
+      <li>
+        Tom & Will were the only people to predict Latifi would beat Albon;
+      </li>
+      <li>
+        Will was the only person to predict Russell would finish as low as 7th;
+      </li>
+      <li>
+        Pete was the only person to predict a Ferrari in the top two of the
+        drivers or constructors, predicting a Ferrari constructors and driver's
+        title (Sainz);
+      </li>
+      <li>
+        Richard was the only person to predict Haas would finish as high as 5th,
+        and Aston Martin as low as 9th;
+      </li>
+      <li>
+        Will was the only person to predict Aston Martin would finish as high as
+        5th;
+      </li>
+      <li>Everyone but Richard predicted McLaren would finish in 4th (3rd).</li>
     </Fragment>
   )
 }
