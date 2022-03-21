@@ -15,11 +15,10 @@ export default function Stats(props) {
   const controDriverPredicts = props.controDriverPredictions
   const controTeamPredicts = props.controTeamPredictions
 
-  //Get diff total, average it out by no of entrants and then round to one decimal place
-  function calcMisprediction(entrant, noOfEntrants) {
-    return Math.round((entrant.diffTotal / noOfEntrants) * 10) / 10
+  //Get diff total, average it out by no of predictions and then round to one decimal place
+  function calcMisprediction(entrant, noOfPredictions) {
+    return Math.round((entrant.diffTotal / noOfPredictions) * 10) / 10
   }
-
   return (
     <div className={statsCon}>
       <h2>Standings Stats</h2>
@@ -27,25 +26,29 @@ export default function Stats(props) {
         <li>
           {mostAccDriver.entrant.fName} {props.isSeasonOver ? "was" : "is"} the
           most accurately predicted driver, with the average player only
-          mispredicting him by {calcMisprediction(mostAccDriver, noOfDrivers)}{" "}
+          mispredicting him by{" "}
+          {calcMisprediction(mostAccDriver, props.noOfPredictions.driver)}{" "}
           positions;
         </li>
         <li>
           {leastAccDriver.entrant.fName} {props.isSeasonOver ? "was" : "is"} the
           least accurately predicted driver, with the average player
-          mispredicting him by {calcMisprediction(leastAccDriver, noOfDrivers)}{" "}
+          mispredicting him by{" "}
+          {calcMisprediction(leastAccDriver, props.noOfPredictions.driver)}{" "}
           positions;
         </li>
         <li>
           {mostAccTeam.entrant.fName} {props.isSeasonOver ? "were" : "are"} the
           most accurately predicted team, with the average player only
-          mispredicting them by {calcMisprediction(mostAccTeam, noOfTeams)}{" "}
+          mispredicting them by{" "}
+          {calcMisprediction(mostAccTeam, props.noOfPredictions.team)}{" "}
           positions;
         </li>
         <li>
           {leastAccTeam.entrant.fName} {props.isSeasonOver ? "were" : "are"} the
           least accurately predicted team, with the average player mispredicting
-          them by {calcMisprediction(leastAccTeam, noOfTeams)} positions.
+          them by {calcMisprediction(leastAccTeam, props.noOfPredictions.team)}{" "}
+          positions.
         </li>
       </ul>
       <h2>Predictions Triva</h2>

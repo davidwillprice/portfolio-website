@@ -22,6 +22,7 @@ import {
   orderEntrantDiffTotals,
   filteredPlayers,
   getControPlayers,
+  countPlayerEntries,
 } from "./calc"
 
 export default function F1Container(props) {
@@ -81,6 +82,12 @@ export default function F1Container(props) {
   const controDriverPredictions = getControPlayers(players, "driver")
   const controTeamPredictions = getControPlayers(players, "team")
 
+  console.log(rounds)
+
+  const noOfPredictions = {
+    driver: countPlayerEntries(players, "driver"),
+    team: countPlayerEntries(players, "team"),
+  }
   return (
     <div className={f1Main}>
       <NavBar changeMode={changeModeHandler} activeMode={mode} />
@@ -116,6 +123,7 @@ export default function F1Container(props) {
             isSeasonOver={isSeasonOver}
             controDriverPredictions={controDriverPredictions}
             controTeamPredictions={controTeamPredictions}
+            noOfPredictions={noOfPredictions}
           >
             {props.statsNotes(isSeasonOver)}
           </Stats>

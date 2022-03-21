@@ -292,3 +292,13 @@ function formatArrayIntoList(arr) {
   }
   return arr
 }
+
+export function countPlayerEntries(players, entrantType) {
+  let count = 0
+  for (const player in players) {
+    if (players[player][entrantType + "Table"].length) {
+      count++
+    }
+  }
+  return count
+}
