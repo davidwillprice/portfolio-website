@@ -10,7 +10,7 @@ export const helpNotes = (
       </a>{" "}
       &{" "}
       <a href="https://twitter.com/wbuxtonofficial/status/1502773974186479616?s=21">
-        Will Bruxton
+        Will Buxton
       </a>
       's predictions were trying to rank the teams at start of the season rather
       than guess the end of season standings.
