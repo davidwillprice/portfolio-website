@@ -39,7 +39,7 @@ export default function Help(props) {
         </li>
         <li>
           Each players' accuracy rating in the leaderboard shows how close they
-          are to a prefectly predicted table;
+          are to a perfectly predicted table;
         </li>
         <li>
           The player(s) with the most accurate driver and constructor tables at
