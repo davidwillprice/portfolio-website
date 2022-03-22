@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useMemo, useState } from "react"
 import NavBar from "./ui/navBar"
 import Help from "./ui/help"
 import FooterSlider from "./ui/footer-slider"
@@ -50,43 +50,44 @@ export default function F1Container(props) {
     setMode(event.target.getAttribute("data-mode"))
   }
 
-  const { teams, drivers, rounds, players } = props
+  const data = useMemo(() => {
+    let { teams, drivers, rounds, players } = props
+    //Populate players.average with prediction tables created by finding the mean positions of everyone else's predictions
+    players = generateAverageTable(players, drivers, "driver")
+    players = generateAverageTable(players, teams, "team")
 
-  //Populate players.average with prediction tables created by finding the mean positions of everyone else's predictions
-  generateAverageTable(players, drivers, "driver")
-  generateAverageTable(players, teams, "team")
+    //Order the prediction tables in players.average
+    players = orderAverageTable(players, "driver")
+    players = orderAverageTable(players, "team")
 
-  //Order the prediction tables in players.average
-  orderAverageTable(players, "driver")
-  orderAverageTable(players, "team")
+    //Based on the player predictions and round data, calculate the differences in entrant predictions for each player, their diff totals and their count of each diffs
+    calcData(players, rounds)
 
-  //Based on the player predictions and round data, calculate the differences in entrant predictions for each player, their diff totals and their count of each diffs
-  calcData(players, rounds)
+    //The leadboards have been generated, but aren't in the correct order so this function will order players based on performance
+    orderLeaderboards(rounds, "driver")
+    orderLeaderboards(rounds, "team")
 
-  //The leadboards have been generated, but aren't in the correct order so this function will order players based on performance
-  orderLeaderboards(rounds, "driver")
-  orderLeaderboards(rounds, "team")
+    //Calculate how players have moved on the leaderboards compared to the previous round
+    calcLeaderboardRdDiffs(rounds, "driver")
+    calcLeaderboardRdDiffs(rounds, "team")
 
-  //Calculate how players have moved on the leaderboards compared to the previous round
-  calcLeaderboardRdDiffs(rounds, "driver")
-  calcLeaderboardRdDiffs(rounds, "team")
+    //Tally up how accurate each player has been
+    generateEntrantDiffTotals(rounds, players, "driver", drivers)
+    generateEntrantDiffTotals(rounds, players, "team", teams)
 
-  //Tally up how accurate each player has been
-  generateEntrantDiffTotals(rounds, players, "driver", drivers)
-  generateEntrantDiffTotals(rounds, players, "team", teams)
+    //Order the players in each round by their percentage correct, highest first
+    orderEntrantDiffTotals(rounds, "driver")
+    orderEntrantDiffTotals(rounds, "team")
 
-  //Order the players in each round by their percentage correct, highest first
-  orderEntrantDiffTotals(rounds, "driver")
-  orderEntrantDiffTotals(rounds, "team")
+    return { teams: teams, drivers: drivers, rounds: rounds, players: players }
+  }, [props])
 
-  const controDriverPredictions = getControPlayers(players, "driver")
-  const controTeamPredictions = getControPlayers(players, "team")
-
-  console.log(rounds)
+  const controDriverPredictions = getControPlayers(data.players, "driver")
+  const controTeamPredictions = getControPlayers(data.players, "team")
 
   const noOfPredictions = {
-    driver: countPlayerEntries(players, "driver"),
-    team: countPlayerEntries(players, "team"),
+    driver: countPlayerEntries(data.players, "driver"),
+    team: countPlayerEntries(data.players, "team"),
   }
   return (
     <div className={f1Main}>
@@ -102,23 +103,27 @@ export default function F1Container(props) {
           <Leaderboard
             entrantType={entrantType}
             roundNo={selectedRound}
-            roundData={rounds}
+            roundData={data.rounds}
           />
         )}
         {mode === "standings" && (
           <Standings
             year={props.year}
-            roundData={rounds}
+            roundData={data.rounds}
             entrantType={entrantType}
             playerGroup={playerGroup}
             roundNo={selectedRound}
-            filteredPlayers={filteredPlayers(players, playerGroup, entrantType)}
+            filteredPlayers={filteredPlayers(
+              data.players,
+              playerGroup,
+              entrantType
+            )}
           />
         )}
         {mode === "help" && <Help year={props.year}>{props.helpNotes}</Help>}
         {mode === "stats" && (
           <Stats
-            roundData={rounds}
+            roundData={data.rounds}
             selectedRound={selectedRound}
             isSeasonOver={isSeasonOver}
             controDriverPredictions={controDriverPredictions}
@@ -134,8 +139,8 @@ export default function F1Container(props) {
         mode !== "help" && (
           <FooterSlider
             selectedRound={selectedRound}
-            noOfRounds={rounds.length}
-            trackName={rounds[selectedRound].trackName}
+            noOfRounds={data.rounds.length}
+            trackName={data.rounds[selectedRound].trackName}
             changeRound={changeRoundHandler}
           />
         )
