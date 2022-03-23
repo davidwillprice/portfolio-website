@@ -13,6 +13,10 @@ export default function Help(props) {
           from their actual standing - These are shown to the right of each
           predicted table row;
         </li>
+        <li>
+          If the player has made a perfect prediction, a green tick shows
+          instead of the penalty points;
+        </li>
         {/*<div className={f1PredictCSS.preview}>
         <div className={f1PredictCSS.tableRow}>
           <div className={`${f1PredictCSS.entrantBlock} ${f1PredictCSS.rbr}`}>

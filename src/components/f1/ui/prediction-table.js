@@ -1,5 +1,7 @@
 import React from "react"
 
+import { tick } from "../../../styles/component/f1/stats.module.scss"
+
 import {
   tableRow,
   entrantBlock,
@@ -69,7 +71,13 @@ export default function PredictionTables(props) {
           entrantType
         )}`}
       >
-        <span>{entrantData.posDiff}</span>
+        <span>
+          {entrantData.posDiff === 0 ? (
+            <span className={tick}>✔</span>
+          ) : (
+            entrantData.posDiff
+          )}
+        </span>
       </div>
     </div>
   ))
