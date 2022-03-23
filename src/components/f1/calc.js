@@ -76,15 +76,12 @@ export function calcData(players, rounds) {
       calcRoundPerformance("team", player)
       //Populate leaderboard for selected player within selected round
       function calcLeaderboard(entrantType, player) {
-        const maxDiff = entrantType === "driver" ? 200 : 50
         round.leaderboards[entrantType].push({
           player: player,
           //The % a table is to correct is difference of 200 and the diffTotal as a percentage of 200
-          percentCorrect: Math.round(
-            ((maxDiff -
-              player.season["round" + roundNo][entrantType].diffTotal) /
-              maxDiff) *
-              100
+          percentCorrect: calcPredictionsAcc(
+            entrantType,
+            player.season["round" + roundNo][entrantType].diffTotal
           ),
           prevRdDiff: 0,
         })
@@ -305,4 +302,10 @@ export function countPlayerEntries(players, entrantType) {
     }
   }
   return count
+}
+
+export function calcPredictionsAcc(entrantType, penaltyPoints) {
+  const maxDiff = entrantType === "driver" ? 200 : 50
+
+  return Math.round(((maxDiff - penaltyPoints) / maxDiff) * 100)
 }

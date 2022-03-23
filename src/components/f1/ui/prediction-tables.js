@@ -9,8 +9,9 @@ import {
   swipeIconRight,
   swipeIconLeft,
   predictionTables,
-  totalDiff,
+  accuracy,
 } from "../../../styles/component/f1/table.module.scss"
+import { calcPredictionsAcc } from "../calc"
 import * as teamColours from "../../../styles/component/f1/team-colours.module.scss"
 
 //Component to render all prediction tables
@@ -45,8 +46,13 @@ export default function PredictionTables(props) {
       <PredictionTable
         tableOrder={playerData[player].season[round][entrantType].diffs}
       />
-      <div className={totalDiff}>
-        Total: {playerData[player].season[round][entrantType].diffTotal}
+      <div className={accuracy}>
+        Accuracy:{" "}
+        {calcPredictionsAcc(
+          entrantType,
+          playerData[player].season[round][entrantType].diffTotal
+        )}
+        %
       </div>
     </div>
   ))

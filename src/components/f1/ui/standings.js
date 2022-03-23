@@ -37,6 +37,7 @@ export default function Standings(props) {
       />
       <PredictionTables
         year={props.year}
+        roundData={props.roundData}
         playerData={props.filteredPlayers}
         entrantType={props.entrantType}
         roundNo={props.roundNo}
