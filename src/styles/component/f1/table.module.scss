@@ -6,6 +6,9 @@
 .playerNumbers1.tablesOverview {
   max-width: 375px;
 }
+.playerNumbers2.tablesOverview {
+  max-width: 620px;
+}
 .playerNumbers3.tablesOverview {
   max-width: 800px;
 }
@@ -57,6 +60,9 @@
   overflow: hidden;
   width: 147px;
 }
+.predictionTables .entrantBlock {
+  width: calc(100% - 40px) !important;
+}
 .tableRow:first-child .entrantBlock {
   border-radius: 3px 3px 0px 0px;
 }
@@ -95,25 +101,30 @@
   display: none;
 }
 .posDiff {
-  width: 28px;
+  width: 42px;
   height: 30px;
   vertical-align: middle;
   display: flex;
   align-items: center;
   padding-left: 8px;
   float: left;
+  justify-content: space-between;
 }
-.diffZero {
-  opacity: 0;
+.posDiffIcon {
+  width: 20px;
+  float: right;
 }
-.diffLow {
-  opacity: 0.5;
+.posDiffIcon i {
+  border: solid red;
+  border-width: 0 1.5px 1.5px 0;
+  display: inline-block;
+  padding: 3px;
 }
-.diffMed {
-  opacity: 0.75;
+.posDiffIcon.up i {
+  transform: rotate(225deg) translate(-1px, -1px);
 }
-.diffHigh {
-  opacity: 1;
+.posDiffIcon.down i {
+  transform: rotate(45deg) translate(-2px, -2px);
 }
 .totalDiff {
   margin-top: 10px;
@@ -182,7 +193,24 @@
     display: block;
   }
   .playerNumbers5 .entrantBlock {
-    width: 85px;
+    width: 100%;
+  }
+}
+@media (max-width: 1050px) {
+  .playerNumbers4 .fullName {
+    display: none;
+  }
+  .playerNumbers4 .shortName {
+    display: block;
+  }
+  .playerNumbers4 .entrantBlock {
+    width: 100%;
+  }
+  .playerNumbers4 .predictionTables {
+    width: calc(100% - 130px);
+  }
+  .playerNumbers4.tablesOverview {
+    max-width: 700px;
   }
 }
 
@@ -203,9 +231,6 @@
   .playerNumbers5 .swipeIconCon {
     display: inherit;
   }
-  .playerNumbers5 .entrantBlock {
-    width: 100%;
-  }
   .playerNumbers5 .fullName {
     display: block;
   }
@@ -213,7 +238,7 @@
     display: none;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 840px) {
   .playerNumbers3 .fullName {
     display: none;
   }
@@ -221,22 +246,62 @@
     display: block;
   }
   .playerNumbers3 .entrantBlock {
-    width: 85px;
+    width: 100%;
   }
   .playerNumbers3 .predictionTables {
-    width: calc(100% - 150px);
+    width: calc(100% - 130px);
+  }
+  .playerNumbers3.tablesOverview {
+    max-width: 570px;
   }
 }
-@media (max-width: 550px) {
-  .playerNumbers3 .predictionTables {
-    width: calc(100% - 110px);
+@media (max-width: 750px) {
+  .playerNumbers4 .predictionTables {
+    flex-wrap: nowrap;
+    width: calc(100% - 150px);
   }
-  .playerNumbers5 .predictionTables .tableContainer {
+  .playerNumbers4 .predictionTables .tableContainer {
+    width: calc(50% - 20px);
+    margin-right: 20px;
+  }
+  .playerNumbers4 .swipeIconCon {
+    display: inherit;
+  }
+  .playerNumbers4 .fullName {
+    display: block;
+  }
+  .playerNumbers4 .shortName {
+    display: none;
+  }
+  .playerNumbers4 .entrantBlock {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .playerNumbers2 .fullName {
+    display: none;
+  }
+  .playerNumbers2 .shortName {
+    display: block;
+  }
+  .playerNumbers2 .entrantBlock {
+    width: 100%;
+  }
+  .playerNumbers2 .predictionTables {
+    width: calc(100% - 130px);
+  }
+  .playerNumbers2.tablesOverview {
+    max-width: 420px;
+  }
+}
+@media (max-width: 580px) {
+  .playerNumbers5 .predictionTables .tableContainer,
+  .playerNumbers4 .predictionTables .tableContainer {
     width: 100%;
     margin-right: 0;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .playerNumbers3 .predictionTables {
     flex-wrap: nowrap;
     width: calc(100% - 150px);
@@ -247,9 +312,6 @@
   }
   .playerNumbers3 .swipeIconCon {
     display: inherit;
-  }
-  .playerNumbers3 .entrantBlock {
-    width: 100%;
   }
   .playerNumbers3 .fullName {
     display: block;
@@ -262,6 +324,25 @@
     margin-bottom: 5px;
   }
 }
+@media (max-width: 450px) {
+  .playerNumbers2 .predictionTables {
+    flex-wrap: nowrap;
+    width: calc(100% - 150px);
+  }
+  .playerNumbers2 .predictionTables .tableContainer {
+    width: 100%;
+    margin-right: 0;
+  }
+  .playerNumbers2 .swipeIconCon {
+    display: inherit;
+  }
+  .playerNumbers2 .fullName {
+    display: block;
+  }
+  .playerNumbers2 .shortName {
+    display: none;
+  }
+}
 @media (max-width: 400px) {
   .playerNumbers1 .fullName {
     display: none;
@@ -270,7 +351,7 @@
     display: block;
   }
   .playerNumbers1 .entrantBlock {
-    width: 85px;
+    width: 100%;
   }
   .playerNumbers1 .predictionTables {
     width: calc(100% - 100px);
@@ -278,15 +359,21 @@
 }
 
 @media (max-width: 350px) {
+  .playerNumbers2 .predictionTables,
   .playerNumbers3 .predictionTables,
+  .playerNumbers4 .predictionTables,
   .playerNumbers5 .predictionTables {
     width: calc(100% - 100px);
   }
+  .playerNumbers2 .fullName,
   .playerNumbers3 .fullName,
+  .playerNumbers4 .fullName,
   .playerNumbers5 .fullName {
     display: none;
   }
+  .playerNumbers2 .shortName,
   .playerNumbers3 .shortName,
+  .playerNumbers4 .shortName,
   .playerNumbers5 .shortName {
     display: block;
   }

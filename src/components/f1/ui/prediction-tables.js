@@ -44,7 +44,6 @@ export default function PredictionTables(props) {
       </div>
       <PredictionTable
         tableOrder={playerData[player].season[round][entrantType].diffs}
-        entrantType={entrantType}
       />
       <div className={totalDiff}>
         Total: {playerData[player].season[round][entrantType].diffTotal}

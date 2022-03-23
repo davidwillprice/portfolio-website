@@ -56,10 +56,14 @@ export function calcData(players, rounds) {
             //Find the position the player predicted that entrant would come in the standings
             const actualPos = round.standings[entrantType].indexOf(entrant)
             //Work out how many positions the player is off
-            const posDiff = Math.abs(predictedPos - actualPos)
-            player.season["round" + roundNo][entrantType].diffCounts[posDiff]++
+            const posDiff = actualPos - predictedPos
+            player.season["round" + roundNo][entrantType].diffCounts[
+              Math.abs(posDiff)
+            ]++
             //Add the posDiff to their total for this round
-            player.season["round" + roundNo][entrantType].diffTotal += posDiff
+            player.season["round" + roundNo][entrantType].diffTotal += Math.abs(
+              posDiff
+            )
             //Add the entrant and their posDiff to the Player's data
             player.season["round" + roundNo][entrantType].diffs.push({
               entrant: entrant,
