@@ -1,7 +1,7 @@
 .teams2022 {
   .mer {
     background-color: #c6c6c6;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: #00d2be;
     }
     span {
@@ -10,13 +10,13 @@
   }
   .fer {
     background-color: #dc0000;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: black;
     }
   }
   .rbr {
     background-color: #00327d;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: #ea262a;
     }
     span {
@@ -25,7 +25,7 @@
   }
   .alp {
     background-color: #007acc;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: #f196c6;
     }
   }
@@ -34,13 +34,13 @@
     span {
       color: black;
     }
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: red;
     }
   }
   .mcl {
     background-color: rgb(255, 128, 0);
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: #47c7fc;
     }
     span {
@@ -49,25 +49,25 @@
   }
   .ast {
     background-color: #00594f;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: #cedc00;
     }
   }
   .alf {
     background-color: #9b0000;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: white;
     }
   }
   .alt {
     background-color: #203a54;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: white;
     }
   }
   .wil {
     background-color: #041e42;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: #00a3e0;
     }
     span {
@@ -78,19 +78,19 @@
 .teams2021 {
   .mer {
     background-color: black;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: #00d2be;
     }
   }
   .fer {
     background-color: #dc0000;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: black;
     }
   }
   .rbr {
     background-color: #00327d;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: #ea262a;
     }
     span {
@@ -99,7 +99,7 @@
   }
   .alp {
     background-color: #007acc;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: #e2211c;
     }
   }
@@ -108,13 +108,13 @@
     span {
       color: blue;
     }
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: red;
     }
   }
   .mcl {
     background-color: #ff8700;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: #1264f4;
     }
     span {
@@ -123,25 +123,25 @@
   }
   .ast {
     background-color: #00584f;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: #c7da00;
     }
   }
   .alf {
     background-color: #9b0000;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: white;
     }
   }
   .alt {
     background-color: #203a54;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: white;
     }
   }
   .wil {
     background-color: #061d41;
-    :nth-child(2) {
+    > :nth-child(2) {
       background-color: #00a0de;
     }
     span {
