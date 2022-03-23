@@ -295,7 +295,7 @@ export const players = {
     [],
     [rbr, fer, mer, mcl, alp, ast, alt, has, alf, wil]
   ),
-  bruxton: new Player(
+  buxton: new Player(
     //https://twitter.com/wbuxtonofficial/status/1502773974186479616?s=21
     "Will Buxton",
     ["misc"],
