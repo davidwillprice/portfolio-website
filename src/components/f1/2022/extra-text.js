@@ -43,6 +43,10 @@ export function statsNotes(isSeasonOver) {
         title (Sainz);
       </li>
       <li>
+        Pete was also the only person to predict Mercedes finishing as low as
+        3rd;
+      </li>
+      <li>
         Richard was the only person to predict Haas would finish as high as 5th,
         and Aston Martin as low as 9th;
       </li>
