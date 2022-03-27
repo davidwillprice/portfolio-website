@@ -165,17 +165,20 @@ export default function Index({ data }) {
             brush={<BrushOne />}
             img={f1Img}
             imgAlt="F1 prediction game screenshot"
-            linkUrl="/f1-prediction-game/2021/"
-            linkDesc="Github page for my Monty Hall Problem code"
+            linkUrl="/f1-prediction-game/2022/"
+            linkDesc="View F1 prediction game"
           >
             <h3>F1 Prediction Game</h3>
-            <p>2021</p>
+            <p>2020-</p>
             <p>
               Side project to create a game where people guess the final
-              standings of the 2021 Formula 1 season.
+              standings of each Formula 1 season.
             </p>
             <ButtonCon>
-              <Button url="/f1-prediction-game/2021/" btnText="View Game" />
+              <Button
+                url="/f1-prediction-game/2022/"
+                btnText="View F1 prediction game"
+              />
               <Button
                 external={true}
                 url="https://github.com/davidwillprice/portfolio-website/tree/main/src/components/f1"
