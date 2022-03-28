@@ -185,7 +185,7 @@ export function generateEntrantDiffTotals(
             entrantType
           ].find(element => element.entrant === entrant)
           //Add entrantStanding.posDiff to entrant's diff total
-          entrantTotal.diffTotal += entrantStanding.posDiff
+          entrantTotal.diffTotal += Math.abs(entrantStanding.posDiff)
         }
       }
     }
