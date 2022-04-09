@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout/layout"
 import StandardCentralText from "../components/standard-central-text"
-import Seo from "../components/head/seo.js"
+import Seo from "../components/head/seo"
 
 import { textLink } from "../styles/global.module.scss"
 import * as ShowcaseStyles from "../styles/page/showcasepage.module.scss"

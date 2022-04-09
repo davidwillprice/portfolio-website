@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
-import Seo from "../components/head/seo.js"
+import Seo from "../components/head/seo"
 import ColourPreview from "../components/colour-preview"
 import FullWidthImage from "../components/full-width-img"
 import StandardCentralText from "../components/standard-central-text"
