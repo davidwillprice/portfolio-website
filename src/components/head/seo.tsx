@@ -5,18 +5,6 @@ import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 import * as globalStyles from "../../styles/global.module.scss"
 
-interface Queries {
-  site: {
-    siteMetadata: {
-      defaultTitle: string
-      titleTemplate: string
-      defaultDescription: string
-      siteUrl: string
-      defaultImage: string
-    }
-  }
-}
-
 const Seo = ({
   title,
   description,
@@ -32,7 +20,7 @@ const Seo = ({
 }) => {
   const { pathname } = useLocation()
 
-  const { site }: Queries = useStaticQuery(query)
+  const { site }: any = useStaticQuery<GatsbyTypes.SEOQuery>(query)
 
   const {
     defaultTitle,
