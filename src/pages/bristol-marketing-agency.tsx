@@ -23,15 +23,15 @@ import mobileMenuGif from "../images/bma/bma-mob-menu.gif"
 import { IGatsbyImageData } from "gatsby-plugin-image/dist/src/components/gatsby-image.browser"
 
 export default function bristolAgency({
-  pageQuery,
+  data,
 }: {
-  pageQuery: {
+  data: {
     threeDeviceHp: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     conceptBoard: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
   }
 }) {
-  const threeDeviceHp = pageQuery.threeDeviceHp.childImageSharp.gatsbyImageData
-  const conceptBoard = pageQuery.conceptBoard.childImageSharp.gatsbyImageData
+  const threeDeviceHp = data.threeDeviceHp.childImageSharp.gatsbyImageData
+  const conceptBoard = data.conceptBoard.childImageSharp.gatsbyImageData
   return (
     <Layout marginTopDesktop={true}>
       <Seo
