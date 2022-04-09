@@ -2939,35 +2939,30 @@ type pageFKeyFilesWebsiteportfolioWebsitesrcpagesartJs3913544382QueryVariables =
 
 type pageFKeyFilesWebsiteportfolioWebsitesrcpagesartJs3913544382Query = { readonly file: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> };
 
-type pageFKeyFilesWebsiteportfolioWebsitesrcpagesbristolMarketingAgencyTsx1818692170QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type pageFKeyFilesWebsiteportfolioWebsitesrcpagesbristolMarketingAgencyTsx1818692170Query = { readonly threeDeviceHp: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly conceptBoard: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> };
-
 type pageFKeyFilesWebsiteportfolioWebsitesrcpagesgraphicDesignJs1430367362QueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type pageFKeyFilesWebsiteportfolioWebsitesrcpagesgraphicDesignJs1430367362Query = { readonly teslaNowIcon: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly aberLogo: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly springholmLogo: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> };
+
+type pageFKeyFilesWebsiteportfolioWebsitesrcpagesbristolMarketingAgencyTsx1818692170QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type pageFKeyFilesWebsiteportfolioWebsitesrcpagesbristolMarketingAgencyTsx1818692170Query = { readonly threeDeviceHp: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly conceptBoard: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> };
 
 type pageFKeyFilesWebsiteportfolioWebsitesrcpagesgraphicDesignteslanowJs1051186640QueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type pageFKeyFilesWebsiteportfolioWebsitesrcpagesgraphicDesignteslanowJs1051186640Query = { readonly icons: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> };
 
-type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
+type pageFKeyFilesWebsiteportfolioWebsitesrcpagesloveyourpostcodeJs1705027987QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+type pageFKeyFilesWebsiteportfolioWebsitesrcpagesloveyourpostcodeJs1705027987Query = { readonly factsTab: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> };
 
 type pageFKeyFilesWebsiteportfolioWebsitesrcpagesindexJs1604261212QueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type pageFKeyFilesWebsiteportfolioWebsitesrcpagesindexJs1604261212Query = { readonly portrait: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly swiis: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly lyp: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly bma: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly monty: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly f1: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> };
-
-type pageFKeyFilesWebsiteportfolioWebsitesrcpagesloveyourpostcodeJs1705027987QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type pageFKeyFilesWebsiteportfolioWebsitesrcpagesloveyourpostcodeJs1705027987Query = { readonly factsTab: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -2995,9 +2990,19 @@ type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
+type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
 type pageFKeyFilesWebsiteportfolioWebsitesrcpagesartsolargraphyJs977227343QueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type pageFKeyFilesWebsiteportfolioWebsitesrcpagesartsolargraphyJs977227343Query = { readonly image8: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly image8NoStreaks: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly image17: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly image28Zoom: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly image28ZoomView: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly image34: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly image35: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly image36: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly image44: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly image50: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly image50Inverted: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly image62: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly image73: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> };
+
+type pageFKeyFilesWebsiteportfolioWebsitesrcpagesindexTsx1604261212QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type pageFKeyFilesWebsiteportfolioWebsitesrcpagesindexTsx1604261212Query = { readonly portrait: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly swiis: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly lyp: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly bma: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly monty: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }>, readonly f1: Maybe<{ readonly childImageSharp: Maybe<Pick<ImageSharp, 'gatsbyImageData'>> }> };
 
 }
