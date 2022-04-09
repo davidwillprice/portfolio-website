@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout/layout"
+import Layout from "./layout/layout"
 import BrushPreview from "../components/brush-preview"
 
 import globalStyles from "../styles/global.module.css"

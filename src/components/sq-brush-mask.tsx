@@ -4,7 +4,18 @@ import * as sqBrushStyles from "../styles/component/sqbrush.module.scss"
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-class SqBrushMask extends Component {
+import { IGatsbyImageData } from "gatsby-plugin-image/dist/src/components/gatsby-image.browser"
+
+export default class SqBrushMask extends Component<{
+  imgAlt: string
+  img: IGatsbyImageData
+  external: boolean
+  linkUrl: string
+  size: string
+  linkDesc: string
+  dirTxtRight?: boolean
+  brush: string
+}> {
   html = () => {
     const brushContent = (
       <div className={sqBrushStyles.brushPreviewCon}>
@@ -62,5 +73,3 @@ class SqBrushMask extends Component {
     )
   }
 }
-
-export default SqBrushMask

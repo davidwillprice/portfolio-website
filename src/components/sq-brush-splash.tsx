@@ -1,10 +1,19 @@
-import React, { Component } from "react"
+import React, { Component, ReactElement } from "react"
 import * as sqBrushStyles from "../styles/component/sqbrush.module.scss"
 
 import { Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
-class SqBrushSplash extends Component {
+export default class SqBrushSplash extends Component<{
+  dirTxtRight?: boolean
+  external?: boolean
+  brush: ReactElement
+  imgAlt: string
+  img: IGatsbyImageData
+  linkDesc: string
+  linkUrl: string
+  nonDesktop?: boolean
+}> {
   CalcModCon = () => {
     let classes =
       sqBrushStyles.workExampleCon + " " + sqBrushStyles.brushSplashCon
@@ -70,5 +79,3 @@ class SqBrushSplash extends Component {
     )
   }
 }
-
-export default SqBrushSplash

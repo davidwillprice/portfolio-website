@@ -18,7 +18,20 @@ import BrushOne from "../svgs/brush-bg-1.svg"
 import BrushTwo from "../svgs/brush-bg-2.svg"
 import BrushThree from "../svgs/brush-bg-3.svg"
 
-export default function Index({ data }) {
+import { IGatsbyImageData } from "gatsby-plugin-image/dist/src/components/gatsby-image.browser"
+
+export default function Index({
+  data,
+}: {
+  data: {
+    portrait: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
+    swiis: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
+    lyp: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
+    bma: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
+    monty: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
+    f1: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
+  }
+}) {
   const portrait = data.portrait.childImageSharp.gatsbyImageData
   const swiisImg = data.swiis.childImageSharp.gatsbyImageData
   const lypImg = data.lyp.childImageSharp.gatsbyImageData
