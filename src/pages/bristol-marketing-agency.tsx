@@ -1,12 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
-import Seo from "../components/head/seo.js"
+import Seo from "../components/head/seo"
 import StandardCentralText from "../components/standard-central-text"
 import TextBesideImg from "../components/text-beside-img"
 import ColourPreview from "../components/colour-preview"
 import FullWidthImage from "../components/full-width-img"
-import FontShowcase from "../components/font-showcase.js"
+import FontShowcase from "../components/font-showcase"
 import ColourPreviewCon from "../components/colour-preview-con"
 
 import * as BrisAgencyStyles from "../styles/page/bristolagency.module.scss"
@@ -18,12 +18,20 @@ import IconsSVG from "../svgs/bma-icons.svg"
 import BlankMobile from "../svgs/blank-mobile.svg"
 
 import MobileMenu from "../images/bma/bma-mobile-menu-full.png"
-
 import mobileMenuGif from "../images/bma/bma-mob-menu.gif"
 
-export default function bristolAgency({ data }) {
-  const threeDeviceHp = data.threeDeviceHp.childImageSharp.gatsbyImageData
-  const conceptBoard = data.conceptBoard.childImageSharp.gatsbyImageData
+import { IGatsbyImageData } from "gatsby-plugin-image/dist/src/components/gatsby-image.browser"
+
+export default function bristolAgency({
+  pageQuery,
+}: {
+  pageQuery: {
+    threeDeviceHp: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
+    conceptBoard: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
+  }
+}) {
+  const threeDeviceHp = pageQuery.threeDeviceHp.childImageSharp.gatsbyImageData
+  const conceptBoard = pageQuery.conceptBoard.childImageSharp.gatsbyImageData
   return (
     <Layout marginTopDesktop={true}>
       <Seo

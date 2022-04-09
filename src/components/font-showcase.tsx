@@ -1,6 +1,13 @@
-import React from "react"
+import React, { ReactChild } from "react"
 import * as fontShowcaseStyles from "../styles/component/font-showcase.module.scss"
-const FontShowcase = props => (
+const FontShowcase = (props: {
+  fontFamily: string
+  color: string
+  fontWeight?: number | undefined
+  bgColor: string
+  children?: ReactChild | ReactChild[]
+  fontName: string
+}) => (
   <div
     className={fontShowcaseStyles.container}
     style={{

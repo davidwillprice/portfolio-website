@@ -9,37 +9,43 @@ import {
 
 import AccessibilityIcon from "../../svgs/accessibility.svg"
 
-class Accessibility extends Component {
+interface MyWindow extends Window {
+  __setPreferredFont(font: string): void
+  __setPreferredTheme(font: string): void
+}
+declare var window: MyWindow
+
+export default class Accessibility extends Component {
   state = {
     activeMenu: false,
   }
   toggleMenu = () => {
-    this.setState(state => ({ activeMenu: !state.activeMenu }))
+    this.setState(state => ({ activeMenu: !this.state.activeMenu }))
   }
-  toggleFont(type, font) {
+  toggleFont(type: string, font: string) {
     const html = document.querySelector("html")
-    if (html.getAttribute(type)) {
+    if (html!.getAttribute(type)) {
       window.__setPreferredFont("normal")
-      html.removeAttribute(type)
+      html!.removeAttribute(type)
     } else {
-      html.setAttribute(type, font)
-      window.__setPreferredFont(font)
+      html!.setAttribute(type, font)
+      window!.__setPreferredFont(font)
     }
   }
-  toggleTheme(type, mode) {
+  toggleTheme(type: string, theme: string) {
     const html = document.querySelector("html")
-    if (html.getAttribute(type)) {
+    if (html!.getAttribute(type)) {
       window.__setPreferredTheme("normal")
-      html.removeAttribute(type)
+      html!.removeAttribute(type)
     } else {
-      window.__setPreferredTheme(mode)
-      html.setAttribute(type, mode)
+      window.__setPreferredTheme(theme)
+      html!.setAttribute(type, theme)
     }
   }
   resetSettings() {
     const html = document.querySelector("html")
-    html.removeAttribute("data-theme")
-    html.removeAttribute("data-font")
+    html!.removeAttribute("data-theme")
+    html!.removeAttribute("data-font")
     window.__setPreferredTheme("normal")
     window.__setPreferredFont("normal")
   }
@@ -48,12 +54,10 @@ class Accessibility extends Component {
       <div className={this.state.activeMenu ? activeMenu : undefined}>
         <div className={optionCon}>
           <h3>Accessibility options</h3>
-          <button
-            onClick={e => this.toggleTheme("data-theme", "highContrast", e)}
-          >
+          <button onClick={e => this.toggleTheme("data-theme", "highContrast")}>
             High contrast mode
           </button>
-          <button onClick={e => this.toggleFont("data-font", "dyslexic", e)}>
+          <button onClick={e => this.toggleFont("data-font", "dyslexic")}>
             Dyslexic mode
           </button>
           <button onClick={this.resetSettings}>Reset settings</button>
@@ -75,4 +79,3 @@ class Accessibility extends Component {
     )
   }
 }
-export default Accessibility

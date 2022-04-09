@@ -5,9 +5,34 @@ import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 import * as globalStyles from "../../styles/global.module.scss"
 
-const Seo = ({ title, description, image, article, bgColor }) => {
+interface Queries {
+  site: {
+    siteMetadata: {
+      defaultTitle: string
+      titleTemplate: string
+      defaultDescription: string
+      siteUrl: string
+      defaultImage: string
+    }
+  }
+}
+
+const Seo = ({
+  title,
+  description,
+  image,
+  article,
+  bgColor,
+}: {
+  title: string
+  description: string
+  image?: string
+  article?: string
+  bgColor?: string
+}) => {
   const { pathname } = useLocation()
-  const { site } = useStaticQuery(query)
+
+  const { site }: Queries = useStaticQuery(query)
 
   const {
     defaultTitle,
@@ -26,6 +51,38 @@ const Seo = ({ title, description, image, article, bgColor }) => {
 
   let bgColourClass = bgColor ? bgColor + "Bg" : ""
 
+  function setTheme(theme: string) {
+    if (theme === "highContrast") {
+      document.querySelector("html")?.setAttribute("data-theme", "highContrast")
+    }
+    ;(window as any).__theme = theme
+  }
+  ;(window as any).__setPreferredTheme = function (theme: string) {
+    setTheme(theme)
+    try {
+      localStorage.setItem("preferred-theme", theme)
+    } catch (e) {}
+  }
+  let preferredTheme = localStorage.getItem("preferred-theme")!
+
+  setTheme(preferredTheme)
+
+  function setFont(font: string) {
+    if (font === "dyslexic") {
+      document.querySelector("html")?.setAttribute("data-font", "dyslexic")
+    }
+    ;(window as any).__font = font
+  }
+  ;(window as any).__setPreferredFont = function (font: string) {
+    setFont(font)
+    try {
+      localStorage.setItem("preferred-font", font)
+    } catch (e) {}
+  }
+  let preferredFont = localStorage.getItem("preferred-font")!
+
+  setFont(preferredFont)
+
   return (
     <Helmet
       bodyAttributes={{ class: globalStyles[bgColourClass] }}
@@ -34,51 +91,6 @@ const Seo = ({ title, description, image, article, bgColor }) => {
         seo.title === "David Price Web Design" ? "" : titleTemplate
       }
     >
-      <script type="javascript">
-        {(function () {
-          if (typeof window !== "undefined") {
-            function setTheme(theme) {
-              if (theme === "highContrast") {
-                document
-                  .querySelector("html")
-                  .setAttribute("data-theme", "highContrast")
-              }
-              window.__theme = theme
-            }
-            window.__setPreferredTheme = function (theme) {
-              setTheme(theme)
-              try {
-                localStorage.setItem("preferred-theme", theme)
-              } catch (e) {}
-            }
-            var preferredTheme
-            try {
-              preferredTheme = localStorage.getItem("preferred-theme")
-            } catch (e) {}
-            setTheme(preferredTheme)
-
-            function setFont(font) {
-              if (font === "dyslexic") {
-                document
-                  .querySelector("html")
-                  .setAttribute("data-font", "dyslexic")
-              }
-              window.__font = font
-            }
-            window.__setPreferredFont = function (font) {
-              setFont(font)
-              try {
-                localStorage.setItem("preferred-font", font)
-              } catch (e) {}
-            }
-            var preferredFont
-            try {
-              preferredFont = localStorage.getItem("preferred-font")
-            } catch (e) {}
-            setFont(preferredFont)
-          }
-        })()}
-      </script>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 

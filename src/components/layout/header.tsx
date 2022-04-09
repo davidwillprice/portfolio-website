@@ -5,13 +5,13 @@ import Logo from "../../svgs/personal-logo.svg"
 
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
-class Header extends Component {
+export default class Header extends Component {
   state = {
     isMobMenuTrig: false,
     randomNo: Math.random() * 1,
   }
   toggleMobMenu = () => {
-    this.setState(state => ({ isMobMenuTrig: !state.isMobMenuTrig }))
+    this.setState(state => ({ isMobMenuTrig: !this.state.isMobMenuTrig }))
   }
   closeMobMenu = () => {
     this.setState(state => ({ isMobMenuTrig: false }))
@@ -75,5 +75,3 @@ class Header extends Component {
     )
   }
 }
-
-export default Header

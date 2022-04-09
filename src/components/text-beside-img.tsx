@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactChild } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import {
   con,
@@ -6,7 +6,14 @@ import {
   imageCon,
 } from "../styles/component/text-beside-img.module.scss"
 
-const TextBesideImg = props => (
+import { IGatsbyImageData } from "gatsby-plugin-image/dist/src/components/gatsby-image.browser"
+
+const TextBesideImg = (props: {
+  children: ReactChild | ReactChild[]
+  headerText: string
+  imgAlt: string
+  img: IGatsbyImageData
+}) => (
   <div className={con}>
     <div className={imageCon}>
       <GatsbyImage image={props.img} alt={props.imgAlt} />

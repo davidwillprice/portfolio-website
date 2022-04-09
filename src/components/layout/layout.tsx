@@ -4,7 +4,11 @@ import Header from "./header"
 import Footer from "./footer"
 import Accessibility from "./accessibility"
 
-class Layout extends Component {
+export default class Layout extends Component<{
+  widthLimited: boolean
+  marginTopDesktop: boolean
+  footer: boolean
+}> {
   state = {
     usingMouse: false,
   }
@@ -13,7 +17,7 @@ class Layout extends Component {
     this.setState({ usingMouse: true })
   }
   //If tab has been pressed, update state
-  usingKeysFn = e => {
+  usingKeysFn = (e: KeyboardEvent) => {
     if (e.key === "Tab") {
       this.setState({ usingMouse: false })
     }
@@ -53,11 +57,8 @@ class Layout extends Component {
       </div>
     )
   }
+  static defaultProps = {
+    footer: true,
+    widthLimited: true,
+  }
 }
-
-Layout.defaultProps = {
-  footer: true,
-  widthLimited: true,
-}
-
-export default Layout

@@ -1,7 +1,11 @@
 import React from "react"
 import * as colourPreviewStyles from "../styles/component/colour-preview.module.scss"
 
-const ColourPreview = props => (
+const ColourPreview = (props: {
+  hexColour: string
+  rgbColour: string
+  textColour: string
+}) => (
   <div
     className={colourPreviewStyles.container}
     style={{ backgroundColor: props.hexColour }}

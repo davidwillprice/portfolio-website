@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import Layout from "../../components/layout/layout"
-import Seo from "../../components/head/seo.js"
+import Seo from "../../components/head/seo"
 
 import F1Container from "../../components/f1/container"
 
