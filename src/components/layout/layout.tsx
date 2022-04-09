@@ -6,7 +6,7 @@ import Accessibility from "./accessibility"
 
 export default class Layout extends Component<{
   widthLimited: boolean
-  marginTopDesktop: boolean
+  marginTopDesktop?: boolean
   footer: boolean
 }> {
   state = {

@@ -6,7 +6,7 @@ export default function ButtonCon({
   align,
   children,
 }: {
-  align: string
+  align?: string
   children: ReactChild | ReactChild[]
 }) {
   const alignment =

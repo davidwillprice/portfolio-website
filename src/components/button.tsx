@@ -5,11 +5,11 @@ import { Link } from "gatsby"
 import GitHubIcon from "../svgs/footer/github-icon.svg"
 
 export default class Button extends Component<{
-  btnIcon: string
-  linkDesc: string
-  btnColor: string
+  btnIcon?: string
+  linkDesc?: string
+  btnColor?: string
   btnText: string
-  external: boolean
+  external?: boolean
   url: string
 }> {
   render() {
@@ -23,7 +23,7 @@ export default class Button extends Component<{
       if (external) {
         return (
           <a
-            aria-label={linkDesc}
+            aria-label={linkDesc ? btnText : ""}
             href={url}
             className={`${LogoShowcaseStyles.button} ${
               btnColor
@@ -38,7 +38,7 @@ export default class Button extends Component<{
       } else {
         return (
           <Link
-            aria-label={linkDesc}
+            aria-label={linkDesc ? btnText : ""}
             to={url}
             className={`${LogoShowcaseStyles.button} ${
               btnColor
