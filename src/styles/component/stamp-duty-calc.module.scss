@@ -1,0 +1,273 @@
+@import "../sass-variables.scss";
+
+.hide {
+  display: none;
+}
+
+.con {
+  max-width: 1000px;
+  margin: 30px auto 20px;
+  background: #eef0ee;
+  border-radius: 5px;
+  * {
+    color: #505050;
+    font-family: arial;
+  }
+}
+.bg {
+  max-width: 650px;
+  padding: 20px 15px 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  color: #505050;
+}
+.header {
+  font-size: 24px;
+  text-align: center;
+  color: #1d859b;
+}
+.calcCon {
+  margin: 0 auto;
+  width: 100%;
+  color: #505050;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.housePriceCon {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.housePrice {
+  display: flex;
+  margin-bottom: 5px;
+}
+.currency {
+  height: 48px;
+  width: 48px;
+  border-radius: 5px;
+  border: 1px solid #d5d5d5;
+  background-color: #fff;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 600;
+  margin-right: 5px;
+}
+.housePriceInput {
+  font-size: 20px;
+  font-weight: 500;
+  height: 48px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 6px;
+  margin: 0 7px 0 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #1d859b;
+  cursor: text;
+}
+.errorMessage {
+  display: flex;
+  svg {
+    float: left;
+    fill: red;
+    margin-right: 5px;
+    padding: 1px;
+    overflow: visible;
+  }
+  p {
+    color: red;
+    font-style: italic;
+    margin: 2px 0 0;
+  }
+}
+.calcButton {
+  font-size: 17px;
+  padding: 11px 20px;
+  border: 1px solid #59585a;
+  background-color: #59585a;
+  width: 140px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background: 0 0;
+    color: #59585a;
+    transition: color 0.3s, background-color 0.2s;
+  }
+}
+.buyerTypeCon {
+  margin: 10px 0 10px;
+}
+.buyerType {
+  position: relative;
+  padding: 2px 0 0 35px;
+  margin-bottom: 15px;
+}
+.buyerTypeInput {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  margin: 0;
+  &:hover ~ .checkmark {
+    background-color: #f3f3f3;
+  }
+  &:checked ~ .checkmark {
+    background-color: #59585a;
+  }
+  &:checked ~ .checkmark:after {
+    display: block;
+  }
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: 0.3s background-color;
+  &::after {
+    left: 8px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}
+.resultsCon {
+  width: 100%;
+  margin-top: 20px;
+  h3 {
+    border-bottom: 2px solid #59585a30;
+    color: #59585a;
+    font-weight: 400;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  td,
+  th {
+    font-size: 17.5px;
+    border: 3px solid #fff;
+    padding: 5px;
+    text-align: center;
+  }
+  .col0 {
+    text-align: left;
+  }
+}
+.resultsMain {
+  display: flex;
+}
+.resultsTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 20px auto 0;
+}
+.finalFigure {
+  font-size: 17px;
+  width: 50%;
+  float: left;
+  font-weight: 600;
+  span {
+    margin-top: 10px;
+    color: #1d859b;
+    font-size: 25px;
+  }
+}
+.col1 {
+  background-color: #e6e6e6;
+}
+.col2 {
+  background-color: #ddd;
+}
+.col3 {
+  background-color: #cfcfcf;
+}
+.col1 > span,
+.col2 > span,
+.col3 > span {
+  color: #1d859b;
+}
+.disclaimer {
+  margin: 20px 0 0;
+  font-size: 10px;
+}
+/*End of Desktop CSS */
+
+@media only screen and (min-width: 800px) {
+  .taxBandShort {
+    display: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .taxBandLong {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .resultsCon td,
+  .resultsCon th {
+    font-size: 14px;
+    padding: 3px;
+    border: 3px solid #fff;
+  }
+  .calcCon {
+    flex-direction: column;
+  }
+  .calcButton {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .currency {
+    width: 30px;
+  }
+  .housePriceInput {
+    margin: 0;
+    width: calc(100% - 35px);
+  }
+  .resultsMain {
+    flex-direction: column;
+  }
+  .finalFigure {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .resultsTable {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .housePriceInput {
+    margin: 0;
+  }
+  .resultsCon {
+    td,
+    th {
+      font-size: 10.5px;
+      padding: 2px;
+      border: 3px solid #fff;
+    }
+  }
+}
