@@ -9,9 +9,9 @@ import { IGatsbyImageData } from "gatsby-plugin-image/dist/src/components/gatsby
 export default class SqBrushMask extends Component<{
   imgAlt: string
   img: IGatsbyImageData
-  external: boolean
+  external?: boolean
   linkUrl: string
-  size: string
+  size?: string
   linkDesc: string
   dirTxtRight?: boolean
   brush: string
