@@ -15,10 +15,12 @@ export default function Art({
   data,
 }: {
   data: {
-    childImageSharp: { gatsbyImageData: IGatsbyImageData }
+    file: {
+      childImageSharp: { gatsbyImageData: IGatsbyImageData }
+    }
   }
 }) {
-  const solargraphy = data.childImageSharp.gatsbyImageData
+  const solargraphy = data.file.childImageSharp.gatsbyImageData
   return (
     <Layout>
       <Seo
