@@ -5,6 +5,15 @@ import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 import * as globalStyles from "../../styles/global.module.scss"
 
+interface customWindow extends Window {
+  __theme?: string
+  __font?: string
+  __setPreferredTheme?: (theme: string) => void
+  __setPreferredFont?: (font: string) => void
+}
+
+declare const window: customWindow
+
 const Seo = ({
   title,
   description,
@@ -39,37 +48,41 @@ const Seo = ({
 
   let bgColourClass = bgColor ? bgColor + "Bg" : ""
 
-  function setTheme(theme: string) {
-    if (theme === "highContrast") {
-      document.querySelector("html")?.setAttribute("data-theme", "highContrast")
+  if (typeof window !== "undefined") {
+    function setTheme(theme: string) {
+      if (theme === "highContrast") {
+        document
+          .querySelector("html")
+          ?.setAttribute("data-theme", "highContrast")
+      }
+      window.__theme = theme
     }
-    ;(window as any).__theme = theme
-  }
-  ;(window as any).__setPreferredTheme = function (theme: string) {
-    setTheme(theme)
-    try {
-      localStorage.setItem("preferred-theme", theme)
-    } catch (e) {}
-  }
-  let preferredTheme = localStorage.getItem("preferred-theme")!
-
-  setTheme(preferredTheme)
-
-  function setFont(font: string) {
-    if (font === "dyslexic") {
-      document.querySelector("html")?.setAttribute("data-font", "dyslexic")
+    window.__setPreferredTheme = function (theme: string) {
+      setTheme(theme)
+      try {
+        localStorage.setItem("preferred-theme", theme)
+      } catch (e) {}
     }
-    ;(window as any).__font = font
-  }
-  ;(window as any).__setPreferredFont = function (font: string) {
-    setFont(font)
-    try {
-      localStorage.setItem("preferred-font", font)
-    } catch (e) {}
-  }
-  let preferredFont = localStorage.getItem("preferred-font")!
+    let preferredTheme = localStorage.getItem("preferred-theme")!
 
-  setFont(preferredFont)
+    setTheme(preferredTheme)
+
+    function setFont(font: string) {
+      if (font === "dyslexic") {
+        document.querySelector("html")?.setAttribute("data-font", "dyslexic")
+      }
+      ;(window as any).__font = font
+    }
+    window.__setPreferredFont = function (font: string) {
+      setFont(font)
+      try {
+        localStorage.setItem("preferred-font", font)
+      } catch (e) {}
+    }
+    let preferredFont = localStorage.getItem("preferred-font")!
+
+    setFont(preferredFont)
+  }
 
   return (
     <Helmet
