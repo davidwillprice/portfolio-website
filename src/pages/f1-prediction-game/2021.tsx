@@ -16,10 +16,10 @@ import {
 
 export default class f1Predict2021 extends Component {
   componentDidMount() {
-    document.querySelector("html").style.backgroundColor = "#242424"
+    document.querySelector("html")!.style.backgroundColor = "#242424"
   }
   componentWillUnmount() {
-    document.querySelector("html").removeAttribute("style")
+    document.querySelector("html")?.removeAttribute("style")
   }
   render() {
     return (
