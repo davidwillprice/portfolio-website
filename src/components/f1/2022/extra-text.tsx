@@ -18,7 +18,7 @@ export const helpNotes = (
   </Fragment>
 )
 
-export function statsNotes(isSeasonOver) {
+export function statsNotes(isSeasonOver: boolean) {
   return (
     <Fragment>
       <li>

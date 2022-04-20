@@ -1,4 +1,6 @@
 import { getPlayerGroups } from "../calc"
+import { Player, Round, Players } from "../classes"
+
 //All entrant starting (driver/team) data
 export const entrantData = {
   drivers: {
@@ -62,16 +64,8 @@ const { mer, fer, rbr, mcl, alp, alt, ast, has, alf, wil } = entrantData.teams
 export const drivers = entrantData.drivers
 export const teams = entrantData.teams
 
-//Object constructors for players
-function Player(name, groups, driverTable, teamTable) {
-  this.name = name
-  this.groups = groups
-  this.driverTable = driverTable
-  this.teamTable = teamTable
-  this.season = {}
-}
 //Player data
-export const players = {
+export const players: Players = {
   david: new Player(
     "David",
     ["aberystwyth", "brr", "herefordshire"],
@@ -333,25 +327,7 @@ export const players = {
   ),
 }
 export const playerGroupsArr = getPlayerGroups(players)
-//Object constructors for rounds
-class Round {
-  constructor(trackName, driverStandings, teamStandings) {
-    this.trackName = trackName
-    this.standings = {
-      driver: driverStandings,
-      team: teamStandings,
-    }
-    this.leaderboards = {
-      //{Player:{playerName}, diffTotal:{diffTotal}] - Ordered in least points
-      driver: [],
-      team: [],
-    }
-    this.entrantDiffTotals = {
-      driver: [],
-      team: [],
-    }
-  }
-}
+
 //Round data
 export let rounds = [
   new Round(

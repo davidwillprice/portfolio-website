@@ -1,7 +1,14 @@
-export function generateAverageTable(players, entrantData, entrantType) {
+import { Player, Round, Players } from "./classes"
+
+export function generateAverageTable(
+  players: Players,
+  entrantData: any,
+  entrantType: string
+) {
+  console.log(players)
   //Delete the average table if it exists from a previous render
-  if (players.average[entrantType + "Table"]) {
-    players.average[entrantType + "Table"] = []
+  if (players.average.tables[entrantType as keyof Player["tables"]]) {
+    players.average.tables[entrantType as keyof Player["tables"]] = []
   }
   //Loop over each entrant, finding their index in each player's prediction table and totalling them in a new avgPrePos property
   for (const entrant of Object.values(entrantData)) {
@@ -9,26 +16,33 @@ export function generateAverageTable(players, entrantData, entrantType) {
     let noOfPlayers = 0
     for (const player of Object.values(players)) {
       //Checking player does actually predict entrant
-      if (player[entrantType + "Table"].indexOf(entrant) !== -1) {
-        predictionPosTotal += player[entrantType + "Table"].indexOf(entrant) + 1
+      if (
+        player.tables[entrantType as keyof Player["tables"]].indexOf(
+          entrant
+        ) !== -1
+      ) {
+        predictionPosTotal +=
+          player.tables[entrantType as keyof Player["tables"]].indexOf(
+            entrant
+          ) + 1
         noOfPlayers++
       }
     }
     entrant.avgPrePos = predictionPosTotal / noOfPlayers
-    players.average[entrantType + "Table"].push(entrant)
+    players.average.tables[entrantType as keyof Player["tables"]].push(entrant)
   }
   return players
 }
 
-export function orderAverageTable(players, entrantType) {
+export function orderAverageTable(players, entrantType: string) {
   //Sort the players by their percentage correct, highest first
-  players.average[entrantType + "Table"].sort((a, b) =>
+  players.average.tables[entrantType].sort((a, b) =>
     a.avgPrePos > b.avgPrePos ? 1 : -1
   )
   return players
 }
 
-export function calcData(players, rounds) {
+export function calcData(players, rounds: Round[]) {
   //Loop through each round
   for (const [roundNo, round] of Object.entries(rounds)) {
     //Delete the leaderboards if they exist from a previous render
@@ -49,9 +63,9 @@ export function calcData(players, rounds) {
       }
       //Loop the player's predictions, each driver and their pos difference from that round's standings
       function calcRoundPerformance(entrantType, player) {
-        if (player[entrantType + "Table"].length > 0) {
+        if (player.tables[entrantType].length > 0) {
           for (const [predictedPos, entrant] of Object.entries(
-            player[entrantType + "Table"]
+            player.tables[entrantType]
           )) {
             //Find the position the player predicted that entrant would come in the standings
             const actualPos = round.standings[entrantType].indexOf(entrant)
@@ -208,7 +222,7 @@ export function filteredPlayers(players, playerGroup, entrantType) {
   for (const key of Object.keys(players)) {
     if (
       players[key].groups.includes(playerGroup) &&
-      players[key][entrantType + "Table"].length > 0
+      players[key].tables[entrantType].length > 0
     ) {
       obj[key] = players[key]
     }
@@ -232,18 +246,15 @@ export function getControPlayers(players, entrantType) {
   //Loop through each player
   for (const player of Object.values(players)) {
     //If the player is "average" or doesn't have predictions for that entrant type, skip them
-    if (
-      player.name === "Average" ||
-      player[entrantType + "Table"].length === 0
-    ) {
+    if (player.name === "Average" || player.tables[entrantType].length === 0) {
       continue
     }
     let totalGuessesfromAverage = 0
     //Loop over their entrants, adding their difference from average to total
     for (const [predictedPos, entrant] of Object.entries(
-      player[entrantType + "Table"]
+      player.tables[entrantType]
     )) {
-      const avgPredictedPos = players.average[entrantType + "Table"].indexOf(
+      const avgPredictedPos = players.average.tables[entrantType].indexOf(
         entrant
       )
       const posDiffs = Math.abs(predictedPos - avgPredictedPos)
@@ -294,10 +305,10 @@ function formatArrayIntoList(arr) {
   return arr
 }
 
-export function countPlayerEntries(players, entrantType) {
+export function countPlayerEntries(players: Player[], entrantType) {
   let count = 0
   for (const player in players) {
-    if (players[player][entrantType + "Table"].length) {
+    if (players[player].tables[entrantType].length) {
       count++
     }
   }

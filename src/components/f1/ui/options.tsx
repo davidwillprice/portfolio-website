@@ -6,11 +6,15 @@ import {
 } from "../../../styles/component/f1/options.module.scss"
 
 export default function Options(props) {
-  function changePlayerGroupHandler(event) {
-    props.changePlayerGroup(event)
+  function changePlayerGroupHandler(
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) {
+    props.changePlayerGroup(event.target.value)
   }
-  function changeEntrantTypeHandler(event) {
-    props.changeEntrantType(event)
+  function changeEntrantTypeHandler(
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) {
+    props.changeEntrantType(event.target.value)
   }
   return (
     //If in the leaderboard or standings section, allow the user to pick whether they want to see the driver or constructor standings/leaderboard

@@ -11,7 +11,7 @@ import {
   perfectPredictions,
 } from "../../../styles/component/f1/leaderboard.module.scss"
 
-function prevRdDiffUI(prevRdDiff) {
+function prevRdDiffUI(prevRdDiff: number) {
   return prevRdDiff > 0
     ? posLeaderboardChg
     : prevRdDiff < 0
@@ -29,7 +29,7 @@ export default function Leaderboard(props) {
   //Go to the leaderboards of the selected entrantType in the selected round and filter out any players which didn't make predictions for that entrant type
   const filteredRoundData = roundData[roundNo].leaderboards[entrantType].filter(
     leaderboardStanding =>
-      leaderboardStanding.player[entrantType + "Table"].length > 0
+      leaderboardStanding.player.tables[entrantType].length > 0
   )
   const listRows = filteredRoundData.map((leaderboardStanding, index) => (
     <tr

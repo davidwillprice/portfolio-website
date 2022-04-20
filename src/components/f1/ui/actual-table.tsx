@@ -13,7 +13,12 @@ import {
 } from "../../../styles/component/f1/table.module.scss"
 import * as teamColours from "../../../styles/component/f1/team-colours.module.scss"
 
-export default function ActualTable(props) {
+export default function ActualTable(props: {
+  roundNo: number
+  roundData: []
+  entrantType: string
+  year: number
+}) {
   //roundData is all the race results
   const roundData = props.roundData
   //entrantType decides whether to generate a driver or team table

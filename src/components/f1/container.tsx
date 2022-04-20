@@ -36,18 +36,18 @@ export default function F1Container(props) {
   )
 
   //Handlers
-  function changeEntrantTypeHandler(event) {
-    setEntrantType(event.target.value)
+  function changeEntrantTypeHandler(newEntrantType: string) {
+    setEntrantType(newEntrantType)
   }
-  function changePlayerGroupHandler(event) {
-    setPlayerGroup(event.target.value)
+  function changePlayerGroupHandler(playerGroup: string) {
+    setPlayerGroup(playerGroup)
   }
-  function changeRoundHandler(event) {
-    setSelectedRound(+event.target.value)
-    setIsSeasonOver(+event.target.value + 1 === props.finalNoOfRaces)
+  function changeRoundHandler(newRoundNo: number) {
+    setSelectedRound(newRoundNo)
+    setIsSeasonOver(newRoundNo + 1 === props.finalNoOfRaces)
   }
-  function changeModeHandler(event) {
-    setMode(event.target.getAttribute("data-mode"))
+  function changeModeHandler(newMode: string) {
+    setMode(newMode)
   }
 
   const data = useMemo(() => {

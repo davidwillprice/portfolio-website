@@ -6,9 +6,13 @@ import {
   active,
 } from "../../../styles/component/f1/navBar.module.scss"
 
-export default function NavBar(props) {
-  function onClickHandler(event) {
-    props.changeMode(event)
+export default function NavBar(props: {
+  changeMode: Function
+  activeMode: string
+}) {
+  function onClickHandler(event: React.MouseEvent<HTMLElement>) {
+    const btn = event.target as HTMLElement
+    props.changeMode(btn.getAttribute("data-mode"))
   }
   return (
     <div className={navCon}>
