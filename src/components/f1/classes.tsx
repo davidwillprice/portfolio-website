@@ -1,8 +1,13 @@
-export interface Entrant {
+export class Entrant {
   fName: string
   sName: string
   team?: string
   avgPrePos?: number
+  constructor(fName: string, sName: string, team?: string) {
+    this.fName = fName
+    this.sName = sName
+    this.team = team
+  }
 }
 
 export class Player {

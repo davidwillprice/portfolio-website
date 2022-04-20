@@ -1,41 +1,41 @@
 import { getPlayerGroups } from "../calc"
-import { Player, Round } from "../classes"
+import { Player, Round, Entrant, Players } from "../classes"
 
 //All entrant starting (driver/team) data
 export const entrantData = {
   drivers: {
-    ham: { fName: "Hamilton", sName: "ham", team: "mer" },
-    bot: { fName: "Bottas", sName: "bot", team: "mer" },
-    lec: { fName: "Leclerc", sName: "lec", team: "fer" },
-    sai: { fName: "Sainz", sName: "sai", team: "fer" },
-    ves: { fName: "Verstappen", sName: "ves", team: "rbr" },
-    per: { fName: "Perez", sName: "per", team: "rbr" },
-    alo: { fName: "Alonso", sName: "alo", team: "alp" },
-    oco: { fName: "Ocon", sName: "oco", team: "alp" },
-    sch: { fName: "Schumacher", sName: "sch", team: "has" },
-    maz: { fName: "Mazepin", sName: "maz", team: "has" },
-    nor: { fName: "Norris", sName: "nor", team: "mcl" },
-    ric: { fName: "Ricciardo", sName: "ric", team: "mcl" },
-    vet: { fName: "Vettel", sName: "vet", team: "ast" },
-    str: { fName: "Stroll", sName: "str", team: "ast" },
-    rai: { fName: "Raikkonen", sName: "rai", team: "alf" },
-    gio: { fName: "Giovinazzi", sName: "gio", team: "alf" },
-    tsu: { fName: "Tsunoda", sName: "tsu", team: "alt" },
-    gas: { fName: "Gasly", sName: "gas", team: "alt" },
-    lat: { fName: "Latifi", sName: "lat", team: "wil" },
-    rus: { fName: "Russell", sName: "rus", team: "wil" },
+    ham: new Entrant("Hamilton", "ham", "mer"),
+    bot: new Entrant("Bottas", "bot", "mer"),
+    lec: new Entrant("Leclerc", "lec", "fer"),
+    sai: new Entrant("Sainz", "sai", "fer"),
+    ves: new Entrant("Verstappen", "ves", "rbr"),
+    per: new Entrant("Perez", "per", "rbr"),
+    alo: new Entrant("Alonso", "alo", "alp"),
+    oco: new Entrant("Ocon", "oco", "alp"),
+    sch: new Entrant("Schumacher", "sch", "has"),
+    maz: new Entrant("Mazepin", "maz", "has"),
+    nor: new Entrant("Norris", "nor", "mcl"),
+    ric: new Entrant("Ricciardo", "ric", "mcl"),
+    vet: new Entrant("Vettel", "vet", "ast"),
+    str: new Entrant("Stroll", "str", "ast"),
+    rai: new Entrant("Raikkonen", "rai", "alf"),
+    gio: new Entrant("Giovinazzi", "gio", "alf"),
+    tsu: new Entrant("Tsunoda", "tsu", "alt"),
+    gas: new Entrant("Gasly", "gas", "alt"),
+    lat: new Entrant("Latifi", "lat", "wil"),
+    rus: new Entrant("Russell", "rus", "wil"),
   },
   teams: {
-    mer: { fName: "Mercedes", sName: "mer" },
-    fer: { fName: "Ferrari", sName: "fer" },
-    rbr: { fName: "Red Bull", sName: "rbr" },
-    mcl: { fName: "McLaren", sName: "mcl" },
-    alp: { fName: "Alpine", sName: "alp" },
-    alt: { fName: "Alpha Tauri", sName: "alt" },
-    ast: { fName: "Aston Martin", sName: "ast" },
-    has: { fName: "Haas", sName: "has" },
-    alf: { fName: "Alfa Romeo", sName: "alf" },
-    wil: { fName: "Williams", sName: "wil" },
+    mer: new Entrant("Mercedes", "mer"),
+    fer: new Entrant("Ferrari", "fer"),
+    rbr: new Entrant("Red Bull", "rbr"),
+    mcl: new Entrant("McLaren", "mcl"),
+    alp: new Entrant("Alpine", "alp"),
+    alt: new Entrant("Alpha Tauri", "alt"),
+    ast: new Entrant("Aston Martin", "ast"),
+    has: new Entrant("Haas", "has"),
+    alf: new Entrant("Alfa Romeo", "alf"),
+    wil: new Entrant("Williams", "wil"),
   },
 }
 const {
@@ -65,7 +65,7 @@ export const drivers = entrantData.drivers
 export const teams = entrantData.teams
 
 //Player data
-export const players = {
+export const players: Players = {
   david: new Player(
     "David",
     ["aberystwyth", "brr", "herefordshire"],
