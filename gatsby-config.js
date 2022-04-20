@@ -47,7 +47,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-typegen`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {

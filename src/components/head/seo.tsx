@@ -29,7 +29,7 @@ const Seo = ({
 }) => {
   const { pathname } = useLocation()
 
-  const { site }: any = useStaticQuery<GatsbyTypes.SEOQuery>(query)
+  const { site }: any = useStaticQuery(query)
 
   const {
     defaultTitle,
