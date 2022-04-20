@@ -93,12 +93,16 @@ export default function F1Container(props) {
     <div className={f1Main}>
       <NavBar changeMode={changeModeHandler} activeMode={mode} />
       <div className={content}>
-        <Options
-          mode={mode}
-          playerGroupsArr={props.playerGroupsArr}
-          changePlayerGroup={changePlayerGroupHandler}
-          changeEntrantType={changeEntrantTypeHandler}
-        />
+        {mode === "leaderboard" || mode === "standings" ? (
+          <Options
+            mode={mode}
+            playerGroupsArr={props.playerGroupsArr}
+            changePlayerGroup={changePlayerGroupHandler}
+            changeEntrantType={changeEntrantTypeHandler}
+          />
+        ) : (
+          ""
+        )}
         {mode === "leaderboard" && (
           <Leaderboard
             entrantType={entrantType}
