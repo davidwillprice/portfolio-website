@@ -5,7 +5,12 @@ import {
   options,
 } from "../../../styles/component/f1/options.module.scss"
 
-export default function Options(props) {
+export default function Options(props: {
+  mode: string
+  playerGroupsArr: string[]
+  changePlayerGroup: Function
+  changeEntrantType: Function
+}) {
   function changePlayerGroupHandler(
     event: React.ChangeEvent<HTMLSelectElement>
   ) {
