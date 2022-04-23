@@ -24,8 +24,18 @@ import {
   getControPlayers,
   countPlayerEntries,
 } from "./calc"
-
-export default function F1Container(props) {
+import { Entrant, Players, Round } from "./classes"
+export default function F1Container(props: {
+  drivers: { [key: string]: Entrant }
+  finalNoOfRaces: number
+  helpNotes: JSX.Element
+  playerGroupsArr: string[]
+  players: Players
+  rounds: Round[]
+  statsNotes: (isSeasonOver: boolean) => JSX.Element
+  teams: { [key: string]: Entrant }
+  year: number
+}) {
   //State
   const [entrantType, setEntrantType] = useState("driver")
   const [playerGroup, setPlayerGroup] = useState(props.playerGroupsArr[0])
