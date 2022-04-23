@@ -349,7 +349,7 @@ function formatArrayIntoList(arr: string[]) {
   return arr
 }
 
-export function countPlayerEntries(players: Player[], entrantType: string) {
+export function countPlayerEntries(players: Players, entrantType: string) {
   let count = 0
   for (const player in players) {
     if (players[player].tables[entrantType as keyof Player["tables"]].length) {
