@@ -1,4 +1,5 @@
 import React from "react"
+import { Round } from "../classes"
 
 import {
   leaderboard,
@@ -19,7 +20,11 @@ function prevRdDiffUI(prevRdDiff: number) {
     : noLeaderboardChg
 }
 
-export default function Leaderboard(props) {
+export default function Leaderboard(props: {
+  roundData: Round[]
+  entrantType: string
+  roundNo: number
+}) {
   //playerData is data of the players that will displayed
   const roundData = props.roundData
   //entrantType decides whether to generate a driver or team leaderboard
@@ -27,9 +32,13 @@ export default function Leaderboard(props) {
   //round decides which race data to show
   const roundNo = props.roundNo
   //Go to the leaderboards of the selected entrantType in the selected round and filter out any players which didn't make predictions for that entrant type
-  const filteredRoundData = roundData[roundNo].leaderboards[entrantType].filter(
+  const filteredRoundData = roundData[roundNo].leaderboards[
+    entrantType as keyof Round["leaderboards"]
+  ].filter(
     leaderboardStanding =>
-      leaderboardStanding.player.tables[entrantType].length > 0
+      leaderboardStanding.player.tables[
+        entrantType as keyof Round["leaderboards"]
+      ].length > 0
   )
   const listRows = filteredRoundData.map((leaderboardStanding, index) => (
     <tr
@@ -49,8 +58,9 @@ export default function Leaderboard(props) {
       <td>{leaderboardStanding.percentCorrect}%</td>
       <td className={perfectPredictions}>
         {
-          leaderboardStanding.player.season["round" + roundNo][entrantType]
-            .diffCounts[0]
+          leaderboardStanding.player.season["round" + roundNo][
+            entrantType as keyof Round["leaderboards"]
+          ].diffCounts[0]
         }
       </td>
     </tr>

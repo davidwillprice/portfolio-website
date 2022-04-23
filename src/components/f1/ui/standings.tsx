@@ -2,6 +2,7 @@ import React from "react"
 
 import ActualTable from "./actual-table"
 import PredictionTables from "./prediction-tables"
+import { Player, Round } from "../classes"
 
 import {
   tablesOverview,
@@ -12,7 +13,14 @@ import {
   playerNumbers1,
 } from "../../../styles/component/f1/table.module.scss"
 
-export default function Standings(props) {
+export default function Standings(props: {
+  roundNo: number
+  entrantType: string
+  filteredPlayers: Player[]
+  roundData: Round[]
+  year: number
+}) {
+  console.log(props.roundData)
   const numberOfPlayers = Object.keys(props.filteredPlayers).length
   let noOfPlayersClass =
     numberOfPlayers === 1
@@ -37,7 +45,6 @@ export default function Standings(props) {
       />
       <PredictionTables
         year={props.year}
-        roundData={props.roundData}
         playerData={props.filteredPlayers}
         entrantType={props.entrantType}
         roundNo={props.roundNo}
