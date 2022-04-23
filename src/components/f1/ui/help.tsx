@@ -3,7 +3,7 @@ import React, { ReactChild } from "react"
 import { helpCon } from "../../../styles/component/f1/help.module.scss"
 
 export default function Help(props: {
-  year: string
+  year: number
   children: ReactChild | ReactChild[]
 }) {
   return (
