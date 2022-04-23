@@ -257,16 +257,15 @@ export function filteredPlayers(
   entrantType: string
 ) {
   //Turn object to array
-  const playerArr = Object.entries(players)
+  const playerArr = Object.values(players)
   //Filter array so it is only those who have the player group and made a prediction for the current entrant type
-  const filteredPlayerArr = playerArr.filter(([key, value]) => {
+  const filteredPlayerArr = playerArr.filter(value => {
     return (
       value.groups.includes(playerGroup) &&
       value.tables[entrantType as keyof Player["tables"]].length > 0
     )
   })
-  //Return array converted back to an object
-  return Object.fromEntries(filteredPlayerArr)
+  return filteredPlayerArr
 }
 
 export function getPlayerGroups(players: Players): string[] {

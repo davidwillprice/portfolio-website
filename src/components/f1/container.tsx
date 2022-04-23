@@ -125,7 +125,6 @@ export default function F1Container(props: {
             year={props.year}
             roundData={data.rounds}
             entrantType={entrantType}
-            playerGroup={playerGroup}
             roundNo={selectedRound}
             filteredPlayers={filteredPlayers(
               data.players,
