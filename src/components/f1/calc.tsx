@@ -269,14 +269,15 @@ export function filteredPlayers(
   return Object.fromEntries(filteredPlayerArr)
 }
 
-export function getPlayerGroups(players: Players) {
+export function getPlayerGroups(players: Players): string[] {
   let playerGroups = new Set()
   for (const player in players) {
     for (const group of players[player].groups) {
       playerGroups.add(group)
     }
   }
-  return [...playerGroups]
+  const arr = [...playerGroups] as string[]
+  return arr
 }
 
 export function getControPlayers(players: Players, entrantType: string) {
