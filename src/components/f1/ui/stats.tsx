@@ -1,8 +1,23 @@
-import React from "react"
+import React, { ReactChild } from "react"
+import { Entrant, Round } from "../classes"
 
 import { statsCon } from "../../../styles/component/f1/stats.module.scss"
 
-export default function Stats(props) {
+export default function Stats(props: {
+  children: ReactChild | ReactChild[]
+  controDriverPredictions: {
+    least: { playerNames: string[]; guessesFromAvg: number }
+    most: { playerNames: string[]; guessesFromAvg: number }
+  }
+  controTeamPredictions: {
+    least: { playerNames: string[]; guessesFromAvg: number }
+    most: { playerNames: string[]; guessesFromAvg: number }
+  }
+  isSeasonOver: boolean
+  noOfPredictions: { driver: number; team: number }
+  roundData: Round[]
+  selectedRound: number
+}) {
   const roundDataDiffTotals =
     props.roundData[props.selectedRound].entrantDiffTotals
   const noOfDrivers = roundDataDiffTotals.driver.length
@@ -16,7 +31,10 @@ export default function Stats(props) {
   const controTeamPredicts = props.controTeamPredictions
 
   //Get diff total, average it out by no of predictions and then round to one decimal place
-  function calcMisprediction(entrant, noOfPredictions) {
+  function calcMisprediction(
+    entrant: { entrant: Entrant; diffTotal: number },
+    noOfPredictions: number
+  ) {
     return Math.round((entrant.diffTotal / noOfPredictions) * 10) / 10
   }
   return (
