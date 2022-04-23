@@ -16,22 +16,23 @@ import {
   down,
 } from "../../../styles/component/f1/table.module.scss"
 import * as teamColours from "../../../styles/component/f1/team-colours.module.scss"
+import { Entrant } from "../classes"
 
-function posDiffText(entrantData) {
-  return entrantData.posDiff === 0 ? (
+function posDiffText(posDiff: number) {
+  return posDiff === 0 ? (
     <span>
       <span className={tick}>✔</span>
     </span>
-  ) : entrantData.posDiff > 0 ? (
+  ) : posDiff > 0 ? (
     <Fragment>
-      {entrantData.posDiff}
+      {posDiff}
       <div className={`${posDiffIcon} ${up}`}>
         <i></i>
       </div>
     </Fragment>
   ) : (
     <Fragment>
-      {Math.abs(entrantData.posDiff)}
+      {Math.abs(posDiff)}
       <div className={`${posDiffIcon} ${down}`}>
         <i></i>
       </div>
@@ -39,29 +40,30 @@ function posDiffText(entrantData) {
   )
 }
 //Component to render a particular prediction tables
-export default function PredictionTable(props) {
+export default function PredictionTable(props: {
+  tableOrder: { entrant: Entrant; posDiff: number }[]
+}) {
   //Shortcut the table order
   const tableOrder = props.tableOrder
   //Map through each table row
-  const listRows = tableOrder.map((entrantData, index) => (
-    //Create HTML for each table row using the data passed in as a prop
-    <div className={tableRow} key={entrantData.entrant.fName}>
-      <div
-        className={`${entrantBlock} ${
-          teamColours[entrantData.entrant.team ?? entrantData.entrant.sName]
-        }`}
-      >
-        <div className={position}>
-          <span>{index + 1}</span>
+  const listRows = tableOrder.map((entrantData, index) => {
+    const { fName, sName, team } = entrantData.entrant
+    return (
+      //Create HTML for each table row using the data passed in as a prop
+      <div className={tableRow} key={fName}>
+        <div className={`${entrantBlock} ${teamColours[team ?? sName]}`}>
+          <div className={position}>
+            <span>{index + 1}</span>
+          </div>
+          <div className={divider}></div>
+          <div className={entrantName}>
+            <span className={fullName}>{fName}</span>
+            <span className={shortName}>{sName}</span>
+          </div>
         </div>
-        <div className={divider}></div>
-        <div className={entrantName}>
-          <span className={fullName}>{entrantData.entrant.fName}</span>
-          <span className={shortName}>{entrantData.entrant.sName}</span>
-        </div>
+        <div className={posDiff}>{posDiffText(entrantData.posDiff)}</div>
       </div>
-      <div className={posDiff}>{posDiffText(entrantData)}</div>
-    </div>
-  ))
+    )
+  })
   return <div className="table">{listRows}</div>
 }
