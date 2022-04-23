@@ -13,9 +13,11 @@ import {
 } from "../../../styles/component/f1/table.module.scss"
 import * as teamColours from "../../../styles/component/f1/team-colours.module.scss"
 
+import { Round } from "../classes"
+
 export default function ActualTable(props: {
   roundNo: number
-  roundData: []
+  roundData: Round[]
   entrantType: string
   year: number
 }) {
@@ -26,28 +28,28 @@ export default function ActualTable(props: {
   //roundNo decides which race data to show
   const roundNo = props.roundNo
 
-  const listRows = roundData[roundNo].standings[entrantType].map(
-    (entrant, index) => (
-      //Create HTML for each table row using the data passed in as a prop
+  const listRows = roundData[roundNo].standings[
+    entrantType as keyof Round["standings"]
+  ].map((entrant, index) => (
+    //Create HTML for each table row using the data passed in as a prop
 
-      <div className={tableRow} key={index + 1 + "-" + entrant.fName}>
-        <div
-          className={`${entrantBlock} ${
-            teamColours[entrant.team ?? entrant.sName]
-          }`}
-        >
-          <div className={position}>
-            <span>{index + 1}</span>
-          </div>
-          <div className={divider}></div>
-          <div className={entrantName}>
-            <span className={fullName}>{entrant.fName}</span>
-            <span className={shortName}>{entrant.sName}</span>
-          </div>
+    <div className={tableRow} key={index + 1 + "-" + entrant.fName}>
+      <div
+        className={`${entrantBlock} ${
+          teamColours[entrant.team ?? entrant.sName]
+        }`}
+      >
+        <div className={position}>
+          <span>{index + 1}</span>
+        </div>
+        <div className={divider}></div>
+        <div className={entrantName}>
+          <span className={fullName}>{entrant.fName}</span>
+          <span className={shortName}>{entrant.sName}</span>
         </div>
       </div>
-    )
-  )
+    </div>
+  ))
   return (
     //Passes a class that includes the year to set the correct team colours like "teams2022"
     <div className={`${tableContainer} ${teamColours["teams" + props.year]}`}>
