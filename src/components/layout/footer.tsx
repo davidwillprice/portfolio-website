@@ -23,7 +23,7 @@ export default function Footer() {
           <p>
             David Price - Built with Gatsby -{" "}
             <Link to={`/privacy-policy/`} aria-label="Privacy Policy">
-              Privacy&nbsp;policy
+              Privacy&nbsp;Policy
             </Link>
           </p>
         </div>
