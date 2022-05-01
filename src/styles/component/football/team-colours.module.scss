@@ -1,0 +1,235 @@
+.teams2021-2022 {
+  .mci {
+    > :nth-child(2) {
+      background-color: white;
+    }
+    background-color: #6cabdd;
+  }
+  .mun {
+    > :nth-child(2) {
+      background-color: #fbe122;
+    }
+    background-color: #da291c;
+  }
+
+  .liv {
+    > :nth-child(2) {
+      background-color: #fe875d;
+    }
+    background-color: #c8102e;
+    color: white;
+  }
+
+  .che {
+    > :nth-child(2) {
+      background-color: #1d2764;
+    }
+    background-color: #034694;
+    color: yellow;
+  }
+
+  .tot {
+    > :nth-child(2) {
+      background-color: #132257;
+    }
+    span {
+      color: #132257;
+    }
+    background-color: white;
+    color: #333;
+    border: rgb(206, 206, 206) 1px solid;
+  }
+
+  .ars {
+    > :nth-child(2) {
+      background-color: white;
+    }
+    background-color: #ef0107;
+  }
+
+  .wat {
+    > :nth-child(2) {
+      background-color: black;
+    }
+    span {
+      color: black;
+    }
+    background-color: #fbee23;
+    color: black;
+  }
+  .lei {
+    > :nth-child(2) {
+      background-color: #dcc683;
+    }
+    background-color: #003090;
+    color: white;
+  }
+  .wol {
+    > :nth-child(2) {
+      background-color: #231f20;
+    }
+    span {
+      color: #231f20;
+    }
+    background-color: #fdb913;
+    color: #333;
+  }
+  .lee {
+    > :nth-child(2) {
+      background-color: #004d97;
+    }
+    span {
+      color: #004d97;
+    }
+    background-color: white;
+    color: #004d97;
+    border: rgb(206, 206, 206) 1px solid;
+  }
+  .eve {
+    > :nth-child(2) {
+      background-color: #0049ff;
+    }
+
+    background-color: #003399;
+  }
+  .cry {
+    > :nth-child(2) {
+      background-color: #c4122e;
+    }
+    background-color: #1b458f;
+  }
+  .whu {
+    > :nth-child(2) {
+      background-color: #1bb1e7;
+    }
+
+    background-color: #7a263a;
+  }
+  .bri {
+    > :nth-child(2) {
+      background-color: white;
+    }
+    background-color: #0057b8;
+  }
+
+  .sou {
+    > :nth-child(2) {
+      background-color: white;
+    }
+    background-color: #d71920;
+  }
+
+  .nor {
+    > :nth-child(2) {
+      background-color: #00a84f;
+    }
+    span {
+      color: black;
+    }
+    background-color: #fff200;
+  }
+
+  .bur {
+    > :nth-child(2) {
+      background-color: #99d6ea;
+    }
+    background-color: #6c1d45;
+  }
+
+  .nec {
+    > :nth-child(2) {
+      background-color: white;
+    }
+    background-color: #181818;
+  }
+  .ast {
+    > :nth-child(2) {
+      background-color: #94bee5;
+    }
+    background-color: #7a003c;
+  }
+
+  .bre {
+    > :nth-child(2) {
+      background-color: #e30613;
+    }
+    span {
+      color: black;
+    }
+    background-color: white;
+    border: rgb(206, 206, 206) 1px solid;
+  }
+
+  .mer {
+    background-color: black;
+    > :nth-child(2) {
+      background-color: #00d2be;
+    }
+  }
+  .fer {
+    background-color: #dc0000;
+    > :nth-child(2) {
+      background-color: black;
+    }
+  }
+  .rbr {
+    background-color: #00327d;
+    > :nth-child(2) {
+      background-color: #ea262a;
+    }
+    span {
+      color: #fcee3b;
+    }
+  }
+  .alp {
+    background-color: #007acc;
+    > :nth-child(2) {
+      background-color: #e2211c;
+    }
+  }
+  .has {
+    background-color: white;
+    span {
+      color: blue;
+    }
+    > :nth-child(2) {
+      background-color: red;
+    }
+  }
+  .mcl {
+    background-color: #ff8700;
+    > :nth-child(2) {
+      background-color: #1264f4;
+    }
+    span {
+      color: rgb(4, 0, 51);
+    }
+  }
+  .ast {
+    background-color: #00584f;
+    > :nth-child(2) {
+      background-color: #c7da00;
+    }
+  }
+  .alf {
+    background-color: #9b0000;
+    > :nth-child(2) {
+      background-color: white;
+    }
+  }
+  .alt {
+    background-color: #203a54;
+    > :nth-child(2) {
+      background-color: white;
+    }
+  }
+  .wil {
+    background-color: #061d41;
+    > :nth-child(2) {
+      background-color: #00a0de;
+    }
+    span {
+      color: #dea225;
+    }
+  }
+}
