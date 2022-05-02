@@ -17,7 +17,7 @@
 }
 .predictionTables {
   display: flex;
-  width: calc(100% - 200px);
+  width: calc(100% - 170px);
   justify-content: space-between;
   flex-wrap: wrap;
   /*Start of carousel stuff*/
@@ -82,7 +82,7 @@
   width: 30px;
   text-align: center;
   justify-content: center;
-  font-family: "Viga", cursive;
+  font-family: arial;
 }
 .divider {
   width: 5px;
@@ -93,8 +93,8 @@
 .entrantName {
   padding: 0 10px;
   font-size: 13px;
-  font-family: "Viga", cursive;
-  text-transform: uppercase;
+  font-weight: 700;
+  font-family: arial;
 }
 .shortName {
   text-transform: uppercase;
@@ -294,7 +294,7 @@
     max-width: 420px;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 630px) {
   .playerNumbers5 .predictionTables .tableContainer,
   .playerNumbers4 .predictionTables .tableContainer {
     width: 100%;
@@ -358,7 +358,7 @@
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 370px) {
   .playerNumbers2 .predictionTables,
   .playerNumbers3 .predictionTables,
   .playerNumbers4 .predictionTables,
