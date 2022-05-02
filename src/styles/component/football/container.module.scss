@@ -1,0 +1,22 @@
+@import "../../sass-variables.scss";
+.footballMain {
+  font-family: var(--text-font);
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  * {
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+  }
+}
+.content {
+  padding: 0 $page-margin-desktop;
+  max-width: $layout-width;
+  margin: 0 auto 100px;
+}
+@media (max-width: 600px) {
+  .content {
+    padding-left: $page-margin-mobile;
+    padding-right: $page-margin-mobile;
+  }
+}
