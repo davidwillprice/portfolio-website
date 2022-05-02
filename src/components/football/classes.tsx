@@ -29,14 +29,12 @@ interface SeasonPerformance {
 }
 
 export class GameWeek {
-  number
   standings
-  leaderboards: { player: Player; percentCorrect: Number; prevRdDiff: Number }[]
+  leaderboard: { player: Player; percentCorrect: number; prevRdDiff: number }[]
   entrantDiffTotals: { entrant: Entrant; diffTotal: number }[]
-  constructor(number: string, standings: Entrant[]) {
-    this.number = number
+  constructor(standings: Entrant[]) {
     this.standings = standings
-    this.leaderboards = []
+    this.leaderboard = []
     this.entrantDiffTotals = []
   }
 }
