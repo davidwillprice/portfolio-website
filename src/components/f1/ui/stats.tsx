@@ -69,7 +69,7 @@ export default function Stats(props: {
           positions.
         </li>
       </ul>
-      <h2>Predictions Trivia</h2>
+      <h2>Player Prediction Trivia</h2>
       <ul>
         <li>
           {controDriverPredicts.most.playerNames} had the most 'controversial'
