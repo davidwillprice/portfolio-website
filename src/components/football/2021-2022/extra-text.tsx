@@ -26,20 +26,26 @@ export function statsNotes(isSeasonOver: boolean) {
   return (
     <Fragment>
       <li>
-        Ewan was the only person who didn't predict that Manchester City would
-        win the title, opting for Liverpool;
+        {isSeasonOver && <span className={cross}>✖</span>} Ewan was the only
+        person who didn't predict that Manchester City would win the title,
+        opting for Liverpool;
       </li>
       <li>
-        Jack was the only person to predict Manchester United would finish as
-        high as second;
+        {isSeasonOver && <span className={cross}>✖</span>} Everyone predicted
+        the top 4 would include Liverpool, Manchester City, Manchester United,
+        and Chelsea;
       </li>
       <li>
-        Sam was the only person to predict Chelsea would finish as low as
-        fourth;
+        {isSeasonOver && <span className={cross}>✖</span>} Everyone predicted
+        Leicester would finish 5th;
       </li>
       <li>
-        Everyone predicted the top 4 would include Liverpool, Manchester City,
-        Manchester United, and Chelsea;
+        {isSeasonOver && <span className={cross}>✖</span>} Everyone predicted
+        Wolves would finish 12th or 13th;
+      </li>
+      <li>
+        {isSeasonOver && <span className={tick}>✔</span>} Everyone predicted
+        Norwich would be relegated.
       </li>
     </Fragment>
   )
