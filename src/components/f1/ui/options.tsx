@@ -39,7 +39,7 @@ export default function Options(props: {
               </option>
               {props.playerGroupsArr.map(group => (
                 <option key={group} value={group}>
-                  {group}
+                  {group.toUpperCase()}
                 </option>
               ))}
             </select>
