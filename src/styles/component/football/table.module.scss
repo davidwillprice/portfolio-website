@@ -15,6 +15,15 @@
 .playerNumbers1.tablesOverview .predictionTables {
   justify-content: flex-end;
 }
+.playerNumbers6 .fullName {
+  display: none;
+}
+.playerNumbers6 .shortName {
+  display: block;
+}
+.playerNumbers6 .entrantBlock {
+  width: 100%;
+}
 .predictionTables {
   display: flex;
   width: calc(100% - 170px);
@@ -211,6 +220,27 @@
   }
   .playerNumbers4.tablesOverview {
     max-width: 700px;
+  }
+
+  .playerNumbers6 .predictionTables {
+    flex-wrap: nowrap;
+    width: calc(100% - 150px);
+  }
+  .playerNumbers6 .predictionTables .tableContainer {
+    width: calc(50% - 20px);
+    margin-right: 20px;
+  }
+  .playerNumbers6 .swipeIconCon {
+    display: inherit;
+  }
+  .playerNumbers6 .fullName {
+    display: block;
+  }
+  .playerNumbers6 .shortName {
+    display: none;
+  }
+  .playerNumbers6 .entrantBlock {
+    width: 100%;
   }
 }
 

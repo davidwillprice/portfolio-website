@@ -6,6 +6,7 @@ import { Player, GameWeek } from "../classes"
 
 import {
   tablesOverview,
+  playerNumbers6,
   playerNumbers5,
   playerNumbers4,
   playerNumbers3,
@@ -31,6 +32,8 @@ export default function Standings(props: {
       ? playerNumbers4
       : numberOfPlayers === 5
       ? playerNumbers5
+      : numberOfPlayers === 6
+      ? playerNumbers6
       : ""
 
   return (
