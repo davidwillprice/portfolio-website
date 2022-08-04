@@ -160,3 +160,166 @@
     border: rgb(206, 206, 206) 1px solid;
   }
 }
+.teams2022-2023 {
+  .mci {
+    > :nth-child(2) {
+      background-color: maroon;
+    }
+    span {
+      color: black;
+    }
+    background-color: #6cabdd;
+  }
+  .mun {
+    > :nth-child(2) {
+      background-color: black;
+    }
+    background-color: #da291c;
+  }
+
+  .liv {
+    > :nth-child(2) {
+      background-color: #8e2333;
+    }
+    background-color: #e40429;
+  }
+
+  .che {
+    > :nth-child(2) {
+      background-color: #1eb9be;
+    }
+    background-color: #034694;
+  }
+
+  .tot {
+    > :nth-child(2) {
+      background-color: #132257;
+    }
+    span {
+      color: #132257;
+    }
+    background-color: white;
+  }
+
+  .ars {
+    > :nth-child(2) {
+      background-color: white;
+    }
+    background-color: #ef0107;
+  }
+
+  .bou {
+    > :nth-child(2) {
+      background-color: black;
+    }
+    span {
+      color: black;
+    }
+    background-color: #d02b25;
+  }
+  .lei {
+    > :nth-child(2) {
+      background-color: #dcc683;
+    }
+    background-color: #003090;
+    color: white;
+  }
+  .wol {
+    > :nth-child(2) {
+      background-color: #231f20;
+    }
+    span {
+      color: #231f20;
+    }
+    background-color: #fdb913;
+    color: #333;
+  }
+  .lee {
+    > :nth-child(2) {
+      background-color: #004d97;
+    }
+    span {
+      color: #004d97;
+    }
+    background-color: white;
+    color: #004d97;
+    border: rgb(206, 206, 206) 1px solid;
+  }
+  .eve {
+    > :nth-child(2) {
+      background-color: #0049ff;
+    }
+
+    background-color: #003399;
+  }
+  .cry {
+    > :nth-child(2) {
+      background-color: #c4122e;
+    }
+    background-color: #1b458f;
+  }
+  .whu {
+    > :nth-child(2) {
+      background-color: #1bb1e7;
+    }
+
+    background-color: #7a263a;
+  }
+  .bri {
+    > :nth-child(2) {
+      background-color: white;
+    }
+    span {
+      color: gold;
+    }
+    background-color: #0057b8;
+  }
+
+  .sou {
+    > :nth-child(2) {
+      background-color: white;
+    }
+    background-color: #d71920;
+  }
+
+  .not {
+    > :nth-child(2) {
+      background-color: white;
+    }
+    background-color: #e13332;
+  }
+
+  .ful {
+    > :nth-child(2) {
+      background-color: black;
+    }
+    span {
+      color: black;
+    }
+    background-color: white;
+  }
+
+  .nec {
+    > :nth-child(2) {
+      background-color: white;
+    }
+    background-color: #181818;
+  }
+  .ast {
+    > :nth-child(2) {
+      background-color: #94bee5;
+    }
+    background-color: #7a003c;
+  }
+
+  .bre {
+    > :nth-child(2) {
+      background-color: #e30613;
+    }
+    span {
+      color: black;
+    }
+    background-color: white;
+    border: rgb(206, 206, 206) 1px solid;
+  }
+}
