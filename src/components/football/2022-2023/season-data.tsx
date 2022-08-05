@@ -181,7 +181,32 @@ export const players: Players = {
       bou,
     ]
   ),
-
+  Jake: new Player(
+    "Jake",
+    ["john kyrle"],
+    [
+      mci,
+      liv,
+      tot,
+      ars,
+      che,
+      whu,
+      mun,
+      nec,
+      ast,
+      wol,
+      lei,
+      eve,
+      bre,
+      cry,
+      sou,
+      not,
+      lee,
+      ful,
+      bri,
+      bou,
+    ]
+  ),
   Sam: new Player(
     "Sam",
     ["aberystwyth"],

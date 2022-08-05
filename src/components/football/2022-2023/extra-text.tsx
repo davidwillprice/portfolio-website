@@ -34,7 +34,7 @@ export function statsNotes(isSeasonOver: boolean) {
         {isSeasonOver && <span className={cross}>✖</span>} Will was the only
         person to predict Chelsea would win the title,{" "}
         {isSeasonOver && <span className={cross}>✖</span>} and the only person
-        to predict Everton finishing higher than 13th (6th);
+        to predict Everton finishing top 6;
       </li>
       <li>
         {isSeasonOver && <span className={cross}>✖</span>} Jack G was the only
@@ -58,6 +58,12 @@ export function statsNotes(isSeasonOver: boolean) {
         {" "}
         {isSeasonOver && <span className={cross}>✖</span>} Jack H and Sam were
         the only people to predict Tottenham wouldn't get Champions League;
+      </li>
+      <li>
+        {isSeasonOver && <span className={cross}>✖</span>} Jake was the only
+        person to predict West Ham would get top 6,{" "}
+        {isSeasonOver && <span className={cross}>✖</span>} and the only person
+        to predict Brighton would be relegated.
       </li>
     </Fragment>
   )
