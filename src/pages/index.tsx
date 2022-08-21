@@ -30,6 +30,7 @@ export default function Index({
     bma: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     monty: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     f1: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
+    football: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
   }
 }) {
   const portrait = data.portrait.childImageSharp.gatsbyImageData
@@ -38,6 +39,7 @@ export default function Index({
   const bmaImg = data.bma.childImageSharp.gatsbyImageData
   const montyImg = data.monty.childImageSharp.gatsbyImageData
   const f1Img = data.f1.childImageSharp.gatsbyImageData
+  const footballImg = data.football.childImageSharp.gatsbyImageData
 
   return (
     <Layout>
@@ -190,11 +192,39 @@ export default function Index({
             <ButtonCon>
               <Button
                 url="/f1-prediction-game/2022/"
-                btnText="View F1 prediction game"
+                btnText="View F1 Prediction Game"
               />
               <Button
                 external={true}
                 url="https://github.com/davidwillprice/portfolio-website/tree/main/src/components/f1"
+                btnText="View Source"
+                btnColor="secondary"
+                btnIcon="github"
+              />
+            </ButtonCon>
+          </SqBrushSplash>
+          <SqBrushSplash
+            brush={<BrushOne />}
+            dirTxtRight={true}
+            img={footballImg}
+            imgAlt="Football Prediction gme screenshot"
+            linkUrl="/football-prediction-game/2022-2023/"
+            linkDesc="View Football Prediction Game"
+          >
+            <h3>Premier League Prediction Game</h3>
+            <p>2019-</p>
+            <p>
+              Side project to create a game where people guess the final
+              standings of each Premier League season.
+            </p>
+            <ButtonCon align="right">
+              <Button
+                url="/football-prediction-game/2022-2023/"
+                btnText="View Football Prediction Game"
+              />
+              <Button
+                external={true}
+                url="https://github.com/davidwillprice/portfolio-website/tree/main/src/components/football"
                 btnText="View Source"
                 btnColor="secondary"
                 btnIcon="github"
@@ -273,6 +303,15 @@ export const pageQuery = graphql`
     f1: file(
       relativePath: {
         eq: "f1-prediction-game/f1-prediction-game-screenshot.png"
+      }
+    ) {
+      childImageSharp {
+        gatsbyImageData(placeholder: NONE)
+      }
+    }
+    football: file(
+      relativePath: {
+        eq: "football-prediction-game/football-prediction-game-screenshot.png"
       }
     ) {
       childImageSharp {
