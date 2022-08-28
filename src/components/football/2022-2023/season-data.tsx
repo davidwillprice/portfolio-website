@@ -107,8 +107,8 @@ export const players: Players = {
     "Glen",
     ["john kyrle"],
     [
-      liv,
       mci,
+      liv,
       ars,
       tot,
       che,
