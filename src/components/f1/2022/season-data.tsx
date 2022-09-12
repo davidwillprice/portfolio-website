@@ -720,4 +720,30 @@ export let rounds = [
     ],
     [rbr, fer, mer, alp, mcl, alf, has, alt, ast, wil]
   ),
+  new Round(
+    "Italian GP",
+    [
+      ves,
+      lec,
+      per,
+      rus,
+      sai,
+      ham,
+      nor,
+      oco,
+      alo,
+      bot,
+      gas,
+      mag,
+      vet,
+      ric,
+      sch,
+      tsu,
+      zho,
+      str,
+      alb,
+      lat,
+    ],
+    [rbr, fer, mer, alp, mcl, alf, has, alt, ast, wil]
+  ),
 ]
