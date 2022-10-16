@@ -23,7 +23,7 @@ export default class Button extends Component<{
       if (external) {
         return (
           <a
-            aria-label={linkDesc ? btnText : ""}
+            aria-label={linkDesc ? linkDesc : btnText}
             href={url}
             className={`${LogoShowcaseStyles.button} ${
               btnColor
@@ -38,7 +38,7 @@ export default class Button extends Component<{
       } else {
         return (
           <Link
-            aria-label={linkDesc ? btnText : ""}
+            aria-label={linkDesc ? linkDesc : btnText}
             to={url}
             className={`${LogoShowcaseStyles.button} ${
               btnColor
