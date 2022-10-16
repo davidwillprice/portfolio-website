@@ -101,7 +101,11 @@ export default function Index({
               Care Scotland and Swiis Healthcare.
             </p>
             <ButtonCon>
-              <Button url="/swiis/" btnText="Learn More" />
+              <Button
+                url="/swiis/"
+                linkDesc="Swiis international web development page"
+                btnText="Learn More"
+              />
             </ButtonCon>
           </SqBrushSplash>
           <SqBrushSplash
@@ -192,12 +196,14 @@ export default function Index({
             <ButtonCon>
               <Button
                 url="/f1-prediction-game/2022/"
+                linkDesc="View F1 prediction game"
                 btnText="View F1 Prediction Game"
               />
               <Button
                 external={true}
                 url="https://github.com/davidwillprice/portfolio-website/tree/main/src/components/f1"
                 btnText="View Source"
+                linkDesc="View F1 Prediction Game source code"
                 btnColor="secondary"
                 btnIcon="github"
               />
@@ -226,6 +232,7 @@ export default function Index({
                 external={true}
                 url="https://github.com/davidwillprice/portfolio-website/tree/main/src/components/football"
                 btnText="View Source"
+                linkDesc="View Football Prediction Game source code"
                 btnColor="secondary"
                 btnIcon="github"
               />
