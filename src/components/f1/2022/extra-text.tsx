@@ -22,39 +22,57 @@ export function statsNotes(isSeasonOver: boolean) {
   return (
     <Fragment>
       <li>
-        Nobody predicted Verstappen, Hamilton, Vettel, Gasly, Magnussen, or
-        Bottas would be beaten by their team mate;
+        Nobody predicted Verstappen
+        {isSeasonOver && <span className={tick}> ✔</span>}, Hamilton
+        {isSeasonOver && <span className={cross}> ✖</span>}, Vettel
+        {isSeasonOver && <span className={tick}> ✔</span>}, Gasly
+        {isSeasonOver && <span className={tick}> ✔</span>}, Magnussen
+        {isSeasonOver && <span className={tick}> ✔</span>}, or Bottas
+        {isSeasonOver && <span className={tick}> ✔</span>} would be beaten by
+        their team mate;
       </li>
       <li>
-        Pete & Sam were the only people to predict Ocon would beat Alonso;
+        {isSeasonOver && <span className={tick}>✔ </span>}Pete & Sam were the
+        only people to predict Ocon would beat Alonso;
       </li>
       <li>
-        Jack & Will were the only people to predict Riccardo would beat Norris;
+        {isSeasonOver && <span className={cross}>✖ </span>}Jack & Will were the
+        only people to predict Riccardo would beat Norris;
       </li>
       <li>
-        Tom & Will were the only people to predict Latifi would beat Albon;
+        {isSeasonOver && <span className={cross}>✖ </span>}Tom & Will were the
+        only people to predict Latifi would beat Albon;
       </li>
       <li>
-        Will was the only person to predict Russell would finish as low as 7th;
+        {isSeasonOver && <span className={cross}>✖ </span>}Will was the only
+        person to predict Russell would finish lower than 5th (7th);
       </li>
       <li>
-        Pete was the only person to predict a Ferrari in the top two of the
-        drivers or constructors, predicting a Ferrari constructors and driver's
-        title (Sainz);
+        {isSeasonOver && <span className={tick}>✔ </span>}Pete was the only
+        person to predict a Ferrari in the top two of the drivers or
+        constructors, predicting a Ferrari constructors{" "}
+        {isSeasonOver && <span className={cross}>✖ </span>}and driver's title
+        (Sainz)
+        {isSeasonOver ? <span className={cross}> ✖</span> : ";"}
       </li>
       <li>
-        Pete was also the only person to predict Mercedes finishing as low as
-        3rd;
+        {isSeasonOver && <span className={tick}>✔ </span>}Pete was also the only
+        person to predict Mercedes finishing lower than 2nd (3rd);
       </li>
       <li>
-        Richard was the only person to predict Haas would finish as high as 5th,
-        and Aston Martin as low as 9th;
+        Richard was the only person to predict Haas would finish higher than 7th
+        (5th){isSeasonOver && <span className={cross}> ✖</span>}, and the only
+        person to predict Aston Martin lower than 8th (9th)
+        {isSeasonOver && <span className={cross}> ✖</span>};
       </li>
       <li>
-        Will was the only person to predict Aston Martin would finish as high as
-        5th;
+        {isSeasonOver && <span className={cross}>✖ </span>}Will was the only
+        person to predict Aston Martin would finish higher than 6th (5th);
       </li>
-      <li>Everyone but Richard predicted McLaren would finish in 4th (3rd).</li>
+      <li>
+        {isSeasonOver && <span className={cross}>✖ </span>}Everyone but Richard
+        predicted McLaren would finish in 4th (3rd).
+      </li>
     </Fragment>
   )
 }
