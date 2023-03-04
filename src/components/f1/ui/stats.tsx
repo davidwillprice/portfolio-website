@@ -99,8 +99,11 @@ export default function Stats(props: {
           change
           {controTeamPredicts.least.guessesFromAvg !== 1 ? "s" : ""}).
         </li>
-        {props.children}
       </ul>
+      <p>
+        Additional trivia based on the predictions of people I actually know:
+      </p>
+      <ul>{props.children}</ul>
     </div>
   )
 }

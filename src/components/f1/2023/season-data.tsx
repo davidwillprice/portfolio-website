@@ -292,14 +292,14 @@ export const players: Players = {
   ),
   formula1: new Player(
     //https://www.formula1.com/en/latest/article.f1-power-rankings-all-10-teams-ranked-after-2023-pre-season-testing.7144c6F6PdlxC07WLxZeEV.html
-    "formula1.com",
+    "formula1.com*",
     ["misc"],
     [],
     [rbr, fer, mer, ast, alp, alf, mcl, alt, has, wil]
   ),
   buxton: new Player(
     //https://twitter.com/wbuxtonofficial/status/1629768214283534336
-    "Will Buxton",
+    "Will Buxton*",
     ["misc"],
     [],
     [rbr, fer, ast, mer, alp, alf, has, alt, wil, mcl]
