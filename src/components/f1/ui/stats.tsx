@@ -70,6 +70,10 @@ export default function Stats(props: {
         </li>
       </ul>
       <h2>Player Prediction Trivia</h2>
+      <p>
+        Trivia for people who submitted predictions for this game specifically
+        (Excluding pundits, Redditors etc from data).
+      </p>
       <ul>
         <li>
           {controDriverPredicts.most.playerNames} had the most 'controversial'
@@ -99,11 +103,8 @@ export default function Stats(props: {
           change
           {controTeamPredicts.least.guessesFromAvg !== 1 ? "s" : ""}).
         </li>
+        {props.children}
       </ul>
-      <p>
-        Additional trivia based on the predictions of people I actually know:
-      </p>
-      <ul>{props.children}</ul>
     </div>
   )
 }

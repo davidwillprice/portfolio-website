@@ -287,7 +287,9 @@ export function getControPlayers(players: Players, entrantType: string) {
     //If the player is "average" or doesn't have predictions for that entrant type, skip them
     if (
       player.name === "Average" ||
-      player.tables[entrantType as keyof Player["tables"]].length === 0
+      player.tables[entrantType as keyof Player["tables"]].length === 0 ||
+      player.groups.includes("redditors") ||
+      player.groups.includes("misc")
     ) {
       continue
     }
