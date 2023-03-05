@@ -23,8 +23,12 @@ export function statsNotes(isSeasonOver: boolean) {
   return (
     <Fragment>
       <li>
-        Nobody predicted Hamilton, Leclerc, Alonso, Gasly, Norris, and Albon
-        being beaten by their team mate;
+        Nobody predicted Alonso, Norris, and Albon being beaten by their
+        teammates;
+      </li>
+      <li>
+        Jenny was the only person to predict Russell, Gasly, and Sainz beating
+        their teammates;
       </li>
       <li>Will was the only person to predict Perez beating Verstappen;</li>
       <li>Tom was the only person to predict Zhou beating Bottas;</li>
@@ -33,7 +37,7 @@ export function statsNotes(isSeasonOver: boolean) {
         the only person not to predict Red Bull will win the constructors
         (Opting for Mercedes);
       </li>
-      <li>Everyone predicted Williams finishing last.</li>
+      <li>Jenny was the only person not to predict Williams finishing last.</li>
     </Fragment>
   )
 }

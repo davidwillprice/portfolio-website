@@ -68,7 +68,7 @@ export const teams = entrantData.teams
 export const players: Players = {
   david: new Player(
     "David",
-    ["aberystwyth", "brr", "herefordshire"],
+    ["aberystwyth", "brr", "bristol"],
     [
       ves,
       per,
@@ -122,7 +122,7 @@ export const players: Players = {
   ),
   tom: new Player(
     "Tom",
-    ["brr", "herefordshire"],
+    ["brr", "bristol"],
     [
       ves,
       per,
@@ -149,7 +149,7 @@ export const players: Players = {
   ),
   pete: new Player(
     "Pete",
-    ["herefordshire"],
+    ["bristol"],
     [
       ham,
       ves,
@@ -200,6 +200,33 @@ export const players: Players = {
       sar,
     ],
     [rbr, fer, mer, alp, ast, alf, mcl, alt, has, wil]
+  ),
+  jenny: new Player(
+    "Jenny",
+    ["bristol"],
+    [
+      ves,
+      per,
+      sai,
+      lec,
+      rus,
+      alo,
+      ham,
+      str,
+      oco,
+      nor,
+      gas,
+      alb,
+      bot,
+      zho,
+      pia,
+      tsu,
+      sar,
+      dev,
+      mag,
+      hul,
+    ],
+    [rbr, fer, mer, ast, alp, mcl, alf, wil, alt, has]
   ),
   wild: new Player(
     //Redditor Predictions https://www.reddit.com/r/formula1/comments/11dhzs5/formula_1_prediction_template_2023_season/
