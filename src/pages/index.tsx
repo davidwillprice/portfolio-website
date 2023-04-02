@@ -195,7 +195,7 @@ export default function Index({
             </p>
             <ButtonCon>
               <Button
-                url="/f1-prediction-game/2022/"
+                url="/f1-prediction-game/2023/"
                 linkDesc="View F1 prediction game"
                 btnText="View F1 Prediction Game"
               />
