@@ -5,41 +5,45 @@
   display: flex;
   margin-top: -50px;
   align-items: flex-start;
+  :first-child {
+    margin-top: 0px;
+  }
+  &.small {
+    margin-top: 20px;
+  }
 }
-.small.workExampleCon {
-  margin-top: 20px;
+.text {
+  align-self: center;
+  flex: 1;
+  margin: 30px 20px 30px 0;
+  h3 {
+    font-size: 2rem;
+    font-weight: 900;
+  }
 }
-.workExampleCon:first-child {
-  margin-top: 0px;
-}
-.workExampleConR .workExampleText {
+.workExampleConR .text {
   order: 1;
   text-align: right;
   margin: 30px 0 30px 20px;
+  a {
+    float: right;
+  }
 }
-.workExampleConR .workExampleText a {
-  float: right;
+.small {
+  .text {
+    margin-top: 0;
+  }
+  .brushImgCon {
+    max-width: 250px;
+    width: 30%;
+  }
 }
-.workExampleText h3 {
-  font-size: 2rem;
-  font-weight: 900;
+.brushImgCon {
+  max-width: 450px;
+  width: 40%;
+  margin: 0 auto;
 }
-.workExampleText {
-  align-self: center;
-  width: 100%;
-  margin: 30px 20px 30px 0;
-}
-.small .workExampleText {
-  margin-top: 0;
-}
-.workExampleLink {
-  width: 75%;
-}
-.small .workExampleLink {
-  width: 30%;
-}
-.brushPreviewCon {
-  max-width: 600px;
+.link {
   width: 100%;
 }
 .brushPreview {
@@ -64,43 +68,41 @@
   width: 100%;
   transition: opacity 200ms;
 }
-.brushMaskCon img {
-  border-radius: 5%;
-  -webkit-mask-size: 100%;
-  mask-size: 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+.brushMaskCon {
+  img {
+    border-radius: 5%;
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+  :hover img {
+    opacity: 0.5;
+  }
 }
-.brushSplashCon .image,
-.brushSplashCon .brushBg {
-  top: 50%;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  height: auto;
-}
-.brushMaskCon :hover img {
-  opacity: 0.5;
-}
-.brushSplashCon .workExampleLink:hover .brushBg {
-  fill: var(--highlight-colour);
+.brushSplashCon {
+  .image,
+  .brushBg {
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: auto;
+  }
+  .link:hover .brushBg {
+    fill: var(--highlight-colour);
+  }
 }
 
 @media (max-width: 1000px) {
   .workExampleCon {
     margin-top: -25px;
   }
-  .workExampleLink {
-    width: 100%;
-  }
-  .small .workExampleLink {
-    width: 50%;
-  }
 }
 
 @media (max-width: 800px) {
-  .workExampleText h3 {
+  .text h3 {
     font-size: 1.3em;
   }
   .workExampleCon {
@@ -112,29 +114,40 @@
   .workExampleCon {
     flex-direction: column;
   }
-  .workExampleConR .workExampleText {
-    text-align: left;
+  .text {
     margin: 0 0 30px;
-  }
-  .workExampleConR .workExampleText a {
-    float: none;
-  }
-  .small .workExampleLink,
-  .small .brushPreviewCon {
-    max-width: 200px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .nonDesktop {
-    margin-bottom: 10px;
-  }
-  .workExampleText {
-    margin: 0 0 30px;
-  }
-  .small .workExampleText {
-    margin-top: 20px;
-  }
-  .workExampleText {
     order: 1;
+  }
+  .brushImgCon {
+    max-width: 400px;
+  }
+  .brushImgCon,
+  .text {
+    width: 100%;
+  }
+  .extraMobBotPadding {
+    margin-bottom: 20px;
+  }
+  .workExampleConR {
+    .text {
+      text-align: left;
+      margin: 0 0 30px;
+    }
+    .text a {
+      float: none;
+    }
+  }
+  .small {
+    .link {
+      max-width: 200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .text {
+      margin-top: 20px;
+    }
+    .brushImgCon {
+      width: auto;
+    }
   }
 }

@@ -227,15 +227,6 @@ button {
   h1 {
     font-size: 2.4rem;
   }
-  .workExampleCon {
-    flex-direction: column;
-  }
-  .workExampleConR .workExampleText {
-    text-align: left;
-  }
-  .workExampleText {
-    order: 1;
-  }
   .anchor::before {
     margin-top: -($header-height-mobile + 10px);
     height: ($header-height-mobile + 10px);

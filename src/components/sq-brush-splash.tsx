@@ -12,7 +12,7 @@ export default class SqBrushSplash extends Component<{
   img: IGatsbyImageData
   linkDesc?: string
   linkUrl?: string
-  nonDesktop?: boolean
+  extraMobBotPadding?: boolean
 }> {
   CalcModCon = () => {
     let classes =
@@ -22,26 +22,17 @@ export default class SqBrushSplash extends Component<{
     }
     return classes
   }
-  CalcBrushCon = () => {
-    let classes = sqBrushStyles.brushPreviewCon
-    if (this.props.nonDesktop) {
-      classes += " " + sqBrushStyles.nonDesktop
-    }
-    return classes
-  }
   html = () => {
     const brushContent = (
-      <div className={this.CalcBrushCon()}>
-        <div className={sqBrushStyles.brushPreview}>
-          <GatsbyImage
-            alt={this.props.imgAlt}
-            image={this.props.img}
-            className={sqBrushStyles.image}
-          />
-          {React.cloneElement(this.props.brush, {
-            className: sqBrushStyles.brushBg,
-          })}
-        </div>
+      <div className={sqBrushStyles.brushPreview}>
+        <GatsbyImage
+          alt={this.props.imgAlt}
+          image={this.props.img}
+          className={sqBrushStyles.image}
+        />
+        {React.cloneElement(this.props.brush, {
+          className: sqBrushStyles.brushBg,
+        })}
       </div>
     )
     // If a link url and description is provided, add a link around the brushcontent
@@ -50,7 +41,7 @@ export default class SqBrushSplash extends Component<{
       if (this.props.external) {
         return (
           <a
-            className={sqBrushStyles.workExampleLink}
+            className={sqBrushStyles.link}
             aria-label={this.props.linkDesc}
             href={this.props.linkUrl}
           >
@@ -60,7 +51,7 @@ export default class SqBrushSplash extends Component<{
       } else {
         return (
           <Link
-            className={sqBrushStyles.workExampleLink}
+            className={sqBrushStyles.link}
             aria-label={this.props.linkDesc}
             to={this.props.linkUrl}
           >
@@ -76,10 +67,16 @@ export default class SqBrushSplash extends Component<{
   render() {
     return (
       <div className={this.CalcModCon()}>
-        <div className={sqBrushStyles.workExampleText}>
-          {this.props.children}
+        <div className={sqBrushStyles.text}>{this.props.children}</div>
+        <div
+          className={`${sqBrushStyles.brushImgCon} ${
+            this.props.extraMobBotPadding
+              ? sqBrushStyles.extraMobBotPadding
+              : ""
+          }`}
+        >
+          {this.html()}
         </div>
-        {this.html()}
       </div>
     )
   }

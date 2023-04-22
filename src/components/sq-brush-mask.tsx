@@ -18,19 +18,17 @@ export default class SqBrushMask extends Component<{
 }> {
   html = () => {
     const brushContent = (
-      <div className={sqBrushStyles.brushPreviewCon}>
-        <div className={sqBrushStyles.brushPreview}>
-          <GatsbyImage
-            alt={this.props.imgAlt}
-            image={this.props.img}
-            className={sqBrushStyles.image}
-            style={{
-              maskImage: "url(" + this.props.brush + ")",
-              maskSize: "100%",
-              WebkitMaskImage: "url(" + this.props.brush + ")",
-            }}
-          />
-        </div>
+      <div className={sqBrushStyles.brushPreview}>
+        <GatsbyImage
+          alt={this.props.imgAlt}
+          image={this.props.img}
+          className={sqBrushStyles.image}
+          style={{
+            maskImage: "url(" + this.props.brush + ")",
+            maskSize: "100%",
+            WebkitMaskImage: "url(" + this.props.brush + ")",
+          }}
+        />
       </div>
     )
     // If a link url and description is provided, add a link around the brushcontent
@@ -39,7 +37,7 @@ export default class SqBrushMask extends Component<{
       if (this.props.external) {
         return (
           <a
-            className={sqBrushStyles.workExampleLink}
+            className={sqBrushStyles.link}
             aria-label={this.props.linkDesc}
             href={this.props.linkUrl}
           >
@@ -49,7 +47,7 @@ export default class SqBrushMask extends Component<{
       } else {
         return (
           <Link
-            className={sqBrushStyles.workExampleLink}
+            className={sqBrushStyles.link}
             aria-label={this.props.linkDesc}
             to={this.props.linkUrl}
           >
@@ -71,10 +69,8 @@ export default class SqBrushMask extends Component<{
           sqBrushStyles.workExampleCon
         } ${sqBrushStyles.brushMaskCon}`}
       >
-        <div className={sqBrushStyles.workExampleText}>
-          {this.props.children}
-        </div>
-        {this.html()}
+        <div className={sqBrushStyles.text}>{this.props.children}</div>
+        <div className={sqBrushStyles.brushImgCon}>{this.html()}</div>
       </div>
     )
   }

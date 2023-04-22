@@ -108,7 +108,7 @@ export default function Index({
             imgAlt="Swiis Foster Care Why Foster on tablet"
             linkDesc="Swiis international web development page"
             linkUrl="/swiis/"
-            nonDesktop={true}
+            extraMobBotPadding={true}
           >
             <h3>Swiis International Ltd</h3>
             <p>Feb 2019 - Feb 2023</p>
@@ -153,7 +153,7 @@ export default function Index({
             imgAlt="Bristol Marketing Agency homepage on mobile"
             linkDesc="Bristol Marketing Agency web design page"
             linkUrl="/bristol-marketing-agency/"
-            nonDesktop={true}
+            extraMobBotPadding={true}
           >
             <h3>Bristol Marketing Agency</h3>
             <p>Feb 2018</p>
