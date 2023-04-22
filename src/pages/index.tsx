@@ -24,6 +24,7 @@ export default function Index({
   data,
 }: {
   data: {
+    cegd: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     portrait: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     swiis: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     lyp: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
@@ -33,6 +34,7 @@ export default function Index({
     football: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
   }
 }) {
+  const cegdImg = data.cegd.childImageSharp.gatsbyImageData
   const portrait = data.portrait.childImageSharp.gatsbyImageData
   const swiisImg = data.swiis.childImageSharp.gatsbyImageData
   const lypImg = data.lyp.childImageSharp.gatsbyImageData
@@ -85,6 +87,21 @@ export default function Index({
           Projects
         </h2>
         <div className={brushConStyles.workBrushCon}>
+          <SqBrushMask
+            brush={"/svgs/brush-bg-1.svg"}
+            dirTxtRight={true}
+            img={cegdImg}
+            imgAlt="Cambridge Education Group Digital logo"
+          >
+            <h3>Cambridge Education Group&nbsp;Digital</h3>
+            <p>Feb 2023 - Current</p>
+            <p>
+              Full-time position as a Web Developer transferring course content
+              between systems while ensuring their quality, responsiveness, and
+              accessiblity. While also working on modular solutions to automate
+              and scale the process.
+            </p>
+          </SqBrushMask>
           <SqBrushSplash
             brush={<BrushThree />}
             img={swiisImg}
@@ -94,7 +111,7 @@ export default function Index({
             nonDesktop={true}
           >
             <h3>Swiis International Ltd</h3>
-            <p>Feb 2019 - Current</p>
+            <p>Feb 2019 - Feb 2023</p>
             <p>
               Full time position as a Web Developer & Designer at Swiis
               International; parent company of Swiis Foster Care, Swiis Foster
@@ -282,6 +299,11 @@ export default function Index({
 }
 export const pageQuery = graphql`
   query {
+    cegd: file(relativePath: { eq: "cegd-logo.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
     portrait: file(relativePath: { eq: "david-price-portrait.jpg" }) {
       childImageSharp {
         gatsbyImageData
