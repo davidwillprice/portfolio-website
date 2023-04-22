@@ -98,8 +98,8 @@ export default function Index({
             <p>
               Full-time position as a Web Developer transferring course content
               between systems while ensuring their quality, responsiveness, and
-              accessiblity. While also working on modular solutions to automate
-              and scale the process.
+              accessiblity. Also working on modular solutions to automate and
+              scale the process.
             </p>
           </SqBrushMask>
           <SqBrushSplash
