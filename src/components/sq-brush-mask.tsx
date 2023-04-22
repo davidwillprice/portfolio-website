@@ -10,9 +10,9 @@ export default class SqBrushMask extends Component<{
   imgAlt: string
   img: IGatsbyImageData
   external?: boolean
-  linkUrl: string
+  linkUrl?: string
   size?: string
-  linkDesc: string
+  linkDesc?: string
   dirTxtRight?: boolean
   brush: string
 }> {
@@ -33,29 +33,35 @@ export default class SqBrushMask extends Component<{
         </div>
       </div>
     )
-    //If the link is external, wrap in an <a> tag instead of a <Link> component
-    if (this.props.external) {
-      return (
-        <a
-          className={sqBrushStyles.workExampleLink}
-          aria-label={this.props.linkDesc}
-          href={this.props.linkUrl}
-        >
-          {brushContent}
-        </a>
-      )
+    // If a link url and description is provided, add a link around the brushcontent
+    if (this.props.linkUrl && this.props.linkDesc) {
+      //If the link is external, wrap in an <a> tag instead of a <Link> component
+      if (this.props.external) {
+        return (
+          <a
+            className={sqBrushStyles.workExampleLink}
+            aria-label={this.props.linkDesc}
+            href={this.props.linkUrl}
+          >
+            {brushContent}
+          </a>
+        )
+      } else {
+        return (
+          <Link
+            className={sqBrushStyles.workExampleLink}
+            aria-label={this.props.linkDesc}
+            to={this.props.linkUrl}
+          >
+            {brushContent}
+          </Link>
+        )
+      }
     } else {
-      return (
-        <Link
-          className={sqBrushStyles.workExampleLink}
-          aria-label={this.props.linkDesc}
-          to={this.props.linkUrl}
-        >
-          {brushContent}
-        </Link>
-      )
+      return brushContent
     }
   }
+
   render() {
     return (
       <div
