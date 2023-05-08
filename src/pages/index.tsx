@@ -201,7 +201,7 @@ export default function Index({
             brush={<BrushOne />}
             img={f1Img}
             imgAlt="F1 prediction game screenshot"
-            linkUrl="/f1-prediction-game/2022/"
+            linkUrl="/f1-prediction-game/2023/"
             linkDesc="View F1 prediction game"
           >
             <h3>F1 Prediction Game</h3>
