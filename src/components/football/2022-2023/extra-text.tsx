@@ -30,6 +30,12 @@ export const helpNotes = (
 export function statsNotes(isSeasonOver: boolean) {
   return (
     <Fragment>
+      {isSeasonOver && (
+        <li>
+          David was the only person not to correctly perdict a single team's
+          final standing;
+        </li>
+      )}
       <li>
         {isSeasonOver && <span className={cross}>✖</span>} Will was the only
         person to predict Chelsea would win the title,{" "}
@@ -37,26 +43,26 @@ export function statsNotes(isSeasonOver: boolean) {
         to predict Everton finishing top 6;
       </li>
       <li>
-        {isSeasonOver && <span className={cross}>✖</span>} Jack G was the only
-        person to predict Bournemouth finishing higher than 20th (19th),{" "}
+        {isSeasonOver && <span className={tick}>✔</span>} Jack G was the only
+        person to predict Bournemouth finishing higher than 20th,{" "}
         {isSeasonOver && <span className={cross}>✖</span>} and the only person
         to predict Brentford getting relegated;
       </li>
       <li>
-        {isSeasonOver && <span className={cross}>✖</span>} Ewan was the only
+        {isSeasonOver && <span className={tick}>✔</span>} Ewan was the only
         person to predict Southampton getting relegated;
       </li>
       <li>
-        {isSeasonOver && <span className={cross}>✖</span>} Sam was the only
+        {isSeasonOver && <span className={tick}>✔</span>} Sam was the only
         person to predict Newcastle would reach the top 6;
       </li>
       <li>
-        {isSeasonOver && <span className={cross}>✖</span>} Jack H was the only
+        {isSeasonOver && <span className={tick}>✔</span>} Jack H was the only
         person to predict Manchester United would get Champions League;
       </li>
       <li>
         {" "}
-        {isSeasonOver && <span className={cross}>✖</span>} Jack H and Sam were
+        {isSeasonOver && <span className={tick}>✔</span>} Jack H and Sam were
         the only people to predict Tottenham wouldn't get Champions League;
       </li>
       <li>
