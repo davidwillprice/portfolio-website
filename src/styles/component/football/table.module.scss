@@ -15,13 +15,16 @@
 .playerNumbers1.tablesOverview .predictionTables {
   justify-content: flex-end;
 }
-.playerNumbers6 .fullName {
+.playerNumbers6 .fullName,
+.playerNumbers7 .fullName {
   display: none;
 }
-.playerNumbers6 .shortName {
+.playerNumbers6 .shortName,
+.playerNumbers7 .shortName {
   display: block;
 }
-.playerNumbers6 .entrantBlock {
+.playerNumbers6 .entrantBlock,
+.playerNumbers7 .entrantBlock {
   width: 100%;
 }
 .predictionTables {
@@ -202,6 +205,26 @@
     display: block;
   }
   .playerNumbers5 .entrantBlock {
+    width: 100%;
+  }
+  .playerNumbers7 .predictionTables {
+    flex-wrap: nowrap;
+    width: calc(100% - 150px);
+  }
+  .playerNumbers7 .predictionTables .tableContainer {
+    width: calc(50% - 20px);
+    margin-right: 20px;
+  }
+  .playerNumbers7 .swipeIconCon {
+    display: inherit;
+  }
+  .playerNumbers7 .fullName {
+    display: block;
+  }
+  .playerNumbers7 .shortName {
+    display: none;
+  }
+  .playerNumbers7 .entrantBlock {
     width: 100%;
   }
 }
