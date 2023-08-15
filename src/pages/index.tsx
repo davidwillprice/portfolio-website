@@ -231,7 +231,7 @@ export default function Index({
             dirTxtRight={true}
             img={footballImg}
             imgAlt="Football Prediction gme screenshot"
-            linkUrl="/football-prediction-game/2022-2023/"
+            linkUrl="/football-prediction-game/2023-2024/"
             linkDesc="View Football Prediction Game"
           >
             <h3>Premier League Prediction Game</h3>
@@ -242,7 +242,7 @@ export default function Index({
             </p>
             <ButtonCon align="right">
               <Button
-                url="/football-prediction-game/2022-2023/"
+                url="/football-prediction-game/2023-2024/"
                 btnText="View Football Prediction Game"
               />
               <Button
