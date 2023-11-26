@@ -23,21 +23,40 @@ export function statsNotes(isSeasonOver: boolean) {
   return (
     <Fragment>
       <li>
-        Nobody predicted Alonso, Norris, and Albon being beaten by their
+        Nobody predicted Alonso
+        {isSeasonOver && <span className={tick}> (✔)</span>}, Norris
+        {isSeasonOver && <span className={tick}> (✔)</span>}, and Albon
+        {isSeasonOver && <span className={tick}> (✔)</span>} being beaten by
+        their teammates;
+      </li>
+      <li>
+        Jenny was the only person to predict Russell
+        {isSeasonOver && <span className={cross}> (✖)</span>}, Gasly
+        {isSeasonOver && <span className={tick}> (✔)</span>}, and Sainz
+        {isSeasonOver && <span className={cross}> (✖)</span>} beating their
         teammates;
       </li>
       <li>
-        Jenny was the only person to predict Russell, Gasly, and Sainz beating
-        their teammates;
+        Will was the only person to predict Perez beating Verstappen
+        {isSeasonOver && <span className={cross}> (✖)</span>};
       </li>
-      <li>Will was the only person to predict Perez beating Verstappen;</li>
-      <li>Tom was the only person to predict Zhou beating Bottas;</li>
       <li>
-        Pete was the only person to predict Hulkenberg beating Magnussen, and
-        the only person not to predict Red Bull will win the constructors
-        (Opting for Mercedes);
+        Tom was the only person to predict Zhou beating Bottas
+        {isSeasonOver && <span className={cross}> (✖)</span>};
       </li>
-      <li>Jenny was the only person not to predict Williams finishing last.</li>
+      <li>
+        Pete was the only person to predict Hulkenberg beating Magnussen
+        {isSeasonOver && <span className={tick}> (✔)</span>}, and the only
+        person not to predict Red Bull will win the constructors (Opting for
+        Mercedes)
+        {isSeasonOver && <span className={cross}> (✖)</span>};
+      </li>
+      <li>
+        Jenny was the only person not to predict Williams finishing last
+        {isSeasonOver && <span className={tick}> (✔)</span>}, predicting Haas to
+        be last instead
+        {isSeasonOver && <span className={tick}> (✔)</span>}.
+      </li>
     </Fragment>
   )
 }

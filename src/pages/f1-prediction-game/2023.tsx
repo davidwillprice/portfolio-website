@@ -36,7 +36,7 @@ export default class f1Predict2023 extends Component {
             rounds={rounds}
             players={players}
             year={2023}
-            finalNoOfRaces={23}
+            finalNoOfRaces={22}
             helpNotes={helpNotes}
             statsNotes={statsNotes}
             playerGroupsArr={playerGroupsArr}
