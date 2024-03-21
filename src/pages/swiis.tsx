@@ -14,7 +14,7 @@ export default function SwiisDigital() {
     <Layout marginTopDesktop={true}>
       <Seo
         title="Swiis International"
-        description="I am currently in a full-time position as a Web Developer & Designer at Swiis International"
+        description="I worked in a full-time position as a Web Developer & Designer at Swiis International"
       />
       <div className={ShowcaseStyles.introCon}>
         <div className={ShowcaseStyles.logoCon + " SwiisLogos"}>
@@ -22,8 +22,7 @@ export default function SwiisDigital() {
         </div>
         <div className={ShowcaseStyles.introText}>
           <p>
-            I am currently in a full-time position as a Web Developer & Designer
-            at{" "}
+            I worked in a full-time position as a Web Developer & Designer at{" "}
             <a className={textLink} href="https://www.swiis.com">
               Swiis International
             </a>
@@ -44,16 +43,22 @@ export default function SwiisDigital() {
             </a>
             .
           </p>
-          <p>Duties include:</p>
+          <p>My duties included:</p>
           <ul>
             <li>
               Using{" "}
               <span className="ShowcaseStyles.highlight">
                 HTML, CSS and JavaScript
               </span>{" "}
-              to develop and manage 6 different{" "}
-              <span className="ShowcaseStyles.highlight">Wordpress</span>{" "}
+              to develop and manage 7 different{" "}
+              <span className="ShowcaseStyles.highlight">WordPress</span>{" "}
               websites;
+            </li>
+            <li>
+              Designing, developing, and managing two web portals allowing over
+              450 foster carers & independent members to login (via a unique
+              account number) and view exclusive resources, events and
+              documents;
             </li>
             <li>
               Monitoring user journeys and general website performance using{" "}

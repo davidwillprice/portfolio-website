@@ -70,7 +70,7 @@ export default function Index({
           and CSS to earn my first Web Developer & Designer position in 2015.
         </p>
         <p>
-          After gaining 6 years experience building and maintaining responsive
+          After gaining 9 years experience building and maintaining responsive
           websites, I am now also proficient in JavaScript.
         </p>
         <p>
@@ -96,10 +96,16 @@ export default function Index({
             <h3>Cambridge Education Group&nbsp;Digital</h3>
             <p>Feb 2023 - Current</p>
             <p>
-              Full-time position as a Web Developer transferring course content
-              between systems while ensuring their quality, responsiveness, and
-              accessiblity. Also working on modular solutions to automate and
-              scale the process.
+              Full-time position as a Web Developer implementing online learning
+              content while ensuring their quality, responsiveness, and
+              accessiblity.
+            </p>
+            <p>
+              In an agile scrum environment, collaborating on various in-house
+              software. Including adding features and eliminating bugs across
+              JavaScript (Next.js) and PHP (WordPress) tech stacks, and
+              providing QA, reviews, and proposing changes to colleague Git pull
+              requests.
             </p>
           </SqBrushMask>
           <SqBrushSplash
