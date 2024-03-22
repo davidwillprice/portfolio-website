@@ -43,11 +43,18 @@ export default function Index({
   const f1Img = data.f1.childImageSharp.gatsbyImageData
   const footballImg = data.football.childImageSharp.gatsbyImageData
 
+  const yearsSinceIStartedWork = () => {
+    const dateIstartedWork = new Date().setFullYear(2015, 8, 11)
+    const millisecondDiff = (new Date().getTime() - dateIstartedWork) / 1000
+    const daysDiff = millisecondDiff / (60 * 60 * 24)
+    return Math.abs(Math.round(daysDiff / 365.25))
+  }
+
   return (
     <Layout>
       <Seo
         title="David Price Web Design"
-        description="I am currently in a full-time position as a Web Developer & Designer at Swiis International"
+        description="Bristol-based Front-End Web Developer"
       />
       <div className={IndexStyles.indexTitleBan}>
         <SolarSVG className={IndexStyles.solarSVG} />
@@ -70,12 +77,10 @@ export default function Index({
           and CSS to earn my first Web Developer & Designer position in 2015.
         </p>
         <p>
-          After gaining 9 years experience building and maintaining responsive
-          websites, I am now also proficient in JavaScript.
-        </p>
-        <p>
-          I am always pushing myself to learn new skills in my free time,
-          currently including Git, React, Gatsby and Sass.
+          Over the last {yearsSinceIStartedWork()} years I have pushed myself to
+          learn new skills and work with new tech, from JavaScript and WordPress
+          to React and Next.js. I take pride in ensuring my websites are
+          responsive, accessible, modular, organised, and fast to load.
         </p>
         <p>
           I believe my creative background helps me approach problem solving and

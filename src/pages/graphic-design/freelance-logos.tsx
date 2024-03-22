@@ -51,7 +51,11 @@ export default function FreelanceLogo() {
         <p>
           Logo I created using a client provided pencil drawing for an American
           Gym on{" "}
-          <a href="https://www.reddit.com/r/logorequests/" rel="nofollow">
+          <a
+            className={textLink}
+            href="https://www.reddit.com/r/logorequests/"
+            rel="nofollow"
+          >
             /r/logorequests
           </a>
           .
