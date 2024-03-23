@@ -121,3 +121,16 @@
     opacity: 1;
   }
 }
+@media (max-width: 900px) {
+  .container {
+    aspect-ratio: 1.7/1;
+    position: relative;
+    svg {
+      position: absolute;
+      width: 120%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: 0;
+    }
+  }
+}

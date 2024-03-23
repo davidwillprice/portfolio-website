@@ -132,7 +132,7 @@ export default function Index({
               <Button
                 url="/swiis/"
                 linkDesc="Swiis international web development page"
-                btnText="Learn More"
+                btnText="View Swiis Position Details"
               />
             </ButtonCon>
           </SqBrushSplash>
@@ -154,7 +154,7 @@ export default function Index({
               <Button
                 url="/loveyourpostcode/"
                 linkDesc="Love Your Postcode web development page"
-                btnText="Learn More"
+                btnText="View LYP Position Details"
               />
             </ButtonCon>
           </SqBrushSplash>
@@ -176,7 +176,7 @@ export default function Index({
               <Button
                 url="/bristol-marketing-agency/"
                 linkDesc="Bristol Marketing Agency web design page"
-                btnText="Learn More"
+                btnText="View LYP Position Details"
               />
             </ButtonCon>
           </SqBrushSplash>
