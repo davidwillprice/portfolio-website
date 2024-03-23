@@ -8,7 +8,7 @@ export const entrantData = {
     rus: new Entrant("Russell", "rus", "mer"),
     lec: new Entrant("Leclerc", "lec", "fer"),
     sai: new Entrant("Sainz", "sai", "fer"),
-    ves: new Entrant("Verstappen", "ves", "rbr"),
+    ver: new Entrant("Verstappen", "ver", "rbr"),
     per: new Entrant("Perez", "per", "rbr"),
     alo: new Entrant("Alonso", "alo", "alp"),
     oco: new Entrant("Ocon", "oco", "alp"),
@@ -43,7 +43,7 @@ const {
   bot,
   lec,
   sai,
-  ves,
+  ver,
   per,
   alo,
   oco,
@@ -70,7 +70,7 @@ export const players: Players = {
     "David",
     ["aberystwyth", "brr", "herefordshire"],
     [
-      ves,
+      ver,
       ham,
       lec,
       rus,
@@ -98,7 +98,7 @@ export const players: Players = {
     ["aberystwyth", "brr"],
     [
       ham,
-      ves,
+      ver,
       lec,
       rus,
       sai,
@@ -124,7 +124,7 @@ export const players: Players = {
     "Tom",
     ["brr", "dyson", "herefordshire"],
     [
-      ves,
+      ver,
       ham,
       rus,
       per,
@@ -152,7 +152,7 @@ export const players: Players = {
     ["herefordshire"],
     [
       sai,
-      ves,
+      ver,
       ham,
       lec,
       rus,
@@ -178,7 +178,7 @@ export const players: Players = {
     "Will",
     ["aberystwyth"],
     [
-      ves,
+      ver,
       ham,
       sai,
       per,
@@ -206,7 +206,7 @@ export const players: Players = {
     ["dyson"],
     [
       ham,
-      ves,
+      ver,
       lec,
       rus,
       per,
@@ -233,7 +233,7 @@ export const players: Players = {
     ["dyson"],
     [
       ham,
-      ves,
+      ver,
       nor,
       rus,
       per,
@@ -259,7 +259,7 @@ export const players: Players = {
     "Jade",
     ["dyson"],
     [
-      ves,
+      ver,
       ham,
       rus,
       sai,
@@ -302,7 +302,7 @@ export const players: Players = {
     "Reddit Poll",
     ["misc"],
     [
-      ves,
+      ver,
       lec,
       sai,
       ham,
@@ -351,7 +351,7 @@ export let rounds = [
       lat,
       per,
       gas,
-      ves,
+      ver,
       vet,
     ],
     [fer, mer, has, alf, alp, alt, ast, wil, mcl, rbr]
@@ -361,7 +361,7 @@ export let rounds = [
     [
       lec,
       sai,
-      ves,
+      ver,
       rus,
       ham,
       oco,
@@ -390,7 +390,7 @@ export let rounds = [
       sai,
       per,
       ham,
-      ves,
+      ver,
       oco,
       nor,
       mag,
@@ -412,7 +412,7 @@ export let rounds = [
     "Imola GP",
     [
       lec,
-      ves,
+      ver,
       per,
       rus,
       sai,
@@ -438,7 +438,7 @@ export let rounds = [
     "Miami GP",
     [
       lec,
-      ves,
+      ver,
       per,
       rus,
       sai,
@@ -463,7 +463,7 @@ export let rounds = [
   new Round(
     "Catalan GP",
     [
-      ves,
+      ver,
       lec,
       per,
       rus,
@@ -489,7 +489,7 @@ export let rounds = [
   new Round(
     "Monaco GP",
     [
-      ves,
+      ver,
       lec,
       per,
       rus,
@@ -515,7 +515,7 @@ export let rounds = [
   new Round(
     "Azerbaijan GP",
     [
-      ves,
+      ver,
       per,
       lec,
       rus,
@@ -541,7 +541,7 @@ export let rounds = [
   new Round(
     "Canadian GP",
     [
-      ves,
+      ver,
       per,
       lec,
       rus,
@@ -567,7 +567,7 @@ export let rounds = [
   new Round(
     "British GP",
     [
-      ves,
+      ver,
       per,
       lec,
       sai,
@@ -593,7 +593,7 @@ export let rounds = [
   new Round(
     "Austrian GP",
     [
-      ves,
+      ver,
       lec,
       per,
       sai,
@@ -619,7 +619,7 @@ export let rounds = [
   new Round(
     "French GP",
     [
-      ves,
+      ver,
       lec,
       per,
       sai,
@@ -645,7 +645,7 @@ export let rounds = [
   new Round(
     "Hungarian GP",
     [
-      ves,
+      ver,
       lec,
       per,
       rus,
@@ -671,7 +671,7 @@ export let rounds = [
   new Round(
     "Belgian GP",
     [
-      ves,
+      ver,
       per,
       lec,
       sai,
@@ -697,7 +697,7 @@ export let rounds = [
   new Round(
     "Dutch GP",
     [
-      ves,
+      ver,
       lec,
       per,
       rus,
@@ -723,7 +723,7 @@ export let rounds = [
   new Round(
     "Italian GP",
     [
-      ves,
+      ver,
       lec,
       per,
       rus,
@@ -749,7 +749,7 @@ export let rounds = [
   new Round(
     "Singaporean GP",
     [
-      ves,
+      ver,
       lec,
       per,
       rus,
@@ -775,7 +775,7 @@ export let rounds = [
   new Round(
     "Japanese GP",
     [
-      ves,
+      ver,
       per,
       lec,
       rus,
@@ -801,7 +801,7 @@ export let rounds = [
   new Round(
     "American GP",
     [
-      ves,
+      ver,
       lec,
       per,
       rus,
@@ -827,7 +827,7 @@ export let rounds = [
   new Round(
     "Mexico GP",
     [
-      ves,
+      ver,
       per,
       lec,
       rus,
@@ -853,7 +853,7 @@ export let rounds = [
   new Round(
     "Brazil GP",
     [
-      ves,
+      ver,
       lec,
       per,
       rus,
@@ -879,7 +879,7 @@ export let rounds = [
   new Round(
     "Abu Dhabi GP",
     [
-      ves,
+      ver,
       lec,
       per,
       rus,
