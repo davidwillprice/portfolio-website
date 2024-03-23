@@ -13,7 +13,7 @@ import * as IndexStyles from "../styles/page/index.module.scss"
 import * as brushConStyles from "../styles/component/brushcon.module.scss"
 import { anchor, textLink } from "../styles/global.module.scss"
 
-import SolarSVG from "../svgs/solar.svg"
+import Solar from "../svgs/solar"
 import BrushOne from "../svgs/brush-bg-1.svg"
 import BrushTwo from "../svgs/brush-bg-2.svg"
 import BrushThree from "../svgs/brush-bg-3.svg"
@@ -57,7 +57,7 @@ export default function Index({
         description="Bristol-based Front-End Web Developer"
       />
       <div className={IndexStyles.indexTitleBan}>
-        <SolarSVG />
+        <Solar />
         <div className={IndexStyles.indexTitleBanText}>
           <h1 className={IndexStyles.indexTitle}> David Price</h1>
           <h2 className={IndexStyles.indexSubtitle}>Front End Web Developer</h2>
