@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
-/* eslint-disable */ import SolarSVGStyles from "../styles/component/svg/solarsvg.scss" /* eslint-enable */
+/* eslint-disable */ import SolarSVGStyles from "../styles/component/svg/solarsvg.module.scss" /* eslint-enable */
 import Seo from "../components/head/seo"
 import SqBrushSplash from "../components/sq-brush-splash"
 import SqBrushMask from "../components/sq-brush-mask"
@@ -57,7 +57,7 @@ export default function Index({
         description="Bristol-based Front-End Web Developer"
       />
       <div className={IndexStyles.indexTitleBan}>
-        <SolarSVG className={IndexStyles.solarSVG} />
+        <SolarSVG />
         <div className={IndexStyles.indexTitleBanText}>
           <h1 className={IndexStyles.indexTitle}> David Price</h1>
           <h2 className={IndexStyles.indexSubtitle}>Front End Web Developer</h2>

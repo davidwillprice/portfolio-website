@@ -2,6 +2,9 @@
 .indexTitleBan {
   width: 100%;
   position: relative;
+  svg {
+    width: 70%;
+  }
 }
 .indexTitleBanText {
   position: absolute;
@@ -11,9 +14,6 @@
   text-align: right;
   margin: auto;
   height: 50%;
-}
-.solarSVG {
-  width: 70%;
 }
 .indexTitle {
   font-size: 3rem;
@@ -33,10 +33,10 @@
   .indexTitleBan {
     display: flex;
     flex-direction: column;
-  }
-  .solarSVG {
-    width: 100%;
-    margin: 0 auto;
+    svg {
+      width: 100%;
+      margin: 0 auto;
+    }
   }
   .indexTitleBanText {
     position: relative;
