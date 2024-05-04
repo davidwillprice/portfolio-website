@@ -24,6 +24,7 @@ export default function Index({
   data,
 }: {
   data: {
+    obfg: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     cegd: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     portrait: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     swiis: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
@@ -34,6 +35,7 @@ export default function Index({
     football: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
   }
 }) {
+  const obfgImg = data.obfg.childImageSharp.gatsbyImageData
   const cegdImg = data.cegd.childImageSharp.gatsbyImageData
   const portrait = data.portrait.childImageSharp.gatsbyImageData
   const swiisImg = data.swiis.childImageSharp.gatsbyImageData
@@ -94,7 +96,7 @@ export default function Index({
         <div className={brushConStyles.workBrushCon}>
           <SqBrushMask
             brush={"/svgs/brush-bg-1.svg"}
-            dirTxtRight={true}
+            dirTxtRight={false}
             img={cegdImg}
             imgAlt="Cambridge Education Group Digital logo"
           >
@@ -112,6 +114,31 @@ export default function Index({
               providing QA, reviews, and proposing changes to colleague Git pull
               requests.
             </p>
+          </SqBrushMask>
+          <SqBrushMask
+            brush={"/svgs/brush-bg-2.svg"}
+            dirTxtRight={true}
+            img={obfgImg}
+            imgAlt="Old Bakery Flower Garden logo"
+          >
+            <h3>Old Bakery Flower Garden</h3>
+            <p>Oct 2022 - Current</p>
+            <p>
+              Volunteer work to design and build a Next.js website for a flower
+              shop in Herefordshire.
+            </p>
+            <p>
+              Utilizes Contentful to allow the shop owner to update text and
+              image themselves, while automatically optimising image file types,
+              size and compression.
+            </p>
+            <ButtonCon align={"right"}>
+              <Button
+                url="https://www.oldbakeryflowergarden.co.uk/"
+                linkDesc="Old Bakery Flower Garden website"
+                btnText="Old Bakery Flower Garden Website"
+              />
+            </ButtonCon>
           </SqBrushMask>
           <SqBrushSplash
             brush={<BrushThree />}
@@ -310,6 +337,11 @@ export default function Index({
 }
 export const pageQuery = graphql`
   query {
+    obfg: file(relativePath: { eq: "old-bakery-flower-garden-logo.jpg" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
     cegd: file(relativePath: { eq: "cegd-logo.jpg" }) {
       childImageSharp {
         gatsbyImageData
