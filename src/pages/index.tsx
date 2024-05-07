@@ -90,31 +90,78 @@ export default function Index({
         </p>
       </SqBrushMask>
       <section>
-        <h2 id="web" className={`${IndexStyles.projectsHeader} ${anchor}`}>
-          Projects
+        <h2 id="work" className={IndexStyles.projectsHeader}>
+          Work Experience
         </h2>
+        <SqBrushMask
+          brush={"/svgs/brush-bg-1.svg"}
+          dirTxtRight={false}
+          img={cegdImg}
+          imgAlt="Cambridge Education Group Digital logo"
+        >
+          <h3>Cambridge Education Group&nbsp;Digital</h3>
+          <p>Feb 2023 - Current</p>
+          <p>
+            Full-time position as a Web Developer implementing online learning
+            content while ensuring their quality, responsiveness, and
+            accessiblity.
+          </p>
+          <p>
+            In an agile scrum environment, collaborating on various in-house
+            software. Including adding features and eliminating bugs across
+            JavaScript (Next.js) and PHP (WordPress) tech stacks, and providing
+            QA, reviews, and proposing changes to colleague Git pull requests.
+          </p>
+        </SqBrushMask>
+        <SqBrushSplash
+          brush={<BrushThree />}
+          img={swiisImg}
+          dirTxtRight={true}
+          imgAlt="Swiis Foster Care Why Foster on tablet"
+          linkDesc="Swiis international web development page"
+          linkUrl="/swiis/"
+          extraMobBotPadding={true}
+        >
+          <h3>Swiis International Ltd</h3>
+          <p>Feb 2019 - Feb 2023</p>
+          <p>
+            Full time position as a Web Developer & Designer at Swiis
+            International; parent company of Swiis Foster Care, Swiis Foster
+            Care Scotland and Swiis Healthcare.
+          </p>
+          <ButtonCon align={"right"}>
+            <Button
+              url="/swiis/"
+              linkDesc="Swiis international web development page"
+              btnText="View Swiis Position Details"
+            />
+          </ButtonCon>
+        </SqBrushSplash>
+        <SqBrushSplash
+          brush={<BrushOne />}
+          img={lypImg}
+          imgAlt="Love Your Postcode property search page on desktop"
+          linkDesc="Love Your Postcode web development page"
+          linkUrl="/loveyourpostcode/"
+        >
+          <h3>Love Your Postcode</h3>
+          <p>Aug 2015 - Feb 2019</p>
+          <p>
+            Full time position as a Web / Graphic Designer at Birmingham estate
+            agent Love Your Postcode.
+          </p>
+          <ButtonCon>
+            <Button
+              url="/loveyourpostcode/"
+              linkDesc="Love Your Postcode web development page"
+              btnText="View LYP Position Details"
+            />
+          </ButtonCon>
+        </SqBrushSplash>
+      </section>
+      <section>
+        <h2 className={`${IndexStyles.projectsHeader} ${anchor}`}>Projects</h2>
         <div className={brushConStyles.workBrushCon}>
-          <SqBrushMask
-            brush={"/svgs/brush-bg-1.svg"}
-            dirTxtRight={false}
-            img={cegdImg}
-            imgAlt="Cambridge Education Group Digital logo"
-          >
-            <h3>Cambridge Education Group&nbsp;Digital</h3>
-            <p>Feb 2023 - Current</p>
-            <p>
-              Full-time position as a Web Developer implementing online learning
-              content while ensuring their quality, responsiveness, and
-              accessiblity.
-            </p>
-            <p>
-              In an agile scrum environment, collaborating on various in-house
-              software. Including adding features and eliminating bugs across
-              JavaScript (Next.js) and PHP (WordPress) tech stacks, and
-              providing QA, reviews, and proposing changes to colleague Git pull
-              requests.
-            </p>
-          </SqBrushMask>
           <SqBrushMask
             brush={"/svgs/brush-bg-2.svg"}
             dirTxtRight={true}
@@ -140,51 +187,7 @@ export default function Index({
               />
             </ButtonCon>
           </SqBrushMask>
-          <SqBrushSplash
-            brush={<BrushThree />}
-            img={swiisImg}
-            imgAlt="Swiis Foster Care Why Foster on tablet"
-            linkDesc="Swiis international web development page"
-            linkUrl="/swiis/"
-            extraMobBotPadding={true}
-          >
-            <h3>Swiis International Ltd</h3>
-            <p>Feb 2019 - Feb 2023</p>
-            <p>
-              Full time position as a Web Developer & Designer at Swiis
-              International; parent company of Swiis Foster Care, Swiis Foster
-              Care Scotland and Swiis Healthcare.
-            </p>
-            <ButtonCon>
-              <Button
-                url="/swiis/"
-                linkDesc="Swiis international web development page"
-                btnText="View Swiis Position Details"
-              />
-            </ButtonCon>
-          </SqBrushSplash>
-          <SqBrushSplash
-            brush={<BrushOne />}
-            dirTxtRight={true}
-            img={lypImg}
-            imgAlt="Love Your Postcode property search page on desktop"
-            linkDesc="Love Your Postcode web development page"
-            linkUrl="/loveyourpostcode/"
-          >
-            <h3>Love Your Postcode</h3>
-            <p>Aug 2015 - Feb 2019</p>
-            <p>
-              Full time position as a Web / Graphic Designer at Birmingham
-              estate agent Love Your Postcode.
-            </p>
-            <ButtonCon align={"right"}>
-              <Button
-                url="/loveyourpostcode/"
-                linkDesc="Love Your Postcode web development page"
-                btnText="View LYP Position Details"
-              />
-            </ButtonCon>
-          </SqBrushSplash>
+
           <SqBrushSplash
             brush={<BrushTwo />}
             img={bmaImg}
@@ -203,7 +206,7 @@ export default function Index({
               <Button
                 url="/bristol-marketing-agency/"
                 linkDesc="Bristol Marketing Agency web design page"
-                btnText="View LYP Position Details"
+                btnText="View Redesign Details"
               />
             </ButtonCon>
           </SqBrushSplash>
