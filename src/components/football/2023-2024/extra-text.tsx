@@ -28,36 +28,50 @@ export function statsNotes(isSeasonOver: boolean) {
       {" "}
       <li>
         Pete was the only person to predict Manchester City finishing lower than
-        2nd;
+        2nd {isSeasonOver && <span className={cross}>✖</span>};
       </li>
       <li>
-        Everyone predicted Manchester City, Manchester United, and Arsenal would
-        get top four;
+        Everyone predicted Manchester City{" "}
+        {isSeasonOver && <span className={tick}>✔</span>}, Manchester United{" "}
+        {isSeasonOver && <span className={cross}>✖</span>}, and Arsenal{" "}
+        {isSeasonOver && <span className={tick}>✔</span>} would get top four;
       </li>
       <li>
-        Everyone predicted Sheffield United finishing within the bottom two;
+        Everyone predicted Sheffield United finishing within the bottom two{" "}
+        <span className={tick}>✔</span>;
       </li>
       <li>
         Ewan, Glen, and Jack G were the only people to predict Sheffield United
-        finishing bottom;
+        finishing bottom <span className={tick}>✔</span>;
       </li>
       <li>
-        Ewan and Jake were the only people to predict Brentford getting top ten;
+        Ewan and Jake were the only people to predict Brentford getting top ten{" "}
+        {isSeasonOver && <span className={cross}>✖</span>};
       </li>
       <li>
         Will was the only person to predict Liverpool finishing outside of
-        CPL/EPL (Lower than 6th), Aston Villa finishing in the top four, Luton
-        surviving, Wolves finishing last, and Bournemouth getting relegated;
+        CPL/EPL (Lower than 6th){" "}
+        {isSeasonOver && <span className={cross}>✖</span>}, Aston Villa
+        finishing in the top four{" "}
+        {isSeasonOver && <span className={tick}>✔</span>}, Luton surviving{" "}
+        {isSeasonOver && <span className={cross}>✖</span>}, Wolves finishing
+        last {isSeasonOver && <span className={cross}>✖</span>}, and Bournemouth
+        getting relegated {isSeasonOver && <span className={cross}>✖</span>};
       </li>
       <li>
         Glen was the only person to predict Newcastle finishing outside of
-        Europe (Lower than 7th);
+        Europe (Lower than 7th){" "}
+        {isSeasonOver && <span className={cross}>✖</span>};
       </li>
       <li>
-        Matt was the only person to predict Wolves surviving and Burnley getting
-        relegated;
+        Matt was the only person to predict Wolves surviving{" "}
+        {isSeasonOver && <span className={tick}>✔</span>} and Burnley getting
+        relegated {isSeasonOver && <span className={tick}>✔</span>};
       </li>
-      <li>David was the only person to predict Fulham getting top ten.</li>
+      <li>
+        David was the only person to predict Fulham getting top ten{" "}
+        {isSeasonOver && <span className={cross}>✖</span>}.
+      </li>
     </Fragment>
   )
 }
