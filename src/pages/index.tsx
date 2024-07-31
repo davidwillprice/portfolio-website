@@ -31,8 +31,8 @@ export default function Index({
     lyp: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     bma: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     monty: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
-    f1: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
-    football: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
+    pts: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
+    tam: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
   }
 }) {
   const obfgImg = data.obfg.childImageSharp.gatsbyImageData
@@ -40,10 +40,10 @@ export default function Index({
   const portrait = data.portrait.childImageSharp.gatsbyImageData
   const swiisImg = data.swiis.childImageSharp.gatsbyImageData
   const lypImg = data.lyp.childImageSharp.gatsbyImageData
+  const ptsImg = data.pts.childImageSharp.gatsbyImageData
   const bmaImg = data.bma.childImageSharp.gatsbyImageData
   const montyImg = data.monty.childImageSharp.gatsbyImageData
-  const f1Img = data.f1.childImageSharp.gatsbyImageData
-  const footballImg = data.football.childImageSharp.gatsbyImageData
+  const tamImg = data.tam.childImageSharp.gatsbyImageData
 
   const yearsSinceIStartedWork = () => {
     const dateIstartedWork = new Date().setFullYear(2015, 8, 11)
@@ -94,13 +94,26 @@ export default function Index({
           Work Experience
         </h2>
         <SqBrushMask
+          brush={"/svgs/brush-bg-2.svg"}
+          dirTxtRight={true}
+          img={tamImg}
+          imgAlt="Thought & Mortar logo"
+        >
+          <h3>Thought & Mortar</h3>
+          <p>Jun 2024 - Current</p>
+          <p>
+            Full-time position as a Front-end Shopify developer for Bristol
+            based digital agency Thought & Mortar.
+          </p>
+        </SqBrushMask>
+        <SqBrushMask
           brush={"/svgs/brush-bg-1.svg"}
           dirTxtRight={false}
           img={cegdImg}
           imgAlt="Cambridge Education Group Digital logo"
         >
           <h3>Cambridge Education Group&nbsp;Digital</h3>
-          <p>Feb 2023 - Current</p>
+          <p>Feb 2023 - Jun 2024</p>
           <p>
             Full-time position as a Web Developer implementing online learning
             content while ensuring their quality, responsiveness, and
@@ -161,10 +174,35 @@ export default function Index({
       </section>
       <section>
         <h2 className={`${IndexStyles.projectsHeader} ${anchor}`}>Projects</h2>
+        <SqBrushSplash
+          brush={<BrushThree />}
+          img={ptsImg}
+          dirTxtRight={true}
+          imgAlt="Predict the Standings website screenshot"
+          linkDesc="Predict the Standings website"
+          linkUrl="https://predictthestandings.com/"
+        >
+          <h3>Predict The Standings</h3>
+          <p>Jan 2024 - Current</p>
+          <p>
+            Website where people around the world can compete to predict the
+            standings for various sports and competitions.
+          </p>
+          <p>
+            Utilises Nextjs, MongoDB, and Auth.js so people can sign in using
+            OAuth and keep their performances from previous seasons.
+          </p>
+          <ButtonCon align={"right"}>
+            <Button
+              url="https://predictthestandings.com/"
+              linkDesc="Predict the Standings website"
+              btnText="Predict The Standings"
+            />
+          </ButtonCon>
+        </SqBrushSplash>
         <div className={brushConStyles.workBrushCon}>
           <SqBrushMask
             brush={"/svgs/brush-bg-2.svg"}
-            dirTxtRight={true}
             img={obfgImg}
             imgAlt="Old Bakery Flower Garden logo"
           >
@@ -175,11 +213,11 @@ export default function Index({
               shop in Herefordshire.
             </p>
             <p>
-              Utilizes Contentful to allow the shop owner to update text and
+              Utilises Contentful to allow the shop owner to update text and
               image themselves, while automatically optimising image file types,
               size and compression.
             </p>
-            <ButtonCon align={"right"}>
+            <ButtonCon>
               <Button
                 url="https://www.oldbakeryflowergarden.co.uk/"
                 linkDesc="Old Bakery Flower Garden website"
@@ -191,6 +229,7 @@ export default function Index({
           <SqBrushSplash
             brush={<BrushTwo />}
             img={bmaImg}
+            dirTxtRight={true}
             imgAlt="Bristol Marketing Agency homepage on mobile"
             linkDesc="Bristol Marketing Agency web design page"
             linkUrl="/bristol-marketing-agency/"
@@ -202,7 +241,7 @@ export default function Index({
               Website redesign over a weekend as part of the job application
               process for a Bristol based marketing agency.
             </p>
-            <ButtonCon>
+            <ButtonCon align="right">
               <Button
                 url="/bristol-marketing-agency/"
                 linkDesc="Bristol Marketing Agency web design page"
@@ -212,7 +251,6 @@ export default function Index({
           </SqBrushSplash>
           <SqBrushSplash
             brush={<BrushThree />}
-            dirTxtRight={true}
             external={true}
             img={montyImg}
             imgAlt="Monty Hall's 3 doors"
@@ -227,7 +265,7 @@ export default function Index({
               wanted to see if I could make a better looking, more accessible
               adaptation with more features.
             </p>
-            <ButtonCon align="right">
+            <ButtonCon>
               <Button
                 external={true}
                 url="https://github.com/davidwillprice/montyhall"
@@ -235,64 +273,6 @@ export default function Index({
                 btnColor="secondary"
                 btnIcon="github"
                 linkDesc="Github page for my Monty Hall Problem code"
-              />
-            </ButtonCon>
-          </SqBrushSplash>
-          <SqBrushSplash
-            brush={<BrushOne />}
-            img={f1Img}
-            imgAlt="F1 prediction game screenshot"
-            linkUrl="/f1-prediction-game/2023/"
-            linkDesc="View F1 prediction game"
-          >
-            <h3>F1 Prediction Game</h3>
-            <p>2020-</p>
-            <p>
-              Side project to create a game where people guess the final
-              standings of each Formula 1 season.
-            </p>
-            <ButtonCon>
-              <Button
-                url="/f1-prediction-game/2023/"
-                linkDesc="View F1 prediction game"
-                btnText="View F1 Prediction Game"
-              />
-              <Button
-                external={true}
-                url="https://github.com/davidwillprice/portfolio-website/tree/main/src/components/f1"
-                btnText="View Source"
-                linkDesc="View F1 Prediction Game source code"
-                btnColor="secondary"
-                btnIcon="github"
-              />
-            </ButtonCon>
-          </SqBrushSplash>
-          <SqBrushSplash
-            brush={<BrushOne />}
-            dirTxtRight={true}
-            img={footballImg}
-            imgAlt="Football Prediction gme screenshot"
-            linkUrl="/football-prediction-game/2023-2024/"
-            linkDesc="View Football Prediction Game"
-          >
-            <h3>Premier League Prediction Game</h3>
-            <p>2019-</p>
-            <p>
-              Side project to create a game where people guess the final
-              standings of each Premier League season.
-            </p>
-            <ButtonCon align="right">
-              <Button
-                url="/football-prediction-game/2023-2024/"
-                btnText="View Football Prediction Game"
-              />
-              <Button
-                external={true}
-                url="https://github.com/davidwillprice/portfolio-website/tree/main/src/components/football"
-                btnText="View Source"
-                linkDesc="View Football Prediction Game source code"
-                btnColor="secondary"
-                btnIcon="github"
               />
             </ButtonCon>
           </SqBrushSplash>
@@ -360,6 +340,20 @@ export const pageQuery = graphql`
         gatsbyImageData(placeholder: NONE)
       }
     }
+    pts: file(
+      relativePath: {
+        eq: "predict-the-standings/predict-the-standings_laptop-screenshot.png"
+      }
+    ) {
+      childImageSharp {
+        gatsbyImageData(placeholder: NONE)
+      }
+    }
+    tam: file(relativePath: { eq: "thought-and-mortar.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: NONE)
+      }
+    }
     lyp: file(relativePath: { eq: "lyp/lyp-property-search-desktop.png" }) {
       childImageSharp {
         gatsbyImageData(placeholder: NONE)
@@ -371,24 +365,6 @@ export const pageQuery = graphql`
       }
     }
     monty: file(relativePath: { eq: "monty-hall/monty-hall-3-doors.png" }) {
-      childImageSharp {
-        gatsbyImageData(placeholder: NONE)
-      }
-    }
-    f1: file(
-      relativePath: {
-        eq: "f1-prediction-game/f1-prediction-game-screenshot.png"
-      }
-    ) {
-      childImageSharp {
-        gatsbyImageData(placeholder: NONE)
-      }
-    }
-    football: file(
-      relativePath: {
-        eq: "football-prediction-game/football-prediction-game-screenshot.png"
-      }
-    ) {
       childImageSharp {
         gatsbyImageData(placeholder: NONE)
       }
