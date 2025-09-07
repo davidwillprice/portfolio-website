@@ -33,6 +33,7 @@ export default function Index({
     monty: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     pts: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
     tam: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
+    stt: { childImageSharp: { gatsbyImageData: IGatsbyImageData } }
   }
 }) {
   const obfgImg = data.obfg.childImageSharp.gatsbyImageData
@@ -42,7 +43,7 @@ export default function Index({
   const lypImg = data.lyp.childImageSharp.gatsbyImageData
   const ptsImg = data.pts.childImageSharp.gatsbyImageData
   const bmaImg = data.bma.childImageSharp.gatsbyImageData
-  const montyImg = data.monty.childImageSharp.gatsbyImageData
+  const sttImg = data.stt.childImageSharp.gatsbyImageData
   const tamImg = data.tam.childImageSharp.gatsbyImageData
 
   const yearsSinceIStartedWork = () => {
@@ -81,7 +82,7 @@ export default function Index({
         <p>
           Over the last {yearsSinceIStartedWork()} years I have pushed myself to
           learn new skills and work with new tech, from JavaScript and WordPress
-          to React and Next.js. I take pride in ensuring my websites are
+          to React and Shopify Liquid. I take pride in ensuring my work is
           responsive, accessible, modular, organised, and fast to load.
         </p>
         <p>
@@ -104,6 +105,11 @@ export default function Index({
           <p>
             Full-time position as a Front-end Shopify developer for Bristol
             based digital agency Thought & Mortar.
+          </p>
+          <p>
+            The core of the role is building upon store themes for merchants.
+            Using Shopify Liquid, JavaScript, and CSS to craft custom solutions
+            that meet the needs of a variety of clients.
           </p>
         </SqBrushMask>
         <SqBrushMask
@@ -220,16 +226,39 @@ export default function Index({
             <ButtonCon>
               <Button
                 url="https://www.oldbakeryflowergarden.co.uk/"
-                linkDesc="Old Bakery Flower Garden website"
-                btnText="Old Bakery Flower Garden Website"
+                linkDesc="Old Bakery Flower Garden"
+                btnText="Old Bakery Flower Garden"
               />
             </ButtonCon>
           </SqBrushMask>
-
+          <SqBrushMask
+            brush={"/svgs/brush-bg-3.svg"}
+            img={sttImg}
+            imgAlt="Old Bakery Flower Garden logo"
+            dirTxtRight={true}
+          >
+            <h3>Scrap The Trap</h3>
+            <p>Oct 2022 - Current</p>
+            <p>
+              Volunteer work through{" "}
+              <a className={textLink} href="https://veganhacktivists.org/">
+                Vegan Hacktivists
+              </a>{" "}
+              to design and build an activist website to pressure Home Base to
+              stop selling glue traps.
+            </p>
+            <p>Utilisies Next.js and Tailwind.</p>
+            <ButtonCon align={"right"}>
+              <Button
+                url="https://www.scrapthetrap.com/"
+                linkDesc="Scrap The Trap"
+                btnText="Scrap The Trap"
+              />
+            </ButtonCon>
+          </SqBrushMask>
           <SqBrushSplash
             brush={<BrushTwo />}
             img={bmaImg}
-            dirTxtRight={true}
             imgAlt="Bristol Marketing Agency homepage on mobile"
             linkDesc="Bristol Marketing Agency web design page"
             linkUrl="/bristol-marketing-agency/"
@@ -241,7 +270,7 @@ export default function Index({
               Website redesign over a weekend as part of the job application
               process for a Bristol based marketing agency.
             </p>
-            <ButtonCon align="right">
+            <ButtonCon>
               <Button
                 url="/bristol-marketing-agency/"
                 linkDesc="Bristol Marketing Agency web design page"
@@ -249,7 +278,7 @@ export default function Index({
               />
             </ButtonCon>
           </SqBrushSplash>
-          <SqBrushSplash
+          {/* <SqBrushSplash
             brush={<BrushThree />}
             external={true}
             img={montyImg}
@@ -275,7 +304,7 @@ export default function Index({
                 linkDesc="Github page for my Monty Hall Problem code"
               />
             </ButtonCon>
-          </SqBrushSplash>
+          </SqBrushSplash> */}
         </div>
       </section>
       <section>
@@ -360,6 +389,11 @@ export const pageQuery = graphql`
       }
     }
     bma: file(relativePath: { eq: "bma/bma-hp-mob.png" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: NONE)
+      }
+    }
+    stt: file(relativePath: { eq: "scrap-the-trap.png" }) {
       childImageSharp {
         gatsbyImageData(placeholder: NONE)
       }
