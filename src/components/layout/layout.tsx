@@ -49,6 +49,11 @@ export default class Layout extends Component<{
         </main>
         {this.props.footer && <Footer />}
         <Accessibility />
+        <script
+          data-goatcounter="https://davidwillprice.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"
+        ></script>
       </div>
     )
   }
