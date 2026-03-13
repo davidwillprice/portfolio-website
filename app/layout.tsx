@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import { Quicksand } from "next/font/google";
+
+import localFont from "next/font/local";
+
+import Header from "@components/header";
+
+import "@styles/globals.scss";
+
+const quicksand = Quicksand({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const rey = localFont({
+  src: "../public/fonts/reey.woff2",
+  variable: "--font-rey",
 });
 
 export const metadata: Metadata = {
@@ -24,8 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body className={`${quicksand.className} ${rey.variable}`}>
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
   );
