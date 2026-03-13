@@ -15,7 +15,7 @@ const Footer = () => (
       </div>
       <div className={styles.links}>
         <a
-          aria-label="Download David Price CV"
+          aria-label="Download David Price's CV"
           href="/2026_david-price-cv.pdf"
           download>
           <svg
