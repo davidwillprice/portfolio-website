@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 40px 15px;
+  img {
+    height: auto;
+    max-height: 340px;
+    width: auto;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container img {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container img {
+    max-width: 100%;
+  }
+}
