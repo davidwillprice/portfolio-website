@@ -18,6 +18,7 @@ import bmaImg from "@images/bma/bma-hp-mob.png";
 
 import styles from "@styles/index.module.scss";
 import btnStyles from "@styles/button.module.scss";
+import workConStyles from "@styles/brushcon.module.scss";
 
 export default function Home() {
   const yearsSinceIStartedWork = () => {
@@ -172,7 +173,7 @@ export default function Home() {
             </a>
           </ButtonCon>
         </SqBrushSplash>
-        <div className={styles.work_brush_con}>
+        <div className={workConStyles.work_brush_con}>
           <SqBrushMask
             brush={"/brushes/brush-bg-2.svg"}
             img={obfgImg}

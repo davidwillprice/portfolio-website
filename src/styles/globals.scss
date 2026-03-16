@@ -18,6 +18,8 @@
   --page-x-margin: 32px;
   --page-y-margin: 32px;
 
+  --border-radius: 5px;
+
   --margin-to-top: calc(var(--header-height) + var(--page-y-margin));
 }
 
@@ -74,6 +76,8 @@ h1,
   font-family: var(--font-rey);
   font-size: 4rem;
   margin-bottom: 48px;
+  z-index: 1;
+  position: relative;
 }
 
 h1,

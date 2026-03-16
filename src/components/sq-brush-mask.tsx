@@ -15,7 +15,7 @@ export default function SqBrushMask({
   linkDesc,
   linkUrl,
   size,
-  width,
+  width = 600,
 }: {
   brush: string;
   children?: ReactNode;
@@ -26,7 +26,7 @@ export default function SqBrushMask({
   linkDesc?: string;
   linkUrl?: string;
   size?: string;
-  width: number;
+  width?: number;
 }) {
   const html = () => {
     const brushContent = (

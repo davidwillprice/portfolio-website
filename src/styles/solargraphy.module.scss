@@ -1,0 +1,24 @@
+.dual_images {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > div {
+    width: 49%;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+      border-radius: 5px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .dual_images {
+    flex-direction: column;
+    > div {
+      width: 100%;
+    }
+  }
+}
