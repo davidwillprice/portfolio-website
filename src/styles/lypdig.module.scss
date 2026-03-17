@@ -1,0 +1,17 @@
+.logo_con {
+  background: linear-gradient(
+    to bottom,
+    rgba(29, 133, 155, 0.95) 0%,
+    rgba(24, 83, 99, 0.9) 100%
+  );
+}
+.logo_subheading {
+  font-family: Piccadilly;
+}
+.desktop_screenshot {
+  background-image: url("../images/lyp/lyp-desktop-images.jpg");
+}
+.logo {
+  transform: translate(3%, 0);
+  margin: 0 auto 20px;
+}
