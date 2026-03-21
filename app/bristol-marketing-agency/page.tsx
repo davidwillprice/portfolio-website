@@ -1,0 +1,218 @@
+import { Metadata } from "next";
+import Image from "next/image";
+
+import StandardCentralText from "@/src/components/standard-central-text";
+import TextBesideImg from "@/src/components/text-beside-img";
+import ColourPreview from "@/src/components/colour-preview";
+import FullWidthImage from "@/src/components/full-width-img";
+import FontShowcase from "@/src/components/font-showcase";
+import ColourPreviewCon from "@/src/components/colour-preview-con";
+
+import styles from "@styles/bristolagency.module.scss";
+
+import BristolLandscapeSVG from "@/src/svgs/bristol-landscape";
+import bristolAgencyLogoSVG from "@svgs/bristol-marketing-agency-logo.svg";
+import IconsSVG from "@svgs/bma-icons";
+//import BlankMobile from "@svgs/blank-mobile";
+
+import threeDeviceHp from "@images/bma/homepage-multiple-devices.jpg";
+import conceptBoard from "@images/bma/concept-board.jpg";
+
+//import MobileMenu from "@images/bma/bma-mobile-menu-full.png";
+//import mobileMenuGif from "@images/bma/bma-mob-menu.gif";
+
+export const metadata: Metadata = {
+  title: "Bristol Marketing Agency | David Price",
+  description:
+    "As part of a job application, I was tasked with redesigning the website of a Bristol based marketing agency",
+};
+
+export default function bristolAgency() {
+  return (
+    <>
+      <div className={styles.logo_con}>
+        <BristolLandscapeSVG />
+        <Image
+          alt="Bristol Marketing Agency Logo"
+          src={bristolAgencyLogoSVG}
+          className={styles.bristol_agency_logo}
+        />
+      </div>
+      <StandardCentralText headerText="Website design for a Bristol based marketing agency">
+        <p>
+          As part of a job application, I was tasked with redesigning the
+          website of a Bristol based marketing agency.
+        </p>
+        <p>
+          The brief stated that the website needed to showcase work to clients,
+          demonstrate their methodology, stand apart from other websites and be
+          reflective of their brand.
+        </p>
+      </StandardCentralText>
+      <TextBesideImg
+        headerText="An earthy, clean and natural colour scheme"
+        img={conceptBoard}
+        imgAlt="Earthy concept board">
+        <p>
+          I was given a concept board that included these images as a guideline
+          for the colours and feel that the website could showcase.
+        </p>
+        <p>
+          I decided my first step should be to choose a colour scheme and using
+          the concept board as a guide, I settled on the below four colours in
+          addition to a heavy use of white.
+        </p>
+        <p>
+          I chose colours which I felt matched well with the company brand
+          values included in the brief: Authentic - Engaged - Accountable.
+        </p>
+      </TextBesideImg>
+      <ColourPreviewCon>
+        <ColourPreview
+          hexColour="#48616e"
+          rgbColour="72, 97, 110"
+          textColour="white"
+        />
+        <ColourPreview
+          hexColour="#949887"
+          rgbColour="148, 152, 135"
+          textColour="white"
+        />
+        <ColourPreview
+          hexColour="#dfe0d2"
+          rgbColour="223, 224, 210"
+          textColour="#48616e"
+        />
+        <ColourPreview
+          hexColour="#e2dedf"
+          rgbColour="226, 222, 223"
+          textColour="#48616e"
+        />
+      </ColourPreviewCon>
+      <FullWidthImage
+        img={threeDeviceHp}
+        imgAlt="Homepage design previews on desktop, tablet and mobile"
+      />
+
+      <StandardCentralText headerText="A simple but striking homepage">
+        <p>
+          I wanted the logo to be at the forefront of the homepage layout and I
+          felt the company icon was an easy fit as a navigation link in the
+          header.
+        </p>
+        <p>
+          I created the vector background using a friend&apos;s photo of the
+          Bristol skyline, chosing a vector instead of a photo to keep the file
+          size small.
+        </p>
+        <p>
+          The landscape isn&apos;t identifiable as Bristol&apos;s skyline so
+          doesn&apos;t narrow a national company down to one area, while keeping
+          the charm of the Bristolian scenery.
+        </p>
+      </StandardCentralText>
+
+      <div className={styles.icons_con}>
+        <div className={styles.bma_icons_svg}>
+          <IconsSVG />
+        </div>
+        <div className={styles.bma_icons_text}>
+          <h3>Minimalist icons & typefaces</h3>
+          <p>
+            I kept the icons as simple as possible to match the simple colour
+            scheme.
+          </p>
+          <p>
+            The light stroke icons were designed for use in the footer and
+            mobile menu.
+          </p>
+          <p>
+            The dark fill icons were for a hover effect and the back-to-top
+            button.
+          </p>
+          <p>
+            Finally, the dark stroke icons were for use on dark backgrounds.
+          </p>
+        </div>
+      </div>
+      <div className={styles.eg_services_bg}>
+        <div className={styles.eg_services_con}>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <StandardCentralText headerText="Portfolio showcase">
+        <p>
+          As requested in the brief, I wanted to make sure the website&apos;s
+          portfolio showcase was particularly striking.
+        </p>
+        <p>
+          The diamond shape of the images are consistent with the shape of the
+          icons.
+        </p>
+      </StandardCentralText>
+      {/* <TextBesideImg
+        headerText="An earthy, clean and natural colour scheme"
+        img={MobileMenu}
+        imgAlt="Mobile menu design"
+        portraitImg={true}>
+        <p>
+          I created a mock up GIF showcasing tapping the mobile menu button.
+        </p>
+        <p>
+          A couple of call-to-action buttons at the bottom of the mobile menu
+          make contacting the agency simple.
+        </p>
+      </TextBesideImg> */}
+      <FontShowcase
+        bgColor="white"
+        color="#48616e"
+        fontName="Adamina Regular"
+        fontFamily="Adamina"></FontShowcase>
+      <StandardCentralText>
+        <p>
+          For the primary font, I chose Adamina Regular as I think it best
+          reflected the elegence, mood and feel of the images provided in the
+          concept board.
+        </p>
+        <p>
+          I felt it was also important to me to pick a font that could be easily
+          implemented through Google Fonts.
+        </p>
+      </StandardCentralText>
+      <FontShowcase
+        bgColor="white"
+        color="#48616e"
+        fontName="Source Sans Pro&nbsp;Light"
+        fontFamily="Source Sans Pro Light"></FontShowcase>
+      <StandardCentralText>
+        <p>
+          I felt Source Pro Light would be a strong choice as a font for all UI
+          aspects and some headers.
+        </p>
+        <p>
+          While being clearly readable, its light weight helps it avoid clashing
+          with the serif font Adamina.
+        </p>
+      </StandardCentralText>
+      <FontShowcase
+        bgColor="white"
+        color="#48616e"
+        fontName="Source Sans Pro Semibold"
+        fontFamily="Source Sans Pro Semibold"></FontShowcase>
+      <StandardCentralText>
+        <p>
+          Source Sans Pro Semibold was the typeface I was least sure about being
+          the right fit for the project, but I envisioned it being used
+          sparingly and only on Call to action buttons.
+        </p>
+      </StandardCentralText>
+    </>
+  );
+}

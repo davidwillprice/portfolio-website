@@ -1,0 +1,64 @@
+.bma_icons {
+  width: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  animation-name: rotateIconsBg;
+  animation-duration: 9s;
+  animation-delay: 6s;
+  animation-iteration-count: infinite;
+  display: block;
+}
+.dark_fill,
+.dark_stroke,
+.light_stroke {
+  opacity: 0;
+  animation-name: rotateIcons;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+
+.dark_stroke {
+  animation-delay: 3s;
+}
+
+.light_stroke {
+  animation-delay: 6s;
+}
+
+@keyframes rotateIcons {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  38% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotateIconsBg {
+  0% {
+    background-color: white;
+  }
+  5% {
+    background-color: #47616f;
+  }
+  33% {
+    background-color: #47616f;
+  }
+  38% {
+    background-color: white;
+  }
+  100% {
+    background-color: white;
+  }
+}
