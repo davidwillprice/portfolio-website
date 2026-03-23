@@ -95,6 +95,82 @@ export default function SwiisDigital() {
           my work distinctly human.
         </li>
       </ul>
+      <h3>PerfectFit</h3>
+      <p>
+        <a href="https://perfect-fit-dog-harness.com/">PerfectFit</a> were on
+        Adobe Commerce and overly reliant on customers using their &apos;Harness
+        Calculator&apos; to find the right size harness for their dog. The
+        customer would input their dog&apos;s breed/measurements and the
+        calculator would link them to the appropriate harness, but there
+        wasn&apos;t any recognition of the dog&apos;s breed or specific
+        measurements after that, so it was easy to get confused as to which
+        harness was recommended.
+      </p>
+      <h4>Dog breeds products</h4>
+      <p>
+        As part of their move from Adobe Commerce to Shopify, I theorised and
+        implemented{" "}
+        <a href="https://perfect-fit-dog-harness.com/products/border-collie-harness">
+          &apos;dog breed&apos; products
+        </a>
+        . We added them as products to their Shopify store, but they are never
+        intended to actually be purchased. Instead, they are just a vector for
+        purchasing the appropriate harnesses for that size of dog breed without
+        disrupting the product structure PerfectFit were used to.
+      </p>
+      <p>
+        &apos;Fit&apos; metaobjects within a metafield store which size dog
+        should have which sized harness, and when the &apos;Harness
+        selector&apos; inputs are changed by the customer, the{" "}
+        <span className="styles.highlight">Section Rendering API</span> updates
+        the UI around the appropriate harness.
+      </p>
+      <p>
+        An important <span className="styles.highlight">SEO</span> benefit was
+        that it gave PerfectFit the perfect pages to rank for searches like
+        &apos;harness for border collie&apos; or &apos;husky harness&apos;.
+      </p>
+      <p>
+        Challenges that I overcame implementing this system included:
+        <ul>
+          <li>
+            Setting up a query string system so that customers can return to the
+            breed/size/puller/variant that they were viewing previously;
+          </li>
+          <li>
+            Ensuring the customer stays on the same color option when moving
+            between harnesses;
+          </li>
+          <li>
+            Updating the variant image in the gallery when moving between
+            harnesses and variants;
+          </li>
+          <li>
+            Customizing the Google Structured Data so dog breed harnesses appear
+            as a `productGroup`, with the harnesses as products within it.
+          </li>
+        </ul>
+      </p>
+      <h4>Harness finder</h4>
+      <p>
+        We also kept the{" "}
+        <a href="https://perfect-fit-dog-harness.com/harness-finder">
+          Harness Finder
+        </a>{" "}
+        available as an additional avenue for customers to find the correct
+        harness.
+      </p>
+      <p>
+        I coded the new version from scratch to work with the new dog breed
+        pages, and added new Google Analytics 4 events that fire when a customer
+        succeeds or fails to get a result.
+      </p>
+      <p>
+        These events carry all the form data as parameters, allowing PerfectFit
+        to see which breeds/sizes are most commonly searched for. This will help
+        inform them which new dog breeds they should add to the store and which
+        new fits they should add for existing breeds.
+      </p>
     </>
   );
 }
