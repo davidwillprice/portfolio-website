@@ -78,16 +78,22 @@ export default function Home() {
           imgAlt="Thought & Mortar logo"
           width={500}>
           <h3>Thought & Mortar</h3>
-          <p>Jun 2024 - Current</p>
+          <p>Jun 2024 - Mar 2026</p>
           <p>
-            Full-time position as a Front-end Shopify developer for Bristol
-            based digital agency Thought & Mortar.
+            Full-time position as a Front-end Shopify Developer for
+            Bristol-based agency Thought & Mortar.
           </p>
           <p>
-            The core of the role is building upon store themes for merchants.
-            Using Shopify Liquid, JavaScript, and CSS to craft custom solutions
-            that meet the needs of a variety of clients.
+            Developing custom solutions using Liquid, JavaScript, and CSS to
+            meet the needs of a wide variety of clients.
           </p>
+          <ButtonCon align={"right"}>
+            <Link
+              href="/thought-and-mortar/"
+              className={`${btnStyles.button} ${btnStyles.primary}`}>
+              View T&M Position Details
+            </Link>
+          </ButtonCon>
         </SqBrushMask>
         <SqBrushMask
           brush={"/brushes/brush-bg-1.svg"}
