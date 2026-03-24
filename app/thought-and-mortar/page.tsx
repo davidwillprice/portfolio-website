@@ -108,8 +108,8 @@ export default function SwiisDigital() {
       </p>
       <h4>Dog breeds products</h4>
       <p>
-        As part of their move from Adobe Commerce to Shopify, I theorised and
-        implemented{" "}
+        As part of their move from Adobe Commerce to Shopify and the
+        &apos;Habitat&apos; theme, I theorised and implemented{" "}
         <a href="https://perfect-fit-dog-harness.com/products/border-collie-harness">
           &apos;dog breed&apos; products
         </a>
@@ -130,27 +130,25 @@ export default function SwiisDigital() {
         that it gave PerfectFit the perfect pages to rank for searches like
         &apos;harness for border collie&apos; or &apos;husky harness&apos;.
       </p>
-      <p>
-        Challenges that I overcame implementing this system included:
-        <ul>
-          <li>
-            Setting up a query string system so that customers can return to the
-            breed/size/puller/variant that they were viewing previously;
-          </li>
-          <li>
-            Ensuring the customer stays on the same color option when moving
-            between harnesses;
-          </li>
-          <li>
-            Updating the variant image in the gallery when moving between
-            harnesses and variants;
-          </li>
-          <li>
-            Customizing the Google Structured Data so dog breed harnesses appear
-            as a `productGroup`, with the harnesses as products within it.
-          </li>
-        </ul>
-      </p>
+      <p>Challenges that I overcame implementing this system included:</p>
+      <ul>
+        <li>
+          Setting up a query string system so that customers can return to the
+          breed/size/puller/variant that they were viewing previously;
+        </li>
+        <li>
+          Ensuring the customer stays on the same color option when moving
+          between harnesses;
+        </li>
+        <li>
+          Updating the variant image in the gallery when moving between
+          harnesses and variants;
+        </li>
+        <li>
+          Customizing the Google Structured Data so dog breed harnesses appear
+          as a `productGroup`, with the harnesses as products within it.
+        </li>
+      </ul>
       <h4>Harness finder</h4>
       <p>
         We also kept the{" "}
@@ -162,8 +160,9 @@ export default function SwiisDigital() {
       </p>
       <p>
         I coded the new version from scratch to work with the new dog breed
-        pages, and added new Google Analytics 4 events that fire when a customer
-        succeeds or fails to get a result.
+        pages, and added new{" "}
+        <span className="styles.highlight">Google Analytics 4</span> events that
+        fire when a customer succeeds or fails to get a result.
       </p>
       <p>
         These events carry all the form data as parameters, allowing PerfectFit
@@ -171,6 +170,85 @@ export default function SwiisDigital() {
         inform them which new dog breeds they should add to the store and which
         new fits they should add for existing breeds.
       </p>
+      <h4>Collection template promo cards</h4>
+      <p>
+        T&M&apos;s previous system for promo cards had clients creating a
+        metaobject entry with the cards&apos; text/layout/colours etc as inputs,
+        assigning the metaobject to a collection&apos;s metafield, then
+        assigning the promo card an order in the grid using the section
+        settings.
+      </p>
+      <p>
+        As the card&apos;s settings were assigned outside of the theme, if you
+        changed a setting like its layout, you would need to then open the theme
+        to see what your change looked like.
+      </p>
+      <p>
+        I created a new system for PerfectFit which ditched metaobjects or
+        metafields. Promo cards are added as{" "}
+        <span className="styles.highlight">theme blocks</span> to the product
+        grid of a collection template. The promo card block has
+        layout/order/shape/colour settings. Any number of buttons, images, text,
+        or graphics can be nested as blocks within the promo block in any order.
+      </p>
+      <p>
+        The promo cards don&apos;t interfere with the pagination as I added an
+        additional loop to the section which fills the gap on pages where the
+        promo cards aren&apos;t rendered.
+      </p>
+      <h3>Bristol Blue Glass</h3>
+      <p>
+        Thought & Mortar redesigned the Bristol Blue Glass website, and we moved
+        their store onto the &apos;Symmetry&apos; Shopify theme.
+      </p>
+      <p>
+        They were paying a monthly fee for a gift wrap app which didn&apos;t
+        offer all the functionality they needed, so I created a new system using
+        Shopify Liquid and JavaScript.
+      </p>
+      <p>Customers can now purchase the following services:</p>
+      <ul>
+        <li>
+          Engraving — With settings for the text, font family, and text colour;
+        </li>
+        <li>Gift wrapping;</li>
+        <li>A greetings card message.</li>
+      </ul>
+      <p>
+        To the extra cost to the order, hidden items are added to the cart for
+        each selected service. Although these items can&apos;t be hidden in the
+        checkout, it is clear which service is for which product thanks to line
+        item properties on the main product.
+      </p>
+      <p>
+        If the main product is removed from the cart, any services associated
+        with it are also removed automatically.
+      </p>
+      <p>
+        As the system relies on JavaScript to work, the services are hidden to
+        any users with JavaScript disabled.
+      </p>
+      <h3>Wow Shelving</h3>
+      <p>
+        As part of their migration from eBay to the &apos;Symmetry&apos; Shopify
+        theme, I implemented custom features including:
+      </p>
+      <ul>
+        <li>
+          A VAT toggle in the header which uses{" "}
+          <span className="styles.highlight">local storage</span> to keep track
+          of the customer&apos;s preference;
+        </li>{" "}
+        <li>
+          A tile calculator which updates the customer&apos;s item quantity
+          based on the area they intend to cover;
+        </li>
+        <li>
+          A discount if the customer is picking up the order from the store —
+          Uses JavaScript to add or remove a discount code depending on the
+          customer&apos;s selection.
+        </li>
+      </ul>
     </>
   );
 }
