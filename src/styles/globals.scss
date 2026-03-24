@@ -168,3 +168,9 @@ ul {
     text-decoration-skip: none;
   }
 }
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}

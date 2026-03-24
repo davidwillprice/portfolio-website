@@ -6,20 +6,32 @@ import styles from "@components/text-beside-img.module.scss";
 const TextBesideImg = (props: {
   children: ReactNode;
   headerText: string;
-  imgAlt: string;
-  portraitImg?: boolean;
   img: StaticImageData;
-}) => (
-  <div className={`${styles.con} ${props.portraitImg ? styles.portrait : ""}`}>
+  imgAfterTextOnDesktop?: boolean;
+  imgAlt: string;
+  maxImgWidth?: number;
+  portraitImg?: boolean;
+}) => {
+  const imageCon = (
     <div className={styles.image_con}>
-      <Image src={props.img} alt={props.imgAlt} />
+      <Image
+        src={props.img}
+        alt={props.imgAlt}
+        style={{ maxWidth: props.maxImgWidth }}
+      />
     </div>
-
-    <div className={styles.text_con}>
-      <h3>{props.headerText}</h3>
-      {props.children}
+  );
+  return (
+    <div
+      className={`${styles.con} ${props.portraitImg ? styles.portrait : ""}`}>
+      {props.imgAfterTextOnDesktop ? "" : imageCon}
+      <div className={styles.text_con}>
+        <h3>{props.headerText}</h3>
+        {props.children}
+      </div>
+      {props.imgAfterTextOnDesktop ? imageCon : ""}
     </div>
-  </div>
-);
+  );
+};
 
 export default TextBesideImg;

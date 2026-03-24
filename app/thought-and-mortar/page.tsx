@@ -1,4 +1,11 @@
 import { Metadata } from "next";
+import Image from "next/image";
+import TextBesideImg from "@/src/components/text-beside-img";
+
+import pfDogBreedImg from "@images/t&m/perfectfit-dog-breed-product-page.jpg";
+import bbgImg from "@images/t&m/bristol-blue-glass-engraving.png";
+import wowShelvingImg from "@images/t&m/wow-shelving-product-page.jpg";
+import lillicocoImg from "@images/t&m/lillicoco-ring-resizing.png";
 
 import styles from "@styles/showcasepage.module.scss";
 
@@ -106,6 +113,12 @@ export default function SwiisDigital() {
         measurements after that, so it was easy to get confused as to which
         harness was recommended.
       </p>
+      <Image
+        className="img"
+        src={pfDogBreedImg}
+        alt="Desktop screenshot of the PerfectFit dog breed product page"
+        style={{ marginBottom: "16px" }}
+      />
       <h4>Dog breeds products</h4>
       <p>
         As part of their move from Adobe Commerce to Shopify and the
@@ -196,38 +209,58 @@ export default function SwiisDigital() {
         additional loop to the section which fills the gap on pages where the
         promo cards aren&apos;t rendered.
       </p>
-      <h3>Bristol Blue Glass</h3>
-      <p>
-        Thought & Mortar redesigned the Bristol Blue Glass website, and we moved
-        their store onto the &apos;Symmetry&apos; Shopify theme.
-      </p>
-      <p>
-        They were paying a monthly fee for a gift wrap app which didn&apos;t
-        offer all the functionality they needed, so I created a new system using
-        Shopify Liquid and JavaScript.
-      </p>
-      <p>Customers can now purchase the following services:</p>
-      <ul>
-        <li>
-          Engraving — With settings for the text, font family, and text colour;
-        </li>
-        <li>Gift wrapping;</li>
-        <li>A greetings card message.</li>
-      </ul>
-      <p>
-        To the extra cost to the order, hidden items are added to the cart for
-        each selected service. Although these items can&apos;t be hidden in the
-        checkout, it is clear which service is for which product thanks to line
-        item properties on the main product.
-      </p>
-      <p>
-        If the main product is removed from the cart, any services associated
-        with it are also removed automatically.
-      </p>
-      <p>
-        As the system relies on JavaScript to work, the services are hidden to
-        any users with JavaScript disabled.
-      </p>
+      <TextBesideImg
+        headerText="Bristol Blue Glass"
+        img={bbgImg}
+        portraitImg={true}
+        maxImgWidth={280}
+        imgAlt="Mobile screenshot of the engraving options on a Bristol Blue Glass product page">
+        <p>
+          Thought & Mortar redesigned the{" "}
+          <a href="https://bristol-glass.co.uk">Bristol Blue Glass</a> store,
+          when we moved them onto the &apos;Symmetry&apos; Shopify theme.
+        </p>
+        <p>
+          They were paying a monthly fee for a gift wrap app which didn&apos;t
+          offer all the functionality they needed, so I created a new system
+          using Shopify Liquid and JavaScript.
+        </p>
+        <p>
+          Customers can now purchase the following services on each{" "}
+          <a href="https://bristol-glass.co.uk/collections/sculptures/products/abouna-blue-glass-sculpture">
+            product page
+          </a>
+          :
+        </p>
+        <ul>
+          <li>
+            Engraving — With settings for the text, font family, and text
+            colour;
+          </li>
+          <li>Gift wrapping;</li>
+          <li>A greetings card message.</li>
+        </ul>
+        <p>
+          To the extra cost to the order, hidden items are added to the cart for
+          each selected service. Although these items can&apos;t be hidden in
+          the checkout, it is clear which service is for which product thanks to
+          line item properties on the main product.
+        </p>
+        <p>
+          If the main product is removed from the cart, any services associated
+          with it are also removed automatically.
+        </p>
+        <p>
+          As the system relies on JavaScript to work, the services are hidden to
+          any users with JavaScript disabled.
+        </p>
+      </TextBesideImg>
+      <Image
+        className="img"
+        src={wowShelvingImg}
+        alt="Desktop screenshot of the Wow Shelving product page"
+        style={{ marginBottom: "32px" }}
+      />
       <h3>Wow Shelving</h3>
       <p>
         As part of their migration from eBay to the &apos;Symmetry&apos; Shopify
@@ -248,7 +281,46 @@ export default function SwiisDigital() {
           Uses JavaScript to add or remove a discount code depending on the
           customer&apos;s selection.
         </li>
-      </ul>
+      </ul>{" "}
+      <TextBesideImg
+        headerText="Lillicoco"
+        img={lillicocoImg}
+        imgAfterTextOnDesktop={true}
+        imgAlt="Mobile screenshot of the ring resizing options on a Lillicoco product page"
+        maxImgWidth={280}
+        portraitImg={true}>
+        <p>
+          I was one of several developers to work on the{" "}
+          <a href="https://www.lillicoco.com/">Lillicoco</a> store.
+        </p>
+        <p>
+          Using Liquid and JavaScript without any apps, I created a resizing
+          block for their{" "}
+          <a href="https://www.lillicoco.com/products/art-deco-14ct-gold-cornflower-sapphire-diamond-ring">
+            ring product
+          </a>{" "}
+          pages.
+        </p>
+        <p>
+          As with the Bristol Blue Glass services, the cost of a ring resize is
+          added to the order by adding a hidden item to the cart. The boundaries
+          and cost of the resizing varies from ring to ring, so I created
+          different variants for different costs within the &apos;Ring
+          Resize&apos; product.
+        </p>
+        <p>
+          Another feature I worked on was ensuring that orders, which would have
+          missed the free delivery threshold because of layaway, actually retain
+          their free delivery by adding a hidden item to the cart with JS and
+          using an app&apos;s custom shipping rules.{" "}
+        </p>
+        <p>
+          Whenever an item is added or removed from cart, the code calculates
+          what the total cost of the order will be after that change, then
+          checks if the total is under the threshold with layaway but over the
+          threshold without layaway.
+        </p>
+      </TextBesideImg>
     </>
   );
 }
