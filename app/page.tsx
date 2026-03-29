@@ -36,37 +36,43 @@ export default function Home() {
   };
   return (
     <>
-      <div className={styles.index_title_ban}>
-        <Solar />
-        <div className={styles.index_title_ban_text}>
-          <h1 className={styles.index_title}> David Price</h1>
-          <h2 className={styles.index_subtitle}>Front End Web Developer</h2>
+      <section>
+        <div className={styles.index_title_ban}>
+          <Solar />
+          <div className={styles.index_title_ban_text}>
+            <h1 className={styles.index_title}> David Price</h1>
+            <h2 className={styles.index_subtitle}>Front End Web Developer</h2>
+          </div>
         </div>
-      </div>
-      <SqBrushMask
-        external={true}
-        brush={"/brushes/brush-bg-1.svg"}
-        img={portraitImg}
-        imgAlt="David Price Portrait"
-        linkDesc="David Price LinkedIn Profile"
-        linkUrl="https://www.linkedin.com/in/davidwillprice/"
-        size={"small"}
-        width={300}>
-        <p>
-          Having graduated with a Fine Art degree in 2014, I taught myself HTML
-          and CSS to earn my first Web Developer & Designer position in 2015.
-        </p>
-        <p>
-          Over the last {yearsSinceIStartedWork()} years I have pushed myself to
-          learn new skills and work with new tech, from JavaScript and WordPress
-          to React and Shopify Liquid. I take pride in ensuring my work is
-          responsive, accessible, modular, organised, and fast to load.
-        </p>
-        <p>
-          I believe my creative background helps me approach problem solving and
-          UI from a unique perspective.
-        </p>
-      </SqBrushMask>
+      </section>
+      <section>
+        <SqBrushMask
+          external={true}
+          brush={"/brushes/brush-bg-1.svg"}
+          img={portraitImg}
+          imgAlt="David Price Portrait"
+          linkDesc="David Price LinkedIn Profile"
+          linkUrl="https://www.linkedin.com/in/davidwillprice/"
+          size={"small"}
+          width={300}>
+          <p>
+            Having graduated with a Fine Art degree in 2014, I taught myself
+            HTML and CSS to earn my first Web Developer & Designer position in
+            2015.
+          </p>
+          <p>
+            Over the last {yearsSinceIStartedWork()} years I have pushed myself
+            to learn new skills and work with new tech, from JavaScript and
+            WordPress to React and Shopify Liquid. I take pride in ensuring my
+            work is responsive, accessible, modular, organised, and fast to
+            load.
+          </p>
+          <p>
+            I believe my creative background helps me approach problem solving
+            and UI from a unique perspective.
+          </p>
+        </SqBrushMask>
+      </section>
       <section>
         <h2 id="web" className={styles.project_header}>
           Work Experience

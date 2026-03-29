@@ -30,25 +30,29 @@ export const metadata: Metadata = {
 export default function bristolAgency() {
   return (
     <>
-      <div className={styles.logo_con}>
-        <BristolLandscapeSVG />
-        <Image
-          alt="Bristol Marketing Agency Logo"
-          src={bristolAgencyLogoSVG}
-          className={styles.bristol_agency_logo}
-        />
-      </div>
-      <StandardCentralText headerText="Website design for a Bristol based marketing agency">
-        <p>
-          As part of a job application, I was tasked with redesigning the
-          website of a Bristol based marketing agency.
-        </p>
-        <p>
-          The brief stated that the website needed to showcase work to clients,
-          demonstrate their methodology, stand apart from other websites and be
-          reflective of their brand.
-        </p>
-      </StandardCentralText>
+      <section>
+        <div className={styles.logo_con}>
+          <BristolLandscapeSVG />
+          <Image
+            alt="Bristol Marketing Agency Logo"
+            src={bristolAgencyLogoSVG}
+            className={styles.bristol_agency_logo}
+          />
+        </div>
+      </section>
+      <section>
+        <StandardCentralText headerText="Website design for a Bristol based marketing agency">
+          <p>
+            As part of a job application, I was tasked with redesigning the
+            website of a Bristol based marketing agency.
+          </p>
+          <p>
+            The brief stated that the website needed to showcase work to
+            clients, demonstrate their methodology, stand apart from other
+            websites and be reflective of their brand.
+          </p>
+        </StandardCentralText>
+      </section>
       <TextBesideImg
         headerText="An earthy, clean and natural colour scheme"
         img={conceptBoard}
@@ -112,7 +116,7 @@ export default function bristolAgency() {
         </p>
       </StandardCentralText>
 
-      <div className={styles.icons_con}>
+      <section className={styles.icons_con}>
         <div className={styles.bma_icons_svg}>
           <IconsSVG />
         </div>
@@ -134,19 +138,21 @@ export default function bristolAgency() {
             Finally, the dark stroke icons were for use on dark backgrounds.
           </p>
         </div>
-      </div>
-      <div className={styles.eg_services_bg}>
-        <div className={styles.eg_services_con}>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+      </section>
+      <section>
+        <div className={styles.eg_services_bg}>
+          <div className={styles.eg_services_con}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
-      </div>
+      </section>
       <StandardCentralText headerText="Portfolio showcase">
         <p>
           As requested in the brief, I wanted to make sure the website&apos;s

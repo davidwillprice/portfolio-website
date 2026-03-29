@@ -40,16 +40,18 @@ export default function FreelanceLogo() {
           & Creative Arts department of the university.
         </p>
       </StandardCentralText>
-      <div className={styles.be_inspired_con}>
-        <Image
-          src={AberInspiredWelshImg}
-          alt="Aberystwyth University 'Be Inspired' Welsh logo"
-        />
-        <Image
-          src={AberInspiredImg}
-          alt="Aberystwyth University 'Be Inspired' English logo"
-        />
-      </div>
+      <section>
+        <div className={styles.be_inspired_con}>
+          <Image
+            src={AberInspiredWelshImg}
+            alt="Aberystwyth University 'Be Inspired' Welsh logo"
+          />
+          <Image
+            src={AberInspiredImg}
+            alt="Aberystwyth University 'Be Inspired' English logo"
+          />
+        </div>
+      </section>
       <StandardCentralText headerText="Be Inspired">
         <p>
           As a Welsh university, every design I created had to have a Welsh and
@@ -61,16 +63,18 @@ export default function FreelanceLogo() {
           called &apos;Be Inspired&apos;.
         </p>
       </StandardCentralText>
-      <div className={styles.step_forward_con}>
-        <Image
-          src={StepForwardWelshImg}
-          alt="Aberystwyth University 'Step Forward' Welsh poster"
-        />
-        <Image
-          src={StepForwardImg}
-          alt="Aberystwyth University 'Step Forward' English poster"
-        />
-      </div>
+      <section>
+        <div className={styles.step_forward_con}>
+          <Image
+            src={StepForwardWelshImg}
+            alt="Aberystwyth University 'Step Forward' Welsh poster"
+          />
+          <Image
+            src={StepForwardImg}
+            alt="Aberystwyth University 'Step Forward' English poster"
+          />
+        </div>
+      </section>
       <StandardCentralText headerText="Step Foward">
         <p>
           The above posters were created for an ILLCA careers event called

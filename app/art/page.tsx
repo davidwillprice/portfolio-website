@@ -22,7 +22,7 @@ export default function Page() {
       <TitleBanner>
         <h1>Art</h1>
       </TitleBanner>
-      <div className={workConStyles.workBrushCon}>
+      <section className={workConStyles.workBrushCon}>
         <SqBrushMask
           brush={"/brushes/brush-bg-5.svg"}
           img={solargraphyImg}
@@ -43,7 +43,7 @@ export default function Page() {
             </Link>
           </ButtonCon>
         </SqBrushMask>
-      </div>
+      </section>
     </>
   );
 }

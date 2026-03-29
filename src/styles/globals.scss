@@ -55,15 +55,18 @@ body {
 }
 
 main {
-  margin-top: var(--margin-to-top);
   min-height: calc(100vh - calc(var(--footer-height) + var(--margin-to-top)));
-  padding: 0 var(--page-x-margin);
-  max-width: var(--layout-width);
-  margin-left: auto;
-  margin-right: auto;
+  margin: var(--margin-to-top) auto 0;
   display: flex;
   place-content: center;
   flex-direction: column;
+}
+
+section {
+  padding: 0 var(--page-x-margin);
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  width: 100%;
 }
 
 a {

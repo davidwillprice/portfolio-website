@@ -11,9 +11,9 @@ export default function StandardCentralText({
 }) {
   const maxWidth = !width || width > 700 ? 700 : width;
   return (
-    <div style={{ maxWidth: maxWidth, margin: "0 auto 16px" }}>
+    <section style={{ maxWidth: maxWidth, margin: "0 auto 16px" }}>
       {headerText && <h3>{headerText}</h3>}
       {children}
-    </div>
+    </section>
   );
 }

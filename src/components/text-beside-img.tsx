@@ -22,7 +22,7 @@ const TextBesideImg = (props: {
     </div>
   );
   return (
-    <div
+    <section
       className={`${styles.con} ${props.portraitImg ? styles.portrait : ""}`}>
       {props.imgAfterTextOnDesktop ? "" : imageCon}
       <div className={styles.text_con}>
@@ -30,7 +30,7 @@ const TextBesideImg = (props: {
         {props.children}
       </div>
       {props.imgAfterTextOnDesktop ? imageCon : ""}
-    </div>
+    </section>
   );
 };
 

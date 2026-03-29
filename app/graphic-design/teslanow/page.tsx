@@ -37,14 +37,14 @@ export default function Teslanow() {
           &apos;TESLANOW&apos;.
         </p>
       </StandardCentralText>
-      <div className={styles.in_car_mockup_con}>
+      <section className={styles.in_car_mockup_con}>
         <Image
           className={styles.in_car_mockup}
           src={InCarMockup}
           alt="Tesla interior"
         />
         <div className={styles.app_spritesheet}></div>
-      </div>
+      </section>
       <StandardCentralText>
         <p>
           My app designs would be fleshed out to work inside a Tesla&pos;s web
