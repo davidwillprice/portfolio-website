@@ -39,12 +39,8 @@ export default function SwiisDigital() {
             <p>My duties included:</p>
             <ul>
               <li>
-                Using{" "}
-                <span className="styles.highlight">
-                  HTML, CSS and JavaScript
-                </span>{" "}
-                to develop and manage 7 different{" "}
-                <span className="styles.highlight">WordPress</span> websites;
+                Using <span>HTML, CSS and JavaScript</span> to develop and
+                manage 7 different <span>WordPress</span> websites;
               </li>
               <li>
                 Designing, developing, and managing two web portals allowing
@@ -54,33 +50,29 @@ export default function SwiisDigital() {
               </li>
               <li>
                 Monitoring user journeys and general website performance using{" "}
-                <span className="styles.highlight">Google Analytics</span> and{" "}
-                <span className="styles.highlight">Google Tag Manager</span>;
+                <span>Google Analytics</span> and{" "}
+                <span>Google Tag Manager</span>;
               </li>
               <li>
                 Designing and showcasing new layouts and designs via Adobe{" "}
-                <span className="styles.highlight">XD</span>;
+                <span>XD</span>;
               </li>
             </ul>
           </div>
         </div>
         <ul className={styles.intro_textContin}>
           <li>
-            Managing and optimising{" "}
-            <span className="styles.highlight">Google Ads</span> and{" "}
-            <span className="styles.highlight">Bing Ads</span> search campaigns;
+            Managing and optimising <span>Google Ads</span> and{" "}
+            <span>Bing Ads</span> search campaigns;
           </li>
           <li>
-            Improving website <span className="styles.highlight">SEO</span>:
-            Keyword analysis, building backlinks, on-page optimisation, and
-            monitoring changes via{" "}
-            <span className="styles.highlight">Google Search Console</span> and{" "}
-            <span className="styles.highlight">Semrush</span>;
+            Improving website <span>SEO</span>: Keyword analysis, building
+            backlinks, on-page optimisation, and monitoring changes via{" "}
+            <span>Google Search Console</span> and <span>Semrush</span>;
           </li>
           <li>
             Creating automated solutions to admin tasks using JavaScript and{" "}
-            <span className="styles.highlight">Google Data Studio</span> that
-            include:
+            <span>Google Data Studio</span> that include:
             <ul>
               <li>Digitalising previously print forms;</li>
               <li>
@@ -88,7 +80,7 @@ export default function SwiisDigital() {
               </li>
               <li>
                 Parsing emails and inputting results directly into Google Sheets
-                via <span className="styles.highlight">Zapier</span>.
+                via <span>Zapier</span>.
               </li>
             </ul>
           </li>
@@ -108,10 +100,10 @@ export default function SwiisDigital() {
         </p>
         <p>
           To streamline this, I recreated the forms on our website using the
-          plugin <span className="styles.highlight">Contact Form 7</span>. When
-          users submit these forms, they are emailed to Zapier where I set up
-          parsing of the information, allowing Zapier to input the feedback
-          directly into Google Sheets within seconds of the form being sent.
+          plugin <span>Contact Form 7</span>. When users submit these forms,
+          they are emailed to Zapier where I set up parsing of the information,
+          allowing Zapier to input the feedback directly into Google Sheets
+          within seconds of the form being sent.
         </p>
       </section>
     </>

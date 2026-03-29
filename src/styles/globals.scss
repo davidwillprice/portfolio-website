@@ -174,3 +174,9 @@ ul {
   height: auto;
   border-radius: var(--border-radius);
 }
+
+p span,
+li span {
+  color: var(--secondary-color);
+  font-variation-settings: "wght" 600;
+}

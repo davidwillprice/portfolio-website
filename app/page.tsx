@@ -22,9 +22,8 @@ import btnStyles from "@styles/button.module.scss";
 import workConStyles from "@styles/brushcon.module.scss";
 
 export const metadata: Metadata = {
-  title: "David Price - Front End Web Developer",
-  description:
-    "I believe my creative background helps me approach problem solving and UI from a unique perspective.",
+  title: "David Price | Frontend Web Developer",
+  description: "Portfolio website for a Bristol-based Frontend Web Developer",
 };
 
 export default function Home() {

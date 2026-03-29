@@ -17,7 +17,7 @@ import StampDutyCalculator from "@images/lyp/stamp-duty-calculator.png";
 export const metadata: Metadata = {
   title: "Love Your Postcode | David Price",
   description:
-    "I worked for 'Love Your Postcode Estate Agents' full-time as a Web / Graphic Designer for three and a half years",
+    "I worked for LYP full-time as a Web / Graphic Designer for three and a half years",
 };
 
 export default function LypDigital() {
@@ -149,46 +149,32 @@ export default function LypDigital() {
             <p>Duties included:</p>
             <ul>
               <li>
-                Using{" "}
-                <span className="showcaseStyles.highlight">
-                  HTML, CSS and JavaScript
-                </span>{" "}
-                to develop and manage the Love Your Postcode{" "}
-                <span className="showcaseStyles.highlight">Wordpress</span>{" "}
-                website;
+                Using <span>HTML, CSS and JavaScript</span> to develop and
+                manage the Love Your Postcode <span>Wordpress</span> website;
               </li>
               <li>
-                <span className="showcaseStyles.highlight">
-                  Coding marketing emails
-                </span>{" "}
-                with maximum compatibility;
+                <span>Coding marketing emails</span> with maximum compatibility;
               </li>
               <li>
                 Monitoring user journeys and general website performance using{" "}
-                <span className="showcaseStyles.highlight">
-                  Google Analytics
-                </span>
-                ;
+                <span>Google Analytics</span>;
               </li>
               <li>
-                Managing{" "}
-                <span className="showcaseStyles.highlight">Google Ads</span>{" "}
-                search, display, video and app campaigns;
+                Managing <span>Google Ads</span> search, display, video and app
+                campaigns;
               </li>
             </ul>
           </div>
         </div>
         <ul className={showcaseStyles.intro_text_contin}>
           <li>
-            Working as part of a team to improve website{" "}
-            <span className="showcaseStyles.highlight">SEO</span>: Building
-            backlinks, managing Google Search Console, keyword analysis, meta
-            titles/descriptions, header structure and other on-page
-            optimisation;
+            Working as part of a team to improve website <span>SEO</span>:
+            Building backlinks, managing Google Search Console, keyword
+            analysis, meta titles/descriptions, header structure and other
+            on-page optimisation;
           </li>
           <li>
-            <span className="showcaseStyles.highlight">Copywriting</span>{" "}
-            website pages and blog content.
+            <span>Copywriting</span> website pages and blog content.
           </li>
         </ul>
       </section>

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Predict The Standings",
+  title: "Privacy Policy | David Price",
   description:
     "This website doesn't collect or store any of your personal data - Period",
 };

@@ -56,9 +56,8 @@ export default function SwiisDigital() {
           <div className={styles.intro_text}>
             <p>
               I worked in a full-time position as a Front-end Shopify Developer
-              for Bristol-based agency{" "}
-              <span className="styles.highlight">Thought & Mortar</span> from
-              June 2024 until its closure in March 2026.
+              for Bristol-based agency <span>Thought & Mortar</span> from June
+              2024 until its closure in March 2026.
             </p>
             <p>My duties included:</p>
             <ul>
@@ -67,38 +66,32 @@ export default function SwiisDigital() {
                 of clients through bespoke theme features;
               </li>
               <li>
-                Pushing the boundaries of{" "}
-                <span className="styles.highlight">Shopify</span> with custom{" "}
-                <span className="styles.highlight">Liquid</span> and{" "}
-                <span className="styles.highlight">JavaScript</span> to overcome
+                Pushing the boundaries of <span>Shopify</span> with custom{" "}
+                <span>Liquid</span> and <span>JavaScript</span> to overcome
                 unique challenges;
               </li>
               <li>
                 Translating project briefs into comprehensive{" "}
-                <span className="styles.highlight">technical scope</span>{" "}
-                documents;
+                <span>technical scope</span> documents;
               </li>
               <li>
-                Bringing Figma designs to life with responsive{" "}
-                <span className="styles.highlight">CSS</span>;
+                Bringing Figma designs to life with responsive <span>CSS</span>;
               </li>
             </ul>
           </div>
         </div>
         <ul className={styles.intro_textContin}>
           <li>
-            Managing multiple <span className="styles.highlight">CI/CD</span>{" "}
-            Git-to-Shopify pipelines at once;
+            Managing multiple <span>CI/CD</span> Git-to-Shopify pipelines at
+            once;
           </li>
           <li>
-            Writing approachable client{" "}
-            <span className="styles.highlight">documentation</span> which also
+            Writing approachable client <span>documentation</span> which also
             breaks down technical details to help clients feel empowered;
           </li>
           <li>
-            Using JavaScript within{" "}
-            <span className="styles.highlight">Google Scripts</span> to
-            manipulate spreadsheets ready for import;
+            Using JavaScript within <span>Google Scripts</span> to manipulate
+            spreadsheets ready for import;
           </li>
           <li>
             Helping businesses set up their first E-commerce store, migrate from
@@ -106,9 +99,8 @@ export default function SwiisDigital() {
             themes from 1.0 to 2.0;
           </li>
           <li>
-            Utilising <span className="styles.highlight">AI</span> as a tool to
-            enhance my work and increase productivity, while keeping the core of
-            my work distinctly human.
+            Utilising <span>AI</span> as a tool to enhance my work and increase
+            productivity, while keeping the core of my work distinctly human.
           </li>
         </ul>
       </section>
@@ -146,13 +138,13 @@ export default function SwiisDigital() {
           &apos;Fit&apos; metaobjects within a metafield store which size dog
           should have which sized harness, and when the &apos;Harness
           selector&apos; inputs are changed by the customer, the{" "}
-          <span className="styles.highlight">Section Rendering API</span>{" "}
-          updates the UI around the appropriate harness.
+          <span>Section Rendering API</span> updates the UI around the
+          appropriate harness.
         </p>
         <p>
-          An important <span className="styles.highlight">SEO</span> benefit was
-          that it gave PerfectFit the perfect pages to rank for searches like
-          &apos;harness for border collie&apos; or &apos;husky harness&apos;.
+          An important <span>SEO</span> benefit was that it gave PerfectFit the
+          perfect pages to rank for searches like &apos;harness for border
+          collie&apos; or &apos;husky harness&apos;.
         </p>
         <p>Challenges that I overcame implementing this system included:</p>
         <ul>
@@ -184,9 +176,8 @@ export default function SwiisDigital() {
         </p>
         <p>
           I coded the new version from scratch to work with the new dog breed
-          pages, and added new{" "}
-          <span className="styles.highlight">Google Analytics 4</span> events
-          that fire when a customer succeeds or fails to get a result.
+          pages, and added new <span>Google Analytics 4</span> events that fire
+          when a customer succeeds or fails to get a result.
         </p>
         <p>
           These events carry all the form data as parameters, allowing
@@ -209,9 +200,8 @@ export default function SwiisDigital() {
         </p>
         <p>
           I created a new system for PerfectFit which ditched metaobjects or
-          metafields. Promo cards are added as{" "}
-          <span className="styles.highlight">theme blocks</span> to the product
-          grid of a collection template. The promo card block has
+          metafields. Promo cards are added as <span>theme blocks</span> to the
+          product grid of a collection template. The promo card block has
           layout/order/shape/colour settings. Any number of buttons, images,
           text, or graphics can be nested as blocks within the promo block in
           any order.
@@ -282,9 +272,8 @@ export default function SwiisDigital() {
         </p>
         <ul>
           <li>
-            A VAT toggle in the header which uses{" "}
-            <span className="styles.highlight">local storage</span> to keep
-            track of the customer&apos;s preference;
+            A VAT toggle in the header which uses <span>local storage</span> to
+            keep track of the customer&apos;s preference;
           </li>
           <li>
             A tile calculator which updates the customer&apos;s item quantity

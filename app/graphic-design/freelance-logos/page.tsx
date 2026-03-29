@@ -14,7 +14,7 @@ import Waga from "@images/freelance-logos/wagamama-logo.jpg";
 export const metadata: Metadata = {
   title: "Freelance Logos | David Price",
   description:
-    "Commissioned and practice logos created before I got my first full-time job in the industry.",
+    "Commissioned and practice logos created before I got my first full-time job in the industry",
 };
 
 export default function FreelanceLogo() {

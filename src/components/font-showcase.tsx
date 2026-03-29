@@ -10,7 +10,7 @@ const FontShowcase = (props: {
 }) => (
   <section>
     <div
-      className={styles.container}
+      className={styles.con}
       style={{
         fontFamily: props.fontFamily,
         color: props.color,

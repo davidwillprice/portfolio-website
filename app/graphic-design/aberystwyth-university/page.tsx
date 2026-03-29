@@ -16,7 +16,7 @@ import styles from "@styles/aber.module.scss";
 export const metadata: Metadata = {
   title: "AberForward Graphic Design | David Price",
   description:
-    "Commissioned and practice logos created before I got my first full-time job in the industry.",
+    "I spent 5 weeks working as an Exhibition Co-ordinator at Aberystwyth University",
 };
 
 export default function FreelanceLogo() {

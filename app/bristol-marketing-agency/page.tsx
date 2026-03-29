@@ -24,7 +24,7 @@ import conceptBoard from "@images/bma/concept-board.jpg";
 export const metadata: Metadata = {
   title: "Bristol Marketing Agency | David Price",
   description:
-    "As part of a job application, I was tasked with redesigning the website of a Bristol based marketing agency",
+    "As part of a job app, I redesigning the website of a marketing agency",
 };
 
 export default function bristolAgency() {
@@ -97,7 +97,6 @@ export default function bristolAgency() {
         img={threeDeviceHp}
         imgAlt="Homepage design previews on desktop, tablet and mobile"
       />
-
       <StandardCentralText headerText="A simple but striking homepage">
         <p>
           I wanted the logo to be at the forefront of the homepage layout and I
@@ -115,7 +114,6 @@ export default function bristolAgency() {
           the charm of the Bristolian scenery.
         </p>
       </StandardCentralText>
-
       <section className={styles.icons_con}>
         <div className={styles.bma_icons_svg}>
           <IconsSVG />

@@ -15,7 +15,7 @@ import icons from "@images/teslanow/icon-showcase.jpg";
 export const metadata: Metadata = {
   title: "Teslanow Graphic Design | David Price",
   description:
-    "Icon, app and website design for a company through freelancer.com.",
+    "Icon, app, and website design for a company through freelancer.com",
 };
 
 export default function Teslanow() {
