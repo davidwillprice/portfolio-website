@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import TextBesideImg from "@/src/components/text-beside-img";
+import TitleBanner from "@/src/components/title-banner";
 
 import pfDogBreedImg from "@images/t&m/perfectfit-dog-breed-product-page.jpg";
 import bbgImg from "@images/t&m/bristol-blue-glass-engraving.png";
@@ -18,6 +19,9 @@ export const metadata: Metadata = {
 export default function SwiisDigital() {
   return (
     <>
+      <TitleBanner>
+        <h1>Thought & Mortar</h1>
+      </TitleBanner>
       <section>
         <div className={styles.intro_con}>
           <div

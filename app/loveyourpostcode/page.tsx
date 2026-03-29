@@ -2,9 +2,10 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 import ColourPreview from "@/src/components/colour-preview";
+import ColourPreviewCon from "@/src/components/colour-preview-con";
 import FullWidthImage from "@/src/components/full-width-img";
 import StandardCentralText from "@/src/components/standard-central-text";
-import ColourPreviewCon from "@/src/components/colour-preview-con";
+import TitleBanner from "@/src/components/title-banner";
 
 import styles from "@styles/lypdig.module.scss";
 import showcaseStyles from "@styles/showcasepage.module.scss";
@@ -22,6 +23,9 @@ export const metadata: Metadata = {
 export default function LypDigital() {
   return (
     <>
+      <TitleBanner>
+        <h1>Love Your Postcode</h1>
+      </TitleBanner>
       <section>
         <div className={showcaseStyles.intro_con}>
           <div className={showcaseStyles.logo_con + " " + styles.logo_con}>

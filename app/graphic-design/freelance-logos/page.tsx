@@ -21,7 +21,7 @@ export default function FreelanceLogo() {
   return (
     <>
       <TitleBanner>
-        <h1>freelance logos</h1>
+        <h1>Freelance logos</h1>
       </TitleBanner>
       <LogoShowcase bgColor="#EDEDED">
         <Image src={Springholm} alt="Springholm summer retreat camp logo" />

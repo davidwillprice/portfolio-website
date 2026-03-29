@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -10,8 +10,21 @@ import styles from "@components/header.module.scss";
 
 const Header = () => {
   const pathname = usePathname();
-
+  const [isScrolled, setIsScrolled] = useState(false);
   const [mobMenuOpen, toggleMobMenu] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleMobMenuCick = () => {
     toggleMobMenu(!mobMenuOpen);
@@ -33,7 +46,7 @@ const Header = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${isScrolled ? styles.sticky : ""}`}>
       <header
         className={`${styles.header} ${mobMenuOpen ? styles.header__expanded : ""}`}>
         <Link

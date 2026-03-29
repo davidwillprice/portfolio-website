@@ -2,7 +2,7 @@
   position: fixed;
   width: 100%;
   z-index: 100;
-  background-color: var(--background-color-low-opacity);
+  background-color: transparent;
 }
 .header {
   display: flex;
@@ -61,7 +61,7 @@
 }
 .hamburger {
   display: none;
-  background-color: var(--menu-background-color-low-opacity);
+  background-color: var(--hamburger-icon-bg-color);
   width: 50px;
   height: 50px;
   cursor: pointer;
@@ -95,6 +95,9 @@
     }
   }
 }
+.sticky {
+  background-color: var(--background-color);
+}
 .header.header__expanded .hamburger span {
   &:nth-child(1),
   &:nth-child(4) {
@@ -127,7 +130,7 @@
     overflow-x: hidden;
   }
   .header.header__expanded {
-    background-color: var(--menu-background-color);
+    background-color: var(--mobile-drawer-bg-color);
     transition: background-color 200ms ease-in-out;
     height: auto;
     .nav {

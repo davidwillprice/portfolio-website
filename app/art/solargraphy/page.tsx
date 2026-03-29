@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-import TitleBanner from "@/src/components/title-banner";
+import Solar from "@/src/svgs/solar";
 import StandardCentralText from "@/src/components/standard-central-text";
 import FullWidthImage from "@/src/components/full-width-img";
 
@@ -22,6 +22,7 @@ import image73 from "@images/solargraphy/solargraph-image-73.jpg";
 import Morph from "@/src/components/morph";
 
 import solarStyles from "@styles/solargraphy.module.scss";
+import styles from "@styles/index.module.scss";
 
 export const metadata: Metadata = {
   title: "Solargraphy | David Price",
@@ -32,9 +33,12 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <TitleBanner>
-        <h1>Solargraphy</h1>
-      </TitleBanner>
+      <section className={styles.index_title_ban}>
+        <div className={styles.index_title_ban_text}>
+          <h1 className={styles.index_title}>Solargraphy</h1>
+        </div>
+        <Solar />
+      </section>
       <section>
         <FullWidthImage
           img={image35}

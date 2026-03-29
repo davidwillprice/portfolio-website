@@ -18,10 +18,10 @@
   }
   &.primary {
     color: var(--secondary-color);
-    background-color: var(--highlight-colour);
+    background-color: var(--highlight-color);
   }
   &.primary:hover {
-    background-color: var(--highlight-colour-alt);
+    background-color: var(--highlight-color-alt);
   }
   &.secondary {
     color: var(--tertiary-color);

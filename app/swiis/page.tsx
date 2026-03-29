@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 
+import TitleBanner from "@/src/components/title-banner";
+
 import styles from "@styles/showcasepage.module.scss";
 import swiisLogoStyles from "@components/swiis-logos.module.scss";
 
@@ -14,6 +16,9 @@ export const metadata: Metadata = {
 export default function SwiisDigital() {
   return (
     <>
+      <TitleBanner>
+        <h1>Swiis International</h1>
+      </TitleBanner>
       <section>
         <div className={styles.intro_con}>
           <div className={`${styles.logo_con} ${swiisLogoStyles.svg}`}>

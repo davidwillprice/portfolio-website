@@ -36,14 +36,12 @@ export default function Home() {
   };
   return (
     <>
-      <section>
-        <div className={styles.index_title_ban}>
-          <Solar />
-          <div className={styles.index_title_ban_text}>
-            <h1 className={styles.index_title}> David Price</h1>
-            <h2 className={styles.index_subtitle}>Front End Web Developer</h2>
-          </div>
+      <section className={styles.index_title_ban}>
+        <div className={styles.index_title_ban_text}>
+          <h1 className={styles.index_title}> David Price</h1>
+          <h2 className={styles.index_subtitle}>Front End Web Developer</h2>
         </div>
+        <Solar />
       </section>
       <section>
         <SqBrushMask
@@ -112,7 +110,7 @@ export default function Home() {
           <p>
             Full-time position as a Web Developer implementing online learning
             content while ensuring their quality, responsiveness, and
-            accessiblity.
+            accessibility.
           </p>
           <p>
             In an agile scrum environment, collaborating on various in-house

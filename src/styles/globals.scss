@@ -1,14 +1,13 @@
 :root {
   --primary-color: #00f0d8;
   --secondary-color: white;
-  --background-color: #004061;
-  --background-color-alt: #007a90;
-  --background-color-low-opacity: rgba(0, 64, 97, 0.9);
-  --menu-background-color: rgba(0, 0, 0, 0.9);
-  --menu-background-color-low-opacity: rgba(0, 0, 0, 0.2);
-  --highlight-colour: #f05d5e;
-  --highlight-colour-alt: #ff1129;
-  --footer-background-color: #333333;
+  --background-color: #00101f;
+  --background-color-alt: #004061;
+  --mobile-drawer-bg-color: rgba(0, 0, 0, 0.9);
+  --hamburger-icon-bg-color: var(--background-color-alt);
+  --highlight-color: #f05d5e;
+  --highlight-color-alt: #ff1129;
+  --footer-bg-color: var(--background-color-alt);
 
   --layout-width: 1200px;
 
@@ -20,7 +19,7 @@
 
   --border-radius: 5px;
 
-  --margin-to-top: calc(var(--header-height) + var(--page-y-margin));
+  --margin-to-top: var(--header-height);
 }
 
 * {
@@ -40,7 +39,6 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  height: 100%;
   margin: 0;
   position: absolute;
   width: 100%;
@@ -55,8 +53,7 @@ body {
 }
 
 main {
-  min-height: calc(100vh - calc(var(--footer-height) + var(--margin-to-top)));
-  margin: var(--margin-to-top) auto 0;
+  min-height: calc(100vh - calc(var(--footer-height)));
   display: flex;
   place-content: center;
   flex-direction: column;

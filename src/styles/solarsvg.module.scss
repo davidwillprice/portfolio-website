@@ -1,28 +1,26 @@
+.container {
+  display: grid;
+  transform: translateY(2px);
+  position: relative;
+}
+
 .background {
   animation: fadein forwards ease-in-out 1s;
   /*expand forwards linear 2s infinite*/
   -webkit-animation: fadein forwards ease-in-out 1s;
-  g {
+  path {
+    transform-origin: bottom center;
     &:nth-child(1) {
       animation-delay: 0.5s;
-      path {
-        animation: expand forwards ease-in-out 10s infinite;
-      }
+      animation: expand forwards ease-in-out 10s infinite;
     }
     &:nth-child(2) {
       animation-delay: 1s;
-      path {
-        animation: expand forwards ease-in-out 7s infinite;
-      }
+      animation: expand forwards ease-in-out 7s infinite;
     }
     &:nth-child(3) {
       animation-delay: 1.5s;
-      path {
-        animation: expand forwards ease-in-out 3s infinite;
-      }
-    }
-    path {
-      transform-origin: bottom center;
+      animation: expand forwards ease-in-out 3s infinite;
     }
   }
 }
@@ -118,18 +116,5 @@
   }
   to {
     opacity: 1;
-  }
-}
-@media (max-width: 900px) {
-  .container {
-    aspect-ratio: 2.05;
-    position: relative;
-    svg {
-      position: absolute;
-      width: 120%;
-      left: 50%;
-      transform: translate(-50%, 0);
-      bottom: 0;
-    }
   }
 }
