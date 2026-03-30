@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
+import ContactIcons from "./contact-icons";
+
 import logoSvg from "@svgs/david-price-logo.svg";
 
 import styles from "@components/header.module.scss";
@@ -21,13 +23,16 @@ const Header = () => {
         setIsScrolled(false);
       }
     };
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleMobMenuCick = () => {
+  const handleMobMenuClick = () => {
     toggleMobMenu(!mobMenuOpen);
+
+    document.documentElement.classList.toggle("mobile-menu-open", !mobMenuOpen);
   };
 
   const menuLink = (url: string, label: string) => {
@@ -37,9 +42,7 @@ const Header = () => {
       <Link
         href={url}
         className={`${styles.link} ${pathname === comparisonUrl ? styles.link__active : ""}`}
-        onNavigate={() => {
-          toggleMobMenu(false);
-        }}>
+        onNavigate={handleMobMenuClick}>
         {label}
       </Link>
     );
@@ -49,12 +52,7 @@ const Header = () => {
     <div className={`${styles.container} ${isScrolled ? styles.sticky : ""}`}>
       <header
         className={`${styles.header} ${mobMenuOpen ? styles.header__expanded : ""}`}>
-        <Link
-          aria-label="Homepage"
-          href="/"
-          onNavigate={() => {
-            toggleMobMenu(false);
-          }}>
+        <Link aria-label="Homepage" href="/" onNavigate={handleMobMenuClick}>
           <Image
             src={logoSvg}
             alt="David Price Logo"
@@ -65,7 +63,7 @@ const Header = () => {
         </Link>
         <button
           className={styles.hamburger}
-          onClick={handleMobMenuCick}
+          onClick={handleMobMenuClick}
           aria-label="Mobile menu"
           aria-expanded={mobMenuOpen}
           aria-controls="menu-items">
@@ -75,17 +73,20 @@ const Header = () => {
           <span />
         </button>
         <nav className={styles.nav} id="menu-items">
-          {menuLink("/#web", "Web Development")}
-          {menuLink("/graphic-design", "Graphic Design")}
-          {menuLink("/art", "Art")}
-          <a
-            className={styles.link}
-            href="#contact"
-            onClick={() => {
-              toggleMobMenu(false);
-            }}>
-            Contact
-          </a>
+          <div className={styles.text_links}>
+            {menuLink("/#web", "Web Development")}
+            {menuLink("/graphic-design", "Graphic Design")}
+            {menuLink("/art", "Art")}
+            <a
+              className={`${styles.link} ${styles.desktop_only}`}
+              href="#contact"
+              onClick={() => {
+                toggleMobMenu(false);
+              }}>
+              Contact
+            </a>
+          </div>
+          <ContactIcons mobileOnly={true} />
         </nav>
       </header>
     </div>

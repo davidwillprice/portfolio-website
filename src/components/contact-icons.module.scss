@@ -1,0 +1,39 @@
+.links {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 32px;
+}
+.link {
+  border-width: 0;
+  max-height: 35px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  fill: var(--secondary-color);
+}
+
+@media (max-width: 800px) {
+  .links {
+    order: 0;
+    a:first-child .link {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: 601px) {
+  .mobile_only {
+    display: none;
+  }
+}
+@media (max-width: 350px) {
+  .links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .link {
+    margin: 0;
+  }
+}

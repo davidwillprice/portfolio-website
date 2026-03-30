@@ -28,7 +28,8 @@
   margin: 0;
   font-weight: 400;
   color: var(--secondary-color);
-  scroll-margin-top: var(--header-height);
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+  scroll-behavior: smooth;
 }
 
 html {
@@ -134,6 +135,9 @@ p {
   h1,
   .h1 {
     font-size: 2.4rem;
+  }
+  html.mobile-menu-open {
+    overflow-y: hidden;
   }
 }
 @media (max-width: 400px) {

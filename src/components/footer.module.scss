@@ -26,20 +26,6 @@
     font-size: 0.9rem;
   }
 }
-.links {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  gap: 32px;
-}
-.link {
-  border-width: 0;
-  max-height: 35px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  fill: var(--secondary-color);
-}
 
 @media (max-width: 800px) {
   .footer__inner {
@@ -50,12 +36,6 @@
     text-align: center;
     order: 1;
   }
-  .links {
-    order: 0;
-    a:first-child .link {
-      margin-left: 0;
-    }
-  }
 }
 
 @media (max-width: 600px) {
@@ -65,9 +45,6 @@
 }
 
 @media (max-width: 350px) {
-  .text a {
-    display: block;
-  }
   .links {
     display: flex;
     justify-content: space-between;
