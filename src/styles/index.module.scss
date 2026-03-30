@@ -56,7 +56,7 @@
   .index_title_ban {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100dvh - var(--header-height));
     svg {
       width: 167%;
       transform: translateX(-8%);
