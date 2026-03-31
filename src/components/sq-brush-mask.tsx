@@ -6,6 +6,7 @@ import styles from "./sq-brush.module.scss";
 import Image, { StaticImageData } from "next/image";
 
 export default function SqBrushMask({
+  border = true,
   brush,
   children,
   dirTxtRight,
@@ -14,9 +15,9 @@ export default function SqBrushMask({
   img,
   linkDesc,
   linkUrl,
-  size,
-  width = 600,
+  imageWidth = 600,
 }: {
+  border?: boolean;
   brush: string;
   children?: ReactNode;
   dirTxtRight?: boolean;
@@ -25,15 +26,14 @@ export default function SqBrushMask({
   img: StaticImageData;
   linkDesc?: string;
   linkUrl?: string;
-  size?: string;
-  width?: number;
+  imageWidth?: number;
 }) {
   const html = () => {
     const brushContent = (
       <div className={styles.brush_preview}>
         <Image
-          width={width}
-          height={width}
+          width={imageWidth}
+          height={imageWidth}
           alt={imgAlt}
           src={img.src}
           className={styles.image}
@@ -70,11 +70,15 @@ export default function SqBrushMask({
     <div
       className={`${
         dirTxtRight ? styles.work_example_con__r : ""
-      } ${size ? styles.small : ""} ${
+      } ${border ? styles.border : ""} ${
         styles.work_example_con
       } ${styles.brush_mask_con}`}>
       <div className={styles.text}>{children}</div>
-      <div className={styles.brush_img_con}>{html()}</div>
+      <div
+        className={styles.brush_img_con}
+        style={{ "--image-width": imageWidth + "px" } as React.CSSProperties}>
+        {html()}
+      </div>
     </div>
   );
 }

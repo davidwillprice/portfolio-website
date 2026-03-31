@@ -11,6 +11,7 @@ import BrushFive from "@svgs/brush-bg-5";
 import styles from "./sq-brush.module.scss";
 
 export default function SqBrushSplash({
+  border = true,
   dirTxtRight,
   brushNo,
   children,
@@ -21,6 +22,7 @@ export default function SqBrushSplash({
   linkUrl,
   extraMobBotPadding,
 }: {
+  border?: boolean;
   dirTxtRight?: boolean;
   external?: boolean;
   brushNo: 1 | 2 | 3 | 4 | 5;
@@ -35,6 +37,9 @@ export default function SqBrushSplash({
     let classes = styles.work_example_con + " " + styles.brush_splash_con;
     if (dirTxtRight) {
       classes += " " + styles.work_example_con__r;
+    }
+    if (border) {
+      classes += " " + styles.border;
     }
     return classes;
   };
@@ -82,7 +87,8 @@ export default function SqBrushSplash({
       <div
         className={`${styles.brush_img_con} ${
           extraMobBotPadding ? styles.extra_mob_bot_padding : ""
-        }`}>
+        }`}
+        style={{ "--image-width": "450px" } as React.CSSProperties}>
         {html()}
       </div>
     </div>

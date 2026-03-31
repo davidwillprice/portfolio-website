@@ -6,8 +6,8 @@
   padding: 0;
   background: linear-gradient(
     to bottom,
-    var(--background-color) 0%,
-    var(--background-color-alt) 100%
+    var(--background-color-1) 0%,
+    var(--background-color-3) 100%
   );
   svg {
     overflow: visible;
@@ -15,7 +15,7 @@
   }
   &:after {
     animation: fadeout forwards ease-in-out 1s;
-    background-color: var(--background-color);
+    background-color: var(--background-color-1);
     top: 0;
     left: 0;
     width: 100%;
@@ -51,6 +51,7 @@
   font-family: var(--font-rey);
   font-weight: 800;
   font-size: 3rem;
+  margin-bottom: 3rem;
 }
 @media only screen and (max-width: 1300px) {
   .index_title_ban {

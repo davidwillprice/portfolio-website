@@ -9,9 +9,9 @@ export default function StandardCentralText({
   headerText?: string;
   children: ReactNode;
 }) {
-  const maxWidth = !width || width > 700 ? 700 : width;
+  const maxWidth = !width || width > 750 ? 750 : width;
   return (
-    <section style={{ maxWidth: maxWidth, margin: "0 auto 16px" }}>
+    <section style={{ maxWidth: maxWidth, margin: "0 auto 3rem" }}>
       {headerText && <h3>{headerText}</h3>}
       {children}
     </section>

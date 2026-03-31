@@ -80,7 +80,9 @@ export default function SwiisDigital() {
             </ul>
           </div>
         </div>
-        <ul className={styles.intro_textContin}>
+        <ul
+          className={styles.intro_textContin}
+          style={{ marginBottom: "4rem" }}>
           <li>
             Managing multiple <span>CI/CD</span> Git-to-Shopify pipelines at
             once;
@@ -104,227 +106,231 @@ export default function SwiisDigital() {
           </li>
         </ul>
       </section>
-      <section>
-        <h3>PerfectFit</h3>
-        <p>
-          <a href="https://perfect-fit-dog-harness.com/">PerfectFit</a> were on
-          Adobe Commerce and overly reliant on customers using their
-          &apos;Harness Calculator&apos; to find the right size harness for
-          their dog. The customer would input their dog&apos;s
-          breed/measurements and the calculator would link them to the
-          appropriate harness, but there wasn&apos;t any recognition of the
-          dog&apos;s breed or specific measurements after that, so it was easy
-          to get confused as to which harness was recommended.
-        </p>
-        <Image
-          className="img"
-          src={pfDogBreedImg}
-          alt="Desktop screenshot of the PerfectFit dog breed product page"
-          style={{ marginBottom: "16px" }}
-        />
-        <h4>Dog breeds products</h4>
-        <p>
-          As part of their move from Adobe Commerce to Shopify and the
-          &apos;Habitat&apos; theme, I theorised and implemented{" "}
-          <a href="https://perfect-fit-dog-harness.com/products/border-collie-harness">
-            &apos;dog breed&apos; products
-          </a>
-          . We added them as products to their Shopify store, but they are never
-          intended to actually be purchased. Instead, they are just a vector for
-          purchasing the appropriate harnesses for that size of dog breed
-          without disrupting the product structure PerfectFit were used to.
-        </p>
-        <p>
-          &apos;Fit&apos; metaobjects within a metafield store which size dog
-          should have which sized harness, and when the &apos;Harness
-          selector&apos; inputs are changed by the customer, the{" "}
-          <span>Section Rendering API</span> updates the UI around the
-          appropriate harness.
-        </p>
-        <p>
-          An important <span>SEO</span> benefit was that it gave PerfectFit the
-          perfect pages to rank for searches like &apos;harness for border
-          collie&apos; or &apos;husky harness&apos;.
-        </p>
-        <p>Challenges that I overcame implementing this system included:</p>
-        <ul>
-          <li>
-            Setting up a query string system so that customers can return to the
-            breed/size/puller/variant that they were viewing previously;
-          </li>
-          <li>
-            Ensuring the customer stays on the same color option when moving
-            between harnesses;
-          </li>
-          <li>
-            Updating the variant image in the gallery when moving between
-            harnesses and variants;
-          </li>
-          <li>
-            Customizing the Google Structured Data so dog breed harnesses appear
-            as a `productGroup`, with the harnesses as products within it.
-          </li>
-        </ul>
-        <h4>Harness finder</h4>
-        <p>
-          We also kept the{" "}
-          <a href="https://perfect-fit-dog-harness.com/harness-finder">
-            Harness Finder
-          </a>{" "}
-          available as an additional avenue for customers to find the correct
-          harness.
-        </p>
-        <p>
-          I coded the new version from scratch to work with the new dog breed
-          pages, and added new <span>Google Analytics 4</span> events that fire
-          when a customer succeeds or fails to get a result.
-        </p>
-        <p>
-          These events carry all the form data as parameters, allowing
-          PerfectFit to see which breeds/sizes are most commonly searched for.
-          This will help inform them which new dog breeds they should add to the
-          store and which new fits they should add for existing breeds.
-        </p>
-        <h4>Collection template promo cards</h4>
-        <p>
-          T&M&apos;s previous system for promo cards had clients creating a
-          metaobject entry with the cards&apos; text/layout/colours etc as
-          inputs, assigning the metaobject to a collection&apos;s metafield,
-          then assigning the promo card an order in the grid using the section
-          settings.
-        </p>
-        <p>
-          As the card&apos;s settings were assigned outside of the theme, if you
-          changed a setting like its layout, you would need to then open the
-          theme to see what your change looked like.
-        </p>
-        <p>
-          I created a new system for PerfectFit which ditched metaobjects or
-          metafields. Promo cards are added as <span>theme blocks</span> to the
-          product grid of a collection template. The promo card block has
-          layout/order/shape/colour settings. Any number of buttons, images,
-          text, or graphics can be nested as blocks within the promo block in
-          any order.
-        </p>
-        <p>
-          The promo cards don&apos;t interfere with the pagination as I added an
-          additional loop to the section which fills the gap on pages where the
-          promo cards aren&apos;t rendered.
-        </p>
-      </section>
-      <TextBesideImg
-        headerText="Bristol Blue Glass"
-        img={bbgImg}
-        portraitImg={true}
-        maxImgWidth={280}
-        imgAlt="Mobile screenshot of the engraving options on a Bristol Blue Glass product page">
-        <p>
-          Thought & Mortar redesigned the{" "}
-          <a href="https://bristol-glass.co.uk">Bristol Blue Glass</a> store,
-          when we moved them onto the &apos;Symmetry&apos; Shopify theme.
-        </p>
-        <p>
-          They were paying a monthly fee for a gift wrap app which didn&apos;t
-          offer all the functionality they needed, so I created a new system
-          using Shopify Liquid and JavaScript.
-        </p>
-        <p>
-          Customers can now purchase the following services on each{" "}
-          <a href="https://bristol-glass.co.uk/collections/sculptures/products/abouna-blue-glass-sculpture">
-            product page
-          </a>
-          :
-        </p>
-        <ul>
-          <li>
-            Engraving — With settings for the text, font family, and text
-            colour;
-          </li>
-          <li>Gift wrapping;</li>
-          <li>A greetings card message.</li>
-        </ul>
-        <p>
-          To the extra cost to the order, hidden items are added to the cart for
-          each selected service. Although these items can&apos;t be hidden in
-          the checkout, it is clear which service is for which product thanks to
-          line item properties on the main product.
-        </p>
-        <p>
-          If the main product is removed from the cart, any services associated
-          with it are also removed automatically.
-        </p>
-        <p>
-          As the system relies on JavaScript to work, the services are hidden to
-          any users with JavaScript disabled.
-        </p>
-      </TextBesideImg>
-      <section>
-        <Image
-          className="img"
-          src={wowShelvingImg}
-          alt="Desktop screenshot of the Wow Shelving product page"
-          style={{ marginBottom: "32px" }}
-        />
-        <h3>Wow Shelving</h3>
-        <p>
-          As part of their migration from eBay to the &apos;Symmetry&apos;
-          Shopify theme, I implemented custom features including:
-        </p>
-        <ul>
-          <li>
-            A VAT toggle in the header which uses <span>local storage</span> to
-            keep track of the customer&apos;s preference;
-          </li>
-          <li>
-            A tile calculator which updates the customer&apos;s item quantity
-            based on the area they intend to cover;
-          </li>
-          <li>
-            A discount if the customer is picking up the order from the store —
-            Uses JavaScript to add or remove a discount code depending on the
-            customer&apos;s selection.
-          </li>
-        </ul>
-      </section>
-      <TextBesideImg
-        headerText="Lillicoco"
-        img={lillicocoImg}
-        imgAfterTextOnDesktop={true}
-        imgAlt="Mobile screenshot of the ring resizing options on a Lillicoco product page"
-        maxImgWidth={280}
-        portraitImg={true}>
-        <p>
-          I was one of several developers to work on the{" "}
-          <a href="https://www.lillicoco.com/">Lillicoco</a> store.
-        </p>
-        <p>
-          Using Liquid and JavaScript without any apps, I created a resizing
-          block for their{" "}
-          <a href="https://www.lillicoco.com/products/art-deco-14ct-gold-cornflower-sapphire-diamond-ring">
-            ring product
-          </a>{" "}
-          pages.
-        </p>
-        <p>
-          As with the Bristol Blue Glass services, the cost of a ring resize is
-          added to the order by adding a hidden item to the cart. The boundaries
-          and cost of the resizing varies from ring to ring, so I created
-          different variants for different costs within the &apos;Ring
-          Resize&apos; product.
-        </p>
-        <p>
-          Another feature I worked on was ensuring that orders, which would have
-          missed the free delivery threshold because of layaway, actually retain
-          their free delivery by adding a hidden item to the cart with JS and
-          using an app&apos;s custom shipping rules.{" "}
-        </p>
-        <p>
-          Whenever an item is added or removed from cart, the code calculates
-          what the total cost of the order will be after that change, then
-          checks if the total is under the threshold with layaway but over the
-          threshold without layaway.
-        </p>
-      </TextBesideImg>
+      <div className="alt_con">
+        <section>
+          <h3>PerfectFit</h3>
+          <p>
+            <a href="https://perfect-fit-dog-harness.com/">PerfectFit</a> were
+            on Adobe Commerce and overly reliant on customers using their
+            &apos;Harness Calculator&apos; to find the right size harness for
+            their dog. The customer would input their dog&apos;s
+            breed/measurements and the calculator would link them to the
+            appropriate harness, but there wasn&apos;t any recognition of the
+            dog&apos;s breed or specific measurements after that, so it was easy
+            to get confused as to which harness was recommended.
+          </p>
+          <Image
+            className="img"
+            src={pfDogBreedImg}
+            alt="Desktop screenshot of the PerfectFit dog breed product page"
+            style={{ marginBottom: "16px" }}
+          />
+          <h4>Dog breeds products</h4>
+          <p>
+            As part of their move from Adobe Commerce to Shopify and the
+            &apos;Habitat&apos; theme, I theorised and implemented{" "}
+            <a href="https://perfect-fit-dog-harness.com/products/border-collie-harness">
+              &apos;dog breed&apos; products
+            </a>
+            . We added them as products to their Shopify store, but they are
+            never intended to actually be purchased. Instead, they are just a
+            vector for purchasing the appropriate harnesses for that size of dog
+            breed without disrupting the product structure PerfectFit were used
+            to.
+          </p>
+          <p>
+            &apos;Fit&apos; metaobjects within a metafield store which size dog
+            should have which sized harness, and when the &apos;Harness
+            selector&apos; inputs are changed by the customer, the{" "}
+            <span>Section Rendering API</span> updates the UI around the
+            appropriate harness.
+          </p>
+          <p>
+            An important <span>SEO</span> benefit was that it gave PerfectFit
+            the perfect pages to rank for searches like &apos;harness for border
+            collie&apos; or &apos;husky harness&apos;.
+          </p>
+          <p>Challenges that I overcame implementing this system included:</p>
+          <ul>
+            <li>
+              Setting up a query string system so that customers can return to
+              the breed/size/puller/variant that they were viewing previously;
+            </li>
+            <li>
+              Ensuring the customer stays on the same color option when moving
+              between harnesses;
+            </li>
+            <li>
+              Updating the variant image in the gallery when moving between
+              harnesses and variants;
+            </li>
+            <li>
+              Customizing the Google Structured Data so dog breed harnesses
+              appear as a `productGroup`, with the harnesses as products within
+              it.
+            </li>
+          </ul>
+          <h4>Harness finder</h4>
+          <p>
+            We also kept the{" "}
+            <a href="https://perfect-fit-dog-harness.com/harness-finder">
+              Harness Finder
+            </a>{" "}
+            available as an additional avenue for customers to find the correct
+            harness.
+          </p>
+          <p>
+            I coded the new version from scratch to work with the new dog breed
+            pages, and added new <span>Google Analytics 4</span> events that
+            fire when a customer succeeds or fails to get a result.
+          </p>
+          <p>
+            These events carry all the form data as parameters, allowing
+            PerfectFit to see which breeds/sizes are most commonly searched for.
+            This will help inform them which new dog breeds they should add to
+            the store and which new fits they should add for existing breeds.
+          </p>
+          <h4>Collection template promo cards</h4>
+          <p>
+            T&M&apos;s previous system for promo cards had clients creating a
+            metaobject entry with the cards&apos; text/layout/colours etc as
+            inputs, assigning the metaobject to a collection&apos;s metafield,
+            then assigning the promo card an order in the grid using the section
+            settings.
+          </p>
+          <p>
+            As the card&apos;s settings were assigned outside of the theme, if
+            you changed a setting like its layout, you would need to then open
+            the theme to see what your change looked like.
+          </p>
+          <p>
+            I created a new system for PerfectFit which ditched metaobjects or
+            metafields. Promo cards are added as <span>theme blocks</span> to
+            the product grid of a collection template. The promo card block has
+            layout/order/shape/colour settings. Any number of buttons, images,
+            text, or graphics can be nested as blocks within the promo block in
+            any order.
+          </p>
+          <p>
+            The promo cards don&apos;t interfere with the pagination as I added
+            an additional loop to the section which fills the gap on pages where
+            the promo cards aren&apos;t rendered.
+          </p>
+        </section>
+        <TextBesideImg
+          headerText="Bristol Blue Glass"
+          img={bbgImg}
+          portraitImg={true}
+          maxImgWidth={280}
+          imgAlt="Mobile screenshot of the engraving options on a Bristol Blue Glass product page">
+          <p>
+            Thought & Mortar redesigned the{" "}
+            <a href="https://bristol-glass.co.uk">Bristol Blue Glass</a> store,
+            when we moved them onto the &apos;Symmetry&apos; Shopify theme.
+          </p>
+          <p>
+            They were paying a monthly fee for a gift wrap app which didn&apos;t
+            offer all the functionality they needed, so I created a new system
+            using Shopify Liquid and JavaScript.
+          </p>
+          <p>
+            Customers can now purchase the following services on each{" "}
+            <a href="https://bristol-glass.co.uk/collections/sculptures/products/abouna-blue-glass-sculpture">
+              product page
+            </a>
+            :
+          </p>
+          <ul>
+            <li>
+              Engraving — With settings for the text, font family, and text
+              colour;
+            </li>
+            <li>Gift wrapping;</li>
+            <li>A greetings card message.</li>
+          </ul>
+          <p>
+            To the extra cost to the order, hidden items are added to the cart
+            for each selected service. Although these items can&apos;t be hidden
+            in the checkout, it is clear which service is for which product
+            thanks to line item properties on the main product.
+          </p>
+          <p>
+            If the main product is removed from the cart, any services
+            associated with it are also removed automatically.
+          </p>
+          <p>
+            As the system relies on JavaScript to work, the services are hidden
+            to any users with JavaScript disabled.
+          </p>
+        </TextBesideImg>
+        <section>
+          <Image
+            className="img"
+            src={wowShelvingImg}
+            alt="Desktop screenshot of the Wow Shelving product page"
+            style={{ marginBottom: "32px" }}
+          />
+          <h3>Wow Shelving</h3>
+          <p>
+            As part of their migration from eBay to the &apos;Symmetry&apos;
+            Shopify theme, I implemented custom features including:
+          </p>
+          <ul>
+            <li>
+              A VAT toggle in the header which uses <span>local storage</span>{" "}
+              to keep track of the customer&apos;s preference;
+            </li>
+            <li>
+              A tile calculator which updates the customer&apos;s item quantity
+              based on the area they intend to cover;
+            </li>
+            <li>
+              A discount if the customer is picking up the order from the store
+              — Uses JavaScript to add or remove a discount code depending on
+              the customer&apos;s selection.
+            </li>
+          </ul>
+        </section>
+        <TextBesideImg
+          headerText="Lillicoco"
+          img={lillicocoImg}
+          imgAfterTextOnDesktop={true}
+          imgAlt="Mobile screenshot of the ring resizing options on a Lillicoco product page"
+          maxImgWidth={280}
+          portraitImg={true}>
+          <p>
+            I was one of several developers to work on the{" "}
+            <a href="https://www.lillicoco.com/">Lillicoco</a> store.
+          </p>
+          <p>
+            Using Liquid and JavaScript without any apps, I created a resizing
+            block for their{" "}
+            <a href="https://www.lillicoco.com/products/art-deco-14ct-gold-cornflower-sapphire-diamond-ring">
+              ring product
+            </a>{" "}
+            pages.
+          </p>
+          <p>
+            As with the Bristol Blue Glass services, the cost of a ring resize
+            is added to the order by adding a hidden item to the cart. The
+            boundaries and cost of the resizing varies from ring to ring, so I
+            created different variants for different costs within the &apos;Ring
+            Resize&apos; product.
+          </p>
+          <p>
+            Another feature I worked on was ensuring that orders, which would
+            have missed the free delivery threshold because of layaway, actually
+            retain their free delivery by adding a hidden item to the cart with
+            JS and using an app&apos;s custom shipping rules.{" "}
+          </p>
+          <p>
+            Whenever an item is added or removed from cart, the code calculates
+            what the total cost of the order will be after that change, then
+            checks if the total is under the threshold with layaway but over the
+            threshold without layaway.
+          </p>
+        </TextBesideImg>
+      </div>
     </>
   );
 }
