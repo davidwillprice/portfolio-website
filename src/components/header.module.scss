@@ -11,7 +11,7 @@
   max-width: var(--layout-width);
   margin: 0 auto;
   padding: 0 var(--page-x-margin);
-  height: 55px;
+  height: 65px;
   overflow: hidden;
   transition:
     height 200ms ease-in-out,
@@ -40,6 +40,8 @@
   transition: opacity 200ms ease-in-out;
   position: relative;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .link:hover,
@@ -155,6 +157,6 @@
     justify-content: center;
   }
   .desktop_only {
-    display: none;
+    display: none !important;
   }
 }

@@ -9,6 +9,7 @@ import ContactIcons from "./contact-icons";
 import logoSvg from "@svgs/david-price-logo.svg";
 
 import styles from "@components/header.module.scss";
+import btnStyles from "@styles/button.module.scss";
 
 const Header = () => {
   const pathname = usePathname();
@@ -78,7 +79,7 @@ const Header = () => {
             {menuLink("/graphic-design", "Graphic Design")}
             {menuLink("/art", "Art")}
             <a
-              className={`${styles.link} ${styles.desktop_only}`}
+              className={`${btnStyles.button} ${btnStyles.primary} ${styles.desktop_only}`}
               href="#contact"
               onClick={() => {
                 toggleMobMenu(false);
