@@ -1,0 +1,56 @@
+.star_con * {
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    background: transparent;
+  }
+}
+
+.star__1 {
+  width: 1px;
+  height: 1px;
+  box-shadow: var(--star-shadows-1);
+  animation: animStar 160s linear infinite;
+  &:after {
+    width: 1px;
+    height: 1px;
+    box-shadow: var(--star-shadows-1);
+  }
+}
+.star__2 {
+  width: 2px;
+  height: 2px;
+  box-shadow: var(--star-shadows-2);
+  animation: animStar 200s linear infinite;
+  &:after {
+    width: 2px;
+    height: 2px;
+    box-shadow: var(--star-shadows-2);
+  }
+}
+
+.star__3 {
+  width: 3px;
+  height: 3px;
+  box-shadow: var(--star-shadows-3);
+  animation: animStar 240s linear infinite;
+  &:after {
+    width: 3px;
+    height: 3px;
+    box-shadow: var(--star-shadows-3);
+  }
+}
+
+@keyframes animStar {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-import Solar from "@/src/svgs/solar";
-import StandardCentralText from "@/src/components/standard-central-text";
-import FullWidthImage from "@/src/components/full-width-img";
+import Solar from "@svgs/solar";
+import StandardCentralText from "@components/standard-central-text";
+import FullWidthImage from "@components/full-width-img";
+import Starfield from "@components/starfield";
 
 import image8 from "@images/solargraphy/solargraph-image-8.jpg";
 import image8NoStreaks from "@images/solargraphy/solargraph-image-8-no-streaks.jpg";
@@ -38,6 +39,7 @@ export default function Page() {
           <h1 className={styles.index_title}>Solargraphy</h1>
         </div>
         <Solar />
+        <Starfield />
       </section>
       <section>
         <FullWidthImage

@@ -2,10 +2,11 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 import StandardCentralText from "@components/standard-central-text";
-import Solar from "@/src/svgs/solar";
-import SqBrushMask from "@/src/components/sq-brush-mask";
-import SqBrushSplash from "@/src/components/sq-brush-splash";
-import ButtonCon from "@/src/components/button-con.module";
+import Solar from "@svgs/solar";
+import SqBrushMask from "@components/sq-brush-mask";
+import SqBrushSplash from "@components/sq-brush-splash";
+import ButtonCon from "@components/button-con.module";
+import Starfield from "@components/starfield";
 
 import portraitImg from "@images/david-price-portrait.jpg";
 import tamImg from "@images/thought-and-mortar-logo.png";
@@ -33,6 +34,7 @@ export default function Home() {
     const daysDiff = millisecondDiff / (60 * 60 * 24);
     return Math.abs(Math.round(daysDiff / 365.25));
   };
+
   return (
     <>
       <section className={styles.index_title_ban}>
@@ -41,6 +43,7 @@ export default function Home() {
           <h2 className={styles.index_subtitle}>Front End Web Developer</h2>
         </div>
         <Solar />
+        <Starfield />
       </section>
       <section>
         <SqBrushMask
