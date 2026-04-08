@@ -40,6 +40,14 @@ export default function Page() {
         </div>
         <Solar />
         <Starfield />
+        <div id="comets">
+          <div className={`${styles.comet} ${styles.comet__1}`}>
+            <div className={styles.comet_inner}></div>
+          </div>
+          <div className={`${styles.comet} ${styles.comet__2}`}>
+            <div className={styles.comet_inner}></div>
+          </div>
+        </div>
       </section>
       <section>
         <FullWidthImage

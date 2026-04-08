@@ -55,11 +55,81 @@
   font-size: 3rem;
   margin-bottom: 3rem;
 }
+.comet {
+  position: absolute;
+  transform-origin: center left;
+  --comet-length: 200px;
+}
+.comet_inner {
+  width: var(--comet-length);
+  height: 1px;
+  background: #fff;
+  background: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+@keyframes animComet {
+  0% {
+    transform: translateX(calc(var(--travel-distance) * 0.5));
+    opacity: 0;
+    width: calc(var(--comet-length) / 2);
+  }
+  2% {
+    opacity: 1;
+    width: var(--comet-length);
+  }
+  5% {
+    opacity: 1;
+    width: var(--comet-length);
+  }
+  7% {
+    transform: translateX(calc(var(--travel-distance) * -0.5));
+    opacity: 0;
+    width: calc(var(--comet-length) / 2);
+  }
+  100% {
+    transform: translateX(calc(var(--travel-distance) * -0.5));
+    opacity: 0;
+    width: calc(var(--comet-length) / 2);
+  }
+}
+
+.comet__1 {
+  --travel-distance: 600px;
+  top: 20%;
+  left: 20%;
+  transform: rotate(190deg);
+  .comet_inner {
+    animation: animComet 24s linear 5s infinite;
+  }
+}
+.comet__2 {
+  --travel-distance: 400px;
+  top: 50%;
+  left: 70%;
+  transform: rotate(100deg);
+  .comet_inner {
+    animation: animComet 16s linear 1s infinite;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
+  .comet__1 {
+    top: 20%;
+    left: 30%;
+    transform: rotate(250deg);
+  }
+  .comet__2 {
+    transform: rotate(150deg);
+  }
   .index_title_ban {
     display: flex;
     flex-direction: column;
-    min-height: calc(100dvh - var(--header-height));
+    min-height: 100dvh;
     svg {
       width: 167%;
       transform: translateX(-8%);
