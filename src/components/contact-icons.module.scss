@@ -13,6 +13,27 @@
   fill: var(--secondary-color);
 }
 
+.links a {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    top: 50%;
+    left: -50%;
+    width: 50px;
+    transform: translateY(-70%) rotate(20deg) translateX(-60%);
+    height: 200%;
+    background-color: var(--footer-bg-color);
+    background: linear-gradient(
+      90deg,
+      rgb(from var(--footer-bg-color) r g b / 0),
+      var(--footer-bg-color) 50%,
+      rgb(from var(--footer-bg-color) r g b / 0) 100%
+    );
+    position: absolute;
+  }
+}
+
 @media (max-width: 800px) {
   .links {
     order: 0;

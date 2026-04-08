@@ -18,7 +18,19 @@
       opacity: 0.5;
     }
   }
+  &:target a::before {
+    animation: iconShine 1s ease-in-out 1;
+  }
 }
+@keyframes iconShine {
+  from {
+    transform: translateY(-70%) rotate(20deg) translateX(-60%);
+  }
+  to {
+    transform: translateY(-70%) rotate(20deg) translateX(400%);
+  }
+}
+
 .text {
   * {
     margin-bottom: 0;
