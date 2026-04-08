@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Metadata } from "next";
 
 import StandardCentralText from "@components/standard-central-text";
 import Solar from "@svgs/solar";
@@ -21,11 +20,6 @@ import bmaImg from "@images/bma/bma-hp-mob.png";
 import styles from "@styles/index.module.scss";
 import btnStyles from "@styles/button.module.scss";
 import workConStyles from "@styles/brushcon.module.scss";
-
-export const metadata: Metadata = {
-  title: "David Price | Frontend Web Developer",
-  description: "Portfolio website for a Bristol-based Frontend Web Developer",
-};
 
 export default function Home() {
   const yearsSinceIStartedWork = () => {
