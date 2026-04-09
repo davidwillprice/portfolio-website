@@ -78,6 +78,7 @@ const Header = () => {
             {menuLink("/#web", "Web Development")}
             {menuLink("/graphic-design", "Graphic Design")}
             {menuLink("/art", "Art")}
+            {menuLink("/articles", "Articles")}
             <a
               className={`${btnStyles.button} ${btnStyles.primary} ${styles.desktop_only}`}
               href="#contact"

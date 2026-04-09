@@ -5,7 +5,7 @@ import styles from "@components/text-beside-img.module.scss";
 
 const TextBesideImg = (props: {
   children: ReactNode;
-  headerText: string;
+  headerText?: string;
   img: StaticImageData;
   imgAfterTextOnDesktop?: boolean;
   imgAlt: string;
@@ -26,7 +26,7 @@ const TextBesideImg = (props: {
       className={`${styles.con} ${props.portraitImg ? styles.portrait : ""}`}>
       {props.imgAfterTextOnDesktop ? "" : imageCon}
       <div className={styles.text_con}>
-        <h3>{props.headerText}</h3>
+        {props.headerText && <h3>{props.headerText}</h3>}
         {props.children}
       </div>
       {props.imgAfterTextOnDesktop ? imageCon : ""}

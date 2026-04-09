@@ -102,6 +102,7 @@ h3,
 .h2,
 .h3 {
   font-size: 2rem;
+  font-weight: 500;
 }
 h4,
 .h4 {
@@ -141,18 +142,21 @@ p {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   :root {
     --page-y-margin: 16px;
     --page-x-margin: 16px;
     --header-height: 82px;
   }
+
+  html.mobile-menu-open {
+    overflow-y: hidden;
+  }
+}
+@media (max-width: 600px) {
   h1,
   .h1 {
     font-size: 2.4rem;
-  }
-  html.mobile-menu-open {
-    overflow-y: hidden;
   }
 }
 @media (max-width: 400px) {
@@ -160,6 +164,10 @@ p {
   .h1 {
     font-size: 2.2rem;
   }
+}
+
+strong {
+  font-weight: 700;
 }
 
 ul {
@@ -181,6 +189,11 @@ hr {
   background: var(--background-color-3);
   font-size: 0;
   border: 0;
+}
+
+blockquote {
+  padding-left: 1rem;
+  border-left: 10px solid var(--background-color-3);
 }
 
 .text_link {
