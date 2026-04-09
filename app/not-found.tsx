@@ -6,7 +6,7 @@ import btnStyles from "@styles/button.module.scss";
 
 export default function NotFound() {
   return (
-    <div style={{ textAlign: "center", marginBottom: "32px" }}>
+    <section className="full_page_section">
       <h1>Page not found</h1>
       <p>
         Sorry, I&apos;m afraid the page you are looking for could not be found.
@@ -19,6 +19,6 @@ export default function NotFound() {
           Return to the Homepage
         </Link>
       </ButtonCon>
-    </div>
+    </section>
   );
 }
