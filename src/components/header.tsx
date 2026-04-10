@@ -80,7 +80,7 @@ const Header = () => {
             {menuLink("/art", "Art")}
             {menuLink("/articles", "Articles")}
             <a
-              className={`${btnStyles.button} ${btnStyles.primary} ${styles.desktop_only}`}
+              className={`${btnStyles.button} ${btnStyles.secondary} ${styles.desktop_only}`}
               href="#contact"
               onClick={() => {
                 toggleMobMenu(false);

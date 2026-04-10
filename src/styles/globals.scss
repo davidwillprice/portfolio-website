@@ -1,13 +1,13 @@
 :root {
-  --primary-color: #00f0d8;
-  --secondary-color: white;
+  --primary-color: white;
+  --secondary-color: #00f0d8;
   --background-color-1: #00101f;
   --background-color-2: #00172c;
   --background-color-3: #004061;
   --mobile-drawer-bg-color: rgba(0, 0, 0, 0.9);
   --hamburger-icon-bg-color: var(--background-color-3);
-  --highlight-color: #f05d5e;
-  --highlight-color-alt: #ff1129;
+  --highlight-color: var(--secondary-color);
+  --highlight-color-alt: var(--primary-color);
   --footer-bg-color: var(--background-color-3);
 
   --layout-width: 1200px;
@@ -28,7 +28,7 @@
   padding: 0;
   margin: 0;
   font-weight: 400;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   scroll-margin-top: calc(var(--header-height) + 3rem);
 }
 
@@ -86,6 +86,20 @@ section {
 a {
   color: var(--secondary-color);
   text-underline-offset: 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: underline;
+  text-decoration-thickness: auto;
+  text-decoration-thickness: max(1px, 0.0625rem);
+  text-underline-offset: 0.1em;
+  transition: 0.1s text-decoration-thickness;
+  &:hover {
+    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    -webkit-text-decoration-skip: none;
+    text-decoration-skip: none;
+  }
 }
 
 h1,
@@ -103,6 +117,7 @@ h3,
 .h3 {
   font-size: 2rem;
   font-weight: 500;
+  color: var(--secondary-color);
 }
 h4,
 .h4 {
@@ -194,23 +209,6 @@ hr {
 blockquote {
   padding-left: 1rem;
   border-left: 10px solid var(--background-color-3);
-}
-
-.text_link {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-decoration: underline;
-  text-decoration-thickness: auto;
-  text-decoration-thickness: max(1px, 0.0625rem);
-  text-underline-offset: 0.1em;
-  transition: 0.1s text-decoration-thickness;
-  &:hover {
-    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
-    -webkit-text-decoration-skip-ink: none;
-    text-decoration-skip-ink: none;
-    -webkit-text-decoration-skip: none;
-    text-decoration-skip: none;
-  }
 }
 
 .img {

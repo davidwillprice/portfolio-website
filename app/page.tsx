@@ -224,7 +224,7 @@ export default function Home() {
             <SqBrushMask
               brush={"/brushes/brush-bg-3.svg"}
               img={sttImg}
-              imgAlt="Old Bakery Flower Garden logo"
+              imgAlt="Scrap The Trap logo"
               dirTxtRight={true}
               imageWidth={500}>
               <h3>Scrap The Trap</h3>

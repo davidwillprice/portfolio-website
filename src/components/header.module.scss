@@ -35,7 +35,7 @@
   column-gap: 6%;
 }
 .link {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   text-align: center;
   transition: opacity 200ms ease-in-out;
   position: relative;
@@ -58,7 +58,7 @@
   border-radius: 3px;
   border-width: 0;
   span {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     height: 5px;
     width: 35px;
     position: absolute;

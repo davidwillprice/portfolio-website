@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  fill: var(--secondary-color);
+  fill: var(--primary-color);
 }
 
 .links a {
@@ -43,7 +43,7 @@
   }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 801px) {
   .mobile_only {
     display: none;
   }

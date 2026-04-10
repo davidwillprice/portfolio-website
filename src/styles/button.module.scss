@@ -10,24 +10,25 @@
   transition: all 0.3s;
   text-align: center;
   justify-content: center;
-  &:hover {
-    transform: translateY(-2px);
-  }
+  border: 2px solid var(--highlight-color);
   svg {
     margin-left: 15px;
   }
   &.primary {
-    color: var(--secondary-color);
+    color: var(--background-color-3);
     background-color: var(--highlight-color);
   }
   &.primary:hover {
     background-color: var(--highlight-color-alt);
+    transform: translateY(-2px);
+    border-color: var(--highlight-color-alt);
   }
   &.secondary {
-    color: var(--tertiary-color);
-    background-color: var(--secondary-color-alt);
+    color: var(--highlight-color);
+    background-color: transparent;
   }
   &.secondary:hover {
-    background-color: var(--secondary-color);
+    color: var(--background-color-3);
+    background-color: var(--highlight-color);
   }
 }

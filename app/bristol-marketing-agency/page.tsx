@@ -15,7 +15,7 @@ import bristolAgencyLogoSVG from "@svgs/bristol-marketing-agency-logo.svg";
 import IconsSVG from "@svgs/bma-icons";
 //import BlankMobile from "@svgs/blank-mobile";
 
-import threeDeviceHp from "@images/bma/homepage-multiple-devices.jpg";
+import threeDeviceHp from "@images/bma/bma-desktop-tablet-mobile-showcase.png";
 import conceptBoard from "@images/bma/concept-board.jpg";
 
 //import MobileMenu from "@images/bma/bma-mobile-menu-full.png";
@@ -95,7 +95,7 @@ export default function bristolAgency() {
       </ColourPreviewCon>
       <FullWidthImage
         img={threeDeviceHp}
-        imgAlt="Homepage design previews on desktop, tablet and mobile"
+        imgAlt="Homepage design mockups on desktop, tablet and mobile"
       />
       <StandardCentralText headerText="A simple but striking homepage">
         <p>
