@@ -272,7 +272,17 @@ export default function Home() {
           <h2 id="web" className={styles.project_header}>
             Completed Courses
           </h2>
-          <StandardCentralText width={728}>
+          <StandardCentralText>
+            <p>
+              2026 -{" "}
+              <a
+                className="text_link"
+                href="https://www.udemy.com/course/nodejs-express-mongodb-bootcamp">
+                &quot;Node.js, Express, MongoDB & More: The Complete
+                Bootcamp&quot;
+              </a>{" "}
+              by Jonas Schmedtmann
+            </p>
             <p>
               2022 -{" "}
               <a
